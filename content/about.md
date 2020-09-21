@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "about"
 ---
 
 Hello, I'm Alexander Trost aka galexrt.
