@@ -4,7 +4,7 @@ defaultContentLanguage: en
 isMultilingual: false
 title: "Alexander Trost aka galexrt"
 theme: sam
-pygmentsStyle: monokai
+pygmentsStyle: dracula
 pygmentsCodefences: true
 params:
   dateform: 'Mon Jan 02, 2006'
@@ -12,9 +12,9 @@ params:
   favicon: favicon.png
   homepage: main
   footerText: 'Copyright (c) Alexander Trost 2020. Built using custom "Call me Sam" Hugo theme.'
-  description: "Alexander Trost aka galexrt's homepage."
+  description: "Alexander Trost aka galexrt homepage."
   images:
-    # TODO Use custom social share image
+    # TODO Use higher resolution custom social share (opengraph) image
     - favicon.png
   title: Alexander Trost
   videoBackground:
@@ -32,5 +32,7 @@ params:
       text: setup
     - link: https://edenmal.moe/
       text: blog
+    - link: https://docs.edenmal.moe/
+      text: docs
 imaging:
   quality: 75
