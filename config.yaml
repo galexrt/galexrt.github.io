@@ -1,0 +1,36 @@
+baseurl: '/'
+languageCode: en-us
+defaultContentLanguage: en
+isMultilingual: false
+title: "Alexander Trost aka galexrt"
+theme: sam
+pygmentsStyle: monokai
+pygmentsCodefences: true
+params:
+  dateform: 'Mon Jan 02, 2006'
+  dateformfull: 'Mon Jan 02 2006 15:04:05 EST'
+  favicon: favicon.png
+  homepage: main
+  footerText: 'Copyright (c) Alexander Trost 2020. Built using custom "Call me Sam" Hugo theme.'
+  description: "Alexander Trost aka galexrt's homepage."
+  images:
+    # TODO Use custom social share image
+    - favicon.png
+  title: Alexander Trost
+  videoBackground:
+    sources:
+      - source: /video1_rescaled_QWXGA_20fps_cut_low.webm
+        type: video/mp4
+        poster: /background.jpg
+    overlay: 'rgba(0, 0, 0, 0.75)'
+  mainMenu:
+    - link: about
+      text: about
+    - link: projects
+      text: projects
+    - link: setup
+      text: setup
+    - link: https://edenmal.moe/
+      text: blog
+imaging:
+  quality: 75
