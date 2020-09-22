@@ -2,7 +2,7 @@
 title: "setup"
 type: "gallery"
 url: "/setup"
-maxWidth: "600x"
+maxWidth: "750x"
 clickablePhotos: true
 toc: true
 ---
@@ -77,3 +77,9 @@ This is a list of the software and hardware I'm using for work, projects and gam
 ***
 
 My dotfiles and some of the scripts I use daily, can be found on [GitHub galexrt/dotfiles repository](https://github.com/galexrt/dotfiles).
+
+***
+
+## Gallery
+
+You can click the photos to see them in their original resolution.

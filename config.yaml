@@ -11,7 +11,7 @@ params:
   dateformfull: 'Mon Jan 02 2006 15:04:05 EST'
   favicon: favicon.png
   homepage: main
-  footerText: 'Copyright (c) Alexander Trost 2020. Built using custom "Call me Sam" Hugo theme.'
+  footerText: '[Site Notice](/site-notice/) | [Privacy Policy](/privacy-policy/) | Copyright (c) Alexander Trost 2020'
   description: "Alexander Trost aka galexrt homepage."
   images:
     # TODO Use higher resolution custom social share (opengraph) image
@@ -32,7 +32,11 @@ params:
       text: setup
     - link: https://edenmal.moe/
       text: blog
-    - link: https://docs.edenmal.moe/
+    - link: https://docs.galexrt.moe/
       text: docs
 imaging:
   quality: 75
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
