@@ -29,6 +29,14 @@ Prometheus exporter for Dell Hardware components using Dell OMSA.
 **GitHub**: https://github.com/galexrt/dellhw_exporter · **Documentation**: https://dellhw-exporter.galexrt.moe
 {{< /center >}}
 
+### k8s-vagrant-multi-node - Author
+
+An easy to run a Vagrant based Kubernetes Multi Node cluster (supports VirtualBox and libvirt).
+
+{{< center >}}
+**GitHub**: https://github.com/galexrt/k8s-vagrant-multi-node · **Documentation**: https://k8s-vagrant-multi-node.galexrt.moe
+{{< /center >}}
+
 ## Communities 
 
 ### Modern Gaming - Infrastructure Administrator
