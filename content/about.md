@@ -4,7 +4,7 @@ title: "about"
 
 Hello, I'm Alexander Trost aka galexrt.
 
-TODO
+I am a DevOps Engineer at [Cloudical Deutschland GmbH](https://cloudical.io/).
 
 ## Social
 
