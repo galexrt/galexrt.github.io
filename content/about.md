@@ -4,7 +4,7 @@ title: "about"
 
 Hello, I'm Alexander Trost aka galexrt.
 
-I am a DevOps Engineer at [Cloudical Deutschland GmbH](https://cloudical.io/).
+I am a DevOps Engineer at [Cloudical Deutschland GmbH](https://cloudical.io/) and a maintainer of the [Rook.io](https://rook.io/) project.
 
 ## Social
 
@@ -16,7 +16,7 @@ I am a DevOps Engineer at [Cloudical Deutschland GmbH](https://cloudical.io/).
 * [Blog](https://edenmal.moe/)
 * [Email](mailto:galexrt@googlemail.com)
 
-Please note I am not giving support through any of these channels. Thanks for understanding!
+**Please note**: I am not giving support through any of these channels. Thanks for understanding!
 
 ***
 
