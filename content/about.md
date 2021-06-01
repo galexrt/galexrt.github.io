@@ -20,4 +20,13 @@ I am a DevOps Engineer at [Cloudical Deutschland GmbH](https://cloudical.io/) an
 
 ***
 
+{{< center >}}
+**Easter Eggs**<br>
+{{< /center >}}
+{{< center >}}
+[Coffee]({{< ref "coffee" >}})
+{{< /center >}}
+
+***
+
 This site has been built using [Hugo](https://gohugo.io/) with a custom version of the ["Call me Sam" Hugo theme](https://github.com/victoriadrake/hugo-theme-sam).
