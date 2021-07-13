@@ -7,8 +7,10 @@ clickablePhotos: true
 toc: false
 ---
 
-{{< center >}}
-**"[Q Kaffee](https://www.qkaffee.de/) is love, [Q Kaffee](https://www.qkaffee.de/) is love"**
-{{< /center >}}
+<div style="text-align: center; font-size: 24px">
 
-If you are ever in Karlsruhe / Durlach, get yourself a good cup of coffee at the [Q Kaffee](https://www.qkaffee.de/).
+**"[Q Kaffee](https://www.qkaffee.de/) is love, [Q-Kaffee](https://www.qkaffee.de/) is life"**
+
+</div>
+
+If you are ever in Karlsruhe / Durlach, get yourself a hot cup of coffee at the [Q-Kaffee](https://www.qkaffee.de/).
