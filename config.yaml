@@ -11,7 +11,7 @@ params:
   dateformfull: 'Mon Jan 02 2006 15:04:05 EST'
   favicon: favicon.png
   homepage: main
-  footerText: '[Impressum](/site-notice/) | [Privacy Policy](/privacy-policy/) | Copyright (c) Alexander Trost 2020'
+  footerText: '[Impressum](/site-notice/) | [Privacy Policy](/privacy-policy/) | Copyright (c) Alexander Trost 2021'
   description: "Alexander Trost aka galexrt homepage."
   images:
     # TODO Use higher resolution custom social share (opengraph) image
