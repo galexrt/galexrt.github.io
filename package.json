@@ -1,24 +1,32 @@
 {
-  "name": "galexrt.github.io",
-  "version": "0.0.1",
-  "description": "Galexrt's personal site.",
-  "main": "none.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/galexrt/galexrt.github.io.git"
-  },
   "author": "Alexander Trost <galexrt@googlemail.com>",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/galexrt/galexrt.github.io/issues"
   },
-  "homepage": "https://github.com/galexrt/galexrt.github.io#readme",
+  "comments": {
+    "dependencies": {},
+    "devDependencies": {
+      "autoprefixer": "project",
+      "postcss-cli": "project"
+    }
+  },
+  "dependencies": {},
+  "description": "Galexrt's personal site.",
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "postcss-cli": "^7.1.2"
   },
-  "private": true
+  "homepage": "https://github.com/galexrt/galexrt.github.io#readme",
+  "license": "Apache-2.0",
+  "main": "none.js",
+  "name": "galexrt.github.io",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galexrt/galexrt.github.io.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.1"
 }
