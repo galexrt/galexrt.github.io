@@ -34,8 +34,7 @@ This is a list of the software and hardware I'm using for work, projects and gam
     * 1x 512GB NVMe SSD
     * 2x 500GB SATA SSD - btrfs RAID1
     * 4x 8TB HDD - btrfs RAID6
-* **Peripherals**:
-    * **Network**: Dual port SFP+ 10GE card
+* **Network**: Dual port SFP+ 10GE card
 
 ### Software
 
@@ -48,7 +47,7 @@ This is a list of the software and hardware I'm using for work, projects and gam
 * **Applications**:
     * **i3 Status Bar**: i3pystatus (by enkore)
     * **Terminal**: Alacritty
-    * **IDE**: Microsoft Visual Studio Code
+    * **Editor**: Microsoft Visual Studio Code
 
 ## Gaming Machine
 
@@ -62,8 +61,7 @@ This is a list of the software and hardware I'm using for work, projects and gam
     * 1x 3TB HDD
     * 1x 4TB HDD
     * 1x Intel Optane Module (32GB)
-* **Peripherals**:
-    * Network: Dual port SFP+ 10GE card
+* **Network**: Dual port SFP+ 10GE card
 
 ### Software
 

@@ -17,19 +17,16 @@ In my free time I'm administrating and maintaining the infrastructure of the ["M
 * [Xing](https://www.xing.com/profile/Alexander_Trost18/cv)
 * [LinkedIn](https://www.linkedin.com/in/alexander-trost/)
 
-**Please note**: I am not giving support through any of these channels. Thanks for understanding!
+<br>
+
+**Note**: I am not giving support through any of these channels.
 
 ***
 
-{{< center >}}
-**Easter Eggs**<br>
-{{< /center >}}
-{{< center >}}
-[Coffee]({{< ref "coffee" >}})
-{{< /center >}}
-{{< center >}}
-[Funny]({{< ref "funny" >}})
-{{< /center >}}
+#### _Easter Eggs_
+
+* [Coffee]({{< ref "coffee" >}})
+* [Funny]({{< ref "funny" >}})
 
 ***
 
