@@ -15,7 +15,7 @@ These are some of the projects I have worked, working on and / or created:
 
 Rook is an open source cloud-native storage orchestrator, providing the platform, framework, and support for a diverse set of storage solutions to natively integrate with cloud-native environments.
 
-I am a maintainer of the project.
+I am a maintainer of the Rook project.
 
 {{< center >}}
 **GitHub**: https://github.com/rook/rook · **Documentation**: https://rook.io
@@ -44,6 +44,19 @@ An easy to run a Vagrant based Kubernetes Multi Node cluster (supports VirtualBo
 I'm helping as a infrastructure administrator at the German Multi-Gaming Community Modern Gaming.
 
 The tasks I'm working on range from running web administration for the several websites and keeping the Gameservers running smoothly to introducing and maintaining automations to make the communities life easy.
+
+Technology Stack:
+
+* Kubernetes
+* Terraform
+* Ansible
+* Git
+* GitHub + GitHub Actions
+* PHP + PHP-FPM
+* MySQL
+* NGINX
+* Static Page Generators
+* Cloudflare
 
 {{< center >}}
 **Homepage**: https://modern-gaming.net
