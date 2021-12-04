@@ -7,15 +7,17 @@ Hello, I'm Alexander Trost aka galexrt.
 I am a DevOps Engineer at [Cloudical Deutschland GmbH](https://cloudical.io/) and a maintainer of the [Rook.io](https://rook.io/) project.
 In my free time I'm administrating and maintaining the infrastructure of the ["Modern Gaming" community](https://modern-gaming.net/).
 
+<img src="profile_picture.jpg" style="max-width: 600px;">
+
 ## Social
 
-* [GitHub](https://github.com/galexrt)
-* [Twitter](https://twitter.com/galexrt)
-* [Twitch.tv](https://twitch.tv/galexrt)
 * [Blog](https://edenmal.moe/)
 * [Email](mailto:galexrt@googlemail.com)
-* [Xing](https://www.xing.com/profile/Alexander_Trost18/cv)
+* [GitHub](https://github.com/galexrt)
 * [LinkedIn](https://www.linkedin.com/in/alexander-trost/)
+* [Twitch](https://twitch.tv/galexrt)
+* [Twitter](https://twitter.com/galexrt)
+* [Xing](https://www.xing.com/profile/Alexander_Trost18/cv)
 
 <br>
 
