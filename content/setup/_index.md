@@ -29,7 +29,7 @@ This is a list of the software and hardware I'm using for work, projects and gam
 
 * **CPU**: AMD Ryzen 7 1800X Eight-Core @ 16x 3.85GHz
 * **Memory**: 32GB DDR4 RAM
-* **GPU**: 2x AMD Raedon 560 Series OC 4G
+* **GPU**: 2x AMD Radeon 560 Series OC 4G
 * **Storage**:
     * 1x 512GB NVMe SSD
     * 2x 500GB SATA SSD - btrfs RAID1
