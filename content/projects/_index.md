@@ -9,6 +9,24 @@ toc: true
 
 These are some of the projects I have worked, working on and / or created:
 
+## Employments
+
+### Koor Technologies, Inc. - Founding Engineer
+
+I'm working as a Founding Engineer at Koor Technologies, Inc. An open source company which has been funded by Open Core Ventures.
+More to come soon!
+
+### Cloudical - DevOps Engineer
+
+I have worked at Cloudical Deutschland GmbH for over 3 years. In that time I have worked at several customer projects, ranging from the automotive industry to finance and startups.
+I helped Cloudical's customer succeed in their adventures into container technologies and the problems that can arise from these technologies.
+
+### 1&1 Mail & Media Development & Technology GmbH - Junior System Administrator
+
+I have mainly worked on development and administration of Kubernetes clusters for applications.
+Besides containers, we have maintained automation services, such as GitLab, GoCD, Puppet, Vault, etc.
+To keep the infrastructure we provide monitored we used Golang, to develop Prometheus exporters, e.g., https://github.com/galexrt/dellhw_exporter/.
+
 ## Open Source Projects
 
 ### Rook.io Project - Maintainer
