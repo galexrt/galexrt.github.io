@@ -13,4 +13,4 @@ toc: false
 
 </div>
 
-If you are ever in Karlsruhe / Durlach, get yourself a hot cup of coffee at the [Q-Kaffee](https://www.qkaffee.de/).
+If you are ever in Karlsruhe Durlach, get yourself an awesome cup of coffee at the [Q-Kaffee](https://www.qkaffee.de/).

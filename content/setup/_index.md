@@ -28,44 +28,43 @@ This is a list of the software and hardware I'm using for work, projects and gam
 ### Hardware
 
 * **CPU**: AMD Ryzen 7 1800X Eight-Core @ 16x 3.85GHz
-* **Memory**: 32GB DDR4 RAM
+* **Memory**: 32GB RAM
 * **GPU**: 2x AMD Radeon 560 Series OC 4G
 * **Storage**:
     * 1x 512GB NVMe SSD
-    * 2x 500GB SATA SSD - btrfs RAID1
-    * 4x 8TB HDD - btrfs RAID6
+    * 2x 500GB SATA SSD
+    * 4x 8TB HDD
 * **Network**: Dual port SFP+ 10GE card
 
 ### Software
 
-* **OS**: Manjaro 20.1 Mikah
-* **Shell**: zsh 5.8
-* **Window Manager**: i3-gaps (2px gaps)
-* **GTK Theme**: Adapta-Nokto-Eta-Maia [GTK2/3]
-* **Icon Theme**: Papirus-Adapta-Nokto-Maia
-* **Font**: Noto Sans 8
+* **OS**: Manjaro
+* **Shell**: zsh
+* **Window Manager**: swaywm
+* **GTK Theme**: Matcha-dark-azul
+* **Icon Theme**: Papirus-Dark
+* **Font**: Roboto 10
 * **Applications**:
-    * **i3 Status Bar**: i3pystatus (by enkore)
     * **Terminal**: Alacritty
     * **Editor**: Microsoft Visual Studio Code
 
 ## Gaming Machine
 
 ### Hardware
-* **CPU**: Intel I7-7700K
-* **Memory**: 16GB DDR4 RAM
+* **CPU**: Intel i7-7700K
+* **Memory**: 16GB RAM
 * **GPU**: NVIDIA GeForce RTX 2080 SUPER
 * **Storage**:
     * 1x 250GB SATA SSD
     * 1x 1TB NVMe SSD
     * 1x 3TB HDD
     * 1x 4TB HDD
-    * 1x Intel Optane Module (32GB)
+    * 1x Intel Optane Module
 * **Network**: Dual port SFP+ 10GE card
 
 ### Software
 
-* **OS**: Windows 10
+* **OS**: Windows
     * Gaming still is most "fun" under Windows.. especially when having more than 7k Games on Steam :-D
 
 ## Network
