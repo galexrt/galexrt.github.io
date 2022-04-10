@@ -1,7 +1,7 @@
 ---
-title: "coffee"
+title: "food"
 type: "gallery"
-url: "/coffee"
+url: "/food"
 maxWidth: "600x"
 clickablePhotos: true
 toc: false
