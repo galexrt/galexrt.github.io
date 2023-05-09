@@ -7,8 +7,8 @@ clickablePhotos: false
 toc: false
 ---
 
-<meta http-equiv="refresh" content="0; URL='https://discord.com/invite/e5pbwuaYCz'" />
+<meta http-equiv="refresh" content="0; URL='https://discord.gg/zFYb3KHg24'" />
 
 ***
 
-[Discord Server Invite - Galexrt-Streamerzone](https://discord.com/invite/e5pbwuaYCz)
+[Discord Server Invite - Galexrt-Streamerzone](https://discord.gg/zFYb3KHg24)
