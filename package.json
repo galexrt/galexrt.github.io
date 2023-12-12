@@ -13,8 +13,8 @@
   "dependencies": {},
   "description": "Galexrt's personal site.",
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "postcss-cli": "^7.1.2"
+    "autoprefixer": "^10.4.16",
+    "postcss-cli": "^10.1.0"
   },
   "homepage": "https://github.com/galexrt/galexrt.github.io#readme",
   "license": "Apache-2.0",
