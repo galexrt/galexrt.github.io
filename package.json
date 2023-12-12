@@ -7,13 +7,14 @@
     "dependencies": {},
     "devDependencies": {
       "autoprefixer": "project",
+      "postcss": "project",
       "postcss-cli": "project"
     }
   },
-  "dependencies": {},
   "description": "Galexrt's personal site.",
   "devDependencies": {
     "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
     "postcss-cli": "^11.0.0"
   },
   "homepage": "https://github.com/galexrt/galexrt.github.io#readme",
