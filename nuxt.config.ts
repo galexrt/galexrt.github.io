@@ -72,6 +72,6 @@ export default defineNuxtConfig({
         compatibilityVersion: 4,
     },
     nitro: {
-        preset: 'github-pages',
+        preset: 'cloudflare-pages',
     },
 });
