@@ -11,6 +11,10 @@ const links = [
                 label: 'Blog',
                 to: '/blog'
             },
+            {
+                label: 'About',
+                to: '/about'
+            },
         ],
     },
     {
