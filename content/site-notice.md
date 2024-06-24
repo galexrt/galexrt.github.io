@@ -1,7 +1,6 @@
 ---
 title: "Impressum"
-hide:
-  - navigation
+icon: "i-ph-notification"
 ---
 
 The Privacy Policy/ Datenschutz­erklärung can be found here: [Privacy Policy/ Datenschutz­erklärung page](/privacy-policy/).

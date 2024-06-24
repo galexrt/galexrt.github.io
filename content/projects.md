@@ -1,3 +1,7 @@
+---
+icon: "i-ph-projector-screen"
+---
+
 These are some of the companies and projects I have worked and/ or am still working on:
 
 ## Koor Technologies, Inc. - Founding Engineer

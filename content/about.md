@@ -1,5 +1,6 @@
 ---
 title: About
+icon: "i-ph-user"
 ---
 
 Hello, I'm Alexander aka galexrt.

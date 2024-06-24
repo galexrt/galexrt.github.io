@@ -1,3 +1,7 @@
+---
+icon: "i-ph-computer-tower"
+---
+
 This is a list of the software and hardware I'm using for work, projects and gaming.
 
 ![Desk Setup](/setup/desk-setup-0.jpg)
