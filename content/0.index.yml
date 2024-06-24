@@ -18,7 +18,7 @@ features:
       to: "/blog"
       icon: "i-ph-article-medium"
     - title: "Projects"
-      description: ""
+      description: "Projects that I have worked on."
       to: "/projects"
       icon: "i-ph-projector-screen"
     - title: "Setup"
