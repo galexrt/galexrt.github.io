@@ -51,20 +51,24 @@ if (post.value.image?.src) {
                     <div class="flex gap-1">
                         <UBadge v-if="post.badge" v-bind="post.badge" variant="subtle" />
                         <span v-if="post.badge" class="text-gray-500 dark:text-gray-400">&middot;</span>
-                        <time class="text-gray-500 dark:text-gray-400">{{
-                            new Date(post.date).toLocaleDateString('en', {
-                                year: 'numeric',
-                                month: 'short',
-                                day: 'numeric',
-                            })
-                            }}</time>
+                        <ULink :to="`/blog/${route.params.year ?? 2001}`">
+                            <time class="text-gray-500 dark:text-gray-400">
+                                {{
+                                    new Date(post.date).toLocaleDateString('en', {
+                                        year: 'numeric',
+                                        month: 'short',
+                                        day: 'numeric',
+                                    })
+                                }}
+                            </time>
+                        </ULink>
                     </div>
                 </div>
             </template>
 
             <div class="mt-4 flex flex-wrap items-center gap-3">
-                <UButton v-for="(author, index) in post.authors" :key="index" :to="author.to" color="white"
-                    target="_blank" size="sm">
+                <UButton v-for="(author, index) in post.authors" :key="index" :to="author.to" color="white" target="_blank"
+                    size="sm">
                     <UAvatar v-bind="author.avatar" :alt="author.name" size="2xs" />
 
                     {{ author.name }}

@@ -72,6 +72,9 @@ export default defineNuxtConfig({
         compatibilityVersion: 4,
     },
     nitro: {
-        preset: 'cloudflare-pages',
+        preset: 'cloudflare-pages-static',
+        prerender: {
+            autoSubfolderIndex: true,
+        },
     },
 });

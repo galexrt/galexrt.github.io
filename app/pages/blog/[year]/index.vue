@@ -22,26 +22,18 @@ useSeoMeta({
 
 <template>
     <UContainer>
-        <UPageHeader v-bind="page" :title="`${page.title} - ${route.params.year}`" class="py-[50px]" />
+        <UPageHeader v-bind="page" :title="`${page.title} - ${route.params.year}`"
+            :links="[{ label: 'Back', color: 'white', to: '/blog', icon: 'i-ph-arrow-left', target: '_self' }]" class="py-[50px]" />
 
         <UPageBody>
             <UBlogList>
-                <UBlogPost
-                    v-for="(post, index) in posts"
-                    :key="index"
-                    :to="post._path"
-                    :title="post.title"
-                    :description="post.description"
-                    :image="post.image"
+                <UBlogPost v-for="(post, index) in posts" :key="index" :to="post._path" :title="post.title"
+                    :description="post.description" :image="post.image"
                     :date="new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' })"
-                    :authors="post.authors"
-                    :badge="post.badge"
-                    :orientation="index === 0 ? 'horizontal' : 'vertical'"
-                    :class="[index === 0 && 'col-span-full']"
-                    :ui="{
+                    :authors="post.authors" :badge="post.badge" :orientation="index === 0 ? 'horizontal' : 'vertical'"
+                    :class="[index === 0 && 'col-span-full']" :ui="{
                         description: 'line-clamp-2',
-                    }"
-                />
+                    }" />
             </UBlogList>
         </UPageBody>
     </UContainer>
