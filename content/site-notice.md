@@ -1,12 +1,12 @@
 ---
 title: "Impressum"
-url: "/site-notice"
-toc: true
+hide:
+  - navigation
 ---
 
-The Privacy Policy / Datenschutz­erklärung can be found here: [Privacy Policy / Datenschutz­erklärung page](/privacy-policy/).
+The Privacy Policy/ Datenschutz­erklärung can be found here: [Privacy Policy/ Datenschutz­erklärung page](/privacy-policy/).
 
-**[German version of the Site Notice / Impressum below.](#impressum)**
+**[German version of the Site Notice/ Impressum below.](#impressum)**
 
 ***
 
@@ -24,7 +24,7 @@ Germany
 ### Contact
 
 <address>
-E-mail: galexrt@googlemail.com</p>
+E-mail: me@galexrt.moe</p>
 </address>
 
 ### Responsible for the content according to Sect. 55, paragraph 2 RStV
@@ -50,17 +50,16 @@ The linked websites had been checked for possible violations of law at the time 
 
 #### Copyright
 
-Contents and compilations published on these websites by the providers are subject to German copyright laws. Reproduction, editing, distribution as well as the use of any kind outside the scope of the copyright law require a written permission of the author or originator. Downloads and copies of these websites are permitted for private use only.
+Contents and compilations published on these websites by the providers are subject to [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
-The commercial use of our contents without permission of the originator is prohibited.
-
-Copyright laws of third parties are respected as long as the contents on these websites do not originate from the provider. Contributions of third parties on this site are indicated as such. However, if you notice any violations of copyright law, please inform us. Such contents will be removed immediately.
+This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+<center>![Creative Commons Attribution 4.0 International License](/images/cc-by-sa.svg)</center>
 
 ***
 
 ## Impressum
 
-English version below [Site Notice section](#site-notice).
+English version below [Site Notice section](#imprint).
 
 ### Angaben gemäß § 5 TMG
 
@@ -74,7 +73,7 @@ Germany
 ### Kontakt
 
 <address>
-E-Mail: galexrt@googlemail.com
+E-Mail: me@galexrt.moe
 </address>
 
 ### Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
@@ -98,6 +97,7 @@ Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir
 
 #### Urheberrecht
 
-Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen der [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
-Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+Diese Arbeiten sind lizenziert unter der [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+<center>![Creative Commons Attribution 4.0 International License](/images/cc-by-sa.svg)</center>

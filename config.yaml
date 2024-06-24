@@ -1,17 +1,5 @@
-baseurl: '/'
-languageCode: en-us
-defaultContentLanguage: en
-isMultilingual: false
 title: "galexrt aka Alexander"
-theme: sam
-pygmentsStyle: dracula
-pygmentsCodefences: true
 params:
-  dateform: 'Mon Jan 02, 2006'
-  dateformfull: 'Mon Jan 02 2006 15:04:05 EST'
-  favicon: favicon.png
-  homepage: home
-  footerText: '[Impressum](/site-notice/) | [Privacy Policy](/privacy-policy/) | Copyright (c) Alexander Trost 2022'
   description: "galexrt aka Alexander's homepage."
   images:
     # TODO Use higher resolution custom social share (opengraph) image
@@ -23,20 +11,3 @@ params:
         type: video/mp4
         poster: /background.jpg
     overlay: 'rgba(0, 0, 0, 0.75)'
-  mainMenu:
-    - link: about
-      text: about
-    - link: projects
-      text: projects
-    - link: setup
-      text: setup
-    - link: https://edenmal.moe/
-      text: blog
-    - link: https://docs.galexrt.moe/
-      text: docs
-imaging:
-  quality: 80
-markup:
-  goldmark:
-    renderer:
-      unsafe: true

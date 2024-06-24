@@ -1,33 +1,42 @@
 {
-  "author": "Alexander Trost <galexrt@googlemail.com>",
-  "bugs": {
-    "url": "https://github.com/galexrt/galexrt.github.io/issues"
-  },
-  "comments": {
-    "dependencies": {},
-    "devDependencies": {
-      "autoprefixer": "project",
-      "postcss": "project",
-      "postcss-cli": "project"
-    }
-  },
-  "description": "Galexrt's personal site.",
-  "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32",
-    "postcss-cli": "^11.0.0"
-  },
-  "homepage": "https://github.com/galexrt/galexrt.github.io#readme",
-  "license": "Apache-2.0",
-  "main": "none.js",
   "name": "galexrt.github.io",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/galexrt/galexrt.github.io.git"
-  },
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck"
   },
-  "version": "0.0.1"
+  "dependencies": {
+    "@iconify-json/heroicons": "1.1.21",
+    "@iconify-json/ph": "^1.1.13",
+    "@iconify-json/simple-icons": "1.1.107",
+    "@nuxt/content": "2.13.0",
+    "@nuxt/fonts": "0.7.0",
+    "@nuxt/image": "1.7.0",
+    "@nuxt/ui-pro": "1.3.1",
+    "@vueuse/nuxt": "10.11.0",
+    "nuxt": "3.12.2"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "0.3.13",
+    "@nuxthq/studio": "2.0.1",
+    "@nuxtjs/fontaine": "^0.4.3",
+    "eslint": "9.5.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-tailwindcss": "3.17.4",
+    "eslint-plugin-vue": "9.26.0",
+    "nuxt-site-config": "^2.2.12",
+    "nuxt-site-config-kit": "^2.2.12",
+    "prettier": "3.3.2",
+    "prettier-plugin-organize-imports": "3.2.4",
+    "prettier-plugin-tailwindcss": "0.6.5",
+    "sharp": "^0.33.4",
+    "vue-tsc": "2.0.22"
+  }
 }

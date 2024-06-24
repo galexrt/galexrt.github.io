@@ -4,15 +4,11 @@ title: "about"
 
 Hello, I'm Alexander aka galexrt.
 
-I'm the Founding Engineer of [Koor Technologies, Inc.](https://koor.tech/).
+I was the Founding Engineer of [Koor Technologies, Inc.](https://koor.tech/).
 I am specialized in containerization, Kubernetes and storage using Rook and Ceph.
 
 In my spare time, I am a system administrator and developer with a passion for gaming, self hosting and, most importantly open source.
 I'm also working on the German [Modern Gaming](https://modern-gaming.net/) Multi-Gaming community, with over 10k members, as an infrastructure administrator.
-
-<img src="profile_picture.jpg" style="max-width: 600px;">
-
-Checkout my blog at [edenmal.moe](https://edenmal.moe/).
 
 ## Socials
 
@@ -24,7 +20,7 @@ Please use these channels appropriately, thanks!
 * [Twitter](https://twitter.com/galexrt)
 * [Xing](https://www.xing.com/profile/Alexander_Trost18/cv)
 
-**NOTE**: I am not giving support through any of these channels.
+**Note**: I am not giving support through any of these channels.
 
 ## Articles
 
@@ -39,10 +35,6 @@ These are some articles which have been published on other blogs, or other mediu
 
 #### _Easter Eggs_
 
-* [Coffee]({{< ref "coffee" >}})
-* [Food]({{< ref "food" >}})
-* [Funny]({{< ref "funny" >}})
-
-***
-
-This site has been built using [Hugo](https://gohugo.io/) with a heavily customized version of the ["Call me Sam" Hugo theme by @victoriadrake](https://github.com/victoriadrake/hugo-theme-sam).
+* [Coffee](/coffee)
+* [Food](/food)
+* [Funny](/funny)

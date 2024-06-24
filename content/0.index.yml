@@ -1,0 +1,35 @@
+title: Galexrt
+description: galexrt aka Alexander's homepage.
+navigation: false
+hero:
+  title: Galexrt
+  description: Sysadmin Garden of Eden
+  links: []
+features:
+  title: "Links"
+  description: ""
+  items:
+    - title: "Docs"
+      description: "Tips, tricks, cheat sheets and docs treasure trove chest."
+      to: "/docs"
+      icon: "i-ph-files"
+    - title: "Blog"
+      description: "Posts of a blog, about technical, personal and random things."
+      to: "/blog"
+      icon: "i-ph-article-medium"
+    - title: "Projects"
+      description: ""
+      to: "/projects"
+      icon: "i-ph-projector-screen"
+    - title: "Setup"
+      description: "My Gaming and Work setup specs."
+      to: "/setup"
+      icon: "i-ph-computer-tower"
+    - title: "Coffee"
+      description: "Do you like coffee? Q-Kaffee in karlsruhe Durlach is the best."
+      to: "/coffee"
+      icon: "i-ph-coffee-bean"
+    - title: "Food"
+      description: "I wouldn't recommend looking at these photos when you are hungry."
+      to: "/food"
+      icon: "i-ph-fork-knife"
