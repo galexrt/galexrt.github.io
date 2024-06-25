@@ -35,7 +35,7 @@ useSeoMeta({
                 <ContentRenderer v-if="post && post.body" :value="post" />
             </UPageBody>
 
-            <template #right>
+            <template v-if="post.body && post.body.toc.links.length" #right>
                 <UContentToc v-if="post.body && post.body.toc" :links="post.body.toc.links" />
             </template>
         </UPage>
