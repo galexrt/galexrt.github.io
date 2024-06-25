@@ -7,7 +7,7 @@ const links = computed(() => navigation.value.find((item) => item._path === '/do
 </script>
 
 <template>
-    <UContainer>
+    <UContainer :ui="{ padding: '!px-4', constrained: 'max-w-8xl' }">
         <UPage>
             <template #left>
                 <UAside>

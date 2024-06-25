@@ -1,5 +1,6 @@
 ---
 title: "Quick Commands"
+icon: 'i-ph-fast-forward'
 ---
 
 ## Archives

@@ -1,5 +1,6 @@
 ---
 title: "Common Issues"
+icon: 'i-ph-seal-warning'
 ---
 
 ## No File Locking

@@ -1,5 +1,6 @@
 ---
 title: GitLab CI
+icon: 'i-simple-icons-gitlab'
 ---
 
 ## CI/CD Variables with Dollar Signs (`$`)

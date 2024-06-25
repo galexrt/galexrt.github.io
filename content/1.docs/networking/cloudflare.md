@@ -1,5 +1,6 @@
 ---
 title: "Cloudflare"
+icon: 'i-simple-icons-cloudflare'
 ---
 
 ## Create IPv4 and IPv6 IPSets

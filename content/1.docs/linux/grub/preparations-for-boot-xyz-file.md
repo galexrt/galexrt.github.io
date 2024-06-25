@@ -1,5 +1,5 @@
 ---
-title: "Preparations for 'Boot XYZ FIle'"
+title: "Preparations for 'Booting XYZ FIle'"
 ---
 
 ::callout{icon="i-heroicons-light-bulb"}

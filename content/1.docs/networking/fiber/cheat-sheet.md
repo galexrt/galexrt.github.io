@@ -1,7 +1,7 @@
 ---
 title: "Cheat Sheet"
+icon: 'i-ph-table'
 ---
-
 
 ## RJ45 (Copper) T-Base SFP/ SFP+
 

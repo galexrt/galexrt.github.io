@@ -1,6 +1,8 @@
 ---
 title: "Cheat Sheet"
+icon: 'i-ph-table'
 ---
+
 ## Quick Run Snippets
 
 ### Automatic OS and Firmware Update

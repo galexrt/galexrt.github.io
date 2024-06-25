@@ -25,8 +25,13 @@ const links = [
 <template>
     <UHeader :links="links">
         <template #logo>
-            Galexrt
-            <UBadge label="Sysadmin Garden of Eden" variant="subtle" class="mb-0.5" />
+            <div class="inline-flex items-center gap-2">
+                <img src="/favicon.png" class="size-9" />
+
+                Galexrt
+
+                <UBadge label="Sysadmin Garden of Eden" variant="subtle" class="hidden sm:block" />
+            </div>
         </template>
 
         <template #panel>

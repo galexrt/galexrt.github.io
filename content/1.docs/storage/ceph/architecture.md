@@ -1,9 +1,3 @@
----
-title: "Ceph"
----
-
-# Ceph
-
 Ceph offers block storage (RBD), network filesystem (CephFS), object storage (RGW, S3, SWIFT) and key value storage (librados).
 
 ## Glossary

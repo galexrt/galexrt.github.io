@@ -1,5 +1,6 @@
 ---
 title: "Cheat Sheet"
+icon: 'i-ph-table'
 ---
 
 ## Re-Create the `debian-sys-maint` User

@@ -1,5 +1,6 @@
 ---
 title: "Common Issues"
+icon: 'i-ph-seal-warning'
 ---
 
 ## PHP Applications hanging/ timing out (e.g., Nextcloud)

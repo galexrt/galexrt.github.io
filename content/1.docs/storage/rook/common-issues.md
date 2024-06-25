@@ -1,5 +1,6 @@
 ---
 title: "Common Issues"
+icon: 'i-ph-seal-warning'
 ---
 
 Be sure to checkout the [Rook Ceph Common Issues page](https://rook.io/docs/rook/v1.8/ceph-common-issues.html) and **that all prerequisites for the storage backend of your choice** are met!

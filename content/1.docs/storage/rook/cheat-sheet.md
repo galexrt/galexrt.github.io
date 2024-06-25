@@ -1,5 +1,6 @@
 ---
 title: Cheat Sheet
+icon: 'i-ph-table'
 ---
 
 ## Get PersistentVolume and PersistentVolumeClaim from `csi-vol-...` Name in Kubernetes

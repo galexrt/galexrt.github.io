@@ -1,8 +1,9 @@
 ---
-title: Visual Studio Code
+title: VS Codium
+icon: 'i-simple-icons-vscodium'
 ---
 
-If you are using Visual Studio Code here's some recommended extensions for it.
+If you are using [VS Codium](https://vscodium.com/) or [VS Code](https://code.visualstudio.com/) here's some recommendations for it.
 
 ## Recommended Extensions
 

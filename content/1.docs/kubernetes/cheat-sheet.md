@@ -1,5 +1,6 @@
 ---
 title: "Cheat Sheet"
+icon: 'i-ph-table'
 ---
 
 ## Update StatefulSet `volumeClaimTemplates` And Other Uneditable Sections

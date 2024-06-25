@@ -1,5 +1,6 @@
 ---
 title: "Harbor Registry"
+icon: 'i-simple-icons-harbor'
 ---
 
 ## Garbage Collection (GC) not working with non-AWS S3 storage?

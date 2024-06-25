@@ -1,5 +1,6 @@
 ---
 title: "Cheat Sheet"
+icon: 'i-ph-table'
 ---
 
 ## Check ETCD performance "status" quickly

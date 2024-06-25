@@ -1,5 +1,6 @@
 ---
 title: git
+icon: 'i-simple-icons-git'
 ---
 
 ## Removes Any Files and Directories Not Commited

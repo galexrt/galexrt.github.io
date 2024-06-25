@@ -1,5 +1,6 @@
 ---
 title: "Cheat Sheet"
+icon: 'i-ph-table'
 ---
 
 ## Allow unsupported Transceivers to be used

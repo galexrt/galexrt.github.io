@@ -1,5 +1,6 @@
 ---
 title: "Docker Registry"
+icon: 'i-simple-icons-docker'
 ---
 
 ## Garbage Collection doesn't work with non AWS S3 stores
