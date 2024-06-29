@@ -3,7 +3,13 @@ export default defineAppConfig({
         primary: 'blue-violet',
         gray: 'neutral',
         icons: {
-            dynamic: true,
+          dynamic: true,
+          dark: 'i-ph-moon-fill',
+          light: 'i-ph-sun-fill',
+          search: 'i-ph-magnifying-glass',
+          external: 'i-ph-link',
+          chevron: 'i-ph-caret-down',
+          hash: 'i-ph-hash',
         },
         button: {
             rounded: 'rounded-full',
