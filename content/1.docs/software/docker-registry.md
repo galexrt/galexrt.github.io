@@ -9,7 +9,7 @@ icon: 'i-simple-icons-docker'
 
 This is due to [GitHub docker/distribution - Issue `failed to garbage collect` #3200](https://github.com/docker/distribution/issues/3200).
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Note**:
 This workaround/ "fix" is based on [@thomasf (Thomas Frössman)](https://github.com/thomasf)'s [comment in the issue](https://github.com/docker/distribution/issues/3200#issuecomment-671062638).
 ::
@@ -18,7 +18,7 @@ There is an issue in the `s3aws.Walk()` function which fails for (most) non AWS 
 
 To make the garbage collection work, an empty file needs to be created in the bucket at the following path (default S3 bucket settings used in the docker-registry itself) `BUCKET_NAME/docker/registry/v2/repositories/`.
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Info**:
 Replace the placeholders (`MC_HOST_CONFIG_NAME`, `BUCKET_NAME`) according to your docker-registry S3 storage configuration.
 ::

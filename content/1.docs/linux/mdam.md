@@ -2,7 +2,7 @@
 title: "mdadm"
 ---
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Note**:
 Don't forget to keep your [`mdadm.conf`](https://linux.die.net/man/5/mdadm.conf) uptodate when creating, modifiying, deleting mdadm arrays.
 ::
@@ -15,7 +15,7 @@ mdadm --detail --scan >> /etc/mdadm.conf
 
 ## Grow RAID 5 to RAID 6
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Danger**:
 **DON'T FORGET TO SPECIFY THE `--backup-file=FILE` for `mdadm --grow` operations!**
 Otherwise if the host is (forced) shutdowned (e.g., power failure), data can/ will be lost.
@@ -25,7 +25,7 @@ Otherwise if the host is (forced) shutdowned (e.g., power failure), data can/ wi
 
 ## Speed-up RAID rebuild
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Note**:
 This may or may not improve your mdadm RAID rebuild performance, as it the speed depends on many factors such as disk speeds, etc.
 ::

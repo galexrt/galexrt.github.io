@@ -12,7 +12,7 @@ You must have the `event_scheduler` enabled, this can be done by running the fol
 SET GLOBAL event_scheduler = ON;
 ```
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Hint**: It is highly recommended to use the config file(s) of your MySQL/ MariaDB server to enable the `event_scheduler` feature.
 Another (hacky) way is to use the [MySQL server `init_file` option](cheat-sheet.md#run-a-sql-script-on-init--startup) which runs a SQL script on server startup.
 ::
@@ -36,7 +36,7 @@ WHERE
 
 ## Show existing Events
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Hint**: `exampledb` is the database name.
 ::
 

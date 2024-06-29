@@ -13,7 +13,7 @@ sysctl --system
 
 ***
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Info**:
 The below list might be outdated, please check the GitHub Gist linked above for the latest version.
 ::

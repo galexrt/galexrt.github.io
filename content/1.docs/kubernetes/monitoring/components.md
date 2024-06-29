@@ -59,7 +59,7 @@ This allows you to "kill" the application Prometheus in case you have screwed up
 
 ### kube-controller-manager
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Info**:
 If the cloud controller is used, it should also be monitored/ scraped for metrics.
 ::
@@ -248,7 +248,7 @@ verbs:
 
 ### Prometheus Kubernetes ETCD Scrape Job Config
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Info**:
 This selects the master Nodes based on the `node-role.kubernetes.io/control-plane` (old label `node-role.kubernetes.io/master`) label.
 So be sure to have it set on the control plane nodes (e.g., kubeadm automatically sets it on control plane nodes).

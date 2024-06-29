@@ -25,7 +25,7 @@ ETCDCTL_API=3 etcdctl \
 
 ## Get Metrics from ETCD using `curl`
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Note**:
     The `/etc/etcd/etcd.conf` was actively used in OpenShift 3.x installations and some older Kubernetes deployment "methods".
 ::

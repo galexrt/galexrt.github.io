@@ -2,7 +2,7 @@
 title: "Regex"
 ---
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Info**:
 In general make sure to forward the audit logs to your log store of choice.
 

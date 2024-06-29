@@ -66,7 +66,7 @@ echo "$CLUSTER-$ROLE-$COUNT_OR_ID.example.systems"
 echo "$CLUSTER-$ROLE-$COUNT_OR_ID-htz-deu-fsn1dc1.example.systems"
 ```
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Note**:
 The `sleep 0.00001` is used to try to prevent "duplicates" when `bashids` is run in parallel to generate IDs.
 ::

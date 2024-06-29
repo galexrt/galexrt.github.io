@@ -2,7 +2,7 @@
 title: "Preparations for 'Booting XYZ FIle'"
 ---
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Danger**:
 Only run the following commands if you know what they are doing!
 

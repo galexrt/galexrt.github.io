@@ -15,7 +15,7 @@ The dellhw_exporter uses Dell Open Manage Server Administrator `omreport` to get
 
 For more info, visit the GitHub repository: https://github.com/galexrt/dellhw_exporter.
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Info**:
 The exporter is written by the project contributors, initially created by [Alexander Trost](https://github.com/galexrt).
 ::

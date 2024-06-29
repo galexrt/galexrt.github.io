@@ -19,7 +19,7 @@ SET GLOBAL query_response_time_stats = 1;
 SET GLOBAL query_response_time_flush = 1;
 ```
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Note**:
 There are other ways to install the plugin, but to "initially" flush the plugin's data the `SET GLOBAL query_response_time_` can be useful to be run.
 ::

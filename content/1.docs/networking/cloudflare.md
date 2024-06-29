@@ -22,7 +22,7 @@ done
 
 ### Allow `80/tcp` (http) and `443/tcp` (https) Access to Cloudflare IPs only
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Note**:
 These iptables rules are for a "stateful" firewall!
 ::

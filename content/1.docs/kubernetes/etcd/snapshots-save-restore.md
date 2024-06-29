@@ -2,7 +2,7 @@
 title: "Snapshots: Save & Restore"
 ---
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Warning**:
 This page is only for ETCD version `3.x` and higher!
 ::
@@ -21,7 +21,7 @@ ETCDCTL_API=3 etcdctl \
 
 ## Restore a snapshot
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Warning**:
 Before restoring a snapshot, all ETCDs in the cluster must be stopped!
 ::

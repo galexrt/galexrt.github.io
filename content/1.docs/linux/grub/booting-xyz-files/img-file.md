@@ -2,7 +2,7 @@
 title: ".img File"
 ---
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Info**:
 You must have a working GRUB installation already, if not checkout the [Preparations for Boot ](../preparations-for-boot-xyz-file.md).
 ::

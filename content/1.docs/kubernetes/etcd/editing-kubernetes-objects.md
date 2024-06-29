@@ -2,7 +2,7 @@
 title: "Editing Kubernetes Objects"
 ---
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Danger**:
 You should be 100% sure what you are doing and should have at least a snapshot of the etcd you want to edit as things can and will possibly go wrong!
 
@@ -28,7 +28,7 @@ make vendor
 # Stay in this directory
 ```
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Warning**:
 Be sure to stop all API servers, before continuing with the next steps.
 Be sure to stop all Controller Manager servers, before continuing with the next steps.
@@ -38,7 +38,7 @@ Depending on the cluster setup, you may just need move out the according `manife
 
 ### Step 2 - Locate object path
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Info**:
     The `etcdctl` probably needs to be run inside the etcd container on one of the Kubernetes masters.
 ::
@@ -52,7 +52,7 @@ I recommend you to keep the session on the server for `etcdctl` open and after f
 
 ### Step 3 - Get object from ETCD
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Info**:
 The `etcdctl` probably needs to be run inside the etcd container on one of the Kubernetes masters.
 ::
@@ -96,7 +96,7 @@ Copy the `etcd-data-new.bin` to the host, e.g.:
 scp etcd-data-new.bin $SSH_USER@$SSH_HOST:
 ```
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Info**:
 The `etcdctl` probably needs to be run inside the etcd container on one of the Kubernetes masters.
 ::

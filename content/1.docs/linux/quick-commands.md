@@ -70,7 +70,7 @@ for file in */*.png; do
 done
 ```
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Hint**:
 The `-l deu+eng` are the languages to use.  In this case `deu+eng` means `deu` "Deutsch" (German) and `eng` "English".
 ::
@@ -99,7 +99,7 @@ Where `/dev/sdXY` could be, `/dev/sda2`, `/dev/nvme0n1p1`, and so on.
 
 ### Optimize JPEG Images
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Warning**:
 The `-m LEVEL` flag reduces the JPEG image quality to that level, in the example below to `95`.
 ::

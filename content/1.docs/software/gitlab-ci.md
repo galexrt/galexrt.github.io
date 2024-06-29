@@ -5,7 +5,7 @@ icon: 'i-simple-icons-gitlab'
 
 ## CI/CD Variables with Dollar Signs (`$`)
 
-::callout{icon="i-heroicons-bug-ant"}
+::callout{icon="i-ph-bug"}
 **Bug**:
 Dollar Signs (`$`) are resolved as a variable in GitLab CI.
 ::

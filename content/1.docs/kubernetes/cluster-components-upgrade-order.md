@@ -19,7 +19,7 @@ Other components of a Kubernetes cluster can mostly be updated in any order, as 
 * CNI (e.g., Calico, Cillium)
 * Operators
 
-::callout{icon="i-heroicons-exclamation-triangle" color="amber"}
+::callout{icon="i-ph-warning" color="amber"}
 **Warning**:
 Be aware of any changes to the operator configs and CustomResourceDefinitions causing unwanted "results".
 

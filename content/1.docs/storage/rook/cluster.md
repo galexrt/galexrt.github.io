@@ -10,7 +10,7 @@ Where the "basic" components are the rook-ceph-agent and `rook-discover` DaemonS
 
 ![rook-operator-cluster-architecture-overview.png](/docs/storage/rook/architecture/rook-operator-cluster-architecture-overview.png)
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Info**:
 * Rook Ceph Discovery DaemonSet is **only started after at least one CephCluster has been created!**
 * The Rook Ceph Agent was used in earlier Rook Ceph versions for the "Flex driver" before the swaitch to use, e.g., Ceph's CSI driver.

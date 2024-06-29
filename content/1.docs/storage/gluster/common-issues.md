@@ -5,7 +5,7 @@ icon: 'i-ph-seal-warning'
 
 ## No File Locking
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 The described case here is a define "no-go" to run on a GlusterFS, but it is worth to mention as some other applications (possibly git and others) might have issues in the long run as well.
 ::
 

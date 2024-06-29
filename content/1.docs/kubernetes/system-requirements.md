@@ -2,7 +2,7 @@
 title: "System Requirements"
 ---
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Tip**: Recommendations for Requirements
 These are **recommendations** for requirements of Kubernetes Masters and Nodes.
 ::
@@ -13,7 +13,7 @@ Network:
 
 * **Bandwidth**: at the very least 1G, recommended for smaller, lower traffic environents is 10G, 25G or more.
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Info**:
 To reduce costs you can get away with just having **a single interface**, instead of, e.g., 2 interfaces being bonded together (it also reduces complexity).
 ::
@@ -22,7 +22,7 @@ To reduce costs you can get away with just having **a single interface**, instea
 
 ### Storage
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Warning**:
 "SSDs or even NVMe based storage is more expensive but your ETCD will love and need it!"
 **DO NOT USE** HDDs nor any kind of networked storage for ETCD!

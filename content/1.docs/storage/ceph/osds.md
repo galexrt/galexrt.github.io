@@ -6,7 +6,7 @@ title: "OSDs"
 
 ### Gracefully remove OSD
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Tip**:
     If you are using Rook Ceph Operator to run a Ceph Cluster in Kubernetes, please follow the official documentation here: [Rook Docs - Ceph OSD Management](https://rook.io/docs/rook/v1.4/ceph-osd-mgmt.html#remove-an-osd).
 ::

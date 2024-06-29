@@ -24,7 +24,7 @@ You want to benchmark the storage of your Ceph cluster(s)? This is a short list 
 
 Make sure you have a (active) Linux kernel of version `4.17` or higher.
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Tip**:
 In general it is recommended to have a very up-to-date version of the Linux kernel, as many improvements have been made to the Ceph kernel drivers in newer kernel versions (`5.x` or higher).
 ::
@@ -66,7 +66,7 @@ Ceph health status reports, e.g., `1 MDSs report oversized cache`.
 
 You can try to increase the `mds cache memory limit` setting[^1].
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Tip**:
 For Rook Ceph users, you set/increase the memory requests on the CephFilesystem object for the MDS daemons[^2].
 ::

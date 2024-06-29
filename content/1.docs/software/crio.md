@@ -4,7 +4,7 @@ title: "CRI-O"
 
 ## Default CNI configs causes Cluster Network Issues
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Info**:
 If you use CRI-O with Kubernetes, you should always remove these default CNI config files!
 ::
@@ -17,7 +17,7 @@ Currently it should be those two files that need to be removed:
 * `/etc/cni/net.d/100-crio-bridge.conf`
 * `/etc/cni/net.d/200-loopback.conf`
 
-::callout{icon="i-heroicons-light-bulb"}
+::callout{icon="i-ph-lightbulb-filament"}
 **Tip**:
 If CRI-O was already running/started at the time of removing these CNI config files, you need to restart the `crio` service on the server(s).
 

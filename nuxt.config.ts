@@ -23,7 +23,7 @@ export default defineNuxtConfig({
         },
     },
     ui: {
-        icons: ['heroicons', 'ph', 'simple-icons'],
+        icons: ['ph', 'simple-icons'],
         safelistColors: ['blue-violet'],
     },
     mdc: {
