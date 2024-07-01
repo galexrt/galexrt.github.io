@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@iconify-json/ph": "1.1.13",
-    "@iconify-json/simple-icons": "1.1.107",
+    "@iconify-json/simple-icons": "1.1.108",
     "@nuxt/content": "2.13.0",
     "@nuxt/fonts": "0.7.1",
     "@nuxt/image": "1.7.0",
@@ -36,7 +36,7 @@
     "prettier-plugin-organize-imports": "3.2.4",
     "prettier-plugin-tailwindcss": "0.6.5",
     "sharp": "0.33.4",
-    "vue-tsc": "2.0.22",
+    "vue-tsc": "2.0.24",
     "wrangler": "3.62.0"
   }
 }
