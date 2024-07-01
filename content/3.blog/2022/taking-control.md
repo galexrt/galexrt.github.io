@@ -1,13 +1,13 @@
 ---
 title: "Taking Control"
+description: "Talking about time, control, Hedgehog's dilemma and other personal points."
+image: "/blog/2022/taking-control/doomsday_clock_(1.67_minutes).png"
+date: 2022-03-25T13:12:30+01:00
 authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
       src: /images/profile-picture.jpg
-description: ""
-tags: []
-date: 2022-03-25T13:12:30+01:00
 ---
 
 Just as a YouTuber would say now "Well.. it has been some time since my last video" and showing a screenshot of their last video's upload time with the typical "it has been x weeks" or longer.
@@ -19,6 +19,8 @@ Well.. it has been quite some time since my last blog post, hasn't it? Two years
 Covid is still "raging" in most countries and let's just say "politics" are at an all time high of being a "landmine" of a topic choice. Not to mention the [Doomsday Clock](https://en.wikipedia.org/wiki/Doomsday_Clock) being moved to 100 seconds before midnight in January 2020.
 
 > ![Doomsday clock, in 2022, at 1.67 minutes (100 seconds) to midnight - Uploaded to Wikimedia by Ryanicus Girraficus](/blog/2022/taking-control/doomsday_clock_(1.67_minutes).png)
+>
+> _Doomsday clock, in 2022, at 1.67 minutes (100 seconds) to midnight - Uploaded to Wikimedia by Ryanicus Girraficus_
 >
 > "Well.. would you look at the time? It has gotten _late_, hasn't it?" _\*gestures vaguely at the doomsday clock\*_
 
