@@ -1,5 +1,6 @@
 ---
 title: "Snapshots: Save & Restore"
+icon: 'i-ph-camera'
 ---
 
 ::callout{icon="i-ph-lightbulb-filament"}

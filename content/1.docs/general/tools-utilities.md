@@ -1,5 +1,6 @@
 ---
 title: Projects, Tools and Utilites
+icon: 'i-ph-wrench'
 ---
 
 ## Automation

@@ -25,7 +25,7 @@ useSeoMeta({
 
 <template>
     <div>
-        <NuxtLoadingIndicator />
+        <NuxtLoadingIndicator color="linear-gradient(90deg, rgba(55,53,158,1) 0%, rgba(77,74,199,1) 35%, rgba(201,214,252,1) 100%)" />
 
         <NuxtLayout>
             <NuxtPage />

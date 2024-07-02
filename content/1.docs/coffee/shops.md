@@ -1,5 +1,6 @@
 ---
 title: Shops
+icon: 'i-ph-shopping-bag'
 ---
 
 ## Best coffee beans

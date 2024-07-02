@@ -1,5 +1,6 @@
 ---
 title: "Slow Log"
+icon: 'i-ph-speedometer'
 ---
 
 ## Enable Slow Query Log to File

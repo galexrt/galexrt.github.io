@@ -1,5 +1,6 @@
 ---
 title: "Tips"
+icon: 'i-ph-tip-jar'
 ---
 
 ## Multiple Exporter on one Server but only one port?

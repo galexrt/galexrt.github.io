@@ -1,5 +1,6 @@
 ---
 title: "Editing Kubernetes Objects"
+icon: 'i-ph-pencil'
 ---
 
 ::callout{icon="i-ph-lightbulb-filament"}

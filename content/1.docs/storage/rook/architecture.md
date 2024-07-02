@@ -1,6 +1,7 @@
 ---
 title: "Architecture"
 date: 2019-02-01
+icon: 'i-ph-compass-tool'
 ---
 
 _The source for the diagrams, can be found as `.graphml` at the same path as the images._

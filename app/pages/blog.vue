@@ -9,7 +9,7 @@ const sortedLinks = computed(() => mapContentNavigation(links.value).reverse());
 </script>
 
 <template>
-    <UContainer>
+    <UContainer :ui="{ padding: '!px-4', constrained: 'max-w-8xl' }">
         <UPage>
             <template #left>
                 <UAside>
