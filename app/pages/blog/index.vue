@@ -19,8 +19,8 @@ useSeoMeta({
 </script>
 
 <template>
-    <UContainer>
-        <UPageHeader v-bind="page" class="py-[50px]" />
+    <UPage>
+        <UPageHeader v-bind="page" />
 
         <UPageBody>
             <UBlogList>
@@ -42,5 +42,5 @@ useSeoMeta({
                 />
             </UBlogList>
         </UPageBody>
-    </UContainer>
+    </UPage>
 </template>

@@ -21,7 +21,7 @@ useSeoMeta({
 </script>
 
 <template>
-    <UContainer>
+    <UPage>
         <UPageHeader v-bind="page" :title="`${page.title} - ${route.params.year}`"
             :links="[{ label: 'Back', color: 'white', to: '/blog', icon: 'i-ph-arrow-left', target: '_self' }]" class="py-[50px]" />
 
@@ -36,5 +36,5 @@ useSeoMeta({
                     }" />
             </UBlogList>
         </UPageBody>
-    </UContainer>
+    </UPage>
 </template>

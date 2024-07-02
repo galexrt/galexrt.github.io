@@ -41,7 +41,7 @@ if (post.value.image?.src) {
 </script>
 
 <template>
-    <UContainer v-if="post">
+    <UPage v-if="post">
         <UPageHeader :title="post.title" :description="post.description">
             <template #headline>
                 <div class="flex flex-col gap-2">
@@ -67,8 +67,8 @@ if (post.value.image?.src) {
             </template>
 
             <div class="mt-4 flex flex-wrap items-center gap-3">
-                <UButton v-for="(author, index) in post.authors" :key="index" :to="author.to" color="white" target="_blank"
-                    size="sm">
+                <UButton v-for="(author, index) in post.authors" :key="index" :to="author.to" color="white"
+                    target="_blank" size="sm">
                     <UAvatar v-bind="author.avatar" :alt="author.name" size="2xs" />
 
                     {{ author.name }}
@@ -76,18 +76,16 @@ if (post.value.image?.src) {
             </div>
         </UPageHeader>
 
-        <UPage>
-            <UPageBody prose>
-                <ContentRenderer v-if="post && post.body" :value="post" />
+        <UPageBody prose>
+            <ContentRenderer v-if="post && post.body" :value="post" />
 
-                <hr v-if="surround?.length" />
+            <hr v-if="surround?.length" />
 
-                <UContentSurround :surround="surround" />
-            </UPageBody>
+            <UContentSurround :surround="surround" />
+        </UPageBody>
 
-            <template #right>
-                <UContentToc v-if="post.body && post.body.toc" :links="post.body.toc.links" />
-            </template>
-        </UPage>
-    </UContainer>
+        <template #right>
+            <UContentToc v-if="post.body && post.body.toc" :links="post.body.toc.links" />
+        </template>
+    </UPage>
 </template>
