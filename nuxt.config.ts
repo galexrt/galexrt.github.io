@@ -2,7 +2,10 @@ const customElements = ['Center'];
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    telemetry: false,
     extends: [process.env.NUXT_UI_PRO_PATH || '@nuxt/ui-pro'],
+    compatibilityDate: '2024-07-05',
+
     modules: [
         '@nuxt/content',
         '@nuxt/eslint',
@@ -14,6 +17,7 @@ export default defineNuxtConfig({
         '@nuxtjs/fontaine',
         'nuxt-site-config',
     ],
+
     hooks: {
         // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
         'components:extend': (components) => {
@@ -22,10 +26,12 @@ export default defineNuxtConfig({
             globals.forEach((c) => (c.global = true));
         },
     },
+
     ui: {
         icons: ['ph', 'simple-icons'],
         safelistColors: ['blue-violet'],
     },
+
     mdc: {
         highlight: {
             langs: [
@@ -48,29 +54,36 @@ export default defineNuxtConfig({
             ],
         },
     },
+
     vue: {
         compilerOptions: {
             isCustomElement: (tag) => customElements.includes(tag),
         },
     },
+
     colorMode: {
         disableTransition: true,
     },
+
     routeRules: {
         '/api/search.json': { prerender: true },
         '/post/**': { redirect: '/blog/**' },
         '/discord': { redirect: 'https://discord.gg/zFYb3KHg24' },
         '/youtube': { redirect: 'https://youtube.com/@galexrt' },
     },
+
     devtools: {
         enabled: true,
     },
+
     typescript: {
         strict: false,
     },
+
     future: {
         compatibilityVersion: 4,
     },
+
     nitro: {
         preset: 'cloudflare-pages-static',
     },
