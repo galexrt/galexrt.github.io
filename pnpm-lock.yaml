@@ -9,8 +9,8 @@ dependencies:
     specifier: 1.1.13
     version: 1.1.13
   '@iconify-json/simple-icons':
-    specifier: 1.1.108
-    version: 1.1.108
+    specifier: 1.1.109
+    version: 1.1.109
   '@nuxt/content':
     specifier: 2.13.1
     version: 2.13.1(nuxt@3.12.2)(vue@3.4.31)
@@ -77,8 +77,8 @@ devDependencies:
     specifier: 2.0.26
     version: 2.0.26(typescript@5.5.3)
   wrangler:
-    specifier: 3.63.1
-    version: 3.63.1
+    specifier: 3.63.2
+    version: 3.63.2
 
 packages:
 
@@ -1351,8 +1351,8 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
-  /@iconify-json/simple-icons@1.1.108:
-    resolution: {integrity: sha512-GeC0Oy3j385BgjI0TadEzVbzM/cYjvAot22hJLNal3wKLmf/8t6RtH2PgRiNaK+SxELeDYdSAHocXxw4QoKXYA==}
+  /@iconify-json/simple-icons@1.1.109:
+    resolution: {integrity: sha512-vIhIJQDdbS5R6kSyIHVBRCaR2jiFjVlbVtB4PAoLjQL45vJRHMTwkrFa536XcX7yW69HbQkoanydcyDjknI6pw==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
@@ -7752,7 +7752,7 @@ packages:
       stoppable: 1.1.0
       undici: 5.28.4
       workerd: 1.20240701.0
-      ws: 8.17.1
+      ws: 8.18.0
       youch: 3.3.3
       zod: 3.23.8
     transitivePeerDependencies:
@@ -11203,8 +11203,8 @@ packages:
       '@cloudflare/workerd-windows-64': 1.20240701.0
     dev: true
 
-  /wrangler@3.63.1:
-    resolution: {integrity: sha512-fxMPNEyDc9pZNtQOuYqRikzv6lL5eP4S1zv7L/kw24uu1cCEmJ39j8bfJGzrAEqKDNsiFXVjEka0RjlpgEVWPg==}
+  /wrangler@3.63.2:
+    resolution: {integrity: sha512-c7F46JtBGTIQehTOgfGbxfDMYgO9AjC70CXVSohxHiF9ajHz56HEV2k3aowhJJiP3MBB8sJMm8rdG10f5zUs+w==}
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
