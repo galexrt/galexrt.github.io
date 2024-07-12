@@ -1,7 +1,7 @@
 export default defineAppConfig({
     ui: {
         primary: 'blue-violet',
-        gray: 'neutral',
+        gray: 'slate',
         icons: {
             dynamic: true,
             dark: 'i-ph-moon-fill',
