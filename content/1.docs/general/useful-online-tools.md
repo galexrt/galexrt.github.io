@@ -1,14 +1,14 @@
 ---
-title: "Online Tools"
-icon: 'i-ph-wrench'
+title: Online Tools
+icon: i-ph-wrench
 ---
 
 ## Diagrams
 
-* https://app.diagrams.net/ - Previously named `draw.io`.
-* https://isoflow.io/ - "Create beautiful cloud diagrams in minutes"
+- <https://app.diagrams.net/> - Previously named `draw.io`.
+- <https://isoflow.io/> - "Create beautiful cloud diagrams in minutes"
 
 ## Image Resizing
 
-* http://waifu2x.udp.jp - Free variant (less zoom).
-* https://mng.waifu2x.me - Paid (not much, billed per minute).
+- <http://waifu2x.udp.jp> - Free variant (less zoom).
+- <https://mng.waifu2x.me> - Paid (not much, billed per minute).
