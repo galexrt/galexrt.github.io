@@ -33,3 +33,11 @@ features:
       description: "I wouldn't recommend looking at these photos when you are hungry."
       to: "/food"
       icon: "i-ph-fork-knife"
+cta:
+  title: Need my help? Want to work with me?
+  description: I have experience with a range of technologies for Kubernetes, and I can help you with your projects through my company ZerBytes.
+  links:
+    - label: Checkout ZerBytes
+      size: xl
+      color: black
+      to: https://zerbytes.net/
