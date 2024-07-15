@@ -1,5 +1,6 @@
 ---
 title: MongoDB
+icon: i-simple-icons-mongodb
 ---
 
 If you can use another database, do it. Why?

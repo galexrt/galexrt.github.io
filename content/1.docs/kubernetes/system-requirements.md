@@ -1,5 +1,5 @@
 ---
-title: "System Requirements"
+title: System Requirements
 ---
 
 ::callout{icon="i-ph-lightbulb-filament"}
@@ -11,7 +11,7 @@ These are **recommendations** for requirements of Kubernetes Masters and Nodes.
 
 Network:
 
-* **Bandwidth**: at the very least 1G, recommended for smaller, lower traffic environents is 10G, 25G or more.
+- **Bandwidth**: at the very least 1G, recommended for smaller, lower traffic environents is 10G, 25G or more.
 
 ::callout{icon="i-ph-lightbulb-filament"}
 **Info**:

@@ -1,11 +1,12 @@
 ---
-title: "Benchmarking"
+title: Benchmarking
+icon: i-mdi-bench
 ---
 
 ## Network
 
-* https://github.com/kubernetes/perf-tests/tree/master/network/benchmarks/netperf
+- <https://github.com/kubernetes/perf-tests/tree/master/network/benchmarks/netperf>
 
 ## DNS
 
-* https://github.com/DNS-OARC/flamethrower
+- <https://github.com/DNS-OARC/flamethrower>

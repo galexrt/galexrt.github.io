@@ -1,5 +1,6 @@
 ---
-title: "event_scheduler"
+title: event_scheduler
+icon: i-ph-calendar-dot
 ---
 
 Ever wanted to run queries in a cronjob? Where to safely put the database credentials? MySQL/ MariaDB can help out with that.
@@ -14,7 +15,7 @@ SET GLOBAL event_scheduler = ON;
 
 ::callout{icon="i-ph-lightbulb-filament"}
 **Hint**: It is highly recommended to use the config file(s) of your MySQL/ MariaDB server to enable the `event_scheduler` feature.
-Another (hacky) way is to use the [MySQL server `init_file` option](cheat-sheet.md#run-a-sql-script-on-init--startup) which runs a SQL script on server startup.
+Another (hacky) way is to use the [MySQL server `init_file` option](cheat-sheet#run-a-sql-script-on-init--startup) which runs a SQL script on server startup.
 ::
 
 ## Create an Event to run a SQL Query
@@ -46,5 +47,5 @@ SHOW EVENTS FROM `exampledb`;
 
 ## References
 
-* [MySQL 5.7 Reference - `event_scheduler`](https://dev.mysql.com/doc/refman/5.7/en/event-scheduler.html)
-* [MySQL 5.7 Reference - `CREATE EVENT` Statement](https://dev.mysql.com/doc/refman/5.7/en/create-event.html).
+- [MySQL 5.7 Reference - `event_scheduler`](https://dev.mysql.com/doc/refman/5.7/en/event-scheduler.html)
+- [MySQL 5.7 Reference - `CREATE EVENT` Statement](https://dev.mysql.com/doc/refman/5.7/en/create-event.html).

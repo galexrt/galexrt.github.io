@@ -1,5 +1,5 @@
 ---
-title: "Monitoring"
+title: Monitoring
 ---
 
 **Use Prometheus for in-cluster monitoring!**

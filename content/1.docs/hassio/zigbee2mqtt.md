@@ -1,6 +1,6 @@
 ---
 title: Zigbee2MQTT
-icon: 'i-simple-icons-zigbee2mqtt'
+icon: i-simple-icons-zigbee2mqtt
 ---
 
 ## Recommended Adapter
@@ -9,8 +9,8 @@ I can recommend the "SONOFF Zigbee 3.0 USB Dongle Plus" adatapr (ASIN: `B09KXTCM
 
 You can buy it from several vendors, e.g., [Amazon](https://www.amazon.com/dp/B09KXTCMSC).
 
-::callout{icon="i-ph-warning" color="amber"}
-**Warning**: Make sure that you get the SONOFF dongle with **`CC2652P + CP2102N`** chips and not `EFR32MG21 + CH9102F`.
+::callout{color="amber" icon="i-ph-warning"}
+**Warning**: Make sure that you get the SONOFF dongle with `` chips and not `EFR32MG21 + CH9102F`.
 
 The `CC2652P + CP2102N` has [firmwares available](https://github.com/Koenkk/Z-Stack-firmware/) from [Koenkk](https://github.com/Koenkk) that work very well.
 ::
