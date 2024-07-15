@@ -51,7 +51,7 @@ QEMU_NET_OPTS="hostfwd=tcp::2222-:22" ./result/bin/run-nixos-vm
 Then you can use `ssh` to connect via the `guest` user:
 
 ```js
-s
+ssh guest@localhost -p 22
 ```
 
 ## Files
