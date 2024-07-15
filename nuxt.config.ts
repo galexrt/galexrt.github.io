@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     },
 
     ui: {
-        icons: ['ph', 'simple-icons'],
+        icons: ['ph', 'simple-icons', 'mdi'],
         safelistColors: ['blue-violet'],
     },
 
