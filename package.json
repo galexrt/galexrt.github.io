@@ -12,9 +12,9 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
+    "@iconify-json/mdi": "^1.1.67",
     "@iconify-json/ph": "1.1.13",
     "@iconify-json/simple-icons": "1.1.109",
-    "@iconify/icons-mdi": "^1.2.48",
     "@nuxt/content": "2.13.1",
     "@nuxt/fonts": "0.7.1",
     "@nuxt/image": "1.7.0",

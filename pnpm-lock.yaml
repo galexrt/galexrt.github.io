@@ -5,15 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@iconify-json/mdi':
+    specifier: ^1.1.67
+    version: 1.1.67
   '@iconify-json/ph':
     specifier: 1.1.13
     version: 1.1.13
   '@iconify-json/simple-icons':
     specifier: 1.1.109
     version: 1.1.109
-  '@iconify/icons-mdi':
-    specifier: ^1.2.48
-    version: 1.2.48
   '@nuxt/content':
     specifier: 2.13.1
     version: 2.13.1(nuxt@3.12.2)(vue@3.4.31)
@@ -1347,6 +1347,12 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
+  /@iconify-json/mdi@1.1.67:
+    resolution: {integrity: sha512-00nllHES8hyACwIfgySlQgAE6MKgpr2wsKfpifMiZWZ9aXC5l4Jb0lR3lJSWwXgOW6kzAOdzC3T+2VOfBBZ13A==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
   /@iconify-json/ph@1.1.13:
     resolution: {integrity: sha512-xtM4JJ63HCKj09WRqrBswXiHrpliBlqboWSZH8odcmqYXbvIFceU9/Til4V+MQr6+MoUC+KB72cxhky2+A6r/g==}
     dependencies:
@@ -1373,12 +1379,6 @@ packages:
 
   /@iconify/collections@1.0.436:
     resolution: {integrity: sha512-M1PinD36UOFlwbhAJtnVNxqb9mpvow4SNHieSY4vCn4eVq/oWgk1nmPoUjxU0lAMlbNcy0xT2smDr90xt3ZnWw==}
-    dependencies:
-      '@iconify/types': 2.0.0
-    dev: false
-
-  /@iconify/icons-mdi@1.2.48:
-    resolution: {integrity: sha512-1Tiq+iX1d2MzrdDiw45Tc9HuhNgg8H4vvaKNV+kF+jmr/kPG+YyeLMyXUKp4bwv+gheIAgNpZPjuqAPRkmMieA==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
