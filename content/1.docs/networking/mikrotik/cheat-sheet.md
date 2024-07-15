@@ -1,6 +1,6 @@
 ---
-title: "Cheat Sheet"
-icon: 'i-ph-table'
+title: Cheat Sheet
+icon: i-ph-table
 ---
 
 ## Quick Run Snippets
@@ -11,7 +11,7 @@ icon: 'i-ph-table'
 /system routerboard settings set auto-upgrade=yes
 /system package update
 check-for-updates once
-:delay 3s;
+:delay 4s;
 :if ( [get status] = "New version is available") do={ install }
 :delay 1s:
 /system routerboard upgrade
