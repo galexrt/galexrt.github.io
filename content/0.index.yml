@@ -34,7 +34,7 @@ features:
       to: "/food"
       icon: "i-ph-fork-knife"
 cta:
-  title: Need my help? Want to work with me?
+  title: Want to work with me or need my expertise?
   description: I have experience with a range of technologies for Kubernetes, and I can help you with your projects through my company ZerBytes.
   links:
     - label: Checkout ZerBytes
