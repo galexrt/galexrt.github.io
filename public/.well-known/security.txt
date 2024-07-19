@@ -1,0 +1,3 @@
+Contact: mailto:me@galexrt.moe
+Expires: 2025-01-01T11:00:00.000Z
+Preferred-Languages: en, de
