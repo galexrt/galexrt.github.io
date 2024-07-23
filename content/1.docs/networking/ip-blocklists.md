@@ -9,6 +9,8 @@ icon: i-mdi-ip
 - <http://www.blocklist.de/en/index.html>
 - <https://www.iblocklist.com/lists>
 - <https://iplists.firehol.org/>
+- <https://github.com/yokoffing/filterlists>
+- <https://github.com/DandelionSprout/adfilt>
 
 ## Checker APIs
 
