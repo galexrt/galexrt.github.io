@@ -1,5 +1,6 @@
 ---
 title: Raspberry Pi
+icon: i-simple-icons-raspberrypi
 ---
 
 ::callout
@@ -28,6 +29,7 @@ dtparam=pciex1_gen=3
 
 Necessary if you use a PoE hat and want to boot of USB devices. You must make sure to have a power supply/PoE hat that delivers enough power `5V 5A`.
 
-```
+```text
 usb_max_current_enable=1
+
 ```
