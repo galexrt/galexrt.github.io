@@ -33,6 +33,10 @@ export default defineNuxtConfig({
         safelistColors: ['blue-violet'],
     },
 
+    fonts: {
+        families: [{ name: 'DM Sans', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], global: true }],
+    },
+
     mdc: {
         highlight: {
             langs: [
