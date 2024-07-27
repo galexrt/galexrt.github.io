@@ -14,7 +14,7 @@
   "dependencies": {
     "@iconify-json/mdi": "^1.1.67",
     "@iconify-json/ph": "1.1.13",
-    "@iconify-json/simple-icons": "1.1.109",
+    "@iconify-json/simple-icons": "1.1.110",
     "@nuxt/content": "2.13.2",
     "@nuxt/fonts": "0.7.1",
     "@nuxt/image": "1.7.0",
@@ -26,7 +26,7 @@
     "@nuxt/eslint": "0.3.13",
     "@nuxthq/studio": "2.0.3",
     "@nuxtjs/fontaine": "0.4.3",
-    "eslint": "9.7.0",
+    "eslint": "9.8.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-tailwindcss": "3.17.4",
@@ -38,7 +38,7 @@
     "prettier-plugin-tailwindcss": "0.6.5",
     "sharp": "0.33.4",
     "vue-tsc": "2.0.29",
-    "wrangler": "3.66.0"
+    "wrangler": "3.67.1"
   },
   "packageManager": "pnpm@8.15.9"
 }
