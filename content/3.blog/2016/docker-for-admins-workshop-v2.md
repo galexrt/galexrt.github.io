@@ -1,19 +1,19 @@
 ---
-title: 'Docker for Admins - Workshop v2'
+title: Docker for Admins - Workshop v2
 tags:
   - Workshop
   - Docker
   - Kubernetes
-  - 'Docker for Admins'
-description: 'Improved version of the first "Docker for Admins"-Workshop. So to say the version 2.'
+  - Docker for Admins
+description: Improved version of the first "Docker for Admins"-Workshop. So to say the version 2.
 authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
       src: /images/profile-picture.jpg
-date: "2016-04-01T15:48:12+02:00"
+date: '2016-04-01T15:48:12+02:00'
 image:
-  src: '/blog/covers/docker-logo-vertical.png'
+  src: /blog/covers/docker-logo-vertical.png
 ---
 
 # Goal of the Workshop
@@ -24,9 +24,9 @@ The last part is about the container orchestration tool Kubernetes by Google. As
 
 # Heads up - "Blogger" Words
 
-* **Grey Boxes with green line on the left**: Mostly contain an useful tip, expected command output or something funny.
-* **TASK**: Is a refer to a task in the workshop repository.
-* **WDWD**: Stands for "What does what do" aka "Me explaining what the things listed below do" (short forms FTW!). I only explain new things in these sections.
+- **Grey Boxes with green line on the left**: Mostly contain an useful tip, expected command output or something funny.
+- **TASK**: Is a refer to a task in the workshop repository.
+- **WDWD**: Stands for "What does what do" aka "Me explaining what the things listed below do" (short forms FTW!). I only explain new things in these sections.
 
 # Group Partition Schema
 
@@ -39,7 +39,7 @@ If there are people that aren't as "advanced", they can play around with [Docker
 A prepared VirtualBox Image will be given around on an USB stick, during the preparation of the workshop.
 The VM Username is `workshop` and so is the password.
 
-## ["What's in the f*cking box?!"](https://www.youtube.com/watch?v=HOkLPjaVK_w)
+## ["What's in the f\*cking box?!"](https://www.youtube.com/watch?v=HOkLPjaVK_w)
 
 Fedora 23 with Docker and Cockpit enabled.
 Cockpit is enabled, so I can simply help and also monitor the VMs, if a problem occurs.
@@ -47,21 +47,20 @@ Firewalld removed, Iptables cleared and persistence disabled.
 
 ### Why is the VM running Fedora?
 
-That's simple, instead of, e.g., Debian, Ubuntu or CentOS? Fedora is more up to date. Not like Debian :P
-Yes, up to date doesn't makes it more stable, but I never had a problem yet and having the latest version of packages is often just awesome, because of improvements or new features.
+That's simple, instead of, e.g., Debian, Ubuntu or CentOS? Fedora is more up to date. Not like Debian
 
-***
+---
 
 # README
 
 **RTFM before asking, thanks!**
 
-If you don't know any further, add **`--help`** to the command, to get a help page that should guide you to your goal or use **`man INSERT_COMMAND_HERE`** to show the man(ual) page for the given command. If you can't solve your problem feel free to ask me.
+If you don't know any further, add `` to the command, to get a help page that should guide you to your goal or use `` to show the man(ual) page for the given command. If you can't solve your problem feel free to ask me.
 
 > There are no dumb questions, but please don't ask them. Okay?
-> -- _Alexander Trost_
+> \-- _Alexander Trost_
 
-***
+---
 
 # Intro: Container and Microservices
 
@@ -87,10 +86,10 @@ An advantage of namespaces is, that you can limit the cpu, memory, network, etc.
 
 This diagram should make it clear, how namespaces can create "unlimited" separated and isolated container environments.
 
-<center>
 ![Linux cgroups namespaces hierachy - by Shmuel Csaba Otto Traian](/blog/2016/docker-for-admins-workshop-v2/linux-cgroups-namespaces-systemd-hierachy.png)
-<i>This photo ([original](https://commons.wikimedia.org/wiki/File:Linux_kernel_unified_hierarchy_cgroups_and_systemd.svg)) is made by Shmuel Csaba Otto Traian, licensed under the [CC Attribution-Share Alike 3.0 Unported](https://creativecommons.org/licenses/by-sa/3.0/deed.en) license.</i>
-</center>
+
+
+_This photo (\[original](https\://commons.wikimedia.org/wiki/File\:Linux\_kernel\_unified\_hierarchy\_cgroups\_and\_systemd.svg)) is made by Shmuel Csaba Otto Traian, licensed under the \[CC Attribution-Share Alike 3.0 Unported](https\://creativecommons.org/licenses/by-sa/3.0/deed.en) license._
 
 Docker and most other containers utilities not only use namespaces to separate containers from each other. There are several other techniques, that further improve security.
 
@@ -100,7 +99,7 @@ Why is it a good idea to use separate namespaces for networked applications? Bec
 
 > **TL;DR** A container is NOT a VM. A container is a "separate" Linux system, that runs in an isolated namespaced environment of the running kernel on the running kernel.
 
-***
+---
 
 # Prepare for the Docker Madness
 
@@ -108,9 +107,9 @@ Why is it a good idea to use separate namespaces for networked applications? Bec
 
 ## Side Notes
 
-* You can install Docker directly on your system or in a VirtualBox. If you use a VirtualBox, please consider using Fedora 23 or anyother linux distro with at least kernel 4.x.
-* If you are a Windows or Mac OSX user, ask yourself "What have I done wrong, to use such shitty plattform?", switch to linux m8, thanks! You can use [Boot2Docker](http://boot2docker.io/) (I don't help or give any support if you use it though!).
-* The download and login details to the VM are located [here](#special-details).
+- You can install Docker directly on your system or in a VirtualBox. If you use a VirtualBox, please consider using Fedora 23 or anyother linux distro with at least kernel 4.x.
+- If you are a Windows or Mac OSX user, ask yourself "What have I done wrong, to use such shitty plattform?", switch to linux m8, thanks! You can use [Boot2Docker](http://boot2docker.io/) (I don't help or give any support if you use it though!).
+- The download and login details to the VM are located [here](#special-details).
 
 ## System "Requirements"
 
@@ -118,8 +117,8 @@ _Insert "The System Requirements are too damn high" Meme here_
 
 **Nope, they're not!**
 
-* A working Linux distro
-* Linux Kernel 4.x or higher ("included" in the Virtualbox)
+- A working Linux distro
+- Linux Kernel 4.x or higher ("included" in the Virtualbox)
 
 You can run Docker under any kernel 3.16+, but I recommend you to use the latest kernel for the implemented improvements in some of the file system and network systems Docker uses.
 
@@ -128,6 +127,7 @@ You can run Docker under any kernel 3.16+, but I recommend you to use the latest
 > **If you use the workshop VM, you can skip this section.**
 
 To install the Docker Engine run the command:
+
 ```console
 curl -sSL https://get.docker.com/ | sh
 ```
@@ -138,51 +138,56 @@ When talking about Docker, we almost always talk about the Docker Engine. Becaus
 
 After you have installed it without any errors popping up, you have to start the Docker Engine.
 When your distribution is using systemd:
+
 ```console
 systemctl enable docker.service
 systemctl start docker.service
 ```
+
 On distribution without systemd:
+
 ```console
 /etc/init.d/docker start
 ```
+
 This starts Docker and when using systemd enables the autostart for Docker Engine.
 
 ## docker-compose Installation
 
 > **If you use the workshop VM, you can skip this section.**
 
-<center>
 ![docker-compose Logo](/blog/2016/docker-for-admins-workshop-v2/docker-compose-logo.png)
-_`docker-compose` Logo by Docker_
-</center>
+\_\`docker-compose\` Logo by Docker\_
+
 
 With curl we download the `docker-compose` binary, then we move `docker-compose` to your `/usr/local/bin` that is in your `PATH` and set the execute permission.
+
 ```console
 wget -O /usr/local/bin/docker-compose "https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m`"
 sudo chmod +x /usr/local/bin/docker-compose
 ```
+
 For more detailed `docker-compose` installation docs, see [here](https://docs.docker.com/compose/install/).
 
 After you have followed the commands above, you can test if you have installed `docker-compose` successfully by running `docker-compose --version`.
 
 The recording below shows the expected output for the `docker-compose` installation and the installation test.
+
 > **Expected Output**
-> <script type="text/javascript" src="https://asciinema.org/a/eujxdopxxvh02bo4mayhfaml0.js" id="asciicast-eujxdopxxvh02bo4mayhfaml0" async data-speed="1.5"></script>
 
 ## Clone the workshop repo
 
 > **If you use the workshop VM, you can skip these steps.**
 
 Clone the Workshop repo from GitHub `https://github.com/galexrt/workshop-docker.git`. It'll provide all files and tasks used in the Workshop.
+
 ```console
 git clone https://github.com/galexrt/workshop-docker.git
 ```
 
 > **Expected Output**
-> <script type="text/javascript" src="https://asciinema.org/a/0dxalykr3w4z2gpde4e4utkgl.js" id="asciicast-0dxalykr3w4z2gpde4e4utkgl" async data-speed="1.5"></script>
 
-***
+---
 
 # Running your first Docker containers
 
@@ -192,63 +197,68 @@ This will guide you through the commands needed to start your WordPress instance
 
 When you have Docker installed correctly, you now have to add your user to the `docker` group (on most distributions the group is called `docker`).
 To add your user to the `docker` group, you can run the following command:
+
 ```console
 gpasswd -a $USER docker
 ```
+
 Please relog or restart your machine after you have added yourself to the group.
 
 Now to test your Docker installation, we start like when learning a new programming language, with the simplest example. A "Hello World" container.
 To run the "Hello World" container, you simply run the following command:
+
 ```console
 docker run hello-world
 ```
 
 > **Example Output**
-> <script type="text/javascript" src="https://asciinema.org/a/b9v692n10olac46xnmvcqztfy.js" id="asciicast-b9v692n10olac46xnmvcqztfy" async data-speed="1.5"></script>
 
 When everything went correct, I can now welcome you to the big World of the containers!
 
 ## Basic commands you need to know
 
-* `docker ps ` - Displays all currently running containers. To display all containers, add the `-a` option or use the filter option `-f []` (can be specified multiple times).
-* `docker stop CONTAINER` - Sends a `SIGTERM` signal to the containers main process. Where `CONTAINER` is a container ID or name.
-* `docker rm CONTAINER` - Deletes a stopped/exited container. Where `CONTAINER` is a container ID or name.
+- `docker ps`  - Displays all currently running containers. To display all containers, add the `-a` option or use the filter option `-f []` (can be specified multiple times).
+- `docker stop CONTAINER` - Sends a `SIGTERM` signal to the containers main process. Where `CONTAINER` is a container ID or name.
+- `docker rm CONTAINER` - Deletes a stopped/exited container. Where `CONTAINER` is a container ID or name.
 
 One of the most important commands we need is `docker run`. So we now take a look at it and run:
+
 ```console
 docker run --help
 ```
 
-> **Expected Output**
-> ![docker run --help Output](/blog/2016/docker-for-admins-workshop-v2/docker-run-help.png)
+> **Expected Output**![docker run --help Output](/blog/2016/docker-for-admins-workshop-v2/docker-run-help.png)
 
 As we can see `docker run` has a lot of options, to choose from.
 In this workshop we are only covering some of basic options, you should know to begin with.
 
-> ![Docker run syntax](/blog/2016/docker-for-admins-workshop-v2/docker-run-syntax.png)
-> **WDWD**
+> ![Docker run syntax](/blog/2016/docker-for-admins-workshop-v2/docker-run-syntax.png)**WDWD**
 >
-> * `[OPTIONS]` - Run flags/options.
-> * `IMAGE` - The name of a Docker image.
-> * `[COMMAND] [ARG ...]` - Depending on the images, used as arguments or as the command by the entrypoint.
+> - `[OPTIONS]` - Run flags/options.
+> - `IMAGE` - The name of a Docker image.
+> - `[COMMAND] [ARG ...]` - Depending on the images, used as arguments or as the command by the entrypoint.
 
 I'm going in depth about image names, command args and entrypoint later on ([here](#Understanding-Dockerfiles)).
 
 ## Starting the MySQL database server
+
 I'm going to use the MySQL Docker image from [sameersbn](https://github.com/sameersbn) in the workshop. Because this image is more convenient to setup, than the official available MySQL and MariaDB Docker image.
 So we specify the `IMAGE` argument in our command now.
+
 ```console
 docker run \
     sameersbn/mysql:latest
 ```
 
 ### Let's give it a name (BTW Can we keep it?)
-_How about Dogmeat? :D_
+
+_How about Dogmeat? \:D_
 
 Our MySQL database server container should have a name, so we don't need to use the randomized name or unique ID.
 Every container gets an unique ID and randomized name. We can override the name with the `--name NAME` option.
 Let's name it "database".
 Our command now looks like this:
+
 ```console
 docker run \
     --name mysql \
@@ -258,24 +268,29 @@ docker run \
 Giving a container a "simple" name, is important to simplify later processes, like connecting from the WordPress instance to the MySQL database server.
 
 ### Does the container keep on running or do I need something like screen or what?!
+
 The  `--detach` and `--interactive` options.
 If you now run the command to start the container, upon start you see some log output coming, but should notice that when closing the terminal, the database container immediately gets stopped/exits (To see if the container exited, use `docker ps -a`).
 When you run a container, by default your current `stdin` and `stdout` will be attached to the container, making it interactive (If you want an interactive container, you should still add `--interactive` option). To disable the attachment of `stdin` and `stdout` add the `--detach` (or short `-d`) option to the command. Using the `--detach` (or `-d`) option, runs the container detached.
+
 ```console
 docker run \
     -d \
     --name mysql \
     sameersbn/mysql:latest
 ```
+
 Running a container detached is most common for containers with server or headless application, like Nginx, MySQL, etc.
 
 Don't forget to delete the exited/stopped MySQL database container with the remove command, `docker rm database` (where database is the name or ID of the container) else if starting you'll get an error saying that a container already exists with the same name.
 In case you already forgot, here's how to delete the container
+
 ```console
 docker rm NAME
 ```
 
 ### How would one configure the MySQL database server instance?
+
 One big questions will be for you, "How can I configure the MySQL database server?" in the container.
 You can..
 **A)** use config files
@@ -287,11 +302,12 @@ Most containers that are configured through environment variables, have a script
 
 In the case of `sameersbn/mysql:latest` the following environment variables are used for basic configuration:
 
-* `DB_USER` - Database User to create. User will be given access to the database(s) from `DB_NAME`.
-* `DB_PASS` - Password for the given database user.
-* `DB_NAME` - Database to create and gain access to the username given in `DB_USER`.
+- `DB_USER` - Database User to create. User will be given access to the database(s) from `DB_NAME`.
+- `DB_PASS` - Password for the given database user.
+- `DB_NAME` - Database to create and gain access to the username given in `DB_USER`.
 
 To specify an environment variable, the `--env` (or `-e`) option is used.
+
 ```console
 docker run \
 [...]
@@ -300,15 +316,18 @@ docker run \
     -e 'DB_NAME=wordpress' \
 [...]
 ```
+
 _\*sarcasm on\* 100% secure passwords used here \*sarcasm off\*_
 
 > Use secure passwords when running in production!
 > `openssl rand -base64 20`, can be used to generate a "secure" password.
 
 ### How do I save the database outside the container?
+
 You want to save your data outside of the container, for a simple reason: If you stop and delete the container, your data is gone. For this Docker has volumes.
 A Volume is like a mount from the host system inside the container.
 The volume option is `--volume` (or `-v`). The syntax of a volume option is for example:
+
 ```console
 docker run \
 [...]
@@ -318,20 +337,22 @@ docker run \
 
 > **WDWD**
 >
-> * `HOST_PATH` - Path to mount from the host system inside the container.
-> * `CONTAINER_PATH` - "Mount" destination path in the container.
-> * `:MODE` - Is optional. Can be `rw` (read-write) or `ro` (read-only). Defaults to `rw`.
+> - `HOST_PATH` - Path to mount from the host system inside the container.
+> - `CONTAINER_PATH` - "Mount" destination path in the container.
+> - `:MODE` - Is optional. Can be `rw` (read-write) or `ro` (read-only). Defaults to `rw`.
 >
 > **NOTE**
 >
-> * If the host path doesn't exist it'll get created.
-> * The host path can be a file too.
-> * Docker doesn't distinguish between file or folder. If the path doesn't exist, a directory always get's created.
+> - If the host path doesn't exist it'll get created.
+> - The host path can be a file too.
+> - Docker doesn't distinguish between file or folder. If the path doesn't exist, a directory always get's created.
 
 ### Running the MySQL database server container
+
 Now we have all components, we need for running the MySQL container.
 
 When we have put everything we learned now together, we should get something that looks like this:
+
 ```console
 docker run \
     -d \
@@ -345,19 +366,21 @@ docker run \
 
 > **WDWD**
 >
-> * `-d` - To run the container detached.
-> * `--name wordpress` - Gives the container the name "wordpress".
-> * `-e ...=...` - Specifies environment variables, that are used for configuration.
-> * `-v /opt/docker/wordpress/mysql:/var/lib/mysql` - Mount `/opt/docker/wordpress/mysql` directory at `/var/lib/mysql` into the container.
-> * `sameersbn/mysql:latest` - Specifies what image to use.
+> - `-d` - To run the container detached.
+> - `--name wordpress` - Gives the container the name "wordpress".
+> - `-e ...=...` - Specifies environment variables, that are used for configuration.
+> - `-v /opt/docker/wordpress/mysql:/var/lib/mysql` - Mount `/opt/docker/wordpress/mysql` directory at `/var/lib/mysql` into the container.
+> - `sameersbn/mysql:latest` - Specifies what image to use.
 
 If you run the run command with the `--detach` (or `-d`), it'll just return the unique (long) ID of the container.
 With `docker logs CONTAINER` (where `CONTAINER` is a container ID or name), you'll get the logs of the first process in the container.
 
 ## Starting the WordPress instance
+
 So you now already know some "basics", about starting containers. I'm not going in depth with every little thing anymore.
 
 ### How can the WordPress container and the MySQL container communicate with each other?
+
 In Docker by default all containers can talk to each other, if they know the IP address, that is called short `ICC` or `Inter Container Communication` (`docker daemon [...] --icc=[true/false]`).
 To allow the WordPress container to contact the MySQL container, we would need to get the IP address of the MySQL container. You can use the `docker inspect CONTAINER_OR_IMAGE` (where `CONTAINER_OR_IMAGE` is the unique ID or name of a container), the command returns JSON formatted output with "all" informations about the given container(s) or image(s).
 
@@ -365,6 +388,7 @@ But to do this everytime the MySQL container get's restarted, is too much work. 
 As you might guess, with links, you can "link"/connect containers together. Keep in mind that with the above mentioned Docker daemon option `--icc=true` all containers can talk to each other, when knowing the IP address of another container.
 
 The link option syntax is like this:
+
 ```console
 docker run \
 [OPTIONS]
@@ -374,8 +398,8 @@ docker run \
 
 > **WDWD**
 >
-> * `CONTAINER_NAME` - The container to link.
-> * `LINK_NAME` - The name of the "/etc/hosts" entry (aka "fake" DNS record).
+> - `CONTAINER_NAME` - The container to link.
+> - `LINK_NAME` - The name of the "/etc/hosts" entry (aka "fake" DNS record).
 
 If you link the MySQL container to the WordPress container, the WordPress container will get a special entry in it's `/etc/hosts` about the MySQL container and "inherit" all of the MySQL containers environment variables prefixed with the link name.
 For example the link option is `--link=mysql:database`.
@@ -383,6 +407,7 @@ For example the link option is `--link=mysql:database`.
 So if we take a look at the `/etc/hosts` and environment variables inside the WordPress container, with the container link to the MySQL container, it should get much clearer how the "linking works".
 To show you the created `/etc/hosts` entry and the environment variables created inside the container.
 I'm running the following command, to just demonstrate it:
+
 ```console
 docker run \
     -d \
@@ -397,10 +422,10 @@ docker rm wordpress
 
 > **WDWD**
 >
-> * `--entrypoint=/bin/bash` - This overwrites the command executed, when the container is started.
+> - `--entrypoint=/bin/bash` - This overwrites the command executed, when the container is started.
 >
 > **Expected Output**
-> <script type="text/javascript" src="https://asciinema.org/a/7ih8kji7y96c5bcev61d7zx1u.js" id="asciicast-7ih8kji7y96c5bcev61d7zx1u" async data-speed="1.5"></script>
+>
 > (The output here may looks a bit different, due to small changes to the commands executed in the demo)
 
 The environment variables are created inside the new container only, not in the link source! The container that is used as the link destination is left untouched.
@@ -408,17 +433,20 @@ beginning with `DATABASE_`, allow to get the environment variables and published
 
 > **NOTE**
 >
-> * There can be multiple links with the same name.
-> * You can't attach two same named links to the destination container (the container you are creating).
+> - There can be multiple links with the same name.
+> - You can't attach two same named links to the destination container (the container you are creating).
 
 ### How can I reach the WordPress instance from the outside?
+
 To make a port available to the "public", that's why it's called publishing ports, you use the `--publish` (or `-p`) option in this format:
+
 ```console
 docker run \
 [OPTIONS]
     -p HOST_ADDRESS:HOST_PORT:CONTAINER_PORT/PROTOCOL
 [IMAGE] [ARGUMENTS]
 ```
+
 ```console
 docker run \
 [OPTIONS] \
@@ -428,25 +456,26 @@ docker run \
 
 > **WDWD**
 >
-> * `HOST_ADDRESS:` - Optional. By default `0.0.0.0`. Address to expose the port on the host system.
-> * `HOST_PORT` - Host port to expose the container port on.
-> * `CONTAINER_PORT` - Container port to expose.
-> * `/PROTOCOL` - Optional. By default `tcp`. The port protocol, currently can be `tcp` or `udp`.
+> - `HOST_ADDRESS:` - Optional. By default `0.0.0.0`. Address to expose the port on the host system.
+> - `HOST_PORT` - Host port to expose the container port on.
+> - `CONTAINER_PORT` - Container port to expose.
+> - `/PROTOCOL` - Optional. By default `tcp`. The port protocol, currently can be `tcp` or `udp`.
 
 And that's how you forward/publish ports from the container to the outside.
 
 ### Running the WordPress instance container
+
 To configure our WordPress container instance, the Docker image comes with extra environment variables.
 The WordPress image name is `wordpress` ([Docker Hub Page](https://hub.docker.com/_/wordpress/))
 
 The possible environment variables for the configuration are the following ones:
 
-* `-e WORDPRESS_DB_HOST=...` Defaults to the DNS name or IP address and port of the linked MySQL container, link name `mysql`.
-* `-e WORDPRESS_DB_USER=...` Defaults to "root".
-* `-e WORDPRESS_DB_PASSWORD=...` Defaults to the value of the `MYSQL_ROOT_PASSWORD` environment variable from the linked MySQL container, link name `mysql`.
-* `-e WORDPRESS_DB_NAME=...` - Defaults to "wordpress".
-* `-e WORDPRESS_TABLE_PREFIX=...` - Defaults to "". Only set this when you need to override the default table prefix in `wp-config.php`.
-* `-e WORDPRESS_AUTH_KEY=...`, `-e WORDPRESS_SECURE_AUTH_KEY=...`, `-e WORDPRESS_LOGGED_IN_KEY=...`, `-e WORDPRESS_NONCE_KEY=...`, `-e WORDPRESS_AUTH_SALT=...`, `-e WORDPRESS_SECURE_AUTH_SALT=...`, `-e WORDPRESS_LOGGED_IN_SALT` - Set these to a secure random value; in production use different random values per variable.
+- `-e WORDPRESS_DB_HOST=...` Defaults to the DNS name or IP address and port of the linked MySQL container, link name `mysql`.
+- `-e WORDPRESS_DB_USER=...` Defaults to "root".
+- `-e WORDPRESS_DB_PASSWORD=...` Defaults to the value of the `MYSQL_ROOT_PASSWORD` environment variable from the linked MySQL container, link name `mysql`.
+- `-e WORDPRESS_DB_NAME=...` - Defaults to "wordpress".
+- `-e WORDPRESS_TABLE_PREFIX=...` - Defaults to "". Only set this when you need to override the default table prefix in `wp-config.php`.
+- `-e WORDPRESS_AUTH_KEY=...`, `-e WORDPRESS_SECURE_AUTH_KEY=...`, `-e WORDPRESS_LOGGED_IN_KEY=...`, `-e WORDPRESS_NONCE_KEY=...`, `-e WORDPRESS_AUTH_SALT=...`, `-e WORDPRESS_SECURE_AUTH_SALT=...`, `-e WORDPRESS_LOGGED_IN_SALT` - Set these to a secure random value; in production use different random values per variable.
 
 In the case of the `WORDPRESS_DB_HOST`, the value would be the name of the link name in the `docker run` command below. In the case of the below command, the `WORDPRESS_DB_HOST` would be `database`.
 The command to run the WordPress container is like this:
@@ -472,13 +501,13 @@ docker run \
 
 > **WDWD**
 >
-> * `-d` - To run the container detached.
-> * `--name wordpress` - Gives the container the name "wordpress".
-> * `-e ...=...` - Specifies environment variables, that are used for configuration.
-> * `--link mysql:database` - Creates a "link" named `mysql`, from the `database` container.
-> * `wordpress` - Specifies what image to use.
+> - `-d` - To run the container detached.
+> - `--name wordpress` - Gives the container the name "wordpress".
+> - `-e ...=...` - Specifies environment variables, that are used for configuration.
+> - `--link mysql:database` - Creates a "link" named `mysql`, from the `database` container.
+> - `wordpress` - Specifies what image to use.
 
-Now execute the command and you should be able to see the WordPress installation screen at http://127.0.0.1:80/.
+Now execute the command and you should be able to see the WordPress installation screen at <http://127.0.0.1:80/>.
 
 > **NOTE**
 >
@@ -488,27 +517,30 @@ For cleanup you now stop and delete the container.
 To stop the WordPress instance, run `docker stop CONTAINER` (where `CONTAINER` in this case is `wordpress`). After stopping the container, you can remove it with `docker rm CONTAINER`.
 The container has to be stopped, before it can be removed.
 
-***
+---
 
 > **Now that we looked into some of most important beginner topics of Docker, we are going to take a look deeper into these topics.**
 
-***
+---
 
 # How do you execute a command/shell inside the container?
+
 To execute a command inside the container, after it has been started, for example in the MySQL container for maintenance access.
 
 With our example, MySQL container let's display a list of the existing databases.
 The command to display the databases from shell is:
+
 ```console
 mysql -u root -p -e "SHOW DATABASES;"
 ```
 
 For this case, the command `docker exec` is used.
 The syntax of `docker exec` is a bit equal to the of `docker run`. Running `docker exec --help` as always to show you the help/syntax menu.
-> **Expected Output**
-> ![docker exec --help Output](/blog/2016/docker-for-admins-workshop-v2/docker-exec-help.png)
+
+> **Expected Output**![docker exec --help Output](/blog/2016/docker-for-admins-workshop-v2/docker-exec-help.png)
 
 To run a command interactively for example opening an interactive MySQL shell session, the command would be:
+
 ```console
 docker exec \
     -it \
@@ -518,18 +550,18 @@ docker exec \
 
 > **WDWD**
 >
-> * `-i` - Attach the stdin aka interactive.
-> * `-t` - Optional. Allocates a pseudo-TTY (pseudo TeleTYpewriter) to the shell/command run.
-> * `CONTAINER` - Container ID or name of the container the command should be executed in.
-> * `mysql -u root -p` - The command and arguments to execute.
+> - `-i` - Attach the stdin aka interactive.
+> - `-t` - Optional. Allocates a pseudo-TTY (pseudo TeleTYpewriter) to the shell/command run.
+> - `CONTAINER` - Container ID or name of the container the command should be executed in.
+> - `mysql -u root -p` - The command and arguments to execute.
 
 You would use the `--detach` (or `-d`) option to run a non-interactive command in the background with no logs or return (Good for cron jobs _;)_).
 
 > **NOTE**
 >
-> * To be able to run a command in the container, the command/binary/file/whatever has to exist in the container!
+> - To be able to run a command in the container, the command/binary/file/whatever has to exist in the container!
 
-***
+---
 
 # Data, Data everywhere
 
@@ -552,27 +584,28 @@ docker run \
 
 > **WDWD**
 >
-> * `HOST_PATH` - Path to mount from the host system inside the container.
-> * `CONTAINER_PATH` - "Mount" destination path in the container.
-> * `:MODE` - Is optional. Can be `rw` (read-write) or `ro` (read-only). Defaults to `rw`.
+> - `HOST_PATH` - Path to mount from the host system inside the container.
+> - `CONTAINER_PATH` - "Mount" destination path in the container.
+> - `:MODE` - Is optional. Can be `rw` (read-write) or `ro` (read-only). Defaults to `rw`.
 >
 > **TL;DR** Data inside container to outside of container.
 >
 > **NOTE**
 >
-> * When the host path doesn't exist, it'll get created. BUT the permissions will be a bit "freaky".
-> * When the path get's created on the host, the directory will be (by default) owned by `root:root`, mod perms `drwxr-xr-x`.
-> * You can now create volumes using the Docker command, but I'm not going deeper into this. You can read more about this [here](https://docs.docker.com/engine/reference/commandline/volume_create/).
+> - When the host path doesn't exist, it'll get created. BUT the permissions will be a bit "freaky".
+> - When the path get's created on the host, the directory will be (by default) owned by `root:root`, mod perms `drwxr-xr-x`.
+> - You can now create volumes using the Docker command, but I'm not going deeper into this. You can read more about this [here](https://docs.docker.com/engine/reference/commandline/volume_create/).
 
 ## Data containers  aka `--volumes-from`
+
 > **NOTE**
 >
-> * I do NOT recommend this method as I often enough "accidentally" clear all exited/dead containers, so my disk space doesn't run out.
-> * I also have cron jobs running on my servers, that clean exited containers. Meaning data containers would just get cleared out everytime.
+> - I do NOT recommend this method as I often enough "accidentally" clear all exited/dead containers, so my disk space doesn't run out.
+> - I also have cron jobs running on my servers, that clean exited containers. Meaning data containers would just get cleared out everytime.
 
 You can store data inside another container, that's called data volume containers.
 When creating an image, you can specify those volumes. You create a container that has a volume "built-into" (Specified while the image was built), meaning that assuming it is our MySQL server image the in-built volume would be located at `/var/lib/mysql`
- The data volume container runs "nothing", it is just there for purpose of getting used by another container. For this you change the entrypoint with the following run option `--entrypoint=COMMAND` (where command could be just `/bin/true`) so the container stops and doesn't run the program it should.
+The data volume container runs "nothing", it is just there for purpose of getting used by another container. For this you change the entrypoint with the following run option `--entrypoint=COMMAND` (where command could be just `/bin/true`) so the container stops and doesn't run the program it should.
 
 Now that we would have a data container, we can use the volumes from this container using the `--volumes-from=CONTAINER` (where `CONTAINER` is a container name or ID) option.
 
@@ -581,7 +614,7 @@ In this case using the `--volumes-from` option would write the data inside the f
 
 As I wrote I personally don't recommend and I'm not even using this method, as I find it bad.
 
-***
+---
 
 # Networking
 
@@ -594,6 +627,7 @@ Brace Yourself for container network stuff!
 NAT also Network Address Translation, allows multiple devices to sit behind one IP address.
 
 ## Over seven bridges you must go (docker0 bridge and veth interfaces)
+
 Docker creates a bridge that is used as a bridge to your network interfaces (`eth0`, `en0`, etc.). The bridge Docker creates is called `docker0` by default.
 By default the `docker0` bridge will be assigned the `172.17.0.1/16` IP range as a network. This IP address range will be used, to assign every container a separate IP.
 Sometimes the bridge address range needs to be adjusted, in most cases when you are running Docker in a corporate network or the network range is just already in use/allocated.
@@ -602,13 +636,14 @@ You would need to add the `--bip=192.168.1.0/24` (where `192.168.1.0/24` is an u
 When a container is created, a `veth` interface will be created too (depending on the network mode). The `veth` interface will have an unique name. `veth` stands for virtual ethernet device. The `veth` device will "connect" to the bridge, to acquire network connectivity. The veth interface will not show the ip address when using tools like `ip addr show` or `ifconfig`.
 
 > **Example Output**
-> <script type="text/javascript" src="https://asciinema.org/a/7czdn4ubsb2k3wtpeunillx32.js" id="asciicast-7czdn4ubsb2k3wtpeunillx32" async data-speed="1.5"></script>
+>
 > This recording shows, the docker0 interface and the veth interface of the database container. In the end we use `docker inspect CONTAINER` to get the IPAddress of the container.
 
 Docker has the feature to even create an overlay network, between multiple machines. But I'm not going deeper into this.
 For people interested in this feature, see the Docker docs [here (Docs Docker network create)](https://docs.docker.com/engine/reference/commandline/network_create/).
 
 ## Network "modes" ("default", host or other)
+
 I've wrote, that I'm not going deeper into Docker's own (overlay) network feature, but with this topic, I'll have to go into it just a bit.
 
 When running a container the default network "mode" is named `default` (`--net=default`). The `default` network "mode" creates a separate network stack for every container.
@@ -618,15 +653,15 @@ There is also the network "mode" `host` available by default. The `host` network
 The network "mode" can be also the name of an (overlay) network created using the Docker "client" (engine).
 
 > **Example Output**
-> <script type="text/javascript" src="https://asciinema.org/a/8g8uguep5jej952k259ngzqoe.js" id="asciicast-8g8uguep5jej952k259ngzqoe" async data-speed="1.5"></script>
+>
 > In the recording, you can see that when using the default network mode you'll get a "newly" created network stack and when using the `host` network mode, the container gets the hosts network stack.
 
 ## Publishing ports
+
 When using the `default` network mode, Docker creates `iptables` rules so published/forwarded ports are reachable from the outside.
 In the example, we see the `iptables` rules for a container with published port `80/http`.
 
-> **Example Output**
-> ![Example iptables list output](/blog/2016/docker-for-admins-workshop-v2/docker-iptables-output.png)
+> **Example Output**![Example iptables list output](/blog/2016/docker-for-admins-workshop-v2/docker-iptables-output.png)
 
 As we can see Docker uses a separate `DOCKER` chain in the `FORWARD` chain, to map incoming traffic on port 80 to the container IP.
 After the destination IP has been changed, Docker uses DNAT (Destination Network Address Translation), to "map" the traffic to the container's end address.
@@ -643,20 +678,20 @@ Do you want to visualize your container network situation? Yes? Then the perfect
 
 In the `network101` task is a file called `start_weave_scope.sh`. The script downloads the Weave Scope wrapper script, that starts the containers needed for Weave Scope to function.
 The commands that are used to download the Weave Scope wrapper script are:
+
 ```console
 sudo wget -O /usr/local/bin/scope https://git.io/scope
 sudo chmod a+x /usr/local/bin/scope
 sudo scope launch
 ```
 
-After the image of the container has been pulled and started, you can then navigate to http://localhost:4040 to see the Weave Scope UI.
+After the image of the container has been pulled and started, you can then navigate to <http://localhost:4040> to see the Weave Scope UI.
 
-> **Expected Output**
-> ![Weave Scope UI](/blog/2016/docker-for-admins-workshop-v2/weavescope_ui.png)
+> **Expected Output**![Weave Scope UI](/blog/2016/docker-for-admins-workshop-v2/weavescope_ui.png)
 
 Through the Weave Scope UI you gain an immersive insight into your network of the containers.
 
-***
+---
 
 # Limiting container resources
 
@@ -669,6 +704,7 @@ As I already mentioned in the [Container!?](#Container) part, namespaces are abl
 ## CPU Limit
 
 Limiting the precious computing resource of a container.
+
 ```console
 $ docker run --help
 [...]
@@ -677,10 +713,12 @@ $ docker run --help
   --cpuset-cpus                   CPUs in which to allow execution (0-3, 0,1)
 [...]
 ```
+
 You can limit the time period and the quota of the CFS (Completely Fair Scheduler).
 Limiting a container to specific cores is also possible (`--cpuset-cpus`).
 
 ## Memory and Swap Limit
+
 ```console
 $ docker run --help
 [...]
@@ -696,34 +734,39 @@ $ docker run --help
   --oom-score-adj                 Tune host's OOM preferences (-1000 to 1000)
 [...]
 ```
+
 As you can see, there is a good amount of option to play around with the memory a container can use and how it can use the memory.
 
 A good feature if you have limited memory available is to play with the memory swappiness.
 
 The `OOM` (Linux Out of Memory Management) options are good, if you have memory intensive applications, but only limited memory available. So important application container don't get killed, when the system should run out of memory.
 
-***
+---
 
 # Selfies? I mean Images
+
 An image is the core of a container. Without an image, there would be no container.
 Creating images is simple to do, depending on what you try to "containerize".
 In this part we set a simple goal. Our goal is to create a container that runs nginx in it.
 
 ## Image Names explained
+
 Images that "come" from the [Docker Image Hub](https://hub.docker.com/), don't need a repository specified.
 
 The image we used for the MySQL container is:
+
 ```console
 sameersbn/mysql:latest
 ```
 
 > **WDWD**
 >
-> * `sameersbn` - The username of the creator.
-> * `mysql` - The image name.
-> * `latest` - The "version" tag. The tag can be anything, but emojis.
+> - `sameersbn` - The username of the creator.
+> - `mysql` - The image name.
+> - `latest` - The "version" tag. The tag can be anything, but emojis.
 
 An example for an image that is pulled from a different image server, than the official Docker Hub, is my image for [Zulip](https://zulip.org/) by Dropbox that is hosted on [quay.io](https://quay.io).
+
 ```console
 quay.io/galexrt/zulip:1.3.10
 SERVER/USERNAME/IMAGE_NAME:TAG
@@ -731,19 +774,19 @@ SERVER/USERNAME/IMAGE_NAME:TAG
 
 > **WDWD**
 >
-> * `quay.io`, `SERVER` - Defaults to `docker.io`. The image repository server to pull the image from.
-> * `galexrt`, `USERNAME` - Username of the image creator/uploader.
-> * `zulip`, `IMAGE_NAME` - Name of the image.
-> * `1.3.10`, `TAG` - Like git tags. When not specified, the default is `latest`.
+> - `quay.io`, `SERVER` - Defaults to `docker.io`. The image repository server to pull the image from.
+> - `galexrt`, `USERNAME` - Username of the image creator/uploader.
+> - `zulip`, `IMAGE_NAME` - Name of the image.
+> - `1.3.10`, `TAG` - Like git tags. When not specified, the default is `latest`.
 
 In the case of official created images, like the WordPress image we used no server and username is required (by default).
-Official images are "marked" through the "missing" username in the image name and the Docker Image Hub url having an underscore instead of an username (https\://hub.docker.com/r/\_/wordpress/).
+Official images are "marked" through the "missing" username in the image name and the Docker Image Hub url having an underscore instead of an username (<https://hub.docker.com/r/_/wordpress/>).
 
 ## What have Layer Cakes to do with Docker Images?
-<center>
+
 ![Layer Cake from Wikimedia](/blog/2016/docker-for-admins-workshop-v2/layer-cake-from-wikimedia.png)
-_Mhh, tasty, isn't it?_ But now back to the topic.
-</center>
+\_Mhh, tasty, isn't it?\_ But now back to the topic.
+
 
 > **TASK**: [`dockerfile101`](https://github.com/galexrt/workshop-docker/tree/master/dockerfile101)
 
@@ -752,19 +795,20 @@ Every "new" layer on top of it, is an action that had been run when building the
 
 Meaning if we create an image from the "baseimage" `fedora:23` like the example `Dockerfile`, a cross-section/profile would look like this:
 
-<center>
 ![Docker Dockerfile Layers](/blog/2016/docker-for-admins-workshop-v2/docker-data-dockerfile-layers.png)
-</center>
+
 
 That is one of the reasons, why Docker images are so small. If you download 10 images that are based on `debian:jessie`, you would only have to download the created/modified layers, because the baseimage is the same for these 10 images.
 To build/create an image, you create a Dockerfile and that's what we are going to talk about next.
 
 ## Dockerfile examples
+
 As you may have already seen in the task directory `dockerfil101`, there was a file called `Dockerfile`.
 A `Dockerfile` contains build instructions for an image. For `Dockerfile`s there is a "special" syntax, but the syntax is very simple.
 I'm going to show you a simple and a more advanced example of Dockerfiles.
 
 ### Simple Dockerfile Example
+
 Taken from the [carazzim0/docker-ebot](https://github.com/carazzim0/docker-ebot) GitHub project, file `Dockerfile`.
 
 ```dockerfile
@@ -799,6 +843,7 @@ ENTRYPOINT ["/sbin/entrypoint.sh"]
 ```
 
 ### Advanced Dockerfile Example
+
 Taken from the [galexrt/docker-zulip](https://github.com/galexrt/docker-zulip) GitHub project, file `Dockerfile`.
 
 ```dockerfile
@@ -857,22 +902,31 @@ You will create an image with `nginx` installed (You can later expand it, with m
 To guide you in creating a nginx image, I show you an example of a http webserver application written in golang, before you are going to create your own `nginx` image.
 
 > **Golang Dockerfile Example**: (Example taken from [Shiju Varghese Medium Blog](https://medium.com/@shijuvar/deploying-go-web-apps-with-docker-1b7561b36f53#.lkj19wklp))
+>
 > ```dockerfile
+> ```
+
 # golang image where workspace (GOPATH) configured at /go.
-FROM golang:latest
+
+FROM golang\:latest
 
 # Copy the local package files to the container’s workspace.
+
 ADD . /go/src/github.com/shijuvar/golang-docker
 
 # Build the golang-docker command inside the container.
+
 RUN go install github.com/shijuvar/golang-docker
 
 # Run the golang-docker command when the container starts.
+
 ENTRYPOINT ["/go/bin/golang-docker"]
 
 # http server listens on port 8080.
+
 EXPOSE 8080
-```
+
+````text
 
 > **WDWD**
 >
@@ -889,14 +943,15 @@ There's even the possibility, to execute specific commands when the image is use
 To build an image we use the `docker build` command. Building this golang example image, we run the following command:
 ```console
 docker build -t golang-docker -f Dockerfile .
-```
+
+````
 
 > **WDWD**
 >
-> * `build` - Used to build Docker images.
-> * `-t IMAGE_NAME` - Specify the name (with an optional tag) of the image, you are creating (Optional. **NOTE** This options is important when manually building and pushing a Docker image to a repository). `IMAGE_NAME` is a string name for the image with an optional tag specified. The tag is added by adding double dots like this `:TAG_NAME`.
-> * `-f DOCKERFILE` - Set the location of the `Dockerfile` (Optional).
-> * `.` - The image build root of the image build (**Important** when `ADD` or `COPY` is used in the `Dockerfile`). All files will be at least added to the build environment for easy access, but not added to the image itself.
+> - `build` - Used to build Docker images.
+> - `-t IMAGE_NAME` - Specify the name (with an optional tag) of the image, you are creating (Optional. **NOTE** This options is important when manually building and pushing a Docker image to a repository). `IMAGE_NAME` is a string name for the image with an optional tag specified. The tag is added by adding double dots like this `:TAG_NAME`.
+> - `-f DOCKERFILE` - Set the location of the `Dockerfile` (Optional).
+> - `.` - The image build root of the image build (**Important** when `ADD` or `COPY` is used in the `Dockerfile`). All files will be at least added to the build environment for easy access, but not added to the image itself.
 
 As you can see, it isn't hard to build your first Docker images.
 If you want to see more advanced examples, you can find more examples in my GitHub repositories [here](https://github.com/search?q=user%3AGalexrt+docker-).
@@ -904,30 +959,35 @@ If you want to see more advanced examples, you can find more examples in my GitH
 ## Commands you need to know when working with Docker images
 
 ### Deleting a Docker image
+
 To delete a Docker image, you use the `docker rmi` subcommand. The syntax is the same as for the `docker rm` subcommand.
+
 ```console
 docker rmi IMAGE [IMAGE...]
 ```
 
 > **WDWD**
 >
-> * `rmi` - The subcommand for deleting one or more image(s).
-> * `IMAGE [IMAGE...]` - One or more image names or IDs to delete.
+> - `rmi` - The subcommand for deleting one or more image(s).
+> - `IMAGE [IMAGE...]` - One or more image names or IDs to delete.
 
 ### Build a Docker image from Dockerfile
+
 Use this command to build images.
+
 ```console
 docker build -t IMAGE_NAME -f DOCKERFILE BUILD_PATH
 ```
 
 > **WDWD**
 >
-> * `build` - The build subcommand.
-> * `-t IMAGE_NAME` - More details to `IMAGE_NAME` are going to be explained in a later section, [here](#Image-Names-explained) or see above **WDWD** part.
-> * `DOCKERFILE` - Path to a Dockerfile. Defaults to the current work directory with `Dockerfile` attached as a file name.
-> * `BUILD_PATH` - The build root path. Files in the directory will be added to the Docker build environment, but not to the image itself. The files are only added when the specified Dockerfile has instructions to do so. You can't go deeper than the `BUILD_PATH`!
+> - `build` - The build subcommand.
+> - `-t IMAGE_NAME` - More details to `IMAGE_NAME` are going to be explained in a later section, [here](#Image-Names-explained) or see above **WDWD** part.
+> - `DOCKERFILE` - Path to a Dockerfile. Defaults to the current work directory with `Dockerfile` attached as a file name.
+> - `BUILD_PATH` - The build root path. Files in the directory will be added to the Docker build environment, but not to the image itself. The files are only added when the specified Dockerfile has instructions to do so. You can't go deeper than the `BUILD_PATH`!
 
 ## Let's build your first Docker image
+
 Now that we know some `Dockerfile` basics, we can start building our own `nginx` image from the baseimage `debian:jessie`.
 
 Let's make this like a test in the school, replace all `__BLANK__` with the correct answer (Solutions are [here](#nginx-Dockerfile)):
@@ -941,15 +1001,15 @@ ENTRYPOINT ["__BLANK__"]
 ```
 
 Got all blanks filled out? Good. Let's build the image:
+
 ```console
 docker build -t workshop-nginx .
 ```
 
-> **Expected Output of `docker build -t workshop-nginx .`**
-> ![Docker Build workshop-nginx image](/blog/2016/docker-for-admins-workshop-v2/docker-build-nginx-image.png)
-
+> **Expected Output of** **docker build -t workshop-nginx .**![Docker Build workshop-nginx image](/blog/2016/docker-for-admins-workshop-v2/docker-build-nginx-image.png)
 
 The build should go successfully, when you filled in the blanks correctly. Let's run the image to see if it is working, the container name will be `workshop-nginx`:
+
 ```console
 docker run \
     --name workshop-nginx \
@@ -959,6 +1019,7 @@ docker run \
 ```
 
 If you did something wrong, remove the container using (where `CONTAINER_NAME` is a container ID or name):
+
 ```console
 docker rm CONTAINER_NAME
 ```
@@ -967,8 +1028,8 @@ To check if the container is running with your image, run `docker ps -a`.
 
 > **WDWD**
 >
-> * `ps` - Like the `ps ` command, but for the containers.
-> * `-a` - Show all containers, whether their current state, without it showing only running containers.
+> - `ps` - Like the `ps`  command, but for the containers.
+> - `-a` - Show all containers, whether their current state, without it showing only running containers.
 
 You should see that the container you started, has exited.
 There's a simple reason, why the container exited/stopped. When running a command as the entrypoint, it has to stay running, not fork to background. When the process forks to background, Docker will think the process has stopped and the container status will be set to `exited` with the last return code.
@@ -976,17 +1037,19 @@ There's a simple reason, why the container exited/stopped. When running a comman
 That's why we need to tell `nginx`, not to run as a daemon, not fork to background, with the following additional arguments `"-g", "daemon off;"` (these arguments must be added to the `ENTRYPOINT` line of the `Dockerfile`).
 
 So we could make a change to the `nginx.conf`, overwrite `nginx.conf` with a custom one or **just change** the `ENTRYPOINT` line to make it look like this:
+
 ```console
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
 ```
 
-Let's rebuild the image (same command) and run it again. Open [http://127.0.0.1:8080](http://127.0.0.1:8080) in your browser and voilà it should show the nginx default page.
+Let's rebuild the image (same command) and run it again. Open <http://127.0.0.1:8080> in your browser and voilà it should show the nginx default page.
 
 To go further with your created image, let's "mount" a volume inside the container with our own `index.html`.
 Use the `index.html` from task `dockerfile202` or create one yourself.
 
 Now we add a volume to the container. Add `-v "$(pwd)":"/usr/share/nginx/html"` to the `docker run` command, but don't forget add the argument before the image name.
 Your command should look like this:
+
 ```console
 docker run \
     --name workshop-nginx \
@@ -997,9 +1060,10 @@ docker run \
 ```
 
 This starts a container named `workshop-nginx` running the image `workshop-nginx` with a volume mounted at `/usr/share/nginx/html`.
-If we now open [http://127.0.0.1:8080](http://127.0.0.1:8080) in the browser, we will see our `index.html`. Well done!
+If we now open <http://127.0.0.1:8080> in the browser, we will see our `index.html`. Well done!
 
 ## How can this help in the development workflow?
+
 If you are for example creating a new CMS written in PHP you could, create a Docker image for it.
 On every push to the git repository of the project, the image could be built and automatic checks could be run, to ensure every feature is working fine.
 
@@ -1016,11 +1080,12 @@ As we can see, containers are better than VMs (depending on the application area
 
 The lower resource usage is good for the development workflow, making it faster and cheaper.
 
-***
+---
 
 # Composing containers made simple with `docker-compose`
 
 ## Making multi container applications simpler to start
+
 To remove the process of typing all those commands to start the containers, `docker-compose` has been created.
 `docker-compose` makes it _easy peasy lemon squeezy_ to run one to many containers using one command.
 The syntax of a `docker-compose.yml` is YAML (_YAML Ain't Markup Language_). A good syntax checker, I use, is available [here](https://yaml-online-parser.appspot.com/).
@@ -1028,7 +1093,8 @@ The syntax of a `docker-compose.yml` is YAML (_YAML Ain't Markup Language_). A g
 In our example with WordPress we will create a `docker-compose.yml` for our MySQL database server, WordPress instance and as an extra we'll add phpMyAdmin to it.
 
 Create the `docker-compose.yml` file. I made this part like a test again, so you can see where you have knowledge holes, replace all `__BLANK__` with the correct answer (Solutions are [here](#WordPress-and-MySQL-docker-compose-yml)):
-(This `docker-compose.yml` has been taken from https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-and-phpmyadmin-with-docker-compose-on-ubuntu-14-04)
+(This `docker-compose.yml` has been taken from <https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-and-phpmyadmin-with-docker-compose-on-ubuntu-14-04>)
+
 ```console
 database:
   image: sameersbn/mysql:latest
@@ -1071,11 +1137,11 @@ phpmyadmin:
 
 > **WDWD**
 >
-> * `database:` - Name of the container.
-> * `  image:` - Defines the used image for the container.
-> * `  links: []` - A list of container links.
-> * `  ports: []` - A list of published ports.
-> * `  environment: []` - "Hash" list of environment variables (Format: `NAME: VALUE`).
+> - `database:` - Name of the container.
+> - `image:` - Defines the used image for the container.
+> - `links: []` - A list of container links.
+> - `ports: []` - A list of published ports.
+> - `environment: []` - "Hash" list of environment variables (Format: `NAME: VALUE`).
 
 I have also added the environment variables `DB_REMOTE_ROOT_NAME` and `DB_REMOTE_ROOT_PASS`, so that Admin can access the MySQL server.
 
@@ -1084,56 +1150,63 @@ I have also added the environment variables `DB_REMOTE_ROOT_NAME` and `DB_REMOTE
 > **TASK**: [`compose101`](https://github.com/galexrt/workshop-docker/tree/master/compose101)
 
 To "run"/start the content of our `docker-compose.yml`, we run:
+
 ```console
 docker-compose -f DOCKER_COMPOSE_YML up
 ```
 
 > **WDWD**
 >
-> * `docker-compose` - The `docker-compose` command.
-> * `-f DOCKER_COMPOSE_YML` - Optional. Defaults to `docker-compose.yml`. `DOCKER_COMPOSE_YML` is a path to a valid `docker-compose` file.
-> * `up` - Starts the containers defined in the given docker-compose file.
-> **Expected Output**
-> <script type="text/javascript" src="https://asciinema.org/a/3bj9rktzp0oi3cda36pmh58eg.js" id="asciicast-3bj9rktzp0oi3cda36pmh58eg" async data-autoplay="false"  data-speed="1.5"></script>
+> - `docker-compose` - The `docker-compose` command.
+> - `-f DOCKER_COMPOSE_YML` - Optional. Defaults to `docker-compose.yml`. `DOCKER_COMPOSE_YML` is a path to a valid `docker-compose` file.
+> - `up` - Starts the containers defined in the given docker-compose file.
+>   **Expected Output**
 
 After running the command, you should see log output starting to fill your terminal. To stop the started containers press `CTRL+C`.
 For running the containers detached in the background, you use the same option as for Docker, the `--detach` (or `-d`) option.
 
 ## Basic `docker-compose` commands
+
 There are some `docker-compose` commands you should know when working with the `docker-compose` command.
 
 ### Stopping all containers run by the current `docker-compose` file
+
 Instead of the `up`, you just put `stop` there. Stops the containers from the current `docker-compose` file.
+
 ```console
 docker-compose stop -t TIMEOUT
 ```
 
 > **WDWD**
 >
-> * `stop` - Stop subcommand.
-> * `-t TIMEOUT` - Optional. Timeout to wait for the containers, before the containers get killed.
+> - `stop` - Stop subcommand.
+> - `-t TIMEOUT` - Optional. Timeout to wait for the containers, before the containers get killed.
 
 ### Deleting all containers run by the current `docker-compose` file
+
 Replacing the `up` with `rm`, deletes all containers that are started by the current `docker-compose` file, but now are stopped or exited.
+
 ```console
 docker-compose -f DOCKER_COMPOSE_YML rm -f
 ```
 
 > **WDWD**
 >
-> * `rm` - "Subcommand" for removing/deleting all container started by the current selected `docker-compose` file.
-> * `-f` - Optional. Forces the removal of the containers.
+> - `rm` - "Subcommand" for removing/deleting all container started by the current selected `docker-compose` file.
+> - `-f` - Optional. Forces the removal of the containers.
 
 ### Restarting all container started by the current `docker-compose` file
+
 Restarts all containers that are started or have exited by the current `docker-compose` file.
 This just stops and starts the containers again and not stops, deletes and runs the containers again.
+
 ```console
 docker-compose -f DOCKER_COMPOSE_YML restart
 ```
 
 > **WDWD**
 >
-> * `restart` - "Subcommand" for removing/deleting all container started by the current selected `docker-compose` file.
+> - `restart` - "Subcommand" for removing/deleting all container started by the current selected `docker-compose` file.
 
 ## Let's play more with `docker-compose`!
 
@@ -1146,18 +1219,21 @@ docker-compose -f DOCKER_COMPOSE_YML restart
 > Keep the `-f DOCKERFILE` option in mind, when dealing with multiple `docker-compose.yml`'s in one folder.
 
 ## Summary of these sections
+
 We can now write basic `docker-compose.yml`s. We can now start a multi container application with one single command.
 
-***
+---
 
 # Orchestration Tools
+
 _The right tool for the right workload. Keep that in mind or you'll have problems soon._
 
 ## A wild Docker Swarm appeared. Kubernetes used rolling-update. It was very effective.
+
 The choice of the orchestration tool, depends on many factors:
 
-* Workloads you'll handle (how many containers will be run?)
-* How many servers?
+- Workloads you'll handle (how many containers will be run?)
+- How many servers?
 
 My favorite choice is Kubernetes, easy to use, developed by Google (one of the largest and longest container users) and now with the latest updates, can scale up to 1000+ nodes.
 I like Kubernetes more, because it offers a rolling-update feature. Allowing you to update your application Pod by Pod.
@@ -1166,42 +1242,45 @@ That's not the only reason, but one of the biggest why.
 
 ## Other Orchestration Tools
 
-* [Mesos by Apache](http://mesos.apache.org/)
-* [Rancher by Rancher Labs](http://rancher.com/)
-* [Shipyard by the Shipyard team](https://shipyard-project.com/)
-* [Nomad by Hashicorp](https://www.nomadproject.io/)
-* And many more
+- [Mesos by Apache](http://mesos.apache.org/)
+- [Rancher by Rancher Labs](http://rancher.com/)
+- [Shipyard by the Shipyard team](https://shipyard-project.com/)
+- [Nomad by Hashicorp](https://www.nomadproject.io/)
+- And many more
 
-***
+---
 
 # Kubessar - Glossar but for Kubernetes
+
 _Like a glossar, but for Kubernetes stuff._
 
 I highly recommend you to look through my Kubernetes presentation to get to know Kubernetes a bit better, before starting to work with it.
 Please note, that the presentation is written in german.
 
-<iframe src="https://docs.google.com/presentation/d/1XHl6MlB0GE2rmoXbe5_603UFVkFF2S3ud6Uc0QI7fPo/embed?start=false&loop=true&delayms=5000" frameborder="0" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
 ## Namespace
+
 Separation of resources. Allowing for quotas per namespace.
 When not specifying a namespace, the `default` namespace will be used.
 
 ## Pod (`po`)
+
 A set of one or more containers.
 
 ## Replication Controller (`rc`)
+
 A ReplicationController ensures that there are always the specific number of replica of a given Pod.
 
 ## Service (`svc`)
+
 Exposed ports of one or multiple pods. The access to the port(s) is "loadbalanced" using iptables.
 A service also creates a A and SRV DNS record, when using the kubedns Pod.
 
 ## Other "Objects"
 
-* kubeclt Files - "Deployment" files for "objects" of Kubernetes. Can be "deployed"/run/executed using the `kubectl` command.
-* ResourceQuotas - Resource quotas for a namespace.
+- kubeclt Files - "Deployment" files for "objects" of Kubernetes. Can be "deployed"/run/executed using the `kubectl` command.
+- ResourceQuotas - Resource quotas for a namespace.
 
-***
+---
 
 # Kubernetes
 
@@ -1210,10 +1289,11 @@ A service also creates a A and SRV DNS record, when using the kubedns Pod.
 ## Kubernetes Features
 
 ### The `iptables` rules will blow your mind
+
 If you have already worked with the basics of `iptables`, this will blow your mind, a lot more is possible with `iptables` than you thought.
-<script type="text/javascript" src="https://asciinema.org/a/89fo5omeyjzmu8zp80rs5mauc.js" id="asciicast-89fo5omeyjzmu8zp80rs5mauc" async data-autoplay="false"  data-speed="1.5"></script>
 
 ### You have some Network Volumes?
+
 No problem, Kubernetes allows you to specify volumes that are network volumes and mount them by a simple name.
 You could even use the volume claim system. Where a Pod just says, I need X GB storage and Kubernetes does the rest for you.
 
@@ -1221,147 +1301,167 @@ You could even use the volume claim system. Where a Pod just says, I need X GB s
 
 ### And there are even more features!
 
-* Loadbalanceing for L4 and L7
-* L7 https termination
-* Autoscaling of Replication Controller
-* And more features already there and to come
+- Loadbalanceing for L4 and L7
+- L7 https termination
+- Autoscaling of Replication Controller
+- And more features already there and to come
 
 # kubectl - Our tool to deploy them all
-<center>
+
 ![Kubernetes Zelda - It's dangerous to go alone](/blog/2016/docker-for-admins-workshop-v2/kubernetes-its-dangerous-to-go-alone.png)
-_Zelda Meme intensifies_
-</center>
+\_Zelda Meme intensifies\_
+
 
 ## The Basics of `kubectl`
+
 The `kubectl` command is used to create new "objects", view Pods, ReplicationController and all other available objects in Kubernetes.
 
 ### List objects
+
 To view all Pods in all namespaces.
+
 ```console
 kubectl get --all-namespaces pods
 ```
 
 > **WDWD**
 >
-> * `kubectl` - The kubectl command.
-> * `get` - Get "objects" from kubernetes API.
-> * `--all-namespaces` - Show objects from all namespaces.
-> * `pods` - Show only pods (Can be a comma seperated list of types, short forms are available).
+> - `kubectl` - The kubectl command.
+> - `get` - Get "objects" from kubernetes API.
+> - `--all-namespaces` - Show objects from all namespaces.
+> - `pods` - Show only pods (Can be a comma seperated list of types, short forms are available).
 
 ### Gather information about one or more object(s)
+
 Get informations about one or more object(s).
+
 ```console
 kubectl describe --namespace=NAMESPACE TYPE/NAME (TYPE/NAME ...)
 ```
 
 > **WDWD**
 >
-> * `describe` - Call the describe routines.
-> * `--namespace=NAMESPACE` - Set namespace to search in (optional when set through kubeconfig file).
-> * `TYPE` - The type of objects to show. For example `pod`, `rc` (for replication controller).
-> * `NAME` - Name of the object to show. For our WordPress Pod, would be `wordpress`.
+> - `describe` - Call the describe routines.
+> - `--namespace=NAMESPACE` - Set namespace to search in (optional when set through kubeconfig file).
+> - `TYPE` - The type of objects to show. For example `pod`, `rc` (for replication controller).
+> - `NAME` - Name of the object to show. For our WordPress Pod, would be `wordpress`.
 
 ### Create one or more object(s)
+
 To deploy/execute a "kubectl" file, we use the `create` subcommand.
+
 ```console
 kubectl create -f FILE_NAME
 ```
 
 > **WDWD**
 >
-> * `create` - Creates an object.
-> * `-f FILE_NAME` - Can be one file, a directory or `-` for stdin. When a directory is specified, files are read in alphabetical order.
+> - `create` - Creates an object.
+> - `-f FILE_NAME` - Can be one file, a directory or `-` for stdin. When a directory is specified, files are read in alphabetical order.
 
 ### Delete one or more object(s)
+
 To stop/delete one or more object(s), there's the `delete` subcommand.
+
 ```console
 kubectl delete -f FILE_NAME
 ```
 
 > **WDWD**
 >
-> * `delete` - Deletes specified object(s).
-> * `-f FILE_NAME` - Can be one file, a directory or `-` for stdin. When a directory is specified, files are read in alphabetical order.
+> - `delete` - Deletes specified object(s).
+> - `-f FILE_NAME` - Can be one file, a directory or `-` for stdin. When a directory is specified, files are read in alphabetical order.
 
 **Or**
+
 ```console
 kubectl delete TYPE/NAME (TYPE/NAME ...)
 ```
 
 > **WDWD**
 >
-> * `delete` - Deletes specified object(s).
-> * `TYPE` - The type of objects to show. For example `pod`, `rc` (for replication controller).
-> * `NAME` - Name of the object to show. For our WordPress Pod, would be `wordpress`.
+> - `delete` - Deletes specified object(s).
+> - `TYPE` - The type of objects to show. For example `pod`, `rc` (for replication controller).
+> - `NAME` - Name of the object to show. For our WordPress Pod, would be `wordpress`.
 
 ### Execute command inside a Pod's container
+
 Using the `exec` subcommand, with almost the same syntax as `docker exec`.
+
 ```console
 kubectl exec POD_NAME OPTIONS (-c CONTAINER_NAME) COMMAND
 ```
 
 > **WDWD**
 >
-> * `exec` - Deletes specified object(s).
-> * `NAME` - Name of the object to show. For our WordPress Pod, would be `wordpress`.
-> * `OPTIONS` - For example `-i` for interactive, see the help menu for more information.
-> * `-c CONTAINER_NAME` - Optional. If the specified pod has more than one container, then it is required.
-> * `COMMAND` - The command to run inside the container.
+> - `exec` - Deletes specified object(s).
+> - `NAME` - Name of the object to show. For our WordPress Pod, would be `wordpress`.
+> - `OPTIONS` - For example `-i` for interactive, see the help menu for more information.
+> - `-c CONTAINER_NAME` - Optional. If the specified pod has more than one container, then it is required.
+> - `COMMAND` - The command to run inside the container.
 
 ### View the logs of a Pod's container
+
 The `logs` subcommand, has almost the same syntax as `docker logs`.
+
 ```console
 kubectl logs OPTIONS POD_NAME (-c CONTAINER_NAME) COMMAND
 ```
 
 > **WDWD**
 >
-> * `exec` - Deletes specified object(s).
-> * `OPTIONS` - For example `-f` for follow the output, see the help menu for more information.
-> * `NAME` - Name of the object to show. For our WordPress Pod, would be `wordpress`.
-> * `-c CONTAINER_NAME` - Optional. If the specified pod has more than one container, then it is required.
+> - `exec` - Deletes specified object(s).
+> - `OPTIONS` - For example `-f` for follow the output, see the help menu for more information.
+> - `NAME` - Name of the object to show. For our WordPress Pod, would be `wordpress`.
+> - `-c CONTAINER_NAME` - Optional. If the specified pod has more than one container, then it is required.
 
 ## Advanced kubectl usage
 
 ### Update the Pods of a Replication Controller during runtime
+
 The `rolling-update` subcommand allows to stop one pod after another and replace it with a new instace of the pod.
+
 ```console
 kubectl rolling-update REPLICATION -f FILE_NAME
 ```
 
 > **WDWD**
 >
-> * `rolling-update` - Rolling update subcommand.
-> * `REPLICATION` - The ReplicationController to update with the given `FILE_NAME`.
-> * `-f FILE_NAME` - Name of the updated ReplicationController file. Can be one file, a directory or `-` for stdin. When a directory is specified, files are read in alphabetical order.
+> - `rolling-update` - Rolling update subcommand.
+> - `REPLICATION` - The ReplicationController to update with the given `FILE_NAME`.
+> - `-f FILE_NAME` - Name of the updated ReplicationController file. Can be one file, a directory or `-` for stdin. When a directory is specified, files are read in alphabetical order.
 
 ### Scaling running Replication Controller
+
 The `scale` subcommand gives you control over the size of running ReplicationController.
+
 ```console
 kubectl scale
 ```
 
 > **WDWD**
 >
-> * `scale` - Scale subcommand.
-> * `--replicas=X` - Set the given ReplicationController to X replicas.
-> * `-f FILE_NAME` or `replicationcontrollers FOO` - Name of the ReplicationController to scale. Can be just the name or one file, a directory or `-` for stdin. When a directory is specified, files are read in alphabetical order.
+> - `scale` - Scale subcommand.
+> - `--replicas=X` - Set the given ReplicationController to X replicas.
+> - `-f FILE_NAME` or `replicationcontrollers FOO` - Name of the ReplicationController to scale. Can be just the name or one file, a directory or `-` for stdin. When a directory is specified, files are read in alphabetical order.
 
-***
+---
 
 # Deploy your own Kubernetes cluster
+
 _Follow these simple steps and get a Kubernetes cluster up and running fast._
 
 ## Install Ansible
+
 _If you use the provided Virtual Box, this step is not needed!_
 
 > The package `python-netaddr` also needs to be installed on the client. Don't forget to install it!!
 
 Please refer to the official [Ansible Installation Docs](http://docs.ansible.com/ansible/intro_installation.html#installing-the-control-machine) on how to install Ansible on your machine.
 
-* For ArchLinux: [Ansible Docs](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-pacman-arch-linux)
-* For Debian: [Ansible Docs](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-apt-ubuntu)
-* For CentOS: [Ansible Docs](http://docs.ansible.com/ansible/intro_installation.html#latest-release-via-yum)
+- For ArchLinux: [Ansible Docs](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-pacman-arch-linux)
+- For Debian: [Ansible Docs](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-apt-ubuntu)
+- For CentOS: [Ansible Docs](http://docs.ansible.com/ansible/intro_installation.html#latest-release-via-yum)
 
 ## Create the cluster inventory file for the deployment
 
@@ -1371,6 +1471,7 @@ Enter the task directory and look for a directory called `ansible/`.
 
 Create a file called `inventory`, in this folder. This file will contain the list/inventory of the servers.
 You create one line per server in the format below (username and password are valid for the provided vm, change to suit your environment):
+
 ```console
 [masters]
 # In most cases the first "server"
@@ -1391,11 +1492,11 @@ SERVER_IP_ADDRESS:SSH_PORT ansible_user=workshop ansible_ssh_pass=workshop ansib
 
 > **WDWD**
 >
-> * `[GROUP_NAME]` - Specifies a server/inventory group.
-> * `SERVER_IP_ADDRESS:SSH_PORT` - `SSH_PORT` is optional. A hostname or ip address the server is reachable.
-> * `ansible_user` - Specifies the SSH username to login with.
-> * `ansible_ssh_pass` - SSH user password.
-> * `ansible_become_pass` - The sudo (default) password.
+> - `[GROUP_NAME]` - Specifies a server/inventory group.
+> - `SERVER_IP_ADDRESS:SSH_PORT` - `SSH_PORT` is optional. A hostname or ip address the server is reachable.
+> - `ansible_user` - Specifies the SSH username to login with.
+> - `ansible_ssh_pass` - SSH user password.
+> - `ansible_become_pass` - The sudo (default) password.
 
 If you have created your inventory properly, run `./setup.sh --syntax-check` to check for any syntax errors.
 
@@ -1403,8 +1504,7 @@ No syntax errors? Let's deploy the cluster!
 
 ## Deploying the Kubernetes cluster
 
-> **TASK**: [`kubernetes202`](https://github.com/galexrt/workshop-docker/tree/master/kubernetes202)
-> **The servers must have the `python` and `python-netaddr` package installed!**
+> **TASK**: [`kubernetes202`](https://github.com/galexrt/workshop-docker/tree/master/kubernetes202)**The servers must have the** **python** **and** **python-netaddr** **package installed!**
 
 Before you continue, enter the task `kubernetes202` directory. Execute the bash `prepare.sh` script. The script will download and setup all files required for the deployment of the cluster.
 If the script exits with an error, please get in touch with me (It should normally not exit with an error).
@@ -1420,6 +1520,7 @@ If you want to be 100% safe, wait up to 15 minutes. Thanks!
 After you have waited some time, please power cycle server after server.
 
 ## Summary of the Kubernetes deployment
+
 We now have a working Kubernetes cluster (**DON'T use this setup in production though!** _There is more work required to make it secure for production use._).
 
 We are now ready to deploy objects/containers on to our Kubernetes cluster. :)
@@ -1430,6 +1531,7 @@ We are now ready to deploy objects/containers on to our Kubernetes cluster. :)
 
 In the task `kubernetes101` directory is a file called `busybox.yaml`. We will now deploy this file onto our cluster.
 The file looks like this:
+
 ```console
 apiVersion: v1
 kind: Pod
@@ -1446,38 +1548,42 @@ spec:
     name: busybox
   restartPolicy: Always
 ```
+
 The syntax of a "kubectl" file, is similar to the syntax of `docker-compose` files. It should get clear when you look at some other examples.
 
 Connect to the Kubernetes master server. Create the busybox container by running the `busybox.yaml` file, wait some seconds and then run the following command:
+
 ```console
 kubectl exec busybox -- nslookup kubernetes
 ```
+
 The output should look like this:
 
 > **Example Output**
-> <script type="text/javascript" src="https://asciinema.org/a/4v7nj482d4vxxo4kwignm272a.js" id="asciicast-4v7nj482d4vxxo4kwignm272a" async></script>
 
 If the output shows an error, something went wrong, please contact me.
 
 No errors? Good move on to the next section.
 
 ## Take a look at the pre-installed `kube-system` containers
+
 Open a ssh tunnel, to the Kubernetes master:
+
 ```console
 ssh -L 8080:127.0.0.1:8080 -fN SERVER_IP_ADDRESS_HERE
 ```
 
-Open your browser and navigate to http://127.0.0.1:8080/.
+Open your browser and navigate to <http://127.0.0.1:8080/>.
 Welcome to the Kubernetes API!
 
 > **NOTE** You can close the ssh tunnel, by simply killing the ssh tunnel process.
 > You can find it using `ps ax`
 
 ### Kubernetes own Dashboard
-Navigate to http://127.0.0.1:8080/ui and look around in the dashboard.
 
-> **Example Output**
-> ![Kubernetes Dashboard UI Example](/blog/2016/docker-for-admins-workshop-v2/kubernetes-dashboard-ui.png)
+Navigate to <http://127.0.0.1:8080/ui> and look around in the dashboard.
+
+> **Example Output**![Kubernetes Dashboard UI Example](/blog/2016/docker-for-admins-workshop-v2/kubernetes-dashboard-ui.png)
 > In the above picture, I have already some ReplicationController running on the cluster.
 >
 > ![Kubernetes Dashboard kube-dns RC overview](/blog/2016/docker-for-admins-workshop-v2/kubernetes-dashboard-ui-rc-overview-dns.png)
@@ -1486,11 +1592,14 @@ Navigate to http://127.0.0.1:8080/ui and look around in the dashboard.
 Just navigate around in the dashboard and see for yourself what you can do.
 
 ### Monitoring the nodes and containers (with Heapster and Grafana)
-Navigate to http://127.0.0.1:8080/api/v1/proxy/namespaces/kube-system/services/monitoring-grafana/.
+
+Navigate to <http://127.0.0.1:8080/api/v1/proxy/namespaces/kube-system/services/monitoring-grafana/>.
 
 > ![Kubernetes Grafana Cluster Node01 Overview](/blog/2016/docker-for-admins-workshop-v2/kubernetes-grafana-cluster-overview.png)
 > Overview over the first workshop node usage.
-> ***
+>
+> ---
+>
 > ![Kubernetes Grafana Pods kube-dns Overview](/blog/2016/docker-for-admins-workshop-v2/kubernetes-grafana-pods-kube-dns.png)
 > Overview over Pod `monitoring-influxdb-grafana` in namespace `kube-system`.
 
@@ -1498,12 +1607,14 @@ Basic monitoring of the cluster nodes, out of the box.
 You can see data for your cluster nodes, down to every single Pod.
 
 Grafana may not work from the begining, but you can easily fix this by changing the data source to type `direct` and the url to:
+
 ```console
 http://127.0.0.1:8080/api/v1/proxy/namespaces/kube-system/services/monitoring-influxdb:api/
 ```
 
 ### All Container logs in one place with an ELK stack
-Navigate to http://127.0.0.1:8080/api/v1/proxy/namespaces/kube-system/services/kibana-logging/.
+
+Navigate to <http://127.0.0.1:8080/api/v1/proxy/namespaces/kube-system/services/kibana-logging/>.
 
 After you have created the default index in the formular, you should see the Kibana interface.
 
@@ -1513,9 +1624,10 @@ After you have created the default index in the formular, you should see the Kib
 
 You can try searching for specific logs or create visualizations.
 
-***
+---
 
 # Deployments with Kubernetes
+
 The `kubectl` utility allows us to create objects, in this section I'm going to cover how you can create "deployment" files for Kubernetes objects.
 
 ## BusyBox Pod Example
@@ -1523,6 +1635,7 @@ The `kubectl` utility allows us to create objects, in this section I'm going to 
 > **TASK**: [`kubernetes303`](https://github.com/galexrt/workshop-docker/tree/master/kubernetes303)
 
 You have already seen this example, but here again with explanations:
+
 ```console
 apiVersion: v1
 kind: Pod
@@ -1542,12 +1655,12 @@ spec:
 
 > **WDWD**
 >
-> * `apiVersion: v1` - Sets the API version to use.
-> * `kind: Pod` - Sets the type/kind of the "obejct".
-> * `metadata: []` - A list of metadata information, like what name or namespace to use.
-> * `spec: []` - A list of "specifications". In this case containing a list of containers.
-> * Container part see below.
-> * `restartPolicy: Always` - Restart policy. In this case the pod always restarts, until deleted.
+> - `apiVersion: v1` - Sets the API version to use.
+> - `kind: Pod` - Sets the type/kind of the "obejct".
+> - `metadata: []` - A list of metadata information, like what name or namespace to use.
+> - `spec: []` - A list of "specifications". In this case containing a list of containers.
+> - Container part see below.
+> - `restartPolicy: Always` - Restart policy. In this case the pod always restarts, until deleted.
 
 ```console
 - image: busybox
@@ -1560,16 +1673,18 @@ spec:
 
 > **WDWD**
 >
-> * `- image: busybox` - Use the busybox image. The `-` (minus) begins the list entry.
-> * `command: []` - The command to run in the container (not the entrypoint).
-> * `imagePullPolicy: IfNotPresent` - The image pull policy.
-> * `name: busybox` - The name of the container of the pod.
+> - `- image: busybox` - Use the busybox image. The `-` (minus) begins the list entry.
+> - `command: []` - The command to run in the container (not the entrypoint).
+> - `imagePullPolicy: IfNotPresent` - The image pull policy.
+> - `name: busybox` - The name of the container of the pod.
 
 Most things are seem similar but different to `docker-compose.yml`s, but if you know the basic syntax differences you should be good to go.
 
 ## WordPress and MySQL Pod Example
+
 See the file `wordpress-mysql/wordpress-mysql-all-in-one.yaml`.
 This code block only contains the pods, not the services.
+
 ```console
 apiVersion: v1
 # Service object
@@ -1683,10 +1798,11 @@ spec:
           # gives the port a name
           name: wordpress
 ```
+
 You can see that the syntax is similar to the syntax of `docker-compose`. It has it's differences, for example the environment variables, but all in all it is similar.
 The big difference to `docker-compose` is that there is more around the container "defintions". In `docker-compose` we "only" have containers, no services, replication controller and other objects.
 
-***
+---
 
 # Your turn, let's deploy the Guestbook application
 
@@ -1696,18 +1812,18 @@ The big difference to `docker-compose` is that there is more around the containe
 
 Enter the `guestbook/` directory and `kubectl` create/"run" the `guestbook-all-in-one.yaml` file.
 For the forgetful, this is how you create/"run" the file:
+
 ```console
 kubectl create -f guestbook-all-in-one.yaml
 ```
 
 > **Expected Output**
-> <script type="text/javascript" src="https://asciinema.org/a/c6vjqoascx8q7pkwid39kefhl.js" id="asciicast-c6vjqoascx8q7pkwid39kefhl" async data-speed="1.5"></script>
 
 This will start all services and replication controller that are required by the guestbook application.
 
 ## Test the Guestbook
 
-To reach the guestbook, navigate to http://127.0.0.1:8080/api/v1/proxy/namespaces/default/services/frontend.
+To reach the guestbook, navigate to <http://127.0.0.1:8080/api/v1/proxy/namespaces/default/services/frontend>.
 
 > ![Kubernetes Guesbook App](/blog/2016/docker-for-admins-workshop-v2/kubernetes-guesbook-home.png)
 > The guestbook app just started, so there are no entries yet.
@@ -1731,7 +1847,7 @@ As you have already seen some Kubernetes "deployment" files in this [Deployments
 
 ## WordPress + MySQL - WIP
 
-Details about a deploying WordPress with MySQL to Kubernetes can be found here: https://github.com/kubernetes/kubernetes/tree/release-1.4/examples/mysql-wordpress-pd
+Details about a deploying WordPress with MySQL to Kubernetes can be found here: <https://github.com/kubernetes/kubernetes/tree/release-1.4/examples/mysql-wordpress-pd>
 
 > **NOTE**
 >
@@ -1743,13 +1859,13 @@ Now you can continue to play around with your Kubernetes cluster. Deploy other a
 
 If you want to stop the Kubernetes cluster, please stop all nodes at the same time! Not stopping them at the same time, causes the services required to run the cluster to desync and causes fatal errors.
 
-***
+---
 
 # The End
 
 If you are reading this, you have made it to the end. Well done, sir or madame! Have a cookie on my cap.
 
-***
+---
 
 # Solutions for "Tests"
 
