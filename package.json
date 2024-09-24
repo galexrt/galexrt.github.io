@@ -35,7 +35,7 @@
     "nuxt-site-config-kit": "2.2.18",
     "prettier": "3.3.3",
     "prettier-plugin-organize-imports": "4.1.0",
-    "prettier-plugin-tailwindcss": "0.6.6",
+    "prettier-plugin-tailwindcss": "0.6.8",
     "sharp": "0.33.5",
     "vue-tsc": "2.1.6",
     "wrangler": "3.78.8"
