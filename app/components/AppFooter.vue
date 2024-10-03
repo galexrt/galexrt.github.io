@@ -36,7 +36,7 @@ const links = [
 <template>
     <UFooter>
         <template #top>
-            <UFooterColumns :links="links" />
+            <UFooterColumns :links="links" class="print:hidden" />
         </template>
 
         <template #left>
@@ -46,9 +46,10 @@ const links = [
         </template>
 
         <template #right>
-            <UColorModeButton size="sm" />
+            <UColorModeButton class="print:hidden" size="sm" />
 
             <UButton
+                class="print:hidden"
                 to="https://github.com/galexrt"
                 target="_blank"
                 icon="i-simple-icons-github"

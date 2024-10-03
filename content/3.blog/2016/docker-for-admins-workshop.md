@@ -112,7 +112,7 @@ For Docker see the begining of script at [here](https://get.docker.com/) or run 
 For `docker-compose` see the [docs](https://docs.docker.com/compose/install/) or run the following command:
 
 ```console
-curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+curl -L https://github.com/docker/compose/releases/download/v2.29.7/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ```
 

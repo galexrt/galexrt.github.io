@@ -81,11 +81,11 @@ if (post.value.image?.src) {
 
             <hr v-if="surround?.length" />
 
-            <UContentSurround :surround="surround" />
+            <UContentSurround :surround="surround" class="print:hidden" />
         </UPageBody>
 
         <template #right>
-            <UContentToc v-if="post.body && post.body.toc" :links="post.body.toc.links" />
+            <UContentToc v-if="post.body && post.body.toc" :links="post.body.toc.links" class="print:hidden" />
         </template>
     </UPage>
 </template>
