@@ -29,5 +29,6 @@ module.exports = {
                 caughtErrorsIgnorePattern: '^_',
             },
         ],
+        'vue/html-self-closing': 'off',
     },
 };

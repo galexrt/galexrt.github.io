@@ -26,7 +26,7 @@ const links = [
     <UHeader :links="links">
         <template #logo>
             <div class="inline-flex items-center gap-2">
-                <img src="/favicon.png" class="size-9" />
+                <img src="/favicon.png" class="h-10" />
 
                 Galexrt
 
