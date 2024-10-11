@@ -29,7 +29,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-tailwindcss": "3.17.5",
-    "eslint-plugin-vue": "9.28.0",
+    "eslint-plugin-vue": "9.29.0",
     "nuxt": "3.13.2",
     "nuxt-site-config": "2.2.18",
     "nuxt-site-config-kit": "2.2.18",
