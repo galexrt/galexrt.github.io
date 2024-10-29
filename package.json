@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "0.6.1",
-    "@nuxthq/studio": "2.2.0",
+    "@nuxthq/studio": "2.2.1",
     "@nuxtjs/fontaine": "0.4.3",
     "eslint": "9.13.0",
     "eslint-config-prettier": "9.1.0",
