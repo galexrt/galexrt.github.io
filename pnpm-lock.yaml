@@ -61,8 +61,8 @@ importers:
         specifier: 3.14.1592
         version: 3.14.1592(@parcel/watcher@2.4.1)(@types/node@22.5.4)(eslint@9.15.0(jiti@2.4.0))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(terser@5.32.0)(typescript@5.6.3)(vite@5.4.11(@types/node@22.5.4)(terser@5.32.0))(vue-tsc@2.1.10(typescript@5.6.3))
       nuxt-site-config:
-        specifier: 3.0.2
-        version: 3.0.2(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.11(@types/node@22.5.4)(terser@5.32.0))(vue@3.5.13(typescript@5.6.3))
+        specifier: 3.0.3
+        version: 3.0.3(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.11(@types/node@22.5.4)(terser@5.32.0))(vue@3.5.13(typescript@5.6.3))
       nuxt-site-config-kit:
         specifier: 2.2.21
         version: 2.2.21(magicast@0.3.5)(rollup@4.24.4)(vue@3.5.13(typescript@5.6.3))
@@ -4096,11 +4096,11 @@ packages:
   nuxt-site-config-kit@2.2.21:
     resolution: {integrity: sha512-xO41Zf6bXlA9Zvj+fX7ftD+ITee4LfrkzHj85Gt4FpgwonFxzGO5pMBtAqIxXKJwuyT1z2wVAixHI+ov66wV0w==}
 
-  nuxt-site-config-kit@3.0.2:
-    resolution: {integrity: sha512-zXiQJl7oXRuKO4EJ/cO0fb8Cu6rs31Kxaq9u8wc2a9CbTNengeW7o/7qHAmmL5TgXFZCfAtAv/zdkN8hc2mZLw==}
+  nuxt-site-config-kit@3.0.3:
+    resolution: {integrity: sha512-lZe1eEOEYQIB/TpL2SY3BgBsOiU+I0JgYToVJ0c+8Knlcp57X2V/asMaN4KlTKEB/4QLOi63DSnL1Unh5Q+u7A==}
 
-  nuxt-site-config@3.0.2:
-    resolution: {integrity: sha512-OizP+E9VtJU4sw5TtJk3Bq40+zIzRma0V5Jw2mjTOn7rT+c7YGG3hv/o3bMh4AvSRY70v859Na18pBCmW6jCWg==}
+  nuxt-site-config@3.0.3:
+    resolution: {integrity: sha512-FqvAUthrqi05vZHB9eusZiu5L+F+Xnc2nt4Yf9lV/qbQ4h9IBXQ7TeikR78FqVHi75XJRg7xrFVMCV11BJWi5Q==}
 
   nuxt@3.14.1592:
     resolution: {integrity: sha512-roWAQH4Mb6WY72cNos+YVw0DgTCNAhNygiAMCedM7hbX6ESTR2n3VH7tU0yIWDPe/hfFdii4M4wWTTNHOtS44g==}
@@ -4967,8 +4967,8 @@ packages:
     peerDependencies:
       vue: ^3
 
-  site-config-stack@3.0.2:
-    resolution: {integrity: sha512-aY7vyoOn2R0GKD/a8SRDD3jaok7qHMJqPB1kJ08DpPlKFWN5uDoxTO0k7JkiICnW0b68/0DAD7yg1VyTiMtryA==}
+  site-config-stack@3.0.3:
+    resolution: {integrity: sha512-FMi4ygGzwqKoFO49KeuFqylJUvSim0AC+vafRC+O/Br99CKOa/x98hxPmdFKtKN1cCV9aHqDyl9kzQPFpqsBJA==}
     peerDependencies:
       vue: ^3
 
@@ -11003,12 +11003,12 @@ snapshots:
       - vue
       - webpack-sources
 
-  nuxt-site-config-kit@3.0.2(magicast@0.3.5)(rollup@4.24.4)(vue@3.5.13(typescript@5.6.3)):
+  nuxt-site-config-kit@3.0.3(magicast@0.3.5)(rollup@4.24.4)(vue@3.5.13(typescript@5.6.3)):
     dependencies:
       '@nuxt/kit': 3.14.1592(magicast@0.3.5)(rollup@4.24.4)
       '@nuxt/schema': 3.14.1592(magicast@0.3.5)(rollup@4.24.4)
       pkg-types: 1.2.1
-      site-config-stack: 3.0.2(vue@3.5.13(typescript@5.6.3))
+      site-config-stack: 3.0.3(vue@3.5.13(typescript@5.6.3))
       std-env: 3.8.0
       ufo: 1.5.4
     transitivePeerDependencies:
@@ -11018,16 +11018,16 @@ snapshots:
       - vue
       - webpack-sources
 
-  nuxt-site-config@3.0.2(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.11(@types/node@22.5.4)(terser@5.32.0))(vue@3.5.13(typescript@5.6.3)):
+  nuxt-site-config@3.0.3(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.11(@types/node@22.5.4)(terser@5.32.0))(vue@3.5.13(typescript@5.6.3)):
     dependencies:
       '@nuxt/devtools-kit': 1.6.0(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.11(@types/node@22.5.4)(terser@5.32.0))
       '@nuxt/kit': 3.14.1592(magicast@0.3.5)(rollup@4.24.4)
       '@nuxt/schema': 3.14.1592(magicast@0.3.5)(rollup@4.24.4)
-      nuxt-site-config-kit: 3.0.2(magicast@0.3.5)(rollup@4.24.4)(vue@3.5.13(typescript@5.6.3))
+      nuxt-site-config-kit: 3.0.3(magicast@0.3.5)(rollup@4.24.4)(vue@3.5.13(typescript@5.6.3))
       pathe: 1.1.2
       pkg-types: 1.2.1
       sirv: 3.0.0
-      site-config-stack: 3.0.2(vue@3.5.13(typescript@5.6.3))
+      site-config-stack: 3.0.3(vue@3.5.13(typescript@5.6.3))
       ufo: 1.5.4
     transitivePeerDependencies:
       - magicast
@@ -12094,7 +12094,7 @@ snapshots:
       ufo: 1.5.4
       vue: 3.5.13(typescript@5.6.3)
 
-  site-config-stack@3.0.2(vue@3.5.13(typescript@5.6.3)):
+  site-config-stack@3.0.3(vue@3.5.13(typescript@5.6.3)):
     dependencies:
       ufo: 1.5.4
       vue: 3.5.13(typescript@5.6.3)
