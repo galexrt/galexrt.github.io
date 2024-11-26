@@ -33,7 +33,7 @@
     "nuxt": "3.14.1592",
     "nuxt-site-config": "3.0.4",
     "nuxt-site-config-kit": "3.0.4",
-    "prettier": "3.4.0",
+    "prettier": "3.4.1",
     "prettier-plugin-organize-imports": "4.1.0",
     "prettier-plugin-tailwindcss": "0.6.9",
     "sharp": "0.33.5",
