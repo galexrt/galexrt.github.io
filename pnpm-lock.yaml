@@ -30,8 +30,8 @@ importers:
         specifier: 1.6.0
         version: 1.6.0(change-case@5.4.4)(magicast@0.3.5)(rollup@4.24.4)(typescript@5.6.3)(vite@5.4.11(@types/node@22.5.4)(terser@5.32.0))(vue@3.5.13(typescript@5.6.3))
       '@vueuse/nuxt':
-        specifier: 11.3.0
-        version: 11.3.0(magicast@0.3.5)(nuxt@3.14.1592(@parcel/watcher@2.4.1)(@types/node@22.5.4)(eslint@9.17.0(jiti@2.4.1))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(terser@5.32.0)(typescript@5.6.3)(vite@5.4.11(@types/node@22.5.4)(terser@5.32.0))(vue-tsc@2.1.10(typescript@5.6.3)))(rollup@4.24.4)(vue@3.5.13(typescript@5.6.3))
+        specifier: 12.0.0
+        version: 12.0.0(magicast@0.3.5)(nuxt@3.14.1592(@parcel/watcher@2.4.1)(@types/node@22.5.4)(eslint@9.17.0(jiti@2.4.1))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(terser@5.32.0)(typescript@5.6.3)(vite@5.4.11(@types/node@22.5.4)(terser@5.32.0))(vue-tsc@2.1.10(typescript@5.6.3)))(rollup@4.24.4)(typescript@5.6.3)
     devDependencies:
       '@nuxt/eslint':
         specifier: 0.7.3
@@ -1939,6 +1939,11 @@ packages:
 
   '@vueuse/nuxt@11.3.0':
     resolution: {integrity: sha512-FxtRTgFmsoASamR3lOftv/r11o1BojF9zir8obbTnKamVZdlQ5rgJ0hHgVbrgA6dlMuEx/PzwqAmiKNFdU4oCQ==}
+    peerDependencies:
+      nuxt: ^3.0.0
+
+  '@vueuse/nuxt@12.0.0':
+    resolution: {integrity: sha512-ZSxphoQAX5/EzIUKADcqmoKOpIya7Qi/Lma2iGuLv0YdEAdIcyhTvJ3HwboSuVCPzzovyitY1Ozo+6b0nZ5j5Q==}
     peerDependencies:
       nuxt: ^3.0.0
 
@@ -8316,6 +8321,20 @@ snapshots:
       - rollup
       - supports-color
       - vue
+
+  '@vueuse/nuxt@12.0.0(magicast@0.3.5)(nuxt@3.14.1592(@parcel/watcher@2.4.1)(@types/node@22.5.4)(eslint@9.17.0(jiti@2.4.1))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(terser@5.32.0)(typescript@5.6.3)(vite@5.4.11(@types/node@22.5.4)(terser@5.32.0))(vue-tsc@2.1.10(typescript@5.6.3)))(rollup@4.24.4)(typescript@5.6.3)':
+    dependencies:
+      '@nuxt/kit': 3.14.1592(magicast@0.3.5)(rollup@4.24.4)
+      '@vueuse/core': 12.0.0(typescript@5.6.3)
+      '@vueuse/metadata': 12.0.0
+      local-pkg: 0.5.1
+      nuxt: 3.14.1592(@parcel/watcher@2.4.1)(@types/node@22.5.4)(eslint@9.17.0(jiti@2.4.1))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(terser@5.32.0)(typescript@5.6.3)(vite@5.4.11(@types/node@22.5.4)(terser@5.32.0))(vue-tsc@2.1.10(typescript@5.6.3))
+      vue: 3.5.13(typescript@5.6.3)
+    transitivePeerDependencies:
+      - magicast
+      - rollup
+      - supports-color
+      - typescript
 
   '@vueuse/shared@11.1.0(vue@3.5.13(typescript@5.6.3))':
     dependencies:
