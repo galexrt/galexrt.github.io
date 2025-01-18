@@ -24,7 +24,6 @@
   "devDependencies": {
     "@nuxt/eslint": "0.7.5",
     "@nuxthq/studio": "2.2.1",
-    "@nuxtjs/fontaine": "0.4.4",
     "eslint": "9.18.0",
     "eslint-config-prettier": "10.0.1",
     "eslint-plugin-prettier": "5.2.2",

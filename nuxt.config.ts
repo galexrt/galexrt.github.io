@@ -13,10 +13,8 @@ export default defineNuxtConfig({
         '@nuxt/ui',
         '@nuxt/fonts',
         '@nuxtjs/fontaine',
-	// Disabled due to https://github.com/nuxt/nuxt/issues/26798
-        //'@nuxthq/studio',
+        '@nuxthq/studio',
         '@vueuse/nuxt',
-        '@nuxtjs/fontaine',
         'nuxt-site-config',
     ],
 
