@@ -70,8 +70,8 @@ importers:
         specifier: 4.1.0
         version: 4.1.0(prettier@3.4.2)(typescript@5.6.3)(vue-tsc@2.2.0(typescript@5.6.3))
       prettier-plugin-tailwindcss:
-        specifier: 0.6.10
-        version: 0.6.10(prettier-plugin-organize-imports@4.1.0(prettier@3.4.2)(typescript@5.6.3)(vue-tsc@2.2.0(typescript@5.6.3)))(prettier@3.4.2)
+        specifier: 0.6.11
+        version: 0.6.11(prettier-plugin-organize-imports@4.1.0(prettier@3.4.2)(typescript@5.6.3)(vue-tsc@2.2.0(typescript@5.6.3)))(prettier@3.4.2)
       sharp:
         specifier: 0.33.5
         version: 0.33.5
@@ -3804,6 +3804,7 @@ packages:
 
   lodash.isequal@4.5.0:
     resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
+    deprecated: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
 
   lodash.isplainobject@4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
@@ -4723,8 +4724,8 @@ packages:
       vue-tsc:
         optional: true
 
-  prettier-plugin-tailwindcss@0.6.10:
-    resolution: {integrity: sha512-ndj2WLDaMzACnr1gAYZiZZLs5ZdOeBYgOsbBmHj3nvW/6q8h8PymsXiEnKvj/9qgCCAoHyvLOisoQdIcsDvIgw==}
+  prettier-plugin-tailwindcss@0.6.11:
+    resolution: {integrity: sha512-YxaYSIvZPAqhrrEpRtonnrXdghZg1irNg4qrjboCXrpybLWVs55cW2N3juhspVJiO0JBvYJT8SYsJpc8OQSnsA==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
@@ -11968,7 +11969,7 @@ snapshots:
     optionalDependencies:
       vue-tsc: 2.2.0(typescript@5.6.3)
 
-  prettier-plugin-tailwindcss@0.6.10(prettier-plugin-organize-imports@4.1.0(prettier@3.4.2)(typescript@5.6.3)(vue-tsc@2.2.0(typescript@5.6.3)))(prettier@3.4.2):
+  prettier-plugin-tailwindcss@0.6.11(prettier-plugin-organize-imports@4.1.0(prettier@3.4.2)(typescript@5.6.3)(vue-tsc@2.2.0(typescript@5.6.3)))(prettier@3.4.2):
     dependencies:
       prettier: 3.4.2
     optionalDependencies:
