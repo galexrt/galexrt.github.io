@@ -22,7 +22,7 @@
     "@vueuse/nuxt": "12.7.0"
   },
   "devDependencies": {
-    "@nuxt/eslint": "1.0.1",
+    "@nuxt/eslint": "1.1.0",
     "@nuxthq/studio": "2.2.1",
     "eslint": "9.20.1",
     "eslint-config-prettier": "10.0.1",
