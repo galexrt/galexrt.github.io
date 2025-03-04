@@ -58,11 +58,11 @@ importers:
         specifier: 3.15.4
         version: 3.15.4(@parcel/watcher@2.4.1)(@types/node@22.5.4)(db0@0.2.1)(eslint@9.21.0(jiti@2.4.2))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(terser@5.32.0)(typescript@5.6.3)(vite@6.0.11(@types/node@22.5.4)(jiti@2.4.2)(terser@5.32.0)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.6.3))(yaml@2.7.0)
       nuxt-site-config:
-        specifier: 3.1.2
-        version: 3.1.2(magicast@0.3.5)(vue@3.5.13(typescript@5.6.3))
+        specifier: 3.1.3
+        version: 3.1.3(magicast@0.3.5)(vue@3.5.13(typescript@5.6.3))
       nuxt-site-config-kit:
-        specifier: 3.1.2
-        version: 3.1.2(magicast@0.3.5)(vue@3.5.13(typescript@5.6.3))
+        specifier: 3.1.3
+        version: 3.1.3(magicast@0.3.5)(vue@3.5.13(typescript@5.6.3))
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -4131,11 +4131,11 @@ packages:
     resolution: {integrity: sha512-Zmuw/PxAeJkIu7EPZEFg0lIwnfpeiDsHog9i1g5d4Z3O5+00R1Vbuk+NC6K7kgpdLsdU2/XBvzc7oQ6BsXuQPg==}
     hasBin: true
 
-  nuxt-site-config-kit@3.1.2:
-    resolution: {integrity: sha512-AuU8UYTgmZ4wV1z8tYsgLHKzPKEY02buXiHKZSCPHgC9sVg/3OctZPcF0LtqZDgOt81U7tz4AGvIAXJCLO3PuQ==}
+  nuxt-site-config-kit@3.1.3:
+    resolution: {integrity: sha512-ULl0kVK/97EQnP0P8ztns1SJ2WCF7myhy2q0EEn5MaaHIwpQV8rEw8PPeOCswIKeWJmkcWGDC26X6359rjhE+A==}
 
-  nuxt-site-config@3.1.2:
-    resolution: {integrity: sha512-SmdgrKjZTS55j48g+FIj16uCzb7e8KFerNzPXheBbwxv9O9CwWVV/q7sV2+tDtg4oO3L322UuKRm4F6mZQsWHA==}
+  nuxt-site-config@3.1.3:
+    resolution: {integrity: sha512-lv4bGPubrB5AvX/2tN5YbAKSi3ywogNvYOYOEJ4RlEHorOaf2wlVkBjSgjqfUU1cRZzMjtP3yvIhTF5xIsFO3A==}
 
   nuxt@3.15.4:
     resolution: {integrity: sha512-hSbZO4mR0uAMJtZPNTnCfiAtgleoOu28gvJcBNU7KQHgWnNXPjlWgwMczko2O4Tmnv9zIe/CQged+2HsPwl2ZA==}
@@ -5017,8 +5017,8 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
-  site-config-stack@3.1.2:
-    resolution: {integrity: sha512-l2ERJjlQwXiUOY2Fbu+SGvR9uOAftBtxvuBVgojhHFOfEgkAbzxjJkiBs1ZE/A/UXyCqzVCVJWW4ooSLzYMhaQ==}
+  site-config-stack@3.1.3:
+    resolution: {integrity: sha512-ejxQOrdUFMPT0ijzq3fiNKcbxHZ50KHGHZzVqLMdl7+ota4dO+yynZaar6Z/ji3+cSHJaNDA/CVQ5UZ12wbYTQ==}
     peerDependencies:
       vue: ^3
 
@@ -5115,6 +5115,9 @@ packages:
 
   std-env@3.8.0:
     resolution: {integrity: sha512-Bc3YwwCB+OzldMxOXJIIvC6cPRWr/LxOp48CdQTOkPyk/t4JWWJbrilwBd7RJzKV8QW7tJkcgAmeuLLJugl5/w==}
+
+  std-env@3.8.1:
+    resolution: {integrity: sha512-vj5lIj3Mwf9D79hBkltk5qmkFI+biIKWS2IBxEyEU3AX1tUf7AoL8nSazCOiiqQsGKIq01SClsKEzweu34uwvA==}
 
   stoppable@1.1.0:
     resolution: {integrity: sha512-KXDYZ9dszj6bzvnEMRYvxgeTHU74QBFL54XKtP3nyMuJ81CFYtABZ3bAzL2EdFUaEwJOBOgENyFj3R7oTzDyyw==}
@@ -11108,26 +11111,26 @@ snapshots:
       - magicast
       - supports-color
 
-  nuxt-site-config-kit@3.1.2(magicast@0.3.5)(vue@3.5.13(typescript@5.6.3)):
+  nuxt-site-config-kit@3.1.3(magicast@0.3.5)(vue@3.5.13(typescript@5.6.3)):
     dependencies:
       '@nuxt/kit': 3.15.4(magicast@0.3.5)
       pkg-types: 2.1.0
-      site-config-stack: 3.1.2(vue@3.5.13(typescript@5.6.3))
-      std-env: 3.8.0
+      site-config-stack: 3.1.3(vue@3.5.13(typescript@5.6.3))
+      std-env: 3.8.1
       ufo: 1.5.4
     transitivePeerDependencies:
       - magicast
       - supports-color
       - vue
 
-  nuxt-site-config@3.1.2(magicast@0.3.5)(vue@3.5.13(typescript@5.6.3)):
+  nuxt-site-config@3.1.3(magicast@0.3.5)(vue@3.5.13(typescript@5.6.3)):
     dependencies:
       '@nuxt/kit': 3.15.4(magicast@0.3.5)
-      nuxt-site-config-kit: 3.1.2(magicast@0.3.5)(vue@3.5.13(typescript@5.6.3))
+      nuxt-site-config-kit: 3.1.3(magicast@0.3.5)(vue@3.5.13(typescript@5.6.3))
       pathe: 2.0.3
       pkg-types: 2.1.0
       sirv: 3.0.1
-      site-config-stack: 3.1.2(vue@3.5.13(typescript@5.6.3))
+      site-config-stack: 3.1.3(vue@3.5.13(typescript@5.6.3))
       ufo: 1.5.4
     transitivePeerDependencies:
       - magicast
@@ -12219,7 +12222,7 @@ snapshots:
 
   sisteransi@1.0.5: {}
 
-  site-config-stack@3.1.2(vue@3.5.13(typescript@5.6.3)):
+  site-config-stack@3.1.3(vue@3.5.13(typescript@5.6.3)):
     dependencies:
       ufo: 1.5.4
       vue: 3.5.13(typescript@5.6.3)
@@ -12317,6 +12320,8 @@ snapshots:
   statuses@2.0.1: {}
 
   std-env@3.8.0: {}
+
+  std-env@3.8.1: {}
 
   stoppable@1.1.0: {}
 
