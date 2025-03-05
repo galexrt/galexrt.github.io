@@ -35,9 +35,9 @@ features:
       icon: "i-ph-fork-knife"
 cta:
   title: Want to work with me or need my expertise?
-  description: I have experience with a range of technologies for Kubernetes, and I can help you with your projects through my company ZerBytes.
+  description: I have experience with a range of technologies for Kubernetes, and I can help you with your projects through my company ZerBytes UG (haftungsbeschränkt).
   links:
-    - label: Checkout ZerBytes
+    - label: Checkout ZerBytes UG (haftungsbeschränkt)
       size: xl
       color: black
       to: https://zerbytes.net/

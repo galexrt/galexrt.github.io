@@ -121,7 +121,7 @@ data:
   NGINX_MAX_UPLOAD_SIZE: "100m"
   # GitLab SMTP settings
   GITLAB_EMAIL: "noreply@example.com"
-  GITLAB_EMAIL_DISPLAY_NAME: "GitLab ZerBytes"
+  GITLAB_EMAIL_DISPLAY_NAME: "GitLab Example"
   GITLAB_EMAIL_REPLY_TO: "gitlab@example.com"
   SMTP_ENABLED: "true"
   SMTP_DOMAIN: "example.com"
