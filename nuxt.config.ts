@@ -3,32 +3,36 @@ const customElements = ['Center'];
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     telemetry: false,
-    extends: [process.env.NUXT_UI_PRO_PATH || '@nuxt/ui-pro'],
-    compatibilityDate: '2024-07-05',
 
     modules: [
-        '@nuxt/content',
         '@nuxt/eslint',
         '@nuxt/image',
-        '@nuxt/ui',
+        '@nuxt/ui-pro',
+        '@nuxt/content',
         '@nuxt/fonts',
         '@nuxthq/studio',
         '@vueuse/nuxt',
         'nuxt-site-config',
     ],
 
-    hooks: {
-        // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
-        'components:extend': (components) => {
-            const globals = components.filter((c) => ['UButton', 'ImageGallery', 'ImageItem'].includes(c.pascalName));
-
-            globals.forEach((c) => (c.global = true));
+    app: {
+        head: {
+            charset: 'utf-8',
+            viewport: 'width=device-width, initial-scale=1',
+            link: [
+                { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+            ],
+            meta: [{ name: 'darkreader-lock', content: '' }],
         },
     },
 
-    ui: {
-        icons: ['ph', 'simple-icons', 'mdi'],
-        safelistColors: ['blue-violet'],
+    css: ['~/assets/css/main.css'],
+
+    icon: {
+        collections: ['ph', 'lucide', 'mdi', 'simple-icons'
+
+        ],
+        serverBundle: 'local',
     },
 
     fonts: {
@@ -69,7 +73,6 @@ export default defineNuxtConfig({
     },
 
     routeRules: {
-        '/api/search.json': { prerender: true },
         '/post/**': { redirect: '/blog/**' },
         '/discord': { redirect: 'https://discord.gg/zFYb3KHg24' },
         '/youtube': { redirect: 'https://youtube.com/@galexrt' },
@@ -82,6 +85,8 @@ export default defineNuxtConfig({
     typescript: {
         strict: false,
     },
+
+    compatibilityDate: '2024-07-11',
 
     future: {
         compatibilityVersion: 4,

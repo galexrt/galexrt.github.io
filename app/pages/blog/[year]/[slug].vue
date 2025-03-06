@@ -1,27 +1,21 @@
 <script setup lang="ts">
-import { withoutTrailingSlash, joinURL } from 'ufo';
-import type { BlogPost } from '~/types';
+import { joinURL } from 'ufo';
 
 const route = useRoute();
 
-const { data: post } = await useAsyncData(route.path, () => queryContent<BlogPost>(route.path).findOne());
+const { data: post } = await useAsyncData(route.path, () => queryCollection('posts').path(route.path).first());
 if (!post.value) {
     throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true });
 }
 
-const { data: surround } = await useAsyncData(
-    `${route.path}-surround`,
-    () =>
-        queryContent('/blog')
-            .where({ _extension: 'md' })
-            .without(['body', 'excerpt'])
-            .sort({ date: -1 })
-            .findSurround(withoutTrailingSlash(route.path)),
-    { default: () => [] },
-);
+const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
+    return queryCollectionItemSurroundings('posts', route.path, {
+        fields: ['description'],
+    });
+});
 
-const title = post.value.head?.title || post.value.title;
-const description = post.value.head?.description || post.value.description;
+const title = post.value.title;
+const description = post.value.description;
 
 useSeoMeta({
     title,
@@ -41,12 +35,18 @@ if (post.value.image?.src) {
 </script>
 
 <template>
-    <UPage v-if="post">
+    <UContainer v-if="post">
         <UPageHeader :title="post.title" :description="post.description">
             <template #headline>
                 <div class="flex flex-col gap-2">
-                    <NuxtImg v-if="post.image?.src"
-                        v-bind="typeof post.image === 'string' ? { src: post.image, alt: post.title } : { alt: post.title, ...post.image }" />
+                    <NuxtImg
+                        v-if="post.image?.src"
+                        v-bind="
+                            typeof post.image === 'string'
+                                ? { src: post.image, alt: post.title }
+                                : { alt: post.title, ...post.image }
+                        "
+                    />
 
                     <div class="flex gap-1">
                         <UBadge v-if="post.badge" v-bind="post.badge" variant="subtle" />
@@ -67,8 +67,14 @@ if (post.value.image?.src) {
             </template>
 
             <div class="mt-4 flex flex-wrap items-center gap-3">
-                <UButton v-for="(author, index) in post.authors" :key="index" :to="author.to" color="white"
-                    target="_blank" size="sm">
+                <UButton
+                    v-for="(author, index) in post.authors"
+                    :key="index"
+                    :to="author.to"
+                    color="neutral"
+                    target="_blank"
+                    size="sm"
+                >
                     <UAvatar v-bind="author.avatar" :alt="author.name" size="2xs" />
 
                     {{ author.name }}
@@ -76,16 +82,18 @@ if (post.value.image?.src) {
             </div>
         </UPageHeader>
 
-        <UPageBody prose>
-            <ContentRenderer v-if="post && post.body" :value="post" />
+        <UPage>
+            <UPageBody>
+                <ContentRenderer v-if="post && post.body" :value="post" />
 
-            <hr v-if="surround?.length" />
+                <USeparator v-if="surround?.length" />
 
-            <UContentSurround :surround="surround" class="print:hidden" />
-        </UPageBody>
+                <UContentSurround :surround="surround" class="print:hidden" />
+            </UPageBody>
 
-        <template #right>
-            <UContentToc v-if="post.body && post.body.toc" :links="post.body.toc.links" class="print:hidden" />
-        </template>
-    </UPage>
+            <template #right>
+                <UContentToc v-if="post.body && post.body.toc" :links="post.body.toc.links" highlight class="print:hidden" />
+            </template>
+        </UPage>
+    </UContainer>
 </template>

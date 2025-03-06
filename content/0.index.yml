@@ -1,6 +1,5 @@
 title: Galexrt
 description: galexrt aka Alexander's homepage.
-navigation: false
 hero:
   title: Galexrt
   description: Sysadmin Garden of Eden
@@ -39,5 +38,5 @@ cta:
   links:
     - label: Checkout ZerBytes UG (haftungsbeschränkt)
       size: xl
-      color: black
+      color: neutral
       to: https://zerbytes.net/

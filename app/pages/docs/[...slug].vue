@@ -1,22 +1,20 @@
 <script setup lang="ts">
-import { withoutTrailingSlash } from 'ufo';
+definePageMeta({
+    layout: 'docs',
+});
 
 const route = useRoute();
 
-const { data: page } = await useAsyncData(route.path, () => queryContent(route.path).findOne());
+const { data: page } = await useAsyncData(route.path, () => queryCollection('docs').path(route.path).first());
 if (!page.value) {
     throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true });
 }
 
-const { data: surround } = await useAsyncData(
-    `${route.path}-surround`,
-    () =>
-        queryContent('/docs')
-            .where({ _extension: 'md', navigation: { $ne: false } })
-            .only(['title', 'description', '_path'])
-            .findSurround(withoutTrailingSlash(route.path)),
-    { default: () => [] },
-);
+const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
+    return queryCollectionItemSurroundings('docs', route.path, {
+        fields: ['description'],
+    });
+});
 
 useSeoMeta({
     title: page.value.title,
@@ -24,24 +22,22 @@ useSeoMeta({
     description: page.value.description,
     ogDescription: page.value.description,
 });
-
-const headline = computed(() => findPageHeadline(page.value!));
 </script>
 
 <template>
     <UPage v-if="page">
-        <UPageHeader :title="page.title" :description="page.description" :links="page.links" :headline="headline" />
+        <UPageHeader :title="page.title" :description="page.description" />
 
         <UPageBody prose>
             <ContentRenderer v-if="page.body" :value="page" />
 
-            <hr v-if="surround?.length" />
+            <USeparator v-if="surround?.length" />
 
             <UContentSurround :surround="surround" />
         </UPageBody>
 
-        <template v-if="page.toc !== false" #right>
-            <UContentToc :links="page.body?.toc?.links" />
+        <template v-if="page?.body?.toc?.links?.length" #right>
+            <UContentToc :links="page.body.toc.links" highlight />
         </template>
     </UPage>
 </template>

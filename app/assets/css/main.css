@@ -1,0 +1,38 @@
+@import 'tailwindcss' theme(static);
+@import '@nuxt/ui-pro';
+
+@source "../../../content";
+
+@theme static {
+    --font-sans: 'DM Sans', sans-serif;
+
+    --breakpoint-3xl: 1920px;
+
+    --color-azureradiance-50: #effaff;
+    --color-azureradiance-100: #dbf2fe;
+    --color-azureradiance-200: #bfe9fe;
+    --color-azureradiance-300: #93dcfd;
+    --color-azureradiance-400: #60c7fa;
+    --color-azureradiance-500: #3babf6;
+    --color-azureradiance-600: #258feb;
+    --color-azureradiance-700: #1e7ce1;
+    --color-azureradiance-800: #1e60af;
+    --color-azureradiance-900: #1e528a;
+    --color-azureradiance-950: #173254;
+
+    --color-blueviolet-50: #f1f3fc;
+    --color-blueviolet-100: #e5ebfa;
+    --color-blueviolet-200: #cfd8f6;
+    --color-blueviolet-300: #b2bfef;
+    --color-blueviolet-400: #939ee6;
+    --color-blueviolet-500: #797edb;
+    --color-blueviolet-600: #524fc8;
+    --color-blueviolet-700: #534eb4;
+    --color-blueviolet-800: #434291;
+    --color-blueviolet-900: #3b3b74;
+    --color-blueviolet-950: #232244;
+}
+
+.dark {
+    --ui-bg: var(--ui-color-neutral-950);
+}

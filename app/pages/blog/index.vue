@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import type { BlogPost } from '~/types';
+const route = useRoute();
 
-const { data: page } = await useAsyncData('blog', () => queryContent('/blog').findOne());
+const { data: page } = await useAsyncData('blog', () => queryCollection('blog').first());
 if (!page.value) {
     throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true });
 }
 
-const { data: posts } = await useAsyncData('posts', () =>
-    queryContent<BlogPost>('/blog').where({ _extension: 'md' }).sort({ date: -1 }).find(),
-);
+const { data: posts } = await useAsyncData(route.path, () => queryCollection('posts').order('date', 'DESC').all());
 
 useSeoMeta({
     title: page.value.title,
@@ -19,15 +17,19 @@ useSeoMeta({
 </script>
 
 <template>
-    <UPage>
-        <UPageHeader v-bind="page" />
+    <UContainer>
+        <UPageHeader v-bind="page">
+            <template #links>
+                <BlogYearSelector />
+            </template>
+        </UPageHeader>
 
         <UPageBody>
-            <UBlogList>
+            <UBlogPosts>
                 <UBlogPost
                     v-for="(post, index) in posts"
                     :key="index"
-                    :to="post._path"
+                    :to="post.path"
                     :title="post.title"
                     :description="post.description"
                     :image="post.image"
@@ -36,11 +38,12 @@ useSeoMeta({
                     :badge="post.badge"
                     :orientation="index === 0 ? 'horizontal' : 'vertical'"
                     :class="[index === 0 && 'col-span-full']"
+                    variant="naked"
                     :ui="{
                         description: 'line-clamp-2',
                     }"
                 />
-            </UBlogList>
+            </UBlogPosts>
         </UPageBody>
-    </UPage>
+    </UContainer>
 </template>

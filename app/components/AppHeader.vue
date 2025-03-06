@@ -1,13 +1,9 @@
 <script setup lang="ts">
-import type { NavItem } from '@nuxt/content';
-
-const navigation = inject<Ref<NavItem[]>>('navigation', ref([]));
-
-const links = [
+const items = [
     {
         label: 'Home',
         to: '/',
-        icon: 'i-ph-house'
+        icon: 'i-ph-house',
     },
     {
         label: 'Docs',
@@ -23,19 +19,24 @@ const links = [
 </script>
 
 <template>
-    <UHeader :links="links">
-        <template #logo>
-            <div class="inline-flex items-center gap-2">
-                <img src="/favicon.png" class="h-10" />
+    <UHeader>
+        <template #left>
+            <ULink class="inline-flex items-center gap-2" to="/">
+                <img src="/favicon.png" class="size-10" />
 
-                Galexrt
-
+                <span class="text-xl font-semibold text-gray-900 dark:text-white">Galexrt</span>
                 <UBadge label="Sysadmin Garden of Eden" variant="subtle" class="hidden sm:block" />
-            </div>
+            </ULink>
         </template>
 
-        <template #panel>
-            <UNavigationTree :links="mapContentNavigation(navigation)" default-open />
+        <UNavigationMenu :items="items" variant="link" />
+
+        <template #right>
+            <UColorModeButton />
+        </template>
+
+        <template #body>
+            <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
         </template>
     </UHeader>
 </template>

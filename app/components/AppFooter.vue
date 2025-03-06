@@ -9,11 +9,11 @@ const links = [
             },
             {
                 label: 'Blog',
-                to: '/blog'
+                to: '/blog',
             },
             {
                 label: 'About',
-                to: '/about'
+                to: '/about',
             },
         ],
     },
@@ -34,7 +34,8 @@ const links = [
 </script>
 
 <template>
-    <UFooter>
+    <USeparator class="h-px" />
+    <UFooter :ui="{ top: 'border-b border-[var(--ui-border)]' }">
         <template #top>
             <UFooterColumns :links="links" class="print:hidden" />
         </template>

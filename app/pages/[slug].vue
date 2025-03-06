@@ -1,13 +1,13 @@
 <script setup lang="ts">
 const route = useRoute();
 
-const { data: post } = await useAsyncData(route.path, () => queryContent(route.path).findOne());
+const { data: post } = await useAsyncData(route.path, () => queryCollection('content').path(route.path).first());
 if (!post.value) {
     throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true });
 }
 
-const title = post.value.head?.title || post.value.title;
-const description = post.value.head?.description || post.value.description;
+const title = post.value.title;
+const description = post.value.description;
 
 useSeoMeta({
     title,
@@ -21,8 +21,14 @@ useSeoMeta({
     <UContainer v-if="post" :ui="{ padding: '!px-4', constrained: 'max-w-8xl' }">
         <UPageHeader :title="post.title" :description="post.description">
             <div class="mt-4 flex flex-wrap items-center gap-3">
-                <UButton v-for="(author, index) in post.authors" :key="index" :to="author.to" color="white"
-                    target="_blank" size="sm">
+                <UButton
+                    v-for="(author, index) in post.authors"
+                    :key="index"
+                    :to="author.to"
+                    color="neutral"
+                    target="_blank"
+                    size="sm"
+                >
                     <UAvatar v-bind="author.avatar" :alt="author.name" size="2xs" />
 
                     {{ author.name }}
@@ -36,7 +42,7 @@ useSeoMeta({
             </UPageBody>
 
             <template v-if="post.body && post.body.toc.links.length" #right>
-                <UContentToc v-if="post.body && post.body.toc" :links="post.body.toc.links" />
+                <UContentToc v-if="post.body && post.body.toc" :links="post.body.toc.links" highlight />
             </template>
         </UPage>
     </UContainer>
