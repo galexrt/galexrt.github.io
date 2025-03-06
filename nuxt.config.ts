@@ -94,4 +94,10 @@ export default defineNuxtConfig({
     nitro: {
         preset: 'cloudflare-pages-static',
     },
+
+    content: {
+        preview: {
+            api: 'https://api.nuxt.studio',
+        },
+    },
 });
