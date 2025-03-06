@@ -10,7 +10,6 @@ export default defineNuxtConfig({
         '@nuxt/ui-pro',
         '@nuxt/content',
         '@nuxt/fonts',
-        '@nuxthq/studio',
         '@vueuse/nuxt',
         'nuxt-site-config',
     ],
