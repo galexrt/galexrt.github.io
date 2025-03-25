@@ -27,7 +27,7 @@
     "@nuxt/eslint": "1.2.0",
     "eslint": "9.23.0",
     "eslint-config-prettier": "10.1.1",
-    "eslint-plugin-prettier": "5.2.4",
+    "eslint-plugin-prettier": "5.2.5",
     "eslint-plugin-tailwindcss": "3.18.0",
     "eslint-plugin-vue": "10.0.0",
     "nuxt": "3.16.1",
