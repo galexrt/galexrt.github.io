@@ -27,7 +27,7 @@ It is possible to do so, but you need to "invest" in `Vagrantfile` and `Makefile
 
 Use `Makefile` to run `NODE=X vagrant up`, where `NODE=X` is the "number" of the node you want to be started.
 To tell `Makefile` to start these "many" targets you use a "hack" like this:
-```console
+```bash
 [...]
 nodes: $(shell for i in $(shell seq 1 $(NODE_COUNT)); do echo "node-$$i"; done)
 

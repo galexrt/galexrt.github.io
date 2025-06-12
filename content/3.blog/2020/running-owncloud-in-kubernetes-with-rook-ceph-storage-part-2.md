@@ -40,14 +40,14 @@ You should have `cluster-admin` access to the Kubernetes cluster! Other access c
 
 We are going to install the Kubernetes NGINX Ingress Controller.
 
-```console
+```bash
 # Taken from https://github.com/kubernetes/ingress-nginx/blob/master/deploy/static/mandatory.yaml
 kubectl apply -f ingress-nginx/
 ```
 
 The instructions shown here are for an environment without `LoadBalancer` Service type support (e.g., bare metal, "normal" VM provider, not cloud), for installation instructions for other environments checkout [Installation Guide - NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/deploy/).
 
-```console
+```bash
 # Taken from # Taken from https://github.com/kubernetes/ingress-nginx/blob/master/deploy/static/provider/baremetal/service-nodeport.yaml
 kubectl apply -f ingress-nginx/service-nodeport.yaml
 ```
@@ -56,7 +56,7 @@ As these are bare metal installation instructions, the NGINX Ingress controller 
 
 To get that port run:
 
-```console
+```bash
 $ kubectl get -n ingress-nginx service ingress-nginx
 NAME            TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
 ingress-nginx   NodePort   10.108.254.160   <none>        80:30512/TCP,443:30243/TCP   23m
@@ -74,7 +74,7 @@ Through the whole installation we will create 4 Namespaces:
 * `owncloud` - For ownCloud and the other operators, such as Zalando's Postgres Operator and KubeDB for Redis.
 * `ingress-nginx` - If you don't have an Ingress controller running yet, the namespace is used for the Ingress NGINX controller (it is already created in the [Ingress Controller steps](#ingress-controller)).
 
-```console
+```bash
 kubectl create -f namespaces.yaml
 ```
 
@@ -89,14 +89,14 @@ In the following sections make sure to use the available `-test` suffixed files 
 
 The operator will take care of starting up the Ceph components one by one and also preparing of disks and health checking.
 
-```console
+```bash
 kubectl create -f rook-ceph/common.yaml
 kubectl create -f rook-ceph/operator.yaml
 ```
 
 You can check on the Pods to see how it looks:
 
-```console
+```bash
 $ kubectl get -n rook-ceph pod
 NAME                                  READY   STATUS    RESTARTS   AGE
 rook-ceph-agent-cbrgv                 1/1     Running   0          90s
@@ -119,7 +119,7 @@ If you wanna see some example CephCluster objects to see what is possible, be su
 **INFO** Use the `cluster-test.yaml` when your Kubernetes cluster has less than 3 schedulable Nodes (e.g., minikube)!
 When using the `cluster-test.yaml` only one `mon` is started. If that mon is down for whatever reason, the Ceph Cluster will come to a halt to prevent any data "corruption".
 
-```console
+```bash
 $ kubectl create -f rook-ceph/cluster.yaml
 ```
 
@@ -127,7 +127,7 @@ This will now cause the operator to start the Ceph cluster after the specificati
 
 To see which Pods have already been created by the operator, you can run (output example from a three node cluster):
 
-```console
+```bash
 $ kubectl get -n rook-ceph pod
 NAME                                                     READY   STATUS      RESTARTS   AGE
 rook-ceph-agent-cbrgv                                    1/1     Running     0          11m
@@ -156,7 +156,7 @@ The StorageClass is for the PostgreSQL and if you want even the Redis cluster.
 
 **INFO** Use the `storageclass-test.yaml` when your Kubernetes cluster has less than 3 schedulable Nodes!
 
-```console
+```bash
 kubectl create -f rook-ceph/storageclass.yaml
 ```
 
@@ -164,7 +164,7 @@ In case of a block storage Pool there are no additional Pods that will be starte
 
 One more thing to do is, to set the created StorageClass as default in the Kubernetes cluster by running the following command:
 
-```console
+```bash
 kubectl patch storageclass rook-ceph-block -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 ```
 
@@ -176,13 +176,13 @@ CephFS is the filesystem that Ceph offers, with its POSIX compliance it is a per
 
 **INFO** Use the `filesystem-test.yaml` when your Kubernetes cluster has less than 3 schedulable Nodes!
 
-```console
+```bash
 kubectl create -f rook-ceph/filesystem.yaml
 ```
 
 Creation of the CephFS will cause, so called MDS daemons, MDS Pods to be started.
 
-```console
+```bash
 $ kubectl get -n rook-ceph pod
 NAME                                    READY   STATUS      RESTARTS   AGE
 [...]
@@ -195,7 +195,7 @@ rook-ceph-mds-myfs-b-76b9fcc8cc-md8bz                    1/1     Running     0  
 
 This will create a Pod which will allow us to run Ceph commands. It will be use to quickly check the Ceph clusters status.
 
-```console
+```bash
 $ kubectl create -f rook-ceph/toolbox.yaml
 # Wait for the Pod to be `Running`
 $ kubectl get -n rook-ceph pod -l "app=rook-ceph-tools"
@@ -207,13 +207,13 @@ rook-ceph-tools-5966446d7b-nrw5n                         1/1     Running     0  
 
 Now use `kubectl exec` to enter the Rook Ceph Toolbox Pod:
 
-```console
+```bash
 kubectl exec -n rook-ceph -it $(kubectl get -n rook-ceph pod -l "app=rook-ceph-tools" -o jsonpath='{.items[0].metadata.name}') bash
 ```
 
 In the Rook Ceph Toolbox Pod, run the following command to get the Ceph cluster health status (example output from a 7 Node Kubernetes Rook Ceph cluster):
 
-```console
+```bash
 $ ceph -s
  cluster:
    id:     f8492cd9-3d14-432c-b681-6f73425d6851
@@ -238,7 +238,7 @@ $ ceph -s
 
 You can also get it by using `kubectl`:
 
-```console
+```bash
 $ kubectl get -n rook-ceph cephcluster rook-ceph
 NAME        DATADIRHOSTPATH   MONCOUNT   AGE   STATE     HEALTH
 rook-ceph   /mnt/sda1/rook    3          14m   Created   HEALTH_OK
@@ -250,7 +250,7 @@ That even shows you some additional information directly through `kubectl` inste
 
 This is how it should look Pod wise now in your `rook-ceph` Namespace (example output from a 3 Node Kubernetes cluster):
 
-```console
+```bash
 $ kubectl get -n rook-ceph pod
 NAME                                                     READY   STATUS      RESTARTS   AGE
 rook-ceph-agent-cbrgv                                    1/1     Running     0          15m
@@ -288,7 +288,7 @@ Zalando's PostgreSQL operator does a great job for running PostgreSQL in Kuberne
 First thing to create is the PostgreSQL Operator which brings the CustomResourceDefinitions, remember the custom Kubernetes objects, with itself.
 Using the Ceph block storage (RBD) we are going to create a redundant PostgreSQL instance for ownCloud to use.
 
-```console
+```bash
 $ kubectl create -n owncloud -f postgres/postgres-operator.yaml
 # Check for the PostgreSQL operator Pod to be created and running
 $ kubectl get -n owncloud pod
@@ -298,7 +298,7 @@ postgres-operator-6464fc9c48-6twrd   1/1     Running   0          5m23s
 
 That is the operator created, moving on to the PostgreSQL custom resource object that will cause the operator to create a PostgreSQL instance for use in Kubernetes:
 
-```console
+```bash
 # Make sure the CustomResourceDefinition of the PostgreSQL has been created
 $ kubectl get customresourcedefinitions.apiextensions.k8s.io postgresqls.acid.zalan.do
 NAME                        CREATED AT
@@ -307,13 +307,13 @@ postgresqls.acid.zalan.do   2019-08-04T10:27:59Z
 
 The CustomResourceDefinition exists? Perfect, continue with the creation:
 
-```console
+```bash
 kubectl create -n owncloud -f postgres/postgres.yaml
 ```
 
 It will take a bit for the two PostgreSQL Pods to appear, but in the end you should have two `owncloud-postgres` Pods:
 
-```console
+```bash
 $ kubectl get -n owncloud pod
 NAME                                 READY   STATUS    RESTARTS   AGE
 owncloud-postgres-0                  1/1     Running   0          92s
@@ -331,7 +331,7 @@ To run a Redis cluster we need the KubeDB Operator, installing it can done using
 
 To keep it quick'n'easy we'll use their bash script for that:
 
-```console
+```bash
 curl -fsSL https://raw.githubusercontent.com/kubedb/cli/0.12.0/hack/deploy/kubedb.sh -o kubedb.sh
 # Take a look at the script using, e.g., `cat kubedb.sh`
 #
@@ -347,13 +347,13 @@ For more information on the bash script and/ or the Helm installation, checkout 
 
 Moving on to creating the Redis cluster, run:
 
-```console
+```bash
 kubectl create -n owncloud -f redis.yaml
 ```
 
 It will take a few seconds for the first Redis Pod(s) to be started, to check that it worked look for Pods with `redis-owncloud-` in their name:
 
-```console
+```bash
 $ kubectl get -n owncloud pods
 NAME                                 READY   STATUS    RESTARTS   AGE
 owncloud-postgres-0                  1/1     Running   0          6m41s
@@ -382,7 +382,7 @@ The folder `owncloud/` contains all the manifests we need.
 
 The ownCloud Deployment currently uses a custom built image (`galexrt/owncloud-server:latest`) which has a fix for a clustered Redis configuration issue (pull request has been opened https://github.com/owncloud-docker/base/pull/95).
 
-```console
+```bash
 kubectl create -n owncloud -f owncloud/
 # Now we'll wait for ownCloud to have installed the database to then scale the ownCloud up to `2` (or more if you want)
 ```
@@ -392,7 +392,7 @@ The admin username is `myowncloudadmin` and can be changed in the `owncloud/ownc
 If you want to change the admin password, edit the `owncloud/owncloud-secret.yaml` file line `OWNCLOUD_ADMIN_PASSWORD`. The values in a Kubernetes Secret object are base64 encoded (e.g., `echo -n YOUR_PASSWORD | base64 -w0`)!
 
 To know when your ownCloud is up'n'running check the logs, e.g.:
-```console
+```bash
 $ kubectl logs -n owncloud -f owncloud-856fcc4947-crscn
 Creating volume folders...
 Creating hook folders...

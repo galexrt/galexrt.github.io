@@ -203,7 +203,7 @@ For the full list of requirements, see [Kubernetes - Install kubeadm documentati
 
 Clone the repository, which contains the example and task files, from GitHub `https://github.com/galexrt/workshop-container-docker-kubernetes.git`. It'll provide all files and tasks used in the Workshop.
 
-```console
+```bash
 $ git clone https://github.com/galexrt/workshop-container-docker-kubernetes.git
 Cloning into 'workshop-container-docker-kubernetes'...
 remote: Enumerating objects: 30, done.
@@ -223,7 +223,7 @@ Now you are ready to run your first Pods in Kubernetes!
 
 Kubernetes has something similar to `docker run`, `kubectl run`. We will use `kubectl run` for the first example to get started but to already say it, `kubectl run` isn't really used in the end to, e.g., deploy applications.
 
-```console
+```bash
 $ kubectl run -it --image=hello-world --restart=Never hello-world
 
 Hello from Docker!
@@ -271,7 +271,7 @@ There are different types of objects in Kubernetes, as an example with the above
 
 To look at the Pod we just created using `kubectl run`, we are going to use `kubectl get` now:
 
-```console
+```bash
 $ kubectl get pod hello-world
 NAME          READY   STATUS      RESTARTS   AGE
 hello-world   0/1     Completed   0          12s
@@ -928,7 +928,7 @@ spec:
 Now that our database will not lose its data, we can run `kubectl create -f mysql-with-storage.yaml` in the task directory, this will create a MySQL Deployment which mounts the `PersistentVolumeClaim` previosuly created to the `mysql` container at `/var/lib/mysql`.
 
 After the `kubectl create` run, we can use `kubectl get` to check if our Deployment and PersistentVolumeClaim have been created:
-```console
+```bash
 $ kubectl get deployment,pod,persistentvolumeclaim
 NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
 deployment.extensions/mysql   1/1     1            1           86s
@@ -970,7 +970,7 @@ Maybe you know about `docker exec`, which can be used to run a command and/ or s
 `kubectl exec` does the same but for Pods. If a Pod has more than one container, it will "cmplain" to you and tell you the list of containers, which you can specify using the `-c CONTAINER_NAME` flag.
 
 Adapt the following command to your `mysql` Pod name with the command `bash`:
-```console
+```bash
 kubectl exec -it POD_NAME -- COMMAND ARGS
 ```
 
@@ -983,7 +983,7 @@ kubectl exec -it POD_NAME -- COMMAND ARGS
 
 The result can look like this:
 
-```console
+```bash
 $ kubectl exec -it mysql-5fc68fb84c-bssg4 -- bash
 root@mysql-5fc68fb84c-bssg4:/#
 ```
@@ -992,7 +992,7 @@ This has now opened an interactive `bash` shell inside the MySQL Pod.
 
 Let's use `mysql` command to connect to the database server:
 
-```console
+```bash
 root@mysql-5fc68fb84c-bssg4:/# mysql -u root -p$MYSQL_ROOT_PASSWORD
 Warning: Using a password on the command line interface can be insecure.
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -1032,7 +1032,7 @@ Go ahead and delete the MySQL Pod in the `default` Namespace (no need to use `--
 
 To get the current Pods, run:
 
-```console
+```bash
 $ kubectl get pod
 NAME                     READY   STATUS      RESTARTS   AGE
 hello-world              0/1     Completed   0          26h
@@ -1043,7 +1043,7 @@ Pod with name `mysql-5fc68fb84c-bssg4` is our target, so run `kubectl delete pod
 
 Checking the current Pods now, we should see a new Pod running:
 
-```console
+```bash
 $ kubectl get pod
 NAME                     READY   STATUS      RESTARTS   AGE
 hello-world              0/1     Completed   0          26h
@@ -1137,7 +1137,7 @@ This will create the objects defined in the YAML.
 
 Check on the newly created `wordpress` objects using `kubectl get` with a label selector:
 
-```console
+```bash
 $ kubectl get deployment,svc,persistentvolumeclaim,pod -l app.kubernetes.io/name=wordpress
 NAME                              READY   UP-TO-DATE   AVAILABLE   AGE
 deployment.extensions/wordpress   1/1     1            1           44s
@@ -1318,7 +1318,7 @@ The instructions for the `kubeadm` and `kubelet` installation have been taken fr
 
 To be able to install the packages we need to add the Kubernetes repository for RHEL-based systems:
 
-```console
+```bash
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
 name=Kubernetes
@@ -1336,7 +1336,7 @@ At one point we can hope for good SELinux support for Kubernetes.
 
 Let's go ahead and disable it:
 
-```console
+```bash
 # Set SELinux in permissive mode (effectively disabling it)
 setenforce 0
 sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
@@ -1348,7 +1348,7 @@ After that we can just go ahead and install the following packages and enable th
 * `kubeadm` - The "configuration utility" for the `kubelet`.
 * `kubectl` - Kubernetes client utility, doesn't hurt if it is on every server, no matter if just a node. It is only "needed" on the master(s) because we will use the master VM to access the Kubernetes API through it.
 
-```console
+```bash
 dnf install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 systemctl enable --now kubelet
 # Set the "new" K8S CNI plugins path for the kubelet (because Docker is used we can do it on the kubelet)
@@ -1371,7 +1371,7 @@ After that we can go ahead and setup the initial master for the Kuberntes cluste
 
 To setup the initial master of the Kubernetes cluster, we will use the `kubeadm init` command:
 
-```console
+```bash
 $ kubeadm init \
     --pod-network-cidr=100.64.0.0/13 \
     --service-cidr=100.72.0.0/13
@@ -1467,7 +1467,7 @@ For a more detailed view on what each Kubernetes component, see [Kubernetes Comp
 
 Then we just need to configure the `kubectl` (only) on the master server to be able to talk with Kubernetes cluster we just created:
 
-```console
+```bash
 mkdir -p $HOME/.kube
 cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 chown $(id -u):$(id -g) $HOME/.kube/config
@@ -1475,7 +1475,7 @@ chown $(id -u):$(id -g) $HOME/.kube/config
 
 Finally on the master server, run `kubectl get componentstatus` to get the current component status and `kubectl get nodes` to get the list of nodes of cluster which should only return the master server we are on right now.
 
-```console
+```bash
 $ kubectl get componentstatus
 NAME                 STATUS    MESSAGE             ERROR
 controller-manager   Healthy   ok
@@ -1496,7 +1496,7 @@ It is okay for the node to be in `NotReady` status, because we currently have no
 
 If you should encounter issues with `kubeadm` failing during, e.g., `kubeadm join` or `kubeadm init`, you can do a reset of that node:
 
-```console
+```bash
 kubeadm reset -f
 # Clear iptables rules
 iptables -F && iptables -t nat -F && iptables -t mangle -F && iptables -X
@@ -1518,7 +1518,7 @@ In this case [Flannel](https://github.com/coreos/flannel) will be used as the ne
 >
 > The IP address range used for the Pods will be `100.64.0.0/13` which is part of [`100.64.0.0/10` space normally used for carrier-grade NAT](https://en.wikipedia.org/wiki/IPv4#Special-use_addresses).
 
-```console
+```bash
 $ curl -O \
     https://raw.githubusercontent.com/coreos/flannel/a70459be0084506e4ec919aa1c114638878db11b/Documentation/kube-flannel.yml
 $ sed -i -e "s?10.244.0.0/16?100.64.0.0/13?g" kube-flannel.yml
@@ -1527,7 +1527,7 @@ $ kubectl apply -f kube-flannel.yml
 
 Running the following command will show you the Pods in the `kube-system` namespace and there you should hopefully already see at least one `kube-flannel-*` Pods:
 
-```console
+```bash
 kubectl get -n kube-system pod
 ```
 
@@ -1535,7 +1535,7 @@ kubectl get -n kube-system pod
 
 On the master server run the following command to print out the "join" command for the nodes:
 
-```console
+```bash
 $ kubeadm token create --print-join-command
 kubeadm join --token 447067.20b55955bd6abe6c 192.168.99.100:8443 --discovery-token-ca-cert-hash sha256:17023a5c90b996e50c514e63e161e46f78be216fd48c0c3df3be67e008b28889
 ```
@@ -1543,7 +1543,7 @@ kubeadm join --token 447067.20b55955bd6abe6c 192.168.99.100:8443 --discovery-tok
 Copy the command to the two nodes and run it on them.
 After a few seconds/ minutes the command should exit successfully and you should be able to see the two nodes in the nodes list on the master (`kubectl get nodes`):
 
-```console
+```bash
 $ kubectl get nodes
 NAME                       STATUS     ROLES    AGE     VERSION
 k8s-c1-master-1.eden.run   Ready      master   5m33s   v1.14.1
@@ -1558,7 +1558,7 @@ k8s-c1-worker-2.eden.run   Ready      <none>   10s     v1.14.1
 In the task `kubernetes404` directory is a file called `busybox.yaml`. We will now deploy this file onto our cluster.
 The file looks like this:
 
-```console
+```bash
 apiVersion: v1
 kind: Pod
 metadata:
@@ -1575,7 +1575,7 @@ spec:
 ```
 
 Connect to the Kubernetes master server and in the task directory `kubernetes101` run the following command to create the `busybox` Pod:
-```console
+```bash
 kubectl create -f busybox.yaml
 ```
 
@@ -1585,7 +1585,7 @@ Run `kubectl get pod busybox` to see the status of the `busybox` Pod we created 
 
 After that run the following command to make sure Pods can reach the Kubernetes API which should mean that the container network works fine.
 
-```console
+```bash
 $ kubectl exec busybox -- wget https://kubernetes.default.svc.cluster.local:443
 Connecting to kubernetes.default.svc.cluster.local:443 (100.72.0.1:443)
 wget: note: TLS certificate validation not implemented
@@ -1611,7 +1611,7 @@ The task `kubernetes303` directory contains some additional manifests to add som
 Please enter the task directory and follow the "Create/ Apply Order" in the `README.md` there.
 
 The command to create the objects is
-```console
+```bash
 kubectl create -R -f DIRECTORY
 ```
 
@@ -1694,7 +1694,7 @@ The `kubectl` utility allows us to create objects, in this section I'm going to 
 
 You have already seen this example, but here again with more explanations:
 
-```console
+```bash
 apiVersion: v1
 kind: Pod
 metadata:
@@ -1720,7 +1720,7 @@ spec:
 * `containers:` - List of containers, see next snippet for more information.
 * `restartPolicy: Always` - Restart policy. In this case the Pod always restarts, until deleted.
 
-```console
+```bash
 - image: busybox
   command:
     - sleep
@@ -1782,7 +1782,7 @@ Exposed one or more Ports of Pods which are selected by a label selector. The ac
 
 When you create a Service, a `A` and `SRV` DNS record is created so that you can access the server through a "static" DNS name.
 
-```console
+```bash
 wordpress.default.svc.cluster.local
 NAME.NAMESPACE.svc.cluster.local
 ```
@@ -1829,7 +1829,7 @@ The `kubectl` command is used to create new "objects", view Pods, ReplicationCon
 
 To view all Pods in all namespaces of the Kubernetes cluster:
 
-```console
+```bash
 kubectl get -n NAMESPACE pods
 ```
 
@@ -1854,7 +1854,7 @@ You can basically specify "anything" as a label, so you are able to select your 
 
 Get pretty formatted informations about one or more object(s):
 
-```console
+```bash
 kubectl describe --namespace=NAMESPACE TYPE/NAME (TYPE/NAME ...)
 ```
 
@@ -1871,7 +1871,7 @@ To create Kubernetes objects through a manifest file or through commands, the `c
 
 ##### Creating objects through a manifest file
 
-```console
+```bash
 kubectl \
     create \
     -f FILE_NAME
@@ -1884,7 +1884,7 @@ kubectl \
 
 ##### Create, e.g., a ConfigMap through the `kubectl create` subcommands
 
-```console
+```bash
 kubectl \
     create \
     configmap OBJECT_NAME \
@@ -1904,7 +1904,7 @@ kubectl \
 
 To delete one or more object(s), there's the `delete` subcommand:
 
-```console
+```bash
 kubectl delete -f FILE_NAME
 ```
 
@@ -1915,7 +1915,7 @@ kubectl delete -f FILE_NAME
 
 **Or**
 
-```console
+```bash
 kubectl delete TYPE/NAME (TYPE/NAME ...)
 ```
 
@@ -1929,7 +1929,7 @@ kubectl delete TYPE/NAME (TYPE/NAME ...)
 
 Using the `exec` subcommand, with almost the same syntax as `docker exec`:
 
-```console
+```bash
 kubectl exec OPTIONS POD_NAME (-c CONTAINER_NAME) COMMAND
 ```
 
@@ -1947,7 +1947,7 @@ If you are trying to exec into a Pod with multiple containers and have not selec
 
 The `logs` subcommand, has almost the same syntax as `docker logs` with some Kubernetes Pod object related flags sprinkled in.
 
-```console
+```bash
 kubectl logs OPTIONS POD_NAME (-c CONTAINER_NAME) COMMAND
 ```
 
@@ -1966,7 +1966,7 @@ If you are trying to get the logs of a Pod with multiple containers and have not
 
 The `edit` subcommand allows you to edit an object which for, e.g., Deployment, StatefulSet:
 
-```console
+```bash
 kubectl edit TYPE OBJECT_NAME
 ```
 
@@ -1980,7 +1980,7 @@ kubectl edit TYPE OBJECT_NAME
 
 The `scale` subcommand allows you scale the replicas size of a given object:
 
-```console
+```bash
 kubectl scale TYPE OBJECT_NAME --replicas=SIZE
 ```
 

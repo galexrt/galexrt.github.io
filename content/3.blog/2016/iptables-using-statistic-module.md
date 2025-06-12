@@ -13,7 +13,7 @@ Kubernetes uses this method to load balance traffic between pods in the cluster.
 
 The commands below create separate chains for each server and for the load balancing of port 80 in this case:
 
-```console
+```bash
 iptables -t nat -N LB_PORT80
 iptables -t nat -N LB_PORT80_SERVER1
 iptables -t nat -A LB_PORT80 \
@@ -29,7 +29,7 @@ iptables -t nat -A INPUT -p tcp -m tcp --dport 80 -j LB_PORT80
 
 My favorite rule to mess with people ;)
 
-```console
+```bash
 iptables -A INPUT \
     -s IP_ADDRESS \
     -m statistic --mode random --probability 0.5000 \

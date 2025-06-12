@@ -10,7 +10,7 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation');
         <AppHeader />
 
         <UMain>
-            <UContainer>
+            <UContainer :ui="{ container: { base: 'max-w-7xl' }}">
                 <UPage>
                     <template #left>
                         <UPageAside>

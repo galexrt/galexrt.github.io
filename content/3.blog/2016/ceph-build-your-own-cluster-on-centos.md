@@ -43,7 +43,7 @@ Let's begin first by adding the Epel and Ceph repository to all our used servers
 On all the servers we have, we need to add the Epel package repositories to the repository list.
 The following commands add the Epel package repositories and the Epel repository verification key:
 
-```console
+```bash
 sudo yum install -y yum-utils && sudo yum-config-manager --add-repo https://dl.fedoraproject.org/pub/epel/7/x86_64/
 sudo yum install --nogpgcheck -y epel-release
 sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
@@ -78,14 +78,14 @@ Other important things to make sure, before continuing with the tutorial:
 Switch to your deployment server and install the Ceph deployment package `ceph-deploy` on the deployment server, in my case server `ceph-tutorial-node1`.
 The first commands will update your package database and system. The second command will install the `ceph-deploy` package on your CentOS server:
 
-```console
+```bash
 sudo yum clean all && sudo yum update
 sudo yum install ceph-deploy
 ```
 
 Still on the deployment server (in my case `ceph-tutorial-node1`) create a folder where files for the deployment will be stored. For example:
 
-```console
+```bash
 mkdir ~/my-ceph-cluster
 cd ~/my-ceph-cluster
 ```
@@ -94,7 +94,7 @@ cd ~/my-ceph-cluster
 
 To generate the basic Ceph cluster configuration I run for my two servers:
 
-```console
+```bash
 ceph-deploy new ceph-tutorial-node1 ceph-tutorial-node2
 ```
 
@@ -141,7 +141,7 @@ Example output of the `ceph-deploy new ceph-tutorial-node1` command:
 
 Running `ls`, we see the generated files in the directory:
 
-```console
+```bash
 # ls
 ceph.conf  ceph-deploy-ceph.log  ceph.mon.keyring
 ```
@@ -150,7 +150,7 @@ Now we need to add an option to the bottom of the default Ceph configuration fil
 
 The options is:
 
-```console
+```bash
 osd pool default size = 2
 ```
 
@@ -160,7 +160,7 @@ You can also add other options here, but as this is just a basic tutorial on how
 Now that our Ceph configuration `ceph.conf` is ready we are going to install Ceph on all servers and create our initial cluster monitor.
 The command for deploying Ceph onto my two servers and creating the monitor server on your server chosen above, in my case `ceph-tutorial-node1` the commands look like this:
 
-```console
+```bash
 ceph-deploy install --no-adjust-repos ceph-tutorial-node1 ceph-tutorial-node2
 ceph-deploy mon create-initial
 ```
@@ -176,7 +176,7 @@ Use ssh to connect to your servers that you want to be storage nodes and create 
 
 In my case:
 
-```console
+```bash
 ssh ceph-tutorial-node1
 sudo mkdir /var/local/osd
 exit
@@ -188,26 +188,26 @@ exit
 
 Back on your deployment server (in my case `ceph-tutorial-node1`) we are going to prepare the storage nodes with the following command:
 
-```console
+```bash
 ceph-deploy osd prepare {ceph-node}:/path/to/directory
 ```
 
 For my two servers I run:
 
-```console
+```bash
 ceph-deploy osd prepare ceph-tutorial-node1:/var/local/osd ceph-tutorial-node2:/var/local/osd
 ```
 
 The `ceph-deploy osd prepare` prepares the storage location and sets up the Ceph OSD in the background.
 The only thing we have to do now is to activate the storage locations (Ceph OSDs) using the activate command:
 
-```console
+```bash
 ceph-deploy osd activate {ceph-node}:/path/to/directory
 ```
 
 For my two servers I run:
 
-```console
+```bash
 ceph-deploy osd activate ceph-tutorial-node1:/var/local/osd ceph-tutorial-node2:/var/local/osd
 ```
 
@@ -215,7 +215,7 @@ ceph-deploy osd activate ceph-tutorial-node1:/var/local/osd ceph-tutorial-node2:
 
 Copy the Ceph admin key to the servers you want to be able to configure your Ceph cluster from with the below command:
 
-```console
+```bash
 ceph-deploy admin {deployment-node}
 ```
 
@@ -223,7 +223,7 @@ ceph-deploy admin {deployment-node}
 
 To check if you Ceph cluster is healthy use the health command:
 
-```console
+```bash
 # ceph health
 HEALTH_OK
 ```
@@ -239,7 +239,7 @@ In case of other problems, all Ceph log files are located under `/var/log/ceph/`
 
 **Example**:
 
-```console
+```bash
 # ls -hl /var/log/ceph/
 total 340K
 -rw------- 1 root root 126K Aug  8 13:24 ceph.log

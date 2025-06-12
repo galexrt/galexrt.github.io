@@ -43,7 +43,7 @@ LARGE_OMAP_OBJECTS 1 large omap objects
 
 The following command should fix the issue:
 
-```console
+```bash
 radosgw-admin reshard stale-instances rm
 ```
 
@@ -86,7 +86,7 @@ You need to find out which disk/device is used by an OSD daemon.
 
 Use the various `ls*` subcommands of `ceph device`.
 
-```console
+```bash
 $ ceph device --help
 device check-health                                                         Check life expectancy of devices
 device get-health-metrics <devid> [<sample>]                                Show stored device metrics for the device
@@ -113,7 +113,7 @@ Enabling the light for the disk can help the datacenter workers to easily locate
 
 #### Locate Disk of OSD by OSD daemon ID (e.g., OSD 13):
 
-```console
+```bash
 $ ceph device ls-by-daemon osd.13
 DEVICE                                     HOST:DEV                                           EXPECTED FAILURE
 SAMSUNG_MZVL2512HCJQ-00B00_S1234567890123  HOSTNAME:nvme1n1
@@ -121,7 +121,7 @@ SAMSUNG_MZVL2512HCJQ-00B00_S1234567890123  HOSTNAME:nvme1n1
 
 #### Show all disks by host (hostname):
 
-```console
+```bash
 $ ceph device ls-by-host HOSTNAME
 DEVICE                                     HOST:DEV                                           EXPECTED FAILURE
 DEVICE                                     DEV      DAEMONS  EXPECTED FAILURE

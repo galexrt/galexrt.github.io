@@ -29,13 +29,13 @@ The disk used in this example is `/dev/sda`.
 4. Grub Installation
     * For GRUB2:
 
-        ```console
+        ```bash
         grub2-install --no-floppy /dev/sda2
         ```
 
     * For GRUB:
 
-      ```console
+      ```bash
       grub-install --no-floppy /dev/sda2
       ```
 

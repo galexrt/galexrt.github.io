@@ -74,7 +74,7 @@ The approach for using `ServiceMonitor`s the "best" way, is to create the least 
 
 From the workshop I "rediscovered" the usage of `kubectl`s subcommand `port-forward`. You should definetly use it, instead of for example using the Kubernetes api directly as a (HTTP) proxy.
 As I normally used the API proxy to access services, here the usage of the command:
-```console
+```bash
 $ kubectl port-forward POD [LOCAL_PORT:]REMOTE_PORT [...[LOCAL_PORT_N:]REMOTE_PORT_N] [options]
 ```
 

@@ -5,7 +5,7 @@ icon: 'i-ph-table'
 
 ## Allow unsupported Transceivers to be used
 
-```console
+```bash
 enable
 configure terminal
 no errdisable detect cause gbic-invalid
@@ -17,7 +17,7 @@ exit
 
 More to come here to get a Cisco switch running with "cheap" network equipment.
 
-```console
+```bash
 enable
 configure terminal
 no errdisable detect cause gbic-invalid

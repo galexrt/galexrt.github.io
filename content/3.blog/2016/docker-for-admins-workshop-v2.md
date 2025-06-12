@@ -128,7 +128,7 @@ You can run Docker under any kernel 3.16+, but I recommend you to use the latest
 
 To install the Docker Engine run the command:
 
-```console
+```bash
 curl -sSL https://get.docker.com/ | sh
 ```
 
@@ -139,14 +139,14 @@ When talking about Docker, we almost always talk about the Docker Engine. Becaus
 After you have installed it without any errors popping up, you have to start the Docker Engine.
 When your distribution is using systemd:
 
-```console
+```bash
 systemctl enable docker.service
 systemctl start docker.service
 ```
 
 On distribution without systemd:
 
-```console
+```bash
 /etc/init.d/docker start
 ```
 
@@ -162,7 +162,7 @@ This starts Docker and when using systemd enables the autostart for Docker Engin
 
 With curl we download the `docker-compose` binary, then we move `docker-compose` to your `/usr/local/bin` that is in your `PATH` and set the execute permission.
 
-```console
+```bash
 wget -O /usr/local/bin/docker-compose "https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m`"
 sudo chmod +x /usr/local/bin/docker-compose
 ```
@@ -181,7 +181,7 @@ The recording below shows the expected output for the `docker-compose` installat
 
 Clone the Workshop repo from GitHub `https://github.com/galexrt/workshop-docker.git`. It'll provide all files and tasks used in the Workshop.
 
-```console
+```bash
 git clone https://github.com/galexrt/workshop-docker.git
 ```
 
@@ -198,7 +198,7 @@ This will guide you through the commands needed to start your WordPress instance
 When you have Docker installed correctly, you now have to add your user to the `docker` group (on most distributions the group is called `docker`).
 To add your user to the `docker` group, you can run the following command:
 
-```console
+```bash
 gpasswd -a $USER docker
 ```
 
@@ -207,7 +207,7 @@ Please relog or restart your machine after you have added yourself to the group.
 Now to test your Docker installation, we start like when learning a new programming language, with the simplest example. A "Hello World" container.
 To run the "Hello World" container, you simply run the following command:
 
-```console
+```bash
 docker run hello-world
 ```
 
@@ -223,7 +223,7 @@ When everything went correct, I can now welcome you to the big World of the cont
 
 One of the most important commands we need is `docker run`. So we now take a look at it and run:
 
-```console
+```bash
 docker run --help
 ```
 
@@ -245,7 +245,7 @@ I'm going in depth about image names, command args and entrypoint later on ([her
 I'm going to use the MySQL Docker image from [sameersbn](https://github.com/sameersbn) in the workshop. Because this image is more convenient to setup, than the official available MySQL and MariaDB Docker image.
 So we specify the `IMAGE` argument in our command now.
 
-```console
+```bash
 docker run \
     sameersbn/mysql:latest
 ```
@@ -259,7 +259,7 @@ Every container gets an unique ID and randomized name. We can override the name 
 Let's name it "database".
 Our command now looks like this:
 
-```console
+```bash
 docker run \
     --name mysql \
     sameersbn/mysql:latest
@@ -273,7 +273,7 @@ The  `--detach` and `--interactive` options.
 If you now run the command to start the container, upon start you see some log output coming, but should notice that when closing the terminal, the database container immediately gets stopped/exits (To see if the container exited, use `docker ps -a`).
 When you run a container, by default your current `stdin` and `stdout` will be attached to the container, making it interactive (If you want an interactive container, you should still add `--interactive` option). To disable the attachment of `stdin` and `stdout` add the `--detach` (or short `-d`) option to the command. Using the `--detach` (or `-d`) option, runs the container detached.
 
-```console
+```bash
 docker run \
     -d \
     --name mysql \
@@ -285,7 +285,7 @@ Running a container detached is most common for containers with server or headle
 Don't forget to delete the exited/stopped MySQL database container with the remove command, `docker rm database` (where database is the name or ID of the container) else if starting you'll get an error saying that a container already exists with the same name.
 In case you already forgot, here's how to delete the container
 
-```console
+```bash
 docker rm NAME
 ```
 
@@ -308,7 +308,7 @@ In the case of `sameersbn/mysql:latest` the following environment variables are 
 
 To specify an environment variable, the `--env` (or `-e`) option is used.
 
-```console
+```bash
 docker run \
 [...]
     -e 'DB_USER=wordpress' \
@@ -328,7 +328,7 @@ You want to save your data outside of the container, for a simple reason: If you
 A Volume is like a mount from the host system inside the container.
 The volume option is `--volume` (or `-v`). The syntax of a volume option is for example:
 
-```console
+```bash
 docker run \
 [...]
     -v HOST_PATH:CONTAINER_PATH:MODE
@@ -353,7 +353,7 @@ Now we have all components, we need for running the MySQL container.
 
 When we have put everything we learned now together, we should get something that looks like this:
 
-```console
+```bash
 docker run \
     -d \
     --name mysql \
@@ -389,7 +389,7 @@ As you might guess, with links, you can "link"/connect containers together. Keep
 
 The link option syntax is like this:
 
-```console
+```bash
 docker run \
 [OPTIONS]
     --link=CONTAINER_NAME:LINK_NAME \
@@ -408,7 +408,7 @@ So if we take a look at the `/etc/hosts` and environment variables inside the Wo
 To show you the created `/etc/hosts` entry and the environment variables created inside the container.
 I'm running the following command, to just demonstrate it:
 
-```console
+```bash
 docker run \
     -d \
     --name=wordpress \
@@ -440,14 +440,14 @@ beginning with `DATABASE_`, allow to get the environment variables and published
 
 To make a port available to the "public", that's why it's called publishing ports, you use the `--publish` (or `-p`) option in this format:
 
-```console
+```bash
 docker run \
 [OPTIONS]
     -p HOST_ADDRESS:HOST_PORT:CONTAINER_PORT/PROTOCOL
 [IMAGE] [ARGUMENTS]
 ```
 
-```console
+```bash
 docker run \
 [OPTIONS] \
     -p 80:80/tcp \
@@ -480,7 +480,7 @@ The possible environment variables for the configuration are the following ones:
 In the case of the `WORDPRESS_DB_HOST`, the value would be the name of the link name in the `docker run` command below. In the case of the below command, the `WORDPRESS_DB_HOST` would be `database`.
 The command to run the WordPress container is like this:
 
-```console
+```bash
 docker run \
     -d \
     --name wordpress \
@@ -530,7 +530,7 @@ To execute a command inside the container, after it has been started, for exampl
 With our example, MySQL container let's display a list of the existing databases.
 The command to display the databases from shell is:
 
-```console
+```bash
 mysql -u root -p -e "SHOW DATABASES;"
 ```
 
@@ -541,7 +541,7 @@ The syntax of `docker exec` is a bit equal to the of `docker run`. Running `dock
 
 To run a command interactively for example opening an interactive MySQL shell session, the command would be:
 
-```console
+```bash
 docker exec \
     -it \
     CONTAINER \
@@ -575,7 +575,7 @@ So if the MySQL server inside the container should ever crash and the container 
 
 I already showed the option, but here is it again (Long form `--volume=`):
 
-```console
+```bash
 docker run \
 [OPTIONS]
     -v HOST_PATH:CONTAINER_PATH:MODE
@@ -679,7 +679,7 @@ Do you want to visualize your container network situation? Yes? Then the perfect
 In the `network101` task is a file called `start_weave_scope.sh`. The script downloads the Weave Scope wrapper script, that starts the containers needed for Weave Scope to function.
 The commands that are used to download the Weave Scope wrapper script are:
 
-```console
+```bash
 sudo wget -O /usr/local/bin/scope https://git.io/scope
 sudo chmod a+x /usr/local/bin/scope
 sudo scope launch
@@ -705,7 +705,7 @@ As I already mentioned in the [Container!?](#Container) part, namespaces are abl
 
 Limiting the precious computing resource of a container.
 
-```console
+```bash
 $ docker run --help
 [...]
   --cpu-period                    Limit CPU CFS (Completely Fair Scheduler) period
@@ -719,7 +719,7 @@ Limiting a container to specific cores is also possible (`--cpuset-cpus`).
 
 ## Memory and Swap Limit
 
-```console
+```bash
 $ docker run --help
 [...]
   --cpuset-mems                   MEMs in which to allow execution (0-3, 0,1)
@@ -755,7 +755,7 @@ Images that "come" from the [Docker Image Hub](https://hub.docker.com/), don't n
 
 The image we used for the MySQL container is:
 
-```console
+```bash
 sameersbn/mysql:latest
 ```
 
@@ -767,7 +767,7 @@ sameersbn/mysql:latest
 
 An example for an image that is pulled from a different image server, than the official Docker Hub, is my image for [Zulip](https://zulip.org/) by Dropbox that is hosted on [quay.io](https://quay.io).
 
-```console
+```bash
 quay.io/galexrt/zulip:1.3.10
 SERVER/USERNAME/IMAGE_NAME:TAG
 ```
@@ -926,7 +926,7 @@ ENTRYPOINT ["/go/bin/golang-docker"]
 
 EXPOSE 8080
 
-````text
+```text
 
 > **WDWD**
 >
@@ -941,10 +941,10 @@ EXPOSE 8080
 There's even the possibility, to execute specific commands when the image is used as a base image, the base instruction is called `ONBUILD ...`, but explaining this is beyond the scope of this workshop. Thanks for understanding!
 
 To build an image we use the `docker build` command. Building this golang example image, we run the following command:
-```console
+```bash
 docker build -t golang-docker -f Dockerfile .
 
-````
+```
 
 > **WDWD**
 >
@@ -962,7 +962,7 @@ If you want to see more advanced examples, you can find more examples in my GitH
 
 To delete a Docker image, you use the `docker rmi` subcommand. The syntax is the same as for the `docker rm` subcommand.
 
-```console
+```bash
 docker rmi IMAGE [IMAGE...]
 ```
 
@@ -975,7 +975,7 @@ docker rmi IMAGE [IMAGE...]
 
 Use this command to build images.
 
-```console
+```bash
 docker build -t IMAGE_NAME -f DOCKERFILE BUILD_PATH
 ```
 
@@ -1002,7 +1002,7 @@ ENTRYPOINT ["__BLANK__"]
 
 Got all blanks filled out? Good. Let's build the image:
 
-```console
+```bash
 docker build -t workshop-nginx .
 ```
 
@@ -1010,7 +1010,7 @@ docker build -t workshop-nginx .
 
 The build should go successfully, when you filled in the blanks correctly. Let's run the image to see if it is working, the container name will be `workshop-nginx`:
 
-```console
+```bash
 docker run \
     --name workshop-nginx \
     -d \
@@ -1020,7 +1020,7 @@ docker run \
 
 If you did something wrong, remove the container using (where `CONTAINER_NAME` is a container ID or name):
 
-```console
+```bash
 docker rm CONTAINER_NAME
 ```
 
@@ -1038,7 +1038,7 @@ That's why we need to tell `nginx`, not to run as a daemon, not fork to backgrou
 
 So we could make a change to the `nginx.conf`, overwrite `nginx.conf` with a custom one or **just change** the `ENTRYPOINT` line to make it look like this:
 
-```console
+```bash
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
 ```
 
@@ -1050,7 +1050,7 @@ Use the `index.html` from task `dockerfile202` or create one yourself.
 Now we add a volume to the container. Add `-v "$(pwd)":"/usr/share/nginx/html"` to the `docker run` command, but don't forget add the argument before the image name.
 Your command should look like this:
 
-```console
+```bash
 docker run \
     --name workshop-nginx \
     -d \
@@ -1095,7 +1095,7 @@ In our example with WordPress we will create a `docker-compose.yml` for our MySQ
 Create the `docker-compose.yml` file. I made this part like a test again, so you can see where you have knowledge holes, replace all `__BLANK__` with the correct answer (Solutions are [here](#WordPress-and-MySQL-docker-compose-yml)):
 (This `docker-compose.yml` has been taken from <https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-and-phpmyadmin-with-docker-compose-on-ubuntu-14-04>)
 
-```console
+```bash
 database:
   image: sameersbn/mysql:latest
   environment:
@@ -1151,7 +1151,7 @@ I have also added the environment variables `DB_REMOTE_ROOT_NAME` and `DB_REMOTE
 
 To "run"/start the content of our `docker-compose.yml`, we run:
 
-```console
+```bash
 docker-compose -f DOCKER_COMPOSE_YML up
 ```
 
@@ -1173,7 +1173,7 @@ There are some `docker-compose` commands you should know when working with the `
 
 Instead of the `up`, you just put `stop` there. Stops the containers from the current `docker-compose` file.
 
-```console
+```bash
 docker-compose stop -t TIMEOUT
 ```
 
@@ -1186,7 +1186,7 @@ docker-compose stop -t TIMEOUT
 
 Replacing the `up` with `rm`, deletes all containers that are started by the current `docker-compose` file, but now are stopped or exited.
 
-```console
+```bash
 docker-compose -f DOCKER_COMPOSE_YML rm -f
 ```
 
@@ -1200,7 +1200,7 @@ docker-compose -f DOCKER_COMPOSE_YML rm -f
 Restarts all containers that are started or have exited by the current `docker-compose` file.
 This just stops and starts the containers again and not stops, deletes and runs the containers again.
 
-```console
+```bash
 docker-compose -f DOCKER_COMPOSE_YML restart
 ```
 
@@ -1320,7 +1320,7 @@ The `kubectl` command is used to create new "objects", view Pods, ReplicationCon
 
 To view all Pods in all namespaces.
 
-```console
+```bash
 kubectl get --all-namespaces pods
 ```
 
@@ -1335,7 +1335,7 @@ kubectl get --all-namespaces pods
 
 Get informations about one or more object(s).
 
-```console
+```bash
 kubectl describe --namespace=NAMESPACE TYPE/NAME (TYPE/NAME ...)
 ```
 
@@ -1350,7 +1350,7 @@ kubectl describe --namespace=NAMESPACE TYPE/NAME (TYPE/NAME ...)
 
 To deploy/execute a "kubectl" file, we use the `create` subcommand.
 
-```console
+```bash
 kubectl create -f FILE_NAME
 ```
 
@@ -1363,7 +1363,7 @@ kubectl create -f FILE_NAME
 
 To stop/delete one or more object(s), there's the `delete` subcommand.
 
-```console
+```bash
 kubectl delete -f FILE_NAME
 ```
 
@@ -1374,7 +1374,7 @@ kubectl delete -f FILE_NAME
 
 **Or**
 
-```console
+```bash
 kubectl delete TYPE/NAME (TYPE/NAME ...)
 ```
 
@@ -1388,7 +1388,7 @@ kubectl delete TYPE/NAME (TYPE/NAME ...)
 
 Using the `exec` subcommand, with almost the same syntax as `docker exec`.
 
-```console
+```bash
 kubectl exec POD_NAME OPTIONS (-c CONTAINER_NAME) COMMAND
 ```
 
@@ -1404,7 +1404,7 @@ kubectl exec POD_NAME OPTIONS (-c CONTAINER_NAME) COMMAND
 
 The `logs` subcommand, has almost the same syntax as `docker logs`.
 
-```console
+```bash
 kubectl logs OPTIONS POD_NAME (-c CONTAINER_NAME) COMMAND
 ```
 
@@ -1421,7 +1421,7 @@ kubectl logs OPTIONS POD_NAME (-c CONTAINER_NAME) COMMAND
 
 The `rolling-update` subcommand allows to stop one pod after another and replace it with a new instace of the pod.
 
-```console
+```bash
 kubectl rolling-update REPLICATION -f FILE_NAME
 ```
 
@@ -1435,7 +1435,7 @@ kubectl rolling-update REPLICATION -f FILE_NAME
 
 The `scale` subcommand gives you control over the size of running ReplicationController.
 
-```console
+```bash
 kubectl scale
 ```
 
@@ -1472,7 +1472,7 @@ Enter the task directory and look for a directory called `ansible/`.
 Create a file called `inventory`, in this folder. This file will contain the list/inventory of the servers.
 You create one line per server in the format below (username and password are valid for the provided vm, change to suit your environment):
 
-```console
+```bash
 [masters]
 # In most cases the first "server"
 SERVER_IP_ADDRESS:SSH_PORT ansible_user=docker ansible_ssh_pass=docker ansible_become_pass=docker
@@ -1532,7 +1532,7 @@ We are now ready to deploy objects/containers on to our Kubernetes cluster. :)
 In the task `kubernetes101` directory is a file called `busybox.yaml`. We will now deploy this file onto our cluster.
 The file looks like this:
 
-```console
+```bash
 apiVersion: v1
 kind: Pod
 metadata:
@@ -1553,7 +1553,7 @@ The syntax of a "kubectl" file, is similar to the syntax of `docker-compose` fil
 
 Connect to the Kubernetes master server. Create the busybox container by running the `busybox.yaml` file, wait some seconds and then run the following command:
 
-```console
+```bash
 kubectl exec busybox -- nslookup kubernetes
 ```
 
@@ -1569,7 +1569,7 @@ No errors? Good move on to the next section.
 
 Open a ssh tunnel, to the Kubernetes master:
 
-```console
+```bash
 ssh -L 8080:127.0.0.1:8080 -fN SERVER_IP_ADDRESS_HERE
 ```
 
@@ -1608,7 +1608,7 @@ You can see data for your cluster nodes, down to every single Pod.
 
 Grafana may not work from the begining, but you can easily fix this by changing the data source to type `direct` and the url to:
 
-```console
+```bash
 http://127.0.0.1:8080/api/v1/proxy/namespaces/kube-system/services/monitoring-influxdb:api/
 ```
 
@@ -1636,7 +1636,7 @@ The `kubectl` utility allows us to create objects, in this section I'm going to 
 
 You have already seen this example, but here again with explanations:
 
-```console
+```bash
 apiVersion: v1
 kind: Pod
 metadata:
@@ -1662,7 +1662,7 @@ spec:
 > - Container part see below.
 > - `restartPolicy: Always` - Restart policy. In this case the pod always restarts, until deleted.
 
-```console
+```bash
 - image: busybox
   command:
     - sleep
@@ -1685,7 +1685,7 @@ Most things are seem similar but different to `docker-compose.yml`s, but if you 
 See the file `wordpress-mysql/wordpress-mysql-all-in-one.yaml`.
 This code block only contains the pods, not the services.
 
-```console
+```bash
 apiVersion: v1
 # Service object
 kind: Service
@@ -1813,7 +1813,7 @@ The big difference to `docker-compose` is that there is more around the containe
 Enter the `guestbook/` directory and `kubectl` create/"run" the `guestbook-all-in-one.yaml` file.
 For the forgetful, this is how you create/"run" the file:
 
-```console
+```bash
 kubectl create -f guestbook-all-in-one.yaml
 ```
 

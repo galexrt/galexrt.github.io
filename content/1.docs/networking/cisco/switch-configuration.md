@@ -22,7 +22,7 @@ Enter config mode using `configure terminal`.
 
 ## Make interface dedicated for mgmt
 
-```console
+```bash
 configure terminal
 interface Gi 0/48
 no interface port
@@ -34,7 +34,7 @@ ip default-gateway DEFAULT_GATEWAY
 
 ## Set IP address on interface
 
-```console
+```bash
 configure terminal
 interface Gi 0/48
 ip address IP_ADDR SUBNET_MASK
@@ -42,19 +42,19 @@ ip address IP_ADDR SUBNET_MASK
 
 ## "Activate" SSH RSA Key
 
-```console
+```bash
 crypto key generate rsa general-keys modulus 4096 label sw-azubi-1
 ```
 
 ## Show interface status
 
-```console
+```bash
 do show interface status
 ```
 
 ## Add passwords to console login thingy
 
-```console
+```bash
 configure terminal
 line console 0
 password YOUR_PASSWORD
@@ -66,6 +66,6 @@ exit
 
 In the global config mode:
 
-```console
+```bash
 enable secret YOUR_PASSWORD
 ```

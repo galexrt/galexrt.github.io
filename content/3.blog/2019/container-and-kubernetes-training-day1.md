@@ -149,7 +149,7 @@ You can run Docker under any kernel `3.16+`, but I recommend you to use a more u
 
 To install Docker run the command:
 
-```console
+```bash
 curl -sSL https://get.docker.com/ -o install-docker.sh
 # Look at the install-docker.sh script to make sure there is nothing evil going on
 sh install-docker.sh
@@ -161,7 +161,7 @@ Docker consistst of the client program `docker` and the Docker Daemon (`dockerd`
 
 After you have installed it hopefully without any errors popping up, you have to enable and start the Docker Engine:
 
-```console
+```bash
 systemctl enable docker.service
 systemctl start docker.service
 ```
@@ -170,7 +170,7 @@ This enables and starts the Docker daemon service.
 
 To make sure the Docker daemon is working as expected, run `docker info`:
 
-```console
+```bash
 $ docker info
 Containers: 0
  Running: 0
@@ -225,7 +225,7 @@ After making sure Docker is working correctly, continue with either [Non-Root Us
 If you are connected as a non-root user, you need to add your user to the `docker` group. The group name may vary depending on the distribution used.
 To add your user to the `docker` group, you can run the following command:
 
-```console
+```bash
 gpasswd -a $USER docker
 ```
 
@@ -241,7 +241,7 @@ Please logout from the server, after you have added yourself to the group.
 
 With curl we download the `docker-compose` binary, then we move `docker-compose` to your `/usr/local/bin` that is in your `PATH` and set the execute permission.
 
-```console
+```bash
 $ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                Dload  Upload   Total   Spent    Left  Speed
@@ -254,7 +254,7 @@ For more detailed `docker-compose` installation instructions, see [https://docs.
 
 After you have followed the commands above, you can check if the "install" was successfully by running `docker-compose version`:
 
-```console
+```bash
 $ docker-compose version
 docker-compose version 1.23.2, build unknown
 docker-py version: 3.7.0
@@ -266,7 +266,7 @@ OpenSSL version: OpenSSL 1.1.1b  26 Feb 2019
 
 Clone the repository, which contains the example and task files, from GitHub `https://github.com/galexrt/workshop-container-docker-kubernetes.git`. It'll provide all files and tasks used in the Workshop.
 
-```console
+```bash
 $ git clone https://github.com/galexrt/workshop-container-docker-kubernetes.git
 Cloning into 'workshop-container-docker-kubernetes'...
 remote: Enumerating objects: 30, done.
@@ -290,7 +290,7 @@ Now to start your first container and test your Docker installation, we will sta
 
 To run the "Hello World" container, you just run the following command:
 
-```console
+```bash
 $ docker run hello-world
 Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
@@ -332,7 +332,7 @@ These are a few basic Docker commands which are useful and important for working
 
 Displays all currently running containers. To display all containers even containers which are not running anymore, add the `-a` flag.
 
-```console
+```bash
 $ docker ps
 # Or
 $ docker ps -a
@@ -343,7 +343,7 @@ $ docker ps -a
 Start or stop a container by sending a `SIGTERM` (`15`) first and after a timeout of default 10 seconds, a `SIGKILL` (`9`) is sent.
 Both commands just print out the targeted container(s) name.
 
-```console
+```bash
 $ docker stop my-cool-container
 my-cool-container
 $ docker start my-cool-container
@@ -354,7 +354,7 @@ my-cool-container
 
 Stop and start the given container(s). Where `CONTAINER_NAME_OR_ID` is a container ID or name.
 
-```console
+```bash
 $ docker restart my-cool-container
 my-cool-container
 ```
@@ -363,7 +363,7 @@ my-cool-container
 
 Remove a stopped or exited container. Where `CONTAINER_NAME_OR_ID` is a container ID or name.
 
-```console
+```bash
 $ docker rm my-cool-container
 my-cool-container
 ```
@@ -372,7 +372,7 @@ my-cool-container
 
 Show the logs of a container. Where `CONTAINER_NAME_OR_ID` is a container ID or name.
 
-```console
+```bash
 $ docker logs my-cool-container
 [... Many log lines from the my-cool-container application ...]
 ```
@@ -381,7 +381,7 @@ $ docker logs my-cool-container
 
 List the images with the tags and size which are currently on the Docker host.
 
-```console
+```bash
 $ docker images
 REPOSITORY                         TAG                                          IMAGE ID            CREATED             SIZE
 fedora-emacs                       latest                                       f8f91b022f8c        About an hour ago   965MB
@@ -397,7 +397,7 @@ fedora                             29                                           
 
 Create and start a container. This comnmand will be shown extensively in the next section.
 
-```console
+```bash
 docker run --help
 
 Usage:	docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
@@ -508,7 +508,7 @@ In this workshop we are only covering the basic flags, you should know to begin 
 
 So we are going to focus on the usage part first:
 
-> ```console
+> ```bash
 $ docker run --help
 
 Usage:	docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
@@ -529,7 +529,7 @@ I'm going in depth about image names, command args and entrypoint later on in ["
 We are going to use the "official" MariaDB Container image from the Docker Hub.
 So we will now specify that image as the `IMAGE` argument in our `docker run` command now:
 
-```console
+```bash
 docker run \
     mariadb:10.4.3-bionic
 ```
@@ -540,7 +540,7 @@ The "entrypoint" script is the "first" thing to be executed when the container i
 
 The output should look something like this:
 
-```console
+```bash
 $ docker run \
    mariadb:10.4.3-bionic
 Unable to find image 'mariadb:10.4.3-bionic' locally
@@ -570,7 +570,7 @@ When a container is started and no name is given, it will receive a randomly gen
 
 In the [Basic commands you need to know](#basic-commands-you-need-to-know) section we have learned about the `docker ps` command. Now we are going to use it to learn more about it and get the name and id of the first try at a `mariadb` container.
 
-```console
+```bash
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
@@ -578,7 +578,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 What's that? No container in the list of running containers. Due to the missing configuration as seen in the above logs the container is not running anymore and has terminated itself.
 The `docker ps` command has a flag called `-a` which will show us all container, even those not running anymore:
 
-```console
+```bash
 $ docker ps -a
 CONTAINER ID        IMAGE                   COMMAND                  CREATED              STATUS                          PORTS               NAMES
 7864ef7db36a        mariadb:10.4.3-bionic   "docker-entrypoint.s…"   About a minute ago   Exited (1) About a minute ago                       recursing_bell
@@ -600,7 +600,7 @@ Before running the command again, let's first add a name to the container and ad
 
 Adding a name to a container is as simple as adding another flag to the `docker run` command, example:
 
-```console
+```bash
 docker run \
     --name=database \
     mariadb:10.4.3-bionic
@@ -630,7 +630,7 @@ In the case of the `mariadb` container image the following environment variables
 
 To specify an environment variable, the `--env` (or `-e` short form) flag can be used:
 
-```console
+```bash
 docker run \
 [...]
     --env 'MYSQL_USER=wordpress' \
@@ -655,7 +655,7 @@ If you want as for most applications, like database, web, cache and so on server
 Have you already run into errors where Docker is telling you that a container with the same exists? You need to delete exited/ stopped containers with the `docker rm CONTAINER_NAME_OR_ID` command (where `CONTAINER_NAME_OR_ID` would be, is the name or ID of the container, e.g., `database`), this "clears" their name and removes the container.
 
 The command to delete the container named `database` is like this:
-```console
+```bash
 $ docker rm database
 database
 ```
@@ -670,7 +670,7 @@ You want to save your data outside of the container, for a simple reason: If you
 A Volume is like a mount from the host system inside the container.
 The volume flag is `--volume` (or `-v`). The syntax of the volume flag is for example:
 
-```console
+```bash
 docker run \
 [...]
     -v HOST_PATH:CONTAINER_PATH:MODE \
@@ -695,7 +695,7 @@ Now we have all components, we need for running the MariaDB container.
 
 When we have put everything we learned now together, we should get something that looks like this:
 
-```console
+```bash
 docker run \
     -d \
     --name=database \
@@ -727,7 +727,7 @@ To execute a command inside a container, for example in the MariaDB `database` c
 
 The following `mysql` command will execute the `SHOW DATAbASE` query which lists the existing databases:
 
-```console
+```bash
 mysql -u root -p -e "SHOW DATABASES;"
 ```
 
@@ -735,7 +735,7 @@ The command `docker exec` can be used to execute a separate command inside a con
 
 Running `docker exec --help` will shows the help menu:
 > **EXAMPLE**
-```console
+```bash
 $ docker exec --help
 
 Usage:	docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
@@ -755,7 +755,7 @@ Options:
 
 To run a command interactively for example opening an interactive MariaDB shell session, the command would be:
 
-```console
+```bash
 docker exec \
     -it \
     CONTAINER \
@@ -805,7 +805,7 @@ But it would be too much work to keep the IP address up to date, when the contai
 So to be able to use this Docker Networking feature, we need to create a network for the application containers.
 This can be done using `docker network create` command:
 
-```console
+```bash
 docker network \
     create \
     [OPTIONS] \
@@ -819,7 +819,7 @@ docker network \
 
 Running the following command, will create a new network in Docker which means there is a new network device on the server created too:
 
-```console
+```bash
 docker network \
     create \
     wordpress
@@ -828,7 +828,7 @@ docker network \
 This new network device can be seen in the output below:
 
 > **EXAMPLE**
-```console
+```bash
 $ docker network create wordpress
 4cc4efd905ff369efdf691dfe9d20c7c55775e628ccb57cc3fdac499785ea05b
 $ ip addr show
@@ -857,7 +857,7 @@ $ ip addr show
 As we are talking about network, let's take a quick look at the `resolv.conf` and hostnames.
 Running the following commands will show you the `resolv.conf` and hostname of the container (output below the **WDWD** explanation):
 
-```console
+```bash
 $ docker run \
     -it \
     --rm \
@@ -874,7 +874,7 @@ $ exit
 > * `--rm` - Causes the container to be deleted when stopped/ exited.
 > * `--entrypoint=/bin/bash` - This overwrites the command executed (as proccess number #1 in the container), when the container is started.
 
-```console
+```bash
 $ docker run \
     -it \
     --rm \
@@ -886,7 +886,7 @@ root@7c329dddc849:/var/www/html# hostname
 
 Every container is getting a random hostname, you can override the hostname of a container using the `--hostname=HOSTNAME` flag for `docker run`/ `docker create`. As a general note your application should try to not rely on the hostname too much, that can also be important for later on with Kubernetes.
 
-```console
+```bash
 root@7c329dddc849:/var/www/html# cat /etc/resolv.conf
 # Generated by NetworkManager
 search lan
@@ -895,7 +895,7 @@ nameserver 172.16.1.1
 
 The `resolv.conf` is partially passed through from the host system. Meaning that in this example `172.16.1.1` is the address of the local nameserver I'm using (`172.16.1.1/24` is the network range the host is in).
 
-```console
+```bash
 root@7c329dddc849:/var/www/html# cat /etc/hosts
 127.0.0.1	localhost
 ::1	localhost ip6-localhost ip6-loopback
@@ -914,7 +914,7 @@ The `/etc/hosts` file is generated per container and has the hostname of the con
 There are two choices to connect the database container to the `wordpress` network:
 
 * Stop, delete and create the database container again but now with the `--net=wordpress` flag added to the `docker run` command:
-```console
+```bash
 docker run \
     -d \
     --net=wordpress \
@@ -929,13 +929,13 @@ docker run \
 
 * Use the `docker network connect` command:
 
-```console
+```bash
 docker network connect [NETWORK_NAME] [CONTAINER_NAME]
 ```
 
 In this case that would be:
 
-```console
+```bash
 docker network connect wordpress database
 ```
 
@@ -959,7 +959,7 @@ The possible environment variables for the configuration are the following ones:
 
 The command to run the WordPress container should look like this now:
 
-```console
+```bash
 docker run \
     -d \
     --net=wordpress \
@@ -1002,7 +1002,7 @@ The container has to be stopped, before it can be removed.
 Right now it can't but we can change this by making the webserver port (`80`) available to the "public", by publishing/ exposing the port(s).
 That is what the `--publish` (or `-p`) flag is used for, in this format:
 
-```console
+```bash
 docker run \
 [OTHER_OPTIONS] \
 #   -p HOST_ADDRESS:HOST_PORT:CONTAINER_PORT/PROTOCOL
@@ -1041,7 +1041,7 @@ So if the MariaDB server inside the container should ever crash and the containe
 
 I already showed the option, but here is it again (Long form `--volume=`):
 
-```console
+```bash
 docker run \
 [OPTIONS]
     -v HOST_PATH:CONTAINER_PATH:MODE
@@ -1116,7 +1116,7 @@ Sometimes the bridge address range needs to be adjusted, even though Docker trie
 > To manually override the Docker bridge address, you can add the `--bip=192.168.1.0/24` (where `192.168.1.0/24` is an unused IP range) to your Docker Daemon flags in the Systemd Unit file or through the "config" files, e.g., on Debian based systems `/etc/default/docker` or on RHEL based systems `/etc/sysconfig/docker` or `/etc/sysconfig/docker-network`.
 
 > **EXAMPLE** `docker0` interface
-> ```console
+> ```bash
 $ ip addr show docker0
 4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
     link/ether 02:42:d1:cc:07:47 brd ff:ff:ff:ff:ff:ff
@@ -1131,7 +1131,7 @@ When a container is created, a `veth` interface will be created (depending on th
 The veth interface will not show the IP address when using tools like `ip addr show` or `ifconfig` on the host, but you are able to see the IP inside the container.
 
 > **EXAMPLE** `veth` interface of container from host
-> ```console
+> ```bash
 $ ip addr show veth9af2aa6
 138: veth9af2aa6@if137: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-4cc4efd905ff state UP group default
     link/ether be:e2:72:ce:72:1b brd ff:ff:ff:ff:ff:ff link-netnsid 0
@@ -1142,7 +1142,7 @@ $ ip addr show veth9af2aa6
 Previously we also had it about other networks/ bridges in regards to `docker network` commands. When running `docker network create` a new bridge will be created which has its "own" IP range as can been seen in the example output.
 
 > **EXAMPLE** `docker network create` "normal" bridge on host
-```console
+```bash
 $ ip addr show br-4cc4efd905ff
 104: br-4cc4efd905ff: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
     link/ether 02:42:90:e4:8d:a1 brd ff:ff:ff:ff:ff:ff
@@ -1155,7 +1155,7 @@ $ ip addr show br-4cc4efd905ff
 You can view the IP address and much more information of containers, using `docker inspect CONTAINER_NAME`:
 
 > **EXAMPLE** `docker inspect database`
-> ```console
+> ```bash
 $ docker inspect database
 [
     {
@@ -1214,7 +1214,7 @@ The `--net` flag can also take a name of a network which has been created using 
 The below snippet shows how the contaienr inside network looks for "default" (/ unspecified) network mode:
 
 > **EXAMPLE**
-> ```console
+> ```bash
 HOST $ docker run -it debian:jessie ip addr show
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -1231,7 +1231,7 @@ As you can see the container is getting an IP from the `docker0` bridge.
 What about using the host's network with `--net=host`?
 
 > **EXAMPLE**
-> ```console
+> ```bash
 $ docker run -it --net=host debian:jessie ip addr show
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -1279,7 +1279,7 @@ The `br-4cc4efd905ff` interface is the `wordpress` network previously created.
 Just for comparsion here the `ip addr show` output directly from the host to compare it with the above output from the container.
 
 > **EXAMPLE**
-> ```console
+> ```bash
 HOST $ ip addr show
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -1325,7 +1325,7 @@ In the below example output below, all `iptables` rules are shown that are creat
 >
 > `iptables` filter rules
 >
-```console
+```bash
 # iptables -L -n
 Chain INPUT (policy ACCEPT)
 target     prot opt source               destination
@@ -1364,7 +1364,7 @@ RETURN     all  --  0.0.0.0/0            0.0.0.0/0
 >
 > `iptables` nat rules
 >
-```console
+```bash
 # iptables -t nat -L -n
 Chain PREROUTING (policy ACCEPT)
 target     prot opt source               destination
@@ -1403,7 +1403,7 @@ Do you want to visualize your container network situation? Yes? Then the perfect
 
 In the `network101` task is a file called `start_weave_scope.sh`. The script downloads the Weave Scope wrapper script, that starts the containers needed for Weave Scope to function.
 The commands that are used to download the Weave Scope wrapper script are:
-```console
+```bash
 sudo wget -O /usr/local/bin/scope https://git.io/scope
 sudo chmod a+x /usr/local/bin/scope
 sudo scope launch
@@ -1429,7 +1429,7 @@ As I already mentioned in the [Container!?](#Container) part, namespaces are abl
 
 Limiting the precious computing resource of a container.
 
-```console
+```bash
 $ docker run --help
 [...]
   --cpu-period                    Limit CPU CFS (Completely Fair Scheduler) period
@@ -1442,7 +1442,7 @@ Limiting a container to specific cores is also possible (`--cpuset-cpus`).
 
 ### Memory and Swap Limit
 
-```console
+```bash
 $ docker run --help
 [...]
   --cpuset-mems                   MEMs in which to allow execution (0-3, 0,1)
@@ -1477,7 +1477,7 @@ Images that "come" from the [Docker Image Hub](https://hub.docker.com/), don't n
 
 The image we used for the MariaDB container is:
 
-```console
+```bash
 mariadb:10.4.3-bionic
 ```
 
@@ -1489,7 +1489,7 @@ mariadb:10.4.3-bionic
 
 An example for an image that is pulled from a different image server, than the official Docker Hub, is my [Prometheus DellHW Exporter](https://github.com/galexrt/dellhw_exporter) image that is hosted on [quay.io](https://quay.io):
 
-```console
+```bash
 quay.io/galexrt/dellhw_exporter:v1.3.5
 SERVER/USERNAME/IMAGE_NAME:TAG
 ```
@@ -1675,7 +1675,7 @@ There's even the possibility, to execute specific commands when the image is use
 
 To build an image we use the `docker build` command. Building this golang example image, we run the following command:
 
-```console
+```bash
 docker build -f Dockerfile -t workshop-gowebapp .
 ```
 
@@ -1696,7 +1696,7 @@ If you want to see more advanced examples, you can find more examples in my GitH
 
 To list the Container images, use the `docker images` command:
 
-```console
+```bash
 docker images
 ```
 
@@ -1706,7 +1706,7 @@ The command can also take a name of an image, but then it will only show quick o
 
 To delete a Container image, you use the `docker rmi` command. The syntax is basically the same as for the `docker rm` command:
 
-```console
+```bash
 docker rmi IMAGE [IMAGE...]
 ```
 
@@ -1719,7 +1719,7 @@ docker rmi IMAGE [IMAGE...]
 
 Use this command to build images:
 
-```console
+```bash
 docker build -t IMAGE_NAME -f DOCKERFILE BUILD_PATH
 ```
 
@@ -1746,19 +1746,19 @@ ENTRYPOINT ["__BLANK__"]
 
 Got all blanks filled out? Good. Let's build the image:
 
-```console
+```bash
 docker build -t workshop-nginx .
 ```
 
 > **Expected Output of `docker build -t workshop-nginx .`**
 >
-> ```console
+> ```bash
 
 ```
 
 The build should go successfully, when you filled in the blanks correctly. Let's run the image to see if it is working, the container name will be `workshop-nginx`:
 
-```console
+```bash
 docker run \
     --name=workshop-nginx \
     -d \
@@ -1768,7 +1768,7 @@ docker run \
 
 If you did something wrong, remove the container using (where `CONTAINER_NAME` is a container ID or name):
 
-```console
+```bash
 docker rm CONTAINER_NAME
 ```
 
@@ -1786,7 +1786,7 @@ That's why we need to tell `nginx`, not to run as a daemon, not fork to backgrou
 
 So we could make a change to the `nginx.conf`, overwrite `nginx.conf` with a custom one or **just change** the `ENTRYPOINT` line to make it look like this:
 
-```console
+```bash
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
 ```
 
@@ -1798,7 +1798,7 @@ Use the `index.html` from task `dockerfile202` or create one yourself.
 Now we add a volume to the container. Add `-v "$(pwd)":"/usr/share/nginx/html"` to the `docker run` command, but don't forget add the argument before the image name.
 Your command should look like this:
 
-```console
+```bash
 docker run \
     --name=workshop-nginx \
     -d \
@@ -1904,7 +1904,7 @@ That is because `docker-compose` creates a `network` based on the "project name"
 
 To run/ start the content of the filled out `docker-compose.yml` (if you are too lazy to fill out the file, use the `docker-compose-solutions.yml`) run:
 
-```console
+```bash
 docker-compose -f docker-compose.yml up
 ```
 
@@ -1915,7 +1915,7 @@ docker-compose -f docker-compose.yml up
 > * `up` - Starts the containers defined in the given docker-compose file.
 >
 > **EXAMPLE**
-> ```console
+> ```bash
 $ docker-compose up # no need for `-f DOCKER_COMPOSE_YML` flag as the default file is used `docker-compose.yml`
 Creating compose101_database_1   ... done
 Creating compose101_phpmyadmin_1 ... done
@@ -1991,7 +1991,7 @@ There are some `docker-compose` commands you should know when working with the `
 
 Instead of the `up`, you just put `stop` there. Stops the containers from the current `docker-compose` file:
 
-```console
+```bash
 docker-compose stop -t TIMEOUT
 ```
 
@@ -2004,7 +2004,7 @@ docker-compose stop -t TIMEOUT
 
 Replacing the `up` with `rm`, deletes all containers that are started by the current `docker-compose` file, but now are stopped or exited:
 
-```console
+```bash
 docker-compose -f DOCKER_COMPOSE_YML rm --force
 ```
 
@@ -2018,7 +2018,7 @@ docker-compose -f DOCKER_COMPOSE_YML rm --force
 Restarts all containers that are started or have exited by the current `docker-compose` file.
 This just stops and starts the containers again. It does not delete and create the containers again.
 
-```console
+```bash
 docker-compose -f DOCKER_COMPOSE_YML restart
 ```
 

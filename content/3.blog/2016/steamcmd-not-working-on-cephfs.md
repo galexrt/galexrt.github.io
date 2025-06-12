@@ -22,7 +22,7 @@ A colleague told me that error may be related to the `st_size` and the `rbytes` 
 
 **`strace` on xfs filesystem**:
 
-```console
+```bash
 [...]
 [pid 123] stat64("./zip0.zip", 0xf71c9c40) = -1 ENOENT (No such file or directory)
 [pid 123] open(".", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 2
@@ -34,7 +34,7 @@ A colleague told me that error may be related to the `st_size` and the `rbytes` 
 ```
 
 **`strace` on CephFS:**
-```console
+```bash
 [...]
 [pid 123] stat64("./zip0.zip", 0xf720ac40) = -1 ENOENT (No such file or directory)
 [pid 123] open(".", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 2

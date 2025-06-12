@@ -5,7 +5,7 @@ icon: 'i-ph-key'
 
 ## ACLs
 
-```console
+```bash
 # faculty auf faculty
 access-list 100 permit tcp 172.17.10.0 0.0.0.255 172.17.0.0 0.0.255.255
 access-list 100 permit udp 172.17.10.0 0.0.0.255 172.17.0.0 0.0.255.255
@@ -18,6 +18,6 @@ access-list 102 deny tcp 172.17.30.0 0.0.0.255 any
 
 ### Enter a "sub" interface
 
-```console
+```bash
 ip access-group NUMBER in
 ```

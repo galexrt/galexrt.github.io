@@ -40,7 +40,7 @@ At least for my I did something like this:
 * (When Docker is used to run Matchbox) Run matchbox, with the following `docker run` command.
 
 The `docker run` command I used looked like this:
-```console
+```bash
 $ docker run \
     --net=host \
     -d \
@@ -65,7 +65,7 @@ The title says it all, reboot all the servers you want to run Container Linux on
 This is more of a "brute force" to clear the disks completely.
 First two commands disable and "remove" LVM devices. `umount` to unmount the disk's partitions and `mdadm` to zero the disks (`/dev/sd{a,b}`) superblocks so no mdadm RAID is detected. The `dd` additionally clears the first 10M of the disk, this is more than just the partition table and MBR, but I personally like to simply erase a bit more just in case.. The end runs `cgpt` to "repair" the disks GPT tables, this fixed issues with Container Linux having trouble creating the partitions during the installation process for me.
 
-```console
+```bash
 lvscan 2>/dev/null | awk '{print "lvremove -f "$2}' | sh
 vgremove 2>/dev/null
 mdadm --stop --scan
@@ -77,7 +77,7 @@ cgpt repair /dev/sda
 
 If you are on a Debian based resuce/recovery system, you need to install `cgpt` you can do this by running:
 
-```console
+```bash
 apt-get update
 apt-get install -y cgpt
 ```
@@ -87,19 +87,19 @@ apt-get install -y cgpt
 The following commands do the following:
 
 1. "Zap"/Clear the disk `/dev/sda` just in case again.
-```console
+```bash
 sgdisk --zap-all --clear /dev/sda >/dev/null
 ```
 2. Create a BIOS boot partition (size ~4096M) on the disk.
-```console
+```bash
 sgdisk --new 1:2048:4095 -c 1:"BIOS Boot Partition" -t 1:ef02 /dev/sda >/dev/null
 ```
 3. Create a partition for "data" which will be used for the grub configs.
-```console
+```bash
 sgdisk --new 2:4096:500M -c 2:"Linux Boot Partition" /dev/sda >/dev/null
 ```
 4. The next three commands, format the data partition with `ext2`, create the mount target directory and mount the data partition to `/boot`.
-```console
+```bash
 mkfs.ext2 -F -q /dev/sda2
 mkdir /boot
 mount -t ext2 /dev/sda2 /boot
@@ -117,14 +117,14 @@ menuentry "Network boot (iPXE)" {
 After creating the `grub.cfg` we need to install grub to the disk.
 This can be done via (for `/dev/sda`):
 
-```console
+```bash
 grub-install --no-floppy /dev/sda
 ```
 
 Download ipxe.lkrn from boot.ipxe.org to `/boot`: https://boot.ipxe.org/ipxe.lkrn. This can be done by curl or wget whatever you prefer.
 An example with `curl` looks like this:
 
-```console
+```bash
 curl -L https://boot.ipxe.org/ipxe.lkrn -o /boot/ipxe.lkrn
 ```
 
@@ -135,7 +135,7 @@ Even though the title says "without DHCP server", if you should "only" have the 
 
 For manual interface configuration in IPXE can be done like this:
 
-```console
+```bash
 #!ipxe
 
 # set IP of first interface
@@ -155,7 +155,7 @@ More info on IPXE `set` command, can be found here: [iPXE - open source boot fir
 If you use a DHCP server for address configuration, you can try using this snippet:
 (This is useful for public cloud providers which don't allow custom IPXE chains)
 
-```console
+```bash
 #!ipxe
 
 dhcp
@@ -227,7 +227,7 @@ As the title suggests reboot your servers.
 When you now have rebooted your servers, you should see some activity in the Matchbox server ("access") log.
 To view the logs of Matchbox when running in Docker with the command in [Step 1 - Setup Matchbox](#Step-1-Setup-matchbox)
 
-```console
+```bash
 [...]
 time="2017-09-09T14:43:26Z" level=debug msg="Matched an Ignition or Container Linux Config template" group=coreos-install-container-linux-node01 labels=map[mac:XX-XX-XX-XX-XX-XX uuid:[...]] profile=coreos-install
 time="2017-09-09T14:43:30Z" level=info msg="HTTP GET /ignition?uuid=[...]&mac=XX-XX-XX-XX-XX-XX"

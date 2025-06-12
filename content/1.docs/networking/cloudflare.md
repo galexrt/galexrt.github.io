@@ -5,7 +5,7 @@ icon: 'i-simple-icons-cloudflare'
 
 ## Create IPv4 and IPv6 IPSets
 
-```console
+```bash
 # Create ipsets for IPv4 and IPv6
 ipset create cf4 hash:net family inet
 ipset create cf6 hash:net family inet6
@@ -27,7 +27,7 @@ done
 These iptables rules are for a "stateful" firewall!
 ::
 
-```console
+```bash
 iptables -A INPUT -m set --match-set cf4 src -p tcp -m multiport --dports http,https -m state --state NEW -j ACCEPT
 iptables -A INPUT -p tcp -m multiport --dports http,https  -m state --state NEW -j DROP
 ip6tables -A INPUT -m set --match-set cf6 src -p tcp -m multiport --dports http,https -m state --state NEW -j ACCEPT

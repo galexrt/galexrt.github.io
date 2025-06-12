@@ -17,7 +17,7 @@ Checkout the official Kubernetes documentation links:
 
 You need to create a secret that contains the ETCD healthcheck client cert and key.
 
-```console
+```bash
 kubectl \
     create \
     -n monitoring \

@@ -25,13 +25,13 @@ To persist the configurations you can either use the NetworkManager or use good 
 Here I'm going to show how it's done using the good old network-scripts.
 First at all we have to disable the NetworkManager service with this command:
 
-```console
+```bash
 systemctl disable NetworkManager.service
 ```
 
 And enable the old fashioned `network.service` with:
 
-```console
+```bash
 systemctl enable network.service
 ```
 > **WARNING**

@@ -24,18 +24,18 @@ The original StackOverflow question can be found here: [StackOverflow - how do y
 ## The original question
 > GitLab is a free, open-source way to host private .git repositories but it does not seem to work with golang. When you create a project it generates a URL of the form:
 >
->```console
+>```bash
 git@1.2.3.4:private-developers/project.git
 ```
 > where: 1.2.3.4 is the IP address of the gitlab server private-developers is a user group which has access to the private repo
 >
 > Golang 1.2.1 doesn't seem to understand this syntax.
 >
->```console
+>```bash
 go get git@1.2.3.4:private-developers/project.git
 ```
 > results in:
->```console
+>```bash
 package git@23.251.148.129/project.git: unrecognized import path "git@1.2.3.4/project.git"
 ```
 > Is there a way to get this to work?
@@ -47,7 +47,7 @@ Author of the question [James Fremen](https://stackoverflow.com/users/2904939/ja
 ## The answer that worked for me
 > Run this command:
 >
->```console
+>```bash
 git config --global url."git@1.2.3.4:".insteadOf "https://1.2.3.4/"
 ```
 >Assuming you have the correct privileges to `git clone` the repository, this will make go get work for all repos on server `1.2.3.4`.
@@ -58,7 +58,7 @@ Author of the answer [Rick Smith](https://stackoverflow.com/users/616644/rick-sm
 
 ### Example for DNS names
 So for example with dns names, it would be for a gitlab running at `gitlab.example.com`.
-```console
+```bash
 git config --global url."git@gitlab.example.com:".insteadOf "https://example.com/"
 ```
 

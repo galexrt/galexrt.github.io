@@ -58,7 +58,7 @@ You can use the GitLab repository import functionality to import the repository.
 When creating the repository, keep it empty! Don't add a `README` or anything at all to it.
 Go ahead and clone my repository with the files locally. To import the repository the remote needs to be changed. For this we run the following commands:
 
-```console
+```bash
 $ git clone https://github.com/galexrt/presentation-gitlab-k8s.git
 $ cd presentation-gitlab-k8s
 # Change the remote of the repository
@@ -76,7 +76,7 @@ Now we can begin with the GitLab Kubernetes integration.
 
 Before continuing, make sure that the `Namespace` for the example files of the repository exist by running:
 
-```console
+```bash
 kubectl create ns presentation-gitlab-k8s
 ```
 
@@ -146,7 +146,7 @@ roleRef:
 In my case even if it not the best way, I'll go with the default `ServiceAccount` created in the namespace where I will run the application.
 For that I check what `Secrets` exist, then get the secret and base64 decode it.
 
-```console
+```bash
 $ kubectl get -n presentation-gitlab-k8s secret
 NAME                    TYPE                                  DATA   AGE
 default-token-2kmsr     kubernetes.io/service-account-token   3      3m11s
@@ -177,7 +177,7 @@ Copy `YOUR_DECODED_TOKEN` somewhere safe for an upcoming step.
 
 As you may have seen in [Step 2 - Get a `ServiceAccount` Token from Kubernetes](#step-2-get-a-serviceaccount-token-from-kubernetes) from the `kubectl get secrets` command output, there was a key named `ca.crt` in it.
 
-```console
+```bash
 $ kubectl get -n presentation-gitlab-k8s secret
 NAME                    TYPE                                  DATA   AGE
 default-token-2kmsr     kubernetes.io/service-account-token   3      3m11s
@@ -477,7 +477,7 @@ Be sure to replace the following placeholders in the upcoming command:
 
 After replacing the placeholders in the command, run it to create the Docker login `Secret` in Kubernetes:
 
-```console
+```bash
 kubectl create \
     -n presentation-gitlab-k8s \
     secret docker-registry registry-gitlab-key \
@@ -490,7 +490,7 @@ Keep the name of the `Secret` in mind that has been created by the `kubectl crea
 
 This "patches" the `default` `ServiceAccount` to automatically use the Docker login `Secret` for pulling images from the registry.
 
-```console
+```bash
 kubectl patch \
     -n presentation-gitlab-k8s \
     serviceaccount default \
@@ -625,7 +625,7 @@ Now that we have gone through all the manifests in the repository, we can move o
 ## Step 8 - Make a change, push and watch the magic happen!
 Now that you have the manifests and the `.gitlab-ci.yml` file in the repository or from the imported one, you can make a change to the code or just create a file by running the following commands:
 
-```console
+```bash
 $ touch test1
 $ git add test1
 $ git commit -m"Testing the GitLab CI functionality #1"

@@ -24,7 +24,7 @@ For more posts about Ceph, take a look at [Sébastien Han Blog](https://www.seba
 To be able to run a rbd benchmark, you need to create an image.
 The command to create an image for this would be:
 
-```console
+```bash
 $ RBD_IMAGE_NAME="bench1"
 $ rbd create --size=10G $RBD_IMAGE_NAME
 ```
@@ -51,7 +51,7 @@ The following flags are for the benchmark configuration:
 
 For sequential write benchmark:
 
-```console
+```bash
 $ rbd -p replicapool bench $RBD_IMAGE_NAME --io-type write --io-size 8192 --io-threads 256 --io-total 10G --io-pattern seq
 ```
 
@@ -59,7 +59,7 @@ $ rbd -p replicapool bench $RBD_IMAGE_NAME --io-type write --io-size 8192 --io-t
 
 For sequential read benchmark:
 
-```console
+```bash
 $ rbd -p replicapool bench $RBD_IMAGE_NAME --io-type read --io-size 8192 --io-threads 256 --io-total 10G --io-pattern seq
 ```
 

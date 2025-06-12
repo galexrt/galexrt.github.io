@@ -7,6 +7,6 @@ icon: 'i-ph-table'
 
 Replace `csi-vol-............` with the volume name:
 
-```console
+```bash
 $ kubectl get pv -o jsonpath='{range .items[?(@.spec.csi.volumeAttributes.imageName=="csi-vol-............")]}{.metadata.name}{"\t"}{.spec.claimRef.namespace}{"/"}{.spec.claimRef.name}{"\n"}{end}'
 ```

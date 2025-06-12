@@ -26,7 +26,7 @@ The password for a replication user must be a maximum of `32` characters long.
 
 >
 
-```console
+```bash
 mysql --max_allowed_packet=16777216
 mysql --max_allowed_packet=16M
 ```

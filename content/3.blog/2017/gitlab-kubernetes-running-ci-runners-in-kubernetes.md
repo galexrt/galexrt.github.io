@@ -40,7 +40,7 @@ If you want the latest manifests version, I recommend you checkout the repositor
 
 To check if you have proper Kubernetes cluster connection, run the following command:
 
-```console
+```bash
 $ kubectl cluster-info
 kubectl cluster-info
 Kubernetes master is running at https://k8s.example.com:443
@@ -143,7 +143,7 @@ The above `ConfigMap` also adds resource requests and limits to the build contai
 >
 > Example output of `gitlab-ci-multi-runner register --help`:
 >
-```console
+```bash
 gitlab-runner@gitlab-ci-runner-0:/$ gitlab-ci-multi-runner --help
 [...]
 --kubernetes-cpu-limit value                          The CPU allocation given to build containers (default: "1") [$KUBERNETES_CPU_LIMIT]
@@ -197,7 +197,7 @@ Then we'll use the GitLab CI runner token to create a secret in Kubernetes for i
 
 To encode the token as base64, you can run something like this:
 
-```console
+```bash
 $ echo YOUR_GITLAB_CI_TOKEN | base64 -w0
 ```
 
@@ -356,7 +356,7 @@ Thanks to [Parama Danoesubroto](https://disqus.com/by/paramaw/) for commenting a
 To interact with the Kubernetes cluster the `kubectl` programm is used. To create/"run" a manifest on the Kubernetes cluster the subcommand `create` is used.
 An example, like this:
 
-```console
+```bash
 kubectl create -f FILE_NAME
 ```
 
@@ -384,7 +384,7 @@ If not check the [Troubleshooting](#Troubleshooting) section below.
 
 To get logs from one of the GitLab CI runner pods, you can use the following command:
 
-```console
+```bash
 $ kubectl logs -f gitlab-ci-runner-0
 [...]
 GITLAB_CI_RUNNER_0_POD_LOGS_HERE

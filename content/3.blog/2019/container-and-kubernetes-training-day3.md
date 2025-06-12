@@ -355,7 +355,7 @@ After that other components, like, e.g., CNI plugin, Monitoring, Operators.
 
 Cordoning a Node makes it unschedulable (bleed out as no new Pods are scheduled on it then).
 
-```console
+```bash
 kubectl cordon NODE_NAME
 ```
 
@@ -368,7 +368,7 @@ Draining a Node removes each Pod from a Node and marks it as cordoned (unschedul
 >
 > Be aware though that if users run applications in Kubernetes with `replicas: 1` they will have a service intrruption, due to Pods bein terminated and created on another Node.
 
-```console
+```bash
 kubectl drain NODE_NAME
 kubectl drain --ignore-daemonsets=true NODE_NAME
 kubectl drain --ignore-daemonsets=true --delete-local-data=true NODE_NAME

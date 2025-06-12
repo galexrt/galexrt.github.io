@@ -78,7 +78,7 @@ You can use the GitLab repository import functionality to import the repository.
 When creating the repository, keep it empty! Don't add a `README` or anything at all to it.
 Go ahead and clone my repository with the files locally. To import the repository the remote needs to be changed. For this we run the following commands:
 
-```console
+```bash
 $ git clone https://github.com/galexrt/presentation-gitlab-k8s.git
 $ cd presentation-gitlab-k8s
 # Change the remote of the repository
@@ -113,7 +113,7 @@ For Kubernetes `1.5` and below you just need to a) create a `ServiceAccount` (se
 In my case even if it not the best way, I'll go with the default `ServiceAccount` created in the namespace where I will run the application.
 For that I check what secrets exist, then get the secret and base64 decode it.
 
-```console
+```bash
 $ kubectl get -n presentation-gitlab-k8s secret
 NAME                                           TYPE                                  DATA      AGE
 default-token-nmx1q                            kubernetes.io/service-account-token   3         20m
@@ -143,7 +143,7 @@ In the end copy `YOUR_DECODED_TOKEN` somewhere safe.
 At least for my cluster that I setup with the `kubernetes/contrib` Ansible deployment the Kubernetes CA certificate is located in `/etc/kubernetes/certs/ca.crt`.
 So a simple `cat` does the thing ;)
 
-```console
+```bash
 $ cat /etc/kubernetes/ca.crt
 -----BEGIN CERTIFICATE-----
 [REDACATED]
@@ -356,7 +356,7 @@ I hope you can what it does by looking at the `script` parts of the jobs and the
 To be able to deploy the built image from the GitLab registry later on, you need to add the Docker login information for the GitLab Registry as a `Secret` to Kubernetes. You need to have `kubectl` downloaded and usable on your system for that.
 The command for creating the Docker login secret is:
 
-```console
+```bash
 # YOUR_SECRET_NAME for example "registry-example-gitlab-key"
 $ kubectl create \
     -n presentation-gitlab-k8s \
@@ -486,7 +486,7 @@ Now that we have all the manifests in the repository, we can move on to the next
 
 Now that you have the manifests and the `.gitlab-ci.yml` file in the repository or from the imported one, you can make a change to the code or just create a file by running the following commands:
 
-```console
+```bash
 $ touch test1
 $ git add test1
 $ git commit -m"Testing the GitLab CI functionality #1"

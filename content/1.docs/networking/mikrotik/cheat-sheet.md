@@ -7,7 +7,7 @@ icon: i-ph-table
 
 ### Automatic OS and Firmware Update
 
-```console
+```bash
 /system routerboard settings set auto-upgrade=yes
 /system package update
 check-for-updates once
@@ -22,7 +22,7 @@ check-for-updates once
 
 ### Set Hostname/ Identity
 
-```console
+```bash
 /system identity
 set name=HOSTNAME
 ```
@@ -31,26 +31,26 @@ set name=HOSTNAME
 
 To `Europe/Berlin`.
 
-```console
+```bash
 /system clock
 set time-zone-name=Europe/Berlin
 ```
 
 ### Disable Ports beginning with `ether`
 
-```console
+```bash
 :foreach i in=[/interface find name~"ether"] do={ /interface ethernet set $i disabled=yes }
 ```
 
 ### "Advertise" 10G on SFP+ Ports
 
-```console
+```bash
 :foreach i in=[/interface find name~"sfp-sfpplus"] do={ /interface ethernet set $i advertise=10000M-full; }
 ```
 
 ### Enable Graphs/ Graphing
 
-```console
+```bash
 /tool graphing
 set page-refresh=240
 /tool graphing interface
@@ -62,7 +62,7 @@ add allow-address=172.16.0.0/24
 
 ### Set Boot target of Device
 
-```console
+```bash
 /system routerboard settings
 set boot-os=router-os
 ```

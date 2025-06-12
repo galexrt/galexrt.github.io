@@ -17,14 +17,14 @@ icon: 'i-ph-table'
 
 Example for `StatefulSet` and `Deployment` below:
 
-```console
+```bash
 kubectl rollout restart statefulset STATEFULSET_NAME
 kubectl rollout restart deployment DEPLOYMENT_NAME
 ```
 
 ### Old Way
 
-```console
+```bash
 kubectl patch -n kube-system ds kube-proxy -p "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"date\":\"$(date +'%s')\"}}}}}"
 ```
 
@@ -65,7 +65,7 @@ spec:
 
 `kubectl exec -it POD_NAME -- sh` into the Pod and use `nsenter` to escape the container's namespace:
 
-```console 
+```bash 
 $ nsenter -t 1 -m -u -n -i sh
 ```
 
@@ -78,26 +78,26 @@ Meaning that `node-role.kubernetes.io/my-cool-role` (any value) will cause the `
 
 ### Set Namespace For Current Context
 
-```console
+```bash
 kubectl config set-context --current --namespace NAMESPACE
 ```
 
 ### Switch To Other Context
 
-```console
+```bash
 kubectl config use-context CONTEXT_NAME
 ```
 
 ### Show Contexts
 
-```console
+```bash
 kubectl config get-contexts
 ```
 
 
 ## Trigger/ Run A CronJob Now (Manually)
 
-```console
+```bash
 kubectl create job --from=cronjob/CRONJOB_NAME JOB_NAME
 kubectl create job --from=cronjob/curator curator-manual-run
 ```

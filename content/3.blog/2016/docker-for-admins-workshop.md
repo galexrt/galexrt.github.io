@@ -111,7 +111,7 @@ For Docker see the begining of script at [here](https://get.docker.com/) or run 
 
 For `docker-compose` see the [docs](https://docs.docker.com/compose/install/) or run the following command:
 
-```console
+```bash
 curl -L https://github.com/docker/compose/releases/download/v2.29.7/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ```
@@ -120,7 +120,7 @@ chmod +x /usr/local/bin/docker-compose
 
 Clone the Workshop repo `https://github.com/galexrt/workshop-docker.git`, it'll provide all files used in the Workshop ;)
 
-```console
+```bash
 git clone https://github.com/galexrt/workshop-docker.git
 ```
 
@@ -147,7 +147,7 @@ Let's start with something simple, the situation is that you want to run a WordP
 No problem, Docker got you!
 
 #### Start the database container (using image: sameersbn/mysql:latest):
-```console
+```bash
 docker run \
     --name mysql \
     -d \
@@ -167,7 +167,7 @@ docker run \
 
 #### Now we need WordPress
 The command for starting a WordPress instance is:
-```console
+```bash
 docker run \
     --name wordpress \
     -d \
@@ -281,7 +281,7 @@ Docker creates a iptables chain in nat and filter table. Docker creates a bridge
 Data is not persistent in containers. Currently if we stop the database container and delete it, all data is gone. :(
 To make data in a container persistent, we use _volumes_. So to make our database data persistent, we add the following argument to the command.
 
-```console
+```bash
 docker run \
     --name mysql \
     -d \
@@ -296,7 +296,7 @@ docker run \
 > * `-v HOST_PATH:CONTAINER_PATH:rw` - `HOST_PATH` path to mount from the host into the container at the `CONTAINER_PATH`. `rw` means `read-write` and `ro` (`read-only`) are possible arguments too (default is `rw`).
 
 We have to stop the WordPress container first, because it is linked to the database container:
-```console
+```bash
 docker stop wordpress database
 docker rm wordpress database
 ```
@@ -455,7 +455,7 @@ There's even the possibility, to execute specific commands when the image is use
 
 To build your image we use the `docker build` command. Building the example image run the following command:
 
-```console
+```bash
 docker build -t golang-docker -f Dockerfile .
 ```
 > **WDWD**
@@ -483,7 +483,7 @@ ENTRYPOINT ["__BLANK__"]
 
 Got all blanks filled out? Good. Let's build the image:
 
-```console
+```bash
 docker build -t workshop-nginx .
 ```
 > **Expected Output of `docker build -t workshop-nginx .`**
@@ -492,7 +492,7 @@ docker build -t workshop-nginx .
 
 The build should go successfully, when you filled in the blanks correctly. Let's run the image to see if it is working, the container name will be `nginx-workshop`:
 
-```console
+```bash
 docker run \
     --name nginx-workshop \
     -d \
@@ -502,7 +502,7 @@ docker run \
 
 If you did something wrong, remove the container using (where `CONTAINER_NAME` is a container ID or name):
 
-```console
+```bash
 docker rm CONTAINER_NAME
 ```
 
@@ -519,7 +519,7 @@ That's why we need to tell `nginx`, not to run as a daemon, not fork to backgrou
 
 So we could make a change to the `nginx.conf`, overwrite `nginx.conf` with a custom one or **just change** the `ENTRYPOINT` line to make it look like this:
 
-```console
+```bash
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
 ```
 
@@ -531,7 +531,7 @@ Use the `index.html` from task `dockerfile202` or create one yourself.
 Now we add a volume to the container. Add `-v "$(pwd)":"/usr/share/nginx/html"` to the `docker run` command, but don't forget add the argument before the image name.
 Your command should look like this:
 
-```console
+```bash
 docker run \
     --name workshop-nginx \
     -d \
@@ -570,7 +570,7 @@ In our example with WordPress we will create a `docker-compose.yml` for our data
 
 Create the `docker-compose.yml` file. I made this part like a test again, so you can see where you have knowledge holes, replace all `__BLANK__` with the correct answer (Solutions are [here](#For-WordPress-docker-compose-yml)):
 
-```console
+```bash
 # Taken from https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-and-phpmyadmin-with-docker-compose-on-ubuntu-14-04
 database:
   image: sameersbn/mysql:latest
@@ -619,7 +619,7 @@ I have also added the environment variables `DB_REMOTE_ROOT_NAME` and `DB_REMOTE
 #### Starting our multi container applications with one command
 
 To "run"/start our `docker-compose.yml`, we run:
-```console
+```bash
 docker-compose up -f DOCKER_COMPOSE_YML
 ```
 > **WDWD**
@@ -704,7 +704,7 @@ Enter the cloned repository and look out for a directory called `ansible/`.
 
 Create a file called `inventory`, this file will contain the list of servers.
 Per server one line in the format below (username and password are valid for the provided vm, change to suit your environment):
-```console
+```bash
 [masters]
 # In most cases the first "server"
 SERVER_IP_ADDRESS:SSH_PORT ansible_user=docker ansible_ssh_pass=docker ansible_become_pass=docker
@@ -783,7 +783,7 @@ These files are also located in the task directory and are here shown for people
 
 ###### Pod
 
-```console
+```bash
 # Kubernetes API version
 apiVersion: v1
 # Type of "request"
@@ -833,7 +833,7 @@ spec:
 
 ###### Service
 
-```console
+```bash
 apiVersion: v1
 # Service object
 kind: Service
@@ -857,7 +857,7 @@ spec:
 
 ###### Pod
 
-```console
+```bash
 # Kubernetes API version
 apiVersion: v1
 # Type of "request" in this case a Pod
@@ -893,7 +893,7 @@ spec:
 
 ###### Service
 
-```console
+```bash
 apiVersion: v1
 # Service object
 kind: Service
@@ -915,7 +915,7 @@ spec:
 
 ###### Pod
 
-```console
+```bash
 # Kubernetes API version
 apiVersion: v1
 # Type of "request"
@@ -947,7 +947,7 @@ spec:
 
 ###### Service
 
-```console
+```bash
 apiVersion: v1
 kind: Service
 metadata:
@@ -978,7 +978,7 @@ _Zelda Meme intensifies_
 The `kubectl` command is used to create new "objects", view Pods, view Replication Controller and much more.
 
 An example to view Pods in all namespaces:
-```console
+```bash
 kubectl get --all-namespaces pods
 ```
 > **WDWD**
@@ -988,7 +988,7 @@ kubectl get --all-namespaces pods
 > * `pods` - Show only pods (Can be a comma seperated list of types, short forms are available).
 
 Get all information about a Pod:
-```console
+```bash
 kubectl describe --namespace=NAMESPACE TYPE NAME
 ```
 > **WDWD**
@@ -998,7 +998,7 @@ kubectl describe --namespace=NAMESPACE TYPE NAME
 > * `NAME` - Name of the object to show. For our WordPress Pod, would be `wordpress`.
 
 To create our WordPress, MySQL, phpMyAdmin Pod and Services, we run:
-```console
+```bash
 kubectl create -f FILE_NAME
 ```
 > **WDWD**

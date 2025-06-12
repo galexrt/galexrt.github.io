@@ -28,7 +28,7 @@ My example server for this tutorial has the following address:
 
 Make sure your server is at the latest version before continuing with the
 To update all packages on Ubuntu run:
-```console
+```bash
 apt-get update
 apt-get upgrade
 ```
@@ -39,14 +39,14 @@ Confirm with (depending on the system locale) with `y`.`
 Please login as root user.
 On most Ubuntu systems, you would use
 
-```console
+```bash
 sudo -i
 ```
 
 to switch to the root user.
 Next up we make sure that we are in the root user's home directory `/root`.
 
-```console
+```bash
 cd /root
 pwd
 ```
@@ -55,7 +55,7 @@ pwd
 
 For the latest Zulip version the download and extraction commands are:
 
-```console
+```bash
 cd /root
 wget https://www.zulip.com/dist/releases/zulip-server-latest.tar.gz
 rm -rf /root/zulip && mkdir /root/zulip
@@ -74,7 +74,7 @@ With the following command, we start the Zulip installation.
 
 > **!! WARNING !!** This will install Zulip to your server and if other applications are also running on this server it can completely mess them up, as mentioned earlier!
 
-```console
+```bash
 /root/zulip/scripts/setup/install
 ```
 
@@ -85,7 +85,7 @@ The command may take some to complete. The command installs Zulip's dependencies
 Navigate to the bottom of the file and check that it reports the success of the installation.
 The command for opening the installation log file in a "paginator" is:
 
-```console
+```bash
 less /var/log/zulip/install.log
 ```
 
@@ -111,13 +111,13 @@ Go ahead and configure the mandatory values to your needs.
 
 Now that you have Zulip configured, we can now initialize the database.
 
-```console
+```bash
 su zulip -c /home/zulip/deployments/current/scripts/setup/initialize-database
 ```
 
 After the database initialization has successfully completed, we should now you should verify that your Zulip email settings are correct:
 
-```console
+```bash
 ./manage.py send_test_email YOUR_EMAIL_ADDRESS
 ```
 
@@ -131,7 +131,7 @@ If it's not in the inbox make sure to also check your SPAM folder.
 We need a Zulip organistation for your users.
 For that we need to switch to the `zulip` user, switch into the current Zulip installation and create a link for realm generation with the command:
 
-```console
+```bash
 su zulip
 cd /home/zulip/deployments/current
 ./manage.py generate_realm_creation_link
@@ -157,7 +157,7 @@ See [Zulip Official Documentation](https://zulip.readthedocs.io/en/latest/index.
 
 Use the below command to restart your Zulip instance, after making changes to the config:
 
-```console
+```bash
 su zulip -c /home/zulip/deployments/current/scripts/restart-server
 ```
 

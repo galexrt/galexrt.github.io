@@ -25,7 +25,7 @@ Replace the placeholders (`MC_HOST_CONFIG_NAME`, `BUCKET_NAME`) according to you
 
 Using the Minio client `mc` (compatible with most/ all S3 based storages) the following command should "fix" the issue:
 
-```console
+```bash
 # Create empty file
 touch workaround_s3aws_walk_issue_github_docker_distribtuion_issue_3200
 # Upload the empty file

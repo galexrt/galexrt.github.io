@@ -19,7 +19,7 @@ title: "Kubernetes Name Schemas"
 * `ROLE` - In case of Kubernetes, e.g., `master`, `etcd`, `node` (other "special" roles could be, e.g., `ingress`, `stora` (could have a suffix per storage software, e.g. `storaceph`)).
 * `COUNT_OR_ID` - A count is a special "type". It can for servers that are known to have only a maximum of n machines at maximum, the number of servers padded with zeroes (e.g., max 12 servers results in `COUNT` for the third machine being `03`), in case of nodes where there can be an undefined amount of them it should be a shortid.
     * To generate a "random" ID (**requires [`bashids`](https://github.com/benwilber/bashids) to be installed**):
-      ```console
+      ```bash
       bashids \
         -e \
         -s 'B_r1KMOASvn_5A1hDKCdPXJfrIBcddpwOnT5orXYaQPV4Ixb1zNSpa-nF6HOw8mii3pqovZUtsnGZ5pqbf59wPfeMp9XagGXc8ViJreL_5J1kvSnDCPfqvuV2bmGsx4DrVV_ef3Gr3MgCMrX86TGUjCDeJmM3LONAfKIH_vv0ZR9WWcJJbLCc5xnxWh7Is8qNq95ORIHS6iU4gKZNV-LIxdYxd7WyO2fKeOn8kApv0FFD2ydkJXdz4KjqBEcN5Fu' \
@@ -29,7 +29,7 @@ title: "Kubernetes Name Schemas"
 
 ### Servers/ VMs Schema
 
-```console
+```bash
 # When country, provider and dc should be omited:
 {CLUSTER}-{ROLE}-{COUNT_OR_ID}.example.systems
 # Examples:
@@ -53,7 +53,7 @@ k8s02-node-7ca16bnb2r1-aws-usa-west1.example.systems
 
 #### Script: Gernate Hostname (+ ID)
 
-```console
+```bash
 CLUSTER="k8s02"
 ROLE="node"
 COUNT_OR_ID="$(sleep 0.00001; \

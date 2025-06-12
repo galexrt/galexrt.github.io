@@ -582,7 +582,7 @@ It even simplifies installing, upgrading of objects in Kubernetes that have been
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FhUJYwM_xy0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-```console
+```bash
 Application requests Credentials -> Vault -> Create Credentials in Database
 Application <- Vault <- Return created Credentials to Application
 ```

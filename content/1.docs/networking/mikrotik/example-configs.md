@@ -4,7 +4,7 @@ title: Example Configs
 
 ## VLANs + VLAN Ingress Filtering
 
-```console
+```bash
 /interface bridge
 # DO NOT SET `vlan-filtering=yes` here already! Otherwise you would lock yourself out.
 add dhcp-snooping=yes frame-types=admit-only-vlan-tagged igmp-snooping=yes ingress-filtering=no name=bridge1 pvid=4094 vlan-filtering=no
@@ -50,7 +50,7 @@ See [MikroTik Wiki - Manual\:Switch Chip Features](https://wiki.mikrotik.com/wik
 
 This bonds interfaces `sfp-sfpplus7` and `sfp-sfpplus8` together as `bonding1` interface:
 
-```console
+```bash
 /interface bonding
 add lacp-rate=1sec name=bonding1 slaves=sfp-sfpplus7,sfp-sfpplus8 transmit-hash-policy=layer-2-and-3
 ```
@@ -59,7 +59,7 @@ add lacp-rate=1sec name=bonding1 slaves=sfp-sfpplus7,sfp-sfpplus8 transmit-hash-
 
 These commands are based on several guides as "one" just didn't work.
 
-```console
+```bash
 /ip/address/add interface=wg0 address=CLIENT_IPV4/32 network=VPN_IPV4_GATEWAY comment="Wireguard VPN"
 /ipv6/address/add interface=wg0 address=CLIENT_IPV6/64 comment="Wireguard VPN"
 

@@ -12,7 +12,7 @@ This page is only for ETCD version `3.x` and higher!
 
 ## Take a snapshot
 
-```console
+```bash
 ETCDCTL_API=3 etcdctl \
     --endpoints $ETCD_ENDPOINT \
     snapshot save snapshot.db
@@ -33,7 +33,7 @@ Be sure to provide all flags that are specified in, e.g., systemd unit file, Kub
 
 The command is looking about like that depending on what flags are used for your ETCD node:
 
-```console
+```bash
 # Run the command as `root` user after that use `chown` to correct ownership of files
 ETCDCTL_API=3 etcdctl \
     snapshot restore snapshot.db \

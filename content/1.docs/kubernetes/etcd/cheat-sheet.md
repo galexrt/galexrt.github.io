@@ -5,7 +5,7 @@ icon: 'i-ph-table'
 
 ## Check ETCD performance "status" quickly
 
-```console
+```bash
 ETCDCTL_API=3 etcdctl \
     [YOUR_FLAGS] \
     check perf
@@ -15,7 +15,7 @@ ETCDCTL_API=3 etcdctl \
 
 #### Kubernetes (`kubeadm`)
 
-```console
+```bash
 ETCDCTL_API=3 etcdctl \
     --cacert=/etc/kubernetes/pki/etcd/ca.crt \
     --cert=/etc/kubernetes/pki/etcd/server.crt \
@@ -30,7 +30,7 @@ ETCDCTL_API=3 etcdctl \
     The `/etc/etcd/etcd.conf` was actively used in OpenShift 3.x installations and some older Kubernetes deployment "methods".
 ::
 
-```console
+```bash
 # Should you still have a `etcd.conf` source it
 source /etc/etcd/etcd.conf
 # Otherwise replace each `$ETCD_PEER_*` with the according path
@@ -39,7 +39,7 @@ curl --cacert=$ETCD_PEER_CA_FILE --cert=$ETCD_PEER_CERT_FILE --key=$ETCD_PEER_KE
 
 ## Show ETCD Cluster Members
 
-```console
+```bash
 ETCDCTL_API=3 etcdctl \
     --cacert=/etc/kubernetes/pki/etcd/ca.crt \
     --cert=/etc/kubernetes/pki/etcd/server.crt \

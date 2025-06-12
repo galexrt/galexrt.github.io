@@ -44,14 +44,14 @@ The goal of the tutorial is to create an "overlay" network between two and more 
 To install OpenVSwitch on Fedora 24 we use the package manager `dnf`.
 The command to install the OpenVSwitch package is:
 
-```console
+```bash
 dnf install openvswitch
 ```
 
 After the command has been successfully run, you now have OpenVSwitch installed.
 First at all we have to start the OpenVSwitch service. To do that we use `systemctl` (more details on how to use systemctl can be seen [here](https://docs.openvswitch.org/en/latest/intro/install/)):
 
-```console
+```bash
 systemctl start openvswitch.service
 ```
 
@@ -66,14 +66,14 @@ This starts the OpenVSwitch service.
 Now that you have OpenVSwitch installed and the service started, you can create the bridge interface.
 The command for creating an OpenVSwitch bridge device is:
 
-```console
+```bash
 ovs-vsctl add-br BRIDGE_NAME
 ```
 
 When you want to create a bridge named `br0`, `BRIDGE_NAME` would be `br0`. You have now created your bridge interface.
 To see your bridge interface use the `ip` command (the below output should be similar to yours):
 
-```console
+```bash
 $ ip link
 [...]
 4: br0: <BROADCAST,MULTICAST,,LOWER_UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default qlen 1
@@ -110,7 +110,7 @@ Your server firewall should not block the GRE tunnel protocol traffic.
 For iptables the protocol name is `gre`.
 An example rule to allow all GRE tunnel protocol traffic:
 
-```console
+```bash
 iptables -A INPUT -p gre -j ACCEPT
 ```
 
@@ -124,21 +124,21 @@ Before creating the first GRE tunnels you should know that it will not make any 
 
 Starting on your the first server (IP: `1.1.1.1`), we create the tunnel to the second and third server:
 
-```console
+```bash
 ovs-vsctl add-port br0 gre1 -- set interface gre1 type=gre options:remote_ip=2.2.2.2
 ovs-vsctl add-port br0 gre1 -- set interface gre2 type=gre options:remote_ip=3.3.3.3
 ```
 
 On the second server (`2.2.2.2`) we now create the tunnel to the first and third server with the commands:
 
-```console
+```bash
 ovs-vsctl add-port br0 gre0 -- set interface gre0 type=gre options:remote_ip=1.1.1.1
 ovs-vsctl add-port br0 gre0 -- set interface gre2 type=gre options:remote_ip=3.3.3.3
 ```
 
 On the third server (`3.3.3.3`) we create the tunnel back to the first and second server so the three server mesh is complete:
 
-```console
+```bash
 ovs-vsctl add-port br0 gre0 -- set interface gre0 type=gre options:remote_ip=1.1.1.1
 ovs-vsctl add-port br0 gre0 -- set interface gre1 type=gre options:remote_ip=2.2.2.2
 ```
@@ -162,14 +162,14 @@ server-3 2 gre2 IP: 3.3.3.3 Network: 10.244.3.0
 Now that you have decided what server has what network slice, we can set the interface up and add the IP addresses to the bridge on each server.
 On the first server (`1.1.1.1`) the command would look like this:
 
-```console
+```bash
 ip link set br0 up
 ip addr add 10.244.1.0/16 broadcast 10.244.255.255 dev br0
 ```
 
 On the second server (`2.2.2.2`) the command is slightly different due to the other address:
 
-```console
+```bash
 ip addr add 10.244.2.0/16 broadcast 10.244.255.255 dev br0
 ```
 
@@ -181,7 +181,7 @@ Now that every server has it's own IP address in the virtual network, we can che
 We are going to use the `ping` command for testing the connectivity between the servers.
 From the first server (`1.1.1.1`) run:
 
-```console
+```bash
 ping 10.244.2.0
 ```
 
@@ -191,13 +191,13 @@ If you should not receive a ping response in the next 10 seconds, it may be caus
 >
 > Where `br0` in the command(s) is your bridge device. Please change it according to your bridge name.
 
-```console
+```bash
 sysctl -w net.ipv4.conf.br0.proxy_arp=1
 ```
 
 To persist this change you can run:
 
-```console
+```bash
 echo "net.ipv4.conf.br0.proxy_arp=1" >> /etc/sysctl.conf
 ```
 

@@ -126,13 +126,13 @@ Checkout the official Ceph OSD Management guide from Rook here: [Rook v1.8 Docs 
 
 ## Check which "Object Store" is used by an OSD
 
-```console
+```bash
 $ ceph osd metadata 0 | grep osd_objectstore
 "osd_objectstore": "bluestore",
 ```
 
 To get a quick overview of the "object stores" (`bluestore`, (don't use it) `filestore`):
-```console
+```bash
 $ ceph osd count-metadata osd_objectstore
 {
     "bluestore": 6
@@ -143,7 +143,7 @@ $ ceph osd count-metadata osd_objectstore
 
 * Make sure the Ceph CSI driver for the storage (block or filesystem) is running (check the logs if you are unsure as well).
 * Check if you use a StorageClass that has `allowVolumeExpansion: false`:
-    ```console
+    ```bash
     $ kubectl get storageclasses.storage.k8s.io
     NAME              PROVISIONER                     RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
     rook-ceph-block   rook-ceph.rbd.csi.ceph.com      Retain          Immediate           false                  3d21h
@@ -174,7 +174,7 @@ You have the Prometheus Operator installed in your Kubernetes cluster, but have 
 
 To rectify this, you can run the following command and/ or add the file to your deployment system:
 
-```console
+```bash
 kubectl apply -f https://raw.githubusercontent.com/rook/rook/master/cluster/examples/kubernetes/ceph/monitoring/rbac.yaml
 ```
 
@@ -206,7 +206,7 @@ Regarding the Rook Ceph Toolbox Pod checkout the Rook documentation here: [Rook 
 
 This requires you to have the Rook Ceph Toolbox deployed, see [Rook Ceph Docs - Ceph Toolbox](https://rook.io/docs/rook/v1.8/ceph-toolbox.html) for more information.
 
-```console
+```bash
 kubectl -n rook-ceph exec -it $(kubectl -n rook-ceph get pod -l "app=rook-ceph-tools" -o jsonpath='{.items[0].metadata.name}') -- bash
 ```
 
@@ -231,7 +231,7 @@ This can potentially mess with the owner/group of the ceph osd block device, as 
 
 You can either change the user and group ID of the `ceph` user on the host to the one inside the `ceph/ceph` image that your Rook Ceph cluster is running right now (CephCluster object `.spec.cephVersion.image`).
 
-```console
+```bash
 $ kubectl get -n rook-ceph cephclusters.ceph.rook.io rook-ceph -o yaml
 apiVersion: ceph.rook.io/v1
 kind: CephCluster

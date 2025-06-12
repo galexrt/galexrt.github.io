@@ -67,7 +67,7 @@ If you want the latest manifests version, I recommend you checkout the repositor
 
 To check if you have proper Kubernetes cluster connection, run the following command:
 
-```console
+```bash
 $ kubectl cluster-info
 kubectl cluster-info
 Kubernetes master is running at https://k8s.example.com:443
@@ -143,7 +143,7 @@ metadata:
 The values for the `data` keys, need to be `base64` encoded.
 This can be done from the command line on most Linuxes using the `base64` command. Like this:
 
-```console
+```bash
 echo -n "YOUR_VALUE" | base64 -w0
 ```
 
@@ -287,7 +287,7 @@ spec:
 You can either a) save all manifests in one file, but then separated by `---` or b) per manifest on file.
 To create/run the mnaifests on Kubernetes, you can now go ahead an run:
 
-```console
+```bash
 kubectl create -f FILE_NAME
 ```
 

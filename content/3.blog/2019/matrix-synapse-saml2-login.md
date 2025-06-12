@@ -130,7 +130,7 @@ You should get a file named `keystore.p12` after pressing the `Download` button.
 
 Now run the following sequence of commands to extract the key and cert in PEM format (this assumes the file is named `keystore.p12` and the password chosen is `example123`):
 
-```console
+```bash
 $ export KEYSTORE_PW="example123"
 $ openssl pkcs12 -in keystore.p12 -password "pass:${KEYSTORE_PW}" -nocerts -nodes | openssl rsa -out key.pem
 writing RSA key

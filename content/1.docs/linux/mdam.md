@@ -9,7 +9,7 @@ Don't forget to keep your [`mdadm.conf`](https://linux.die.net/man/5/mdadm.conf)
 
 ## Generate `mdadm.conf`
 
-```console
+```bash
 mdadm --detail --scan >> /etc/mdadm.conf
 ```
 
@@ -32,7 +32,7 @@ This may or may not improve your mdadm RAID rebuild performance, as it the speed
 
 This assumes your disks are `sda`, `sdb` and `sdc`, and the RAID array is `md0` (`/dev/md0`).
 
-```console
+```bash
 for disk in sd{a..c}; do
     blockdev --setra 16384 "/dev/${disk}"
     echo 1024 > "/sys/block/${disk}/queue/read_ahead_kb"

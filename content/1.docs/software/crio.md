@@ -23,7 +23,7 @@ If CRI-O was already running/started at the time of removing these CNI config fi
 
 Using `sudo` or as the root user run the following to restart the `crio` service on servers that use systemd as the "service manager":
 
-```console
+```bash
 systemctl restart crio
 ```
 ::

@@ -140,7 +140,7 @@ To get that certificate in the "correct" format and get the fingerprint, I have 
 
 Set the `IDP_DESCRIPTOR_FILE` variable to the path where you saved the `SAML 2.0 Identity Provder Metadata` "page" to.
 
-```console
+```bash
 IDP_DESCRIPTOR_FILE="~/Downloads/descriptor"
 (
     echo "-----BEGIN CERTIFICATE-----"

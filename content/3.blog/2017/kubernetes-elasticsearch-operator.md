@@ -25,7 +25,7 @@ The project can be found on GitHub: [https://github.com/galexrt/elasticsearch-op
 
 Use the `bundle.yaml` that is in the repo root, to run the operator on the cluster.
 
-```console
+```bash
 kubectl create -f bundle.yaml
 ```
 
@@ -33,7 +33,7 @@ kubectl create -f bundle.yaml
 
 To verify that the operator has successful installed its `ThirdPartyResources`, you simply check the Kubernetes server for them:
 
-```console
+```bash
 $ kubectl get thirdpartyresources
 NAME                                       DESCRIPTION                           VERSION(S)
 [...]

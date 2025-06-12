@@ -19,7 +19,7 @@ To quote from the project's README:
 
 You can run it:
 
-```console
+```bash
 kuberang
 ```
 

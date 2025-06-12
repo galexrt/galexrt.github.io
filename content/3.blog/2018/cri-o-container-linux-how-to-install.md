@@ -62,7 +62,7 @@ Before you just go ahead and build from "master" branch, I'd recommend you to ch
 
 Summarized to build the binary from source run:
 
-```console
+```bash
 $ go get -u github.com/cri-o/cri-o
 $ cd $GOPATH/src/github.com/cri-o/cri-o
 $ make
@@ -70,7 +70,7 @@ $ make
 
 That will produce all CRI-O binaries, see:
 
-```console
+```bash
 $ ls -hl $GOPATH/src/github.com/cri-o/cri-o/bin
 total 86M
 -rwxr-xr-x 1 user user  56K 19. Apr 12:14 conmon
@@ -90,7 +90,7 @@ These binaries are needed and will be referenced to in the  upcoming steps.
 
 On "all" servers which should be switched to use CRI-O as the Container Runtime we need to create some directory:
 
-```console
+```bash
 mkdir -p /opt/bin /opt/lib64 /etc/crio /var/lib/crio
 ```
 
@@ -98,7 +98,7 @@ Now upload the compiled `crio` and `conmon` (not `common`) binaries from [Step 1
 After that run `ldd /opt/bin/crio` (and for `conmon` too), to see which libraries need to uploaded too.
 
 **Example Output** of `ldd /usr/bin/ffmpeg`:
-```console
+```bash
 ldd /usr/bin/ffmpeg
     linux-vdso.so.1 =>  (0x00007ffffc1fe000)
     libavfilter.so.0 => not found
@@ -207,7 +207,7 @@ The original Systemd service unit was taken from [GitHub cri-o/cri-o - master `c
 
 Create the directory `/etc/sysconfig` if it doesn't exist yet, and create/ update the file `/etc/sysconfig/crio` in it with the following content:
 
-```console
+```bash
 # /etc/sysconfig/crio
 
 # use "--enable-metrics" and "--metrics-port value"
@@ -326,13 +326,13 @@ After=crio.service
 
 Now that the CRI-O and Kubelet Systemd service units have been created and/or modified we need to reload Systemd:
 
-```console
+```bash
 systemctl daemon-reload
 ```
 
 ## Step 6 - Start CRI-O and restart Kubelet
 
-```console
+```bash
 systemctl enable crio.service crio-shutdown.service
 systemctl start crio.service crio-shutdown.service
 ```
@@ -341,7 +341,7 @@ systemctl start crio.service crio-shutdown.service
 
 If there was no error during the start CRI-O, you are ready to restart Kubelet and let it start the containers through CRI-O:
 
-```console
+```bash
 systemctl restart kubelet.service
 ```
 
@@ -361,7 +361,7 @@ There are multiple ways to test if CRI-O starts containers:
 
 Now that we are sure containers are running fine with CRI-O, go ahead stop and disable the `docker.service` on the host(s) using the following commands:
 
-```console
+```bash
 systemctl stop docker.service
 systemctl disable docker.service
 
