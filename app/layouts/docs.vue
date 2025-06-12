@@ -10,8 +10,8 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation');
         <AppHeader />
 
         <UMain>
-            <UContainer :ui="{ container: { base: 'max-w-7xl' }}">
-                <UPage>
+            <UContainer class="max-w-[1800px]">
+                <UPage :ui="{ root: 'lg:grid-cols-13', left: 'lg:col-span-4', center: 'lg:col-span-9', right: 'lg:col-span-3 order-first lg:order-last' }">
                     <template #left>
                         <UPageAside>
                             <template #top>
@@ -24,6 +24,7 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation');
                                     </template>
                                 </UContentSearchButton>
                             </template>
+
                             <UContentNavigation :navigation="navigation" highlight />
                         </UPageAside>
                     </template>
