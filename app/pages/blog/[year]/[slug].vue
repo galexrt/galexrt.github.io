@@ -28,8 +28,8 @@ if (post.value.image) {
     const site = useSiteConfig();
 
     useSeoMeta({
-        ogImage: joinURL(site.url, post.value.image),
-        twitterImage: joinURL(site.url, post.value.image),
+        ogImage: joinURL(site.url, typeof post.image === 'string' ? post.value.image : post.value.image.src),
+        twitterImage: joinURL(site.url, typeof post.image === 'string' ? post.value.image : post.value.image.src),
     });
 }
 </script>
