@@ -21,7 +21,7 @@ importers:
         specifier: 1.2.41
         version: 1.2.41
       '@mermaid-js/layout-elk':
-        specifier: ^0.1.8
+        specifier: 0.1.8
         version: 0.1.8(mermaid@11.7.0)
       '@nuxt/content':
         specifier: 3.6.1
@@ -42,7 +42,7 @@ importers:
         specifier: 12.2.0
         version: 12.2.0
       mermaid:
-        specifier: ^11.7.0
+        specifier: 11.7.0
         version: 11.7.0
     devDependencies:
       '@nuxt/eslint':
