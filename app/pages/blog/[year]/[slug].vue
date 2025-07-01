@@ -24,35 +24,52 @@ useSeoMeta({
     ogDescription: description,
 });
 
-if (post.value.image?.src) {
+if (post.value.image) {
     const site = useSiteConfig();
 
     useSeoMeta({
-        ogImage: joinURL(site.url, post.value.image.src),
-        twitterImage: joinURL(site.url, post.value.image.src),
+        ogImage: joinURL(site.url, post.value.image),
+        twitterImage: joinURL(site.url, post.value.image),
     });
 }
 </script>
 
 <template>
-    <UContainer v-if="post">
-        <UPageHeader :title="post.title" :description="post.description">
-            <template #headline>
-                <div class="flex flex-col gap-2">
-                    <NuxtImg
-                        v-if="post.image?.src"
-                        v-bind="
-                            typeof post.image === 'string'
-                                ? { src: post.image, alt: post.title }
-                                : { alt: post.title, ...post.image }
-                        "
-                    />
+    <div v-if="post">
+        <UPageHero
+            :title="post.title"
+            :description="post.description"
+            :ui="{ title: 'text-shadow-sm', description: 'text-shadow-sm text-gray-900 dark:text-white' }"
+        >
+            <template #top>
+                <div
+                    class="absolute rounded-full dark:bg-(--ui-primary) blur-[300px] size-60 sm:size-80 transform -translate-x-1/2 left-1/2 -translate-y-80"
+                />
+            </template>
 
-                    <div class="flex gap-1">
-                        <UBadge v-if="post.badge" v-bind="post.badge" variant="subtle" />
-                        <span v-if="post.badge" class="text-gray-500 dark:text-gray-400">&middot;</span>
-                        <ULink :to="`/blog/${route.params.year ?? 2001}`">
-                            <time class="text-gray-500 dark:text-gray-400">
+            <div
+                class="absolute inset-0 z-[-1] overflow-hidden [mask-image:radial-gradient(ellipse_at_center,#fff_0_65%,rgba(255,255,255,0.9)_78%,transparent_85%)]"
+            >
+                <NuxtImg
+                    v-if="post.image"
+                    class="w-full h-full object-cover object-center"
+                    v-bind="
+                        typeof post.image === 'string'
+                            ? { src: post.image, alt: post.title }
+                            : { alt: post.title, ...post.image }
+                    "
+                />
+
+                <div class="absolute inset-0 bg-black/60 mix-blend-multiply" />
+            </div>
+
+            <template #headline>
+                <div class="inline-flex gap-1">
+                    <UBadge v-if="post.badge" v-bind="post.badge" variant="subtle" />
+                    <span v-if="post.badge">&middot;</span>
+                    <ULink :to="`/blog/${route.params.year ?? 2001}`">
+                        <UBadge>
+                            <time>
                                 {{
                                     new Date(post.date).toLocaleDateString('en', {
                                         year: 'numeric',
@@ -61,39 +78,48 @@ if (post.value.image?.src) {
                                     })
                                 }}
                             </time>
-                        </ULink>
-                    </div>
+                        </UBadge>
+                    </ULink>
                 </div>
             </template>
 
-            <div class="mt-4 flex flex-wrap items-center gap-3">
-                <UButton
-                    v-for="(author, index) in post.authors"
-                    :key="index"
-                    :to="author.to"
-                    color="neutral"
-                    target="_blank"
-                    size="sm"
-                >
-                    <UAvatar v-bind="author.avatar" :alt="author.name" size="2xs" />
+            <template #links>
+                <div class="mt-4 flex flex-wrap items-center gap-3">
+                    <UButton
+                        v-for="(author, index) in post.authors"
+                        :key="index"
+                        :to="author.to"
+                        color="neutral"
+                        target="_blank"
+                        size="sm"
+                    >
+                        <UAvatar v-bind="author.avatar" :alt="author.name" size="2xs" />
 
-                    {{ author.name }}
-                </UButton>
-            </div>
-        </UPageHeader>
-
-        <UPage>
-            <UPageBody>
-                <ContentRenderer v-if="post && post.body" :value="post" />
-
-                <USeparator v-if="surround?.length" />
-
-                <UContentSurround :surround="surround" class="print:hidden" />
-            </UPageBody>
-
-            <template #right>
-                <UContentToc v-if="post.body && post.body.toc" :links="post.body.toc.links" highlight class="print:hidden" />
+                        {{ author.name }}
+                    </UButton>
+                </div>
             </template>
-        </UPage>
-    </UContainer>
+        </UPageHero>
+
+        <UContainer>
+            <UPage>
+                <UPageBody>
+                    <ContentRenderer v-if="post && post.body" :value="post" />
+
+                    <USeparator v-if="surround?.length" />
+
+                    <UContentSurround :surround="surround" class="print:hidden" />
+                </UPageBody>
+
+                <template #right>
+                    <UContentToc
+                        v-if="post.body && post.body.toc"
+                        :links="post.body.toc.links"
+                        highlight
+                        class="print:hidden"
+                    />
+                </template>
+            </UPage>
+        </UContainer>
+    </div>
 </template>

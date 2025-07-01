@@ -25,7 +25,7 @@ In your git config (e.g., `~/.config/git/config`) add a `[alias]` section:
 
 ### Remove branches that don't have a remote branch
 
-::callout{icon="i-ph-warning" color="amber"}
+::callout{icon="i-ph-warning" color="warn"}
 Make sure that you don't have important local branches without a remote branch.
 ::
 

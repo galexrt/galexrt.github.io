@@ -7,7 +7,7 @@ This is the config and board I use to detect the door bell buzzer "ringing" for 
 
 ![Door Bell Buzzer ESP32 Voltage detection](/docs/hassio/esphome/voltage-adc/esphome_adc_door_bell_overview.jpg)
 
-::callout{color="amber" icon="i-ph-warning"}
+::callout{color="warn" icon="i-ph-warning"}
 Before you do anything involving power, please make sure to use a Multimeter and/or contact an electrician before you hurt yourself.
 ::
 
@@ -18,7 +18,12 @@ Before you do anything involving power, please make sure to use a Multimeter and
 
 ## Pins
 
+::mermaid
 ```mermaid
+---
+config:
+  layout: elk
+---
 flowchart BT
     subgraph ESP32
         ESP32_GND[GND]
@@ -39,6 +44,7 @@ flowchart BT
         DoorBell_MINUS[-]-->VCC_GND
     end
 ```
+::
 
 ## ESPHome Config
 

@@ -15,7 +15,12 @@ useSeoMeta({
 
 <template>
     <div v-if="page">
-        <UPageHero :title="page.hero.title" :description="page.hero.description" :links="page.hero.links">
+        <UPageHero
+            :title="page.hero.title"
+            :description="page.hero.description"
+            :links="page.hero.links"
+            :ui="{ title: 'text-shadow-sm', description: 'text-shadow-sm text-gray-900 dark:text-white' }"
+        >
             <template #top>
                 <div
                     class="absolute rounded-full dark:bg-(--ui-primary) blur-[300px] size-60 sm:size-80 transform -translate-x-1/2 left-1/2 -translate-y-80"
@@ -23,8 +28,10 @@ useSeoMeta({
             </template>
 
             <div
-                class="landing-grid absolute inset-0 z-[-1] [mask-image:radial-gradient(100%_100%_at_top,white,transparent)]"
-            />
+                class="landing-grid absolute inset-0 z-[-1] [mask-image:radial-gradient(80%_80%_at_top,#000_0_60%,rgba(0,0,0,0.9)_75%,transparent_95%)]"
+            >
+                <div class="absolute inset-0 bg-black/60 mix-blend-multiply" />
+            </div>
         </UPageHero>
 
         <UPageSection
@@ -46,11 +53,3 @@ useSeoMeta({
         <UPageCTA v-bind="page.cta" class="bg-gray-100/50 dark:bg-gray-800/50" />
     </div>
 </template>
-
-<style scoped>
-.landing-grid {
-    background-image: url('/images/grey-prism.svg');
-    background-repeat: repeat;
-    background-attachment: fixed;
-}
-</style>

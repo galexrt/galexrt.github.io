@@ -36,3 +36,9 @@
 .dark {
     --ui-bg: var(--ui-color-neutral-950);
 }
+
+.landing-grid {
+    background-image: url('/images/grey-prism.svg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+}

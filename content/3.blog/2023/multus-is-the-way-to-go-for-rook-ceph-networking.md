@@ -10,7 +10,7 @@ authors:
       src: /images/profile-picture.jpg
 ---
 
-::callout{icon="i-ph-info" color="blue"}
+::callout{icon="i-ph-info" color="info"}
 This blog post is originally from the Koor Technologies, Inc. website which due Koor Technologies, Inc. closure in early 2024 doesn't exist anymore.
 ::
 
@@ -26,6 +26,7 @@ You will end up with more traffic on the _cluster network_ than on the _public n
 
 A simplified diagram of this flow of data from a client:
 
+::mermaid
 ```mermaid
 ---
 title: Ceph Data Replication Flow
@@ -41,6 +42,7 @@ sequenceDiagram
     OSD3->>OSD1: Data has been saved
     OSD1->>Client: Write Confirmation
 ```
+::
 
 Sidenote: That's a reason why Ceph can appear slower in direct comparisons with other storage projects because an input/ "data write" operation is only confirmed after it has been fully replicated.
 

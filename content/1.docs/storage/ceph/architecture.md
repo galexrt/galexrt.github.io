@@ -18,19 +18,22 @@ Ceph offers block storage (RBD), network filesystem (CephFS), object storage (RG
 
 ### Pool -> PG -> Object
 
+::mermaid
 ```mermaid
 graph LR
 subgraph Pool
-    subgraph PG-1[PG 1]
+    subgraph PG-2[PG 2]
         Object-1[Object 1]
         Object-2[Object 2]
     end
-    subgraph PG-2[PG 2]
+
+    subgraph PG-1[PG 1]
         Object-3[Object 3]
         Object-4[Object 4]
     end
 end
 ```
+::
 
 ## Ceph Cluster Components
 
@@ -40,20 +43,17 @@ The MONs are keeping a **map** of the current MONs, OSDs, PGs, Pools and so on.
 
 MONs require a quorum to function, meaning that you should always run at least 3 mons for production 5 can be a good idea as well.
 
+::mermaid
 ```mermaid
 graph LR
-    MON-A
+    MON-A["MON A"]
+    MON-B["MON B"]
+    MON-C["MON C"]
+
     MON-A -.- MON-B
     MON-A -.- MON-C
-
-    MON-B
-    MON-B -.- MON-A
-    MON-B -.- MON-C
-
-    MON-C
-    MON-C -.- MON-B
-    MON-C -.- MON-C
 ```
+::
 
 **Man Page**: https://docs.ceph.com/en/latest/man/8/ceph-mon/
 
@@ -81,13 +81,19 @@ It is recommended to run at least 1.
 
 The MGR daemon(s) talk with the MON, OSD MDS, and even RGW.
 
+::mermaid
 ```mermaid
+---
+config:
+  layout: elk
+---
 graph LR
     MGR --> MON
     MGR --> OSD
     MGR --> MDS
     MGR --> RGW
 ```
+::
 
 The MGR daemon(s) have many modules to for example provide metrics for Prometheus, Zabbix and others. In addition to that a Ceph dashboard can be activated which contains some basic information and even an integration with Prometheus and Grafana.
 
@@ -97,7 +103,12 @@ The MGR daemon(s) have many modules to for example provide metrics for Prometheu
 
 All OSDs normally talk with each other for hearbeat :heart: checking and data replication (actual data and also for data "scrubbing" operations).
 
+::mermaid
 ```mermaid
+---
+config:
+  layout: elk
+---
 graph LR
     OSD-0
     OSD-0 -.- OSD-1
@@ -119,6 +130,7 @@ graph LR
     OSD-n -.- OSD-1
     OSD-n -.- OSD-2
 ```
+::
 
 * If a client writes data, the data is replicated by the OSD and not the client.
 * If a client reads data, the data can be read from multiple OSDs at the same time (as long as they have a replica of the data).
@@ -132,7 +144,12 @@ The MDS is the metadata server for the CephFilesystem (CephFS).
 
 It talks with the OSDs and coordinates the filesystem access. Clients still need to access the OSDs, but the MDS is the "gateway" to know where to go so to say.
 
+::mermaid
 ```mermaid
+---
+config:
+  layout: elk
+---
 graph LR
     Client-A --> MDS-1
     Client-B --> MDS-1
@@ -146,6 +163,7 @@ graph LR
     Client-B ---> OSDs
     Client-C ---> OSDs
 ```
+::
 
 **Man Page**: https://docs.ceph.com/en/latest/man/8/ceph-mds/
 
@@ -154,7 +172,12 @@ graph LR
 RGW can offer S3 and/ or SWIFT compatible storage, allowing to use it as a "replacement" for AWS S3 object storage in some cases.
 An advantage to, e.g., the block storage (RBD) and CephFS is that the client itself does not need direct access to the MONs, OSDs, etc., though it depends on the use case and the performance required per client/ application.
 
+::mermaid
 ```mermaid
+---
+config:
+  layout: elk
+---
 graph LR
     Client-A --> RGW-1
     Client-B --> RGW-1
@@ -162,10 +185,16 @@ graph LR
     RGW-1 --> OSDs
     RGW-2 --> OSDs
 ```
+::
 
 Common scenario is that you have a load balancer in front of your RGWs, in itself the structure stays the same:
 
+::mermaid
 ```mermaid
+---
+config:
+  layout: elk
+---
 graph LR
     Client-A --> Loadbalancer
     Client-B --> Loadbalancer
@@ -175,6 +204,7 @@ graph LR
     RGW-1 --> OSDs
     RGW-2 --> OSDs
 ```
+::
 
 **Man Page**: https://docs.ceph.com/en/latest/man/8/radosgw/
 

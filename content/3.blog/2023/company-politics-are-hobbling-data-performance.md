@@ -10,7 +10,7 @@ authors:
       src: /images/profile-picture.jpg
 ---
 
-::callout{icon="i-ph-info" color="blue"}
+::callout{icon="i-ph-info" color="info"}
 This blog post is originally from the Koor Technologies, Inc. website which due Koor Technologies, Inc. closure in early 2024 doesn't exist anymore.
 ::
 

@@ -11,11 +11,11 @@ authors:
   - name: Gaurav Sitlani
 ---
 
-::callout{icon="i-ph-info" color="blue"}
+::callout{icon="i-ph-info" color="info"}
 This blog post is originally from the Koor Technologies, Inc. website which due Koor Technologies, Inc. closure in early 2024 doesn't exist anymore.
 ::
 
-::callout{icon="i-ph-check-circle" color="green"}
+::callout{icon="i-ph-check-circle" color="success"}
 To continue the work on the `extended-ceph-exporter` project, I have created an independent fork on GitHub [galexrt/extended-ceph-exporter](https://github.com/galexrt/extended-ceph-exporter).
 ::
 
@@ -44,6 +44,6 @@ Check it out on GitHub: [https://github.com/koor-tech/extended-ceph-exporter](ht
 
 If you have any feedback please feel free to share and start a [discussion](https://github.com/koor-tech/extended-ceph-exporter/discussions/) on the `extended-ceph-exporter` Github project.
 
-::callout{icon="i-ph-check-circle" color="green"}
+::callout{icon="i-ph-check-circle" color="success"}
 To continue the work on the `extended-ceph-exporter` project, I have created an independent fork on GitHub [galexrt/extended-ceph-exporter](https://github.com/galexrt/extended-ceph-exporter).
 ::
