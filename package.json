@@ -24,7 +24,7 @@
     "@nuxt/ui-pro": "3.2.0",
     "@vueuse/nuxt": "13.5.0",
     "better-sqlite3": "12.2.0",
-    "mermaid": "11.8.0"
+    "mermaid": "11.8.1"
   },
   "devDependencies": {
     "@nuxt/eslint": "1.5.2",
