@@ -24,14 +24,14 @@
     "@nuxt/ui-pro": "3.2.0",
     "@vueuse/nuxt": "13.5.0",
     "better-sqlite3": "12.2.0",
-    "mermaid": "11.8.1"
+    "mermaid": "11.9.0"
   },
   "devDependencies": {
-    "@nuxt/eslint": "1.5.2",
+    "@nuxt/eslint": "1.6.0",
     "eslint": "9.31.0",
-    "eslint-config-prettier": "10.1.5",
+    "eslint-config-prettier": "10.1.7",
     "eslint-plugin-prettier": "5.5.1",
-    "eslint-plugin-tailwindcss": "3.18.0",
+    "eslint-plugin-tailwindcss": "3.18.2",
     "eslint-plugin-vue": "10.3.0",
     "nuxt": "3.17.7",
     "nuxt-site-config": "3.2.2",
@@ -39,8 +39,8 @@
     "prettier": "3.6.2",
     "prettier-plugin-organize-imports": "4.1.0",
     "sharp": "0.34.3",
-    "vue-tsc": "3.0.1",
-    "wrangler": "4.24.3"
+    "vue-tsc": "3.0.3",
+    "wrangler": "4.25.0"
   },
   "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad",
   "pnpm": {
