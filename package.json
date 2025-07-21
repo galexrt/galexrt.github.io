@@ -16,7 +16,7 @@
     "@iconify-json/lucide": "1.2.57",
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/ph": "1.2.2",
-    "@iconify-json/simple-icons": "1.2.43",
+    "@iconify-json/simple-icons": "1.2.44",
     "@mermaid-js/layout-elk": "0.1.8",
     "@nuxt/content": "3.6.3",
     "@nuxt/fonts": "0.11.4",
@@ -29,8 +29,8 @@
   "devDependencies": {
     "@nuxt/eslint": "1.6.0",
     "eslint": "9.31.0",
-    "eslint-config-prettier": "10.1.7",
-    "eslint-plugin-prettier": "5.5.1",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-prettier": "5.5.3",
     "eslint-plugin-tailwindcss": "3.18.2",
     "eslint-plugin-vue": "10.3.0",
     "nuxt": "3.17.7",
@@ -41,6 +41,9 @@
     "sharp": "0.34.3",
     "vue-tsc": "3.0.3",
     "wrangler": "4.25.0"
+  },
+  "resolutions": {
+    "napi-postinstall": "0.3.2"
   },
   "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad",
   "pnpm": {
