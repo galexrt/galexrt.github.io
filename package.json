@@ -13,22 +13,22 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "1.2.62",
+    "@iconify-json/lucide": "1.2.64",
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/ph": "1.2.2",
-    "@iconify-json/simple-icons": "1.2.48",
-    "@mermaid-js/layout-elk": "0.1.8",
+    "@iconify-json/simple-icons": "1.2.49",
+    "@mermaid-js/layout-elk": "0.1.9",
     "@nuxt/content": "3.6.3",
     "@nuxt/fonts": "0.11.4",
     "@nuxt/image": "1.11.0",
     "@nuxt/ui-pro": "3.3.2",
     "@vueuse/nuxt": "13.7.0",
     "better-sqlite3": "12.2.0",
-    "mermaid": "11.9.0"
+    "mermaid": "11.10.1"
   },
   "devDependencies": {
     "@nuxt/eslint": "1.9.0",
-    "eslint": "9.33.0",
+    "eslint": "9.34.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.4",
     "eslint-plugin-tailwindcss": "3.18.2",
@@ -39,13 +39,13 @@
     "prettier": "3.6.2",
     "prettier-plugin-organize-imports": "4.2.0",
     "sharp": "0.34.3",
-    "vue-tsc": "3.0.5",
-    "wrangler": "4.31.0"
+    "vue-tsc": "3.0.6",
+    "wrangler": "4.32.0"
   },
   "resolutions": {
     "napi-postinstall": "0.3.3"
   },
-  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748",
+  "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b",
   "pnpm": {
     "onlyBuiltDependencies": [
       "better-sqlite3",
