@@ -21,7 +21,7 @@
     "@nuxt/content": "3.7.1",
     "@nuxt/fonts": "0.11.4",
     "@nuxt/image": "1.11.0",
-    "@nuxt/ui-pro": "3.3.4",
+    "@nuxt/ui-pro": "3.3.5",
     "@vueuse/nuxt": "13.9.0",
     "better-sqlite3": "12.4.1",
     "mermaid": "11.12.0",
@@ -41,7 +41,7 @@
     "prettier-plugin-organize-imports": "4.3.0",
     "sharp": "0.34.4",
     "vue-tsc": "3.0.8",
-    "wrangler": "4.38.0"
+    "wrangler": "4.39.0"
   },
   "resolutions": {
     "napi-postinstall": "0.3.3"
