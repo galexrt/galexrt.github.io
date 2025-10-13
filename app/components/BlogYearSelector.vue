@@ -16,11 +16,13 @@ const cards = computed(() => {
         result.set(year, 1);
     });
 
-    return result.entries().map((r) => ({
+    console.log(result);
+
+    return [...result.entries().map((r) => ({
         title: r[0].toString(),
         description: `Total Posts: ${r[1]}`,
         to: `/blog/${r[0]}`,
-    }));
+    }))];
 });
 </script>
 
@@ -29,7 +31,7 @@ const cards = computed(() => {
         <UButton label="Year Selector" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" />
 
         <template #content>
-            <div class="max-h-[200px] min-h-[200px] overflow-y-auto">
+            <div class="max-h-[50%] min-h-[200px] overflow-y-auto p-6">
                 <UPageGrid>
                     <UPageCard v-for="(card, index) in cards" :key="index" v-bind="card" />
                 </UPageGrid>
