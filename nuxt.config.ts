@@ -29,10 +29,11 @@ export default defineNuxtConfig({
     css: ['~/assets/css/main.css'],
 
     icon: {
-        collections: ['ph', 'lucide', 'mdi', 'simple-icons'
-
-        ],
-        serverBundle: 'local',
+        collections: ['ph', 'mdi', 'simple-icons'],
+        clientBundle: {
+            scan: true,
+        },
+        serverBundle: 'remote',
     },
 
     fonts: {

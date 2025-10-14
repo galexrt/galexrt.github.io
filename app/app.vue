@@ -21,18 +21,18 @@ useSeoMeta({
 const links = [
     {
         label: 'Docs',
-        icon: 'i-lucide-book',
-        to: '/docs/getting-started',
+        to: '/docs',
+        icon: 'i-ph-book',
     },
     {
-        label: 'Pricing',
-        icon: 'i-lucide-credit-card',
-        to: '/pricing',
+        label: 'Docs',
+        to: '/docs',
+        icon: 'i-ph-files',
     },
     {
         label: 'Blog',
-        icon: 'i-lucide-pencil',
         to: '/blog',
+        icon: 'i-ph-article-medium',
     },
 ];
 

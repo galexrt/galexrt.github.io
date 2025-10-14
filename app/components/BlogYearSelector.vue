@@ -28,7 +28,7 @@ const cards = computed(() => {
 
 <template>
     <UDrawer>
-        <UButton label="Year Selector" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" />
+        <UButton label="Year Selector" color="neutral" variant="subtle" trailing-icon="i-ph-caret-double-down" />
 
         <template #content>
             <div class="max-h-[50%] min-h-[200px] overflow-y-auto p-6">
