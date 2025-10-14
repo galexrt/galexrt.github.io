@@ -74,6 +74,7 @@ export default defineNuxtConfig({
     },
 
     routeRules: {
+        '/': { prerender: true },
         '/post/**': { redirect: '/blog/**' },
         '/discord': { redirect: 'https://discord.gg/zFYb3KHg24' },
         '/youtube': { redirect: 'https://youtube.com/@galexrt' },
