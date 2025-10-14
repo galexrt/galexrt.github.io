@@ -10,6 +10,7 @@ export default defineNuxtConfig({
         '@nuxt/ui-pro',
         '@nuxt/content',
         '@nuxt/fonts',
+        '@nuxthub/core',
         '@vueuse/nuxt',
         'nuxt-site-config',
     ],
@@ -85,14 +86,14 @@ export default defineNuxtConfig({
         strict: false,
     },
 
-    compatibilityDate: '2024-07-11',
+    compatibilityDate: '2024-07-29',
 
     future: {
         compatibilityVersion: 4,
     },
 
-    nitro: {
-        preset: 'cloudflare_pages',
+    hub: {
+        database: true,
     },
 
     content: {
