@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const route = useRoute();
 
-const { data: posts } = await useAsyncData(route.path, () => queryCollection('posts').order('date', 'DESC').all());
+const { data: posts } = await useAsyncData(() =>route.path+'', () => queryCollection('posts').order('date', 'DESC').all());
 
 const cards = computed(() => {
     const result = new Map<number, number>();
