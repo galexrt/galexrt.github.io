@@ -92,7 +92,7 @@ export default defineNuxtConfig({
     },
 
     nitro: {
-        preset: 'cloudflare-pages-static',
+        preset: 'cloudflare_pages',
     },
 
     content: {
