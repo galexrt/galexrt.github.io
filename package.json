@@ -18,7 +18,7 @@
     "@iconify-json/simple-icons": "1.2.57",
     "@mermaid-js/layout-elk": "0.2.0",
     "@nuxt/content": "3.8.0",
-    "@nuxt/fonts": "0.11.4",
+    "@nuxt/fonts": "0.12.1",
     "@nuxt/image": "1.11.0",
     "@nuxt/ui-pro": "3.3.7",
     "@nuxthub/core": "^0.9.0",
