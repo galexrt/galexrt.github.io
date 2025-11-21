@@ -23,7 +23,7 @@
     "@nuxt/ui": "^4.2.0",
     "@nuxthub/core": "^0.9.0",
     "@vueuse/nuxt": "14.0.0",
-    "better-sqlite3": "12.4.1",
+    "better-sqlite3": "12.4.5",
     "mermaid": "11.12.1",
     "zod": "4.1.12"
   },
