@@ -16,7 +16,7 @@ title: "Kubernetes Name Schemas"
 * `PROVIDER` - 3 character long abbreviation of provider name.
 * `DC` - Optional info about datacenter/region (e.g., `FSN1-DC1`).
 * `CLUSTER` - Cluster designation (in case of Kubernetes, should always have k8s in the beginning) and if there can be multiple a number added (with two digits, e.g., `01`, `12`).
-* `ROLE` - In case of Kubernetes, e.g., `master`, `etcd`, `node` (other "special" roles could be, e.g., `ingress`, `stora` (could have a suffix per storage software, e.g. `storaceph`)).
+* `ROLE` - In case of Kubernetes, e.g., `master`, `etcd`, `node` (other "special" roles could be, e.g., `ingress`, `storage` (could have a suffix per storage software, e.g. `storage-rook`)).
 * `COUNT_OR_ID` - A count is a special "type". It can for servers that are known to have only a maximum of n machines at maximum, the number of servers padded with zeroes (e.g., max 12 servers results in `COUNT` for the third machine being `03`), in case of nodes where there can be an undefined amount of them it should be a shortid.
     * To generate a "random" ID (**requires [`bashids`](https://github.com/benwilber/bashids) to be installed**):
       ```bash
