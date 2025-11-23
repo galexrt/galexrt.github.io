@@ -315,17 +315,26 @@ tiefighter                   1/1     Running   0          6m19s   2a01:4f8:c014:
 xwing                        1/1     Running   0          4m15s   2a01:4f8:c014:34b1::c396   talos-worker-1   <none>           <none>
 ```
 
-TODO
+This seems to show that everything is working as expected! Pods are getting IPs from the `/64` networks of the respective nodes and communication between pods is working as expected.
 
-## Summarizing Everything
+## Summarizing Everything And Some Notes
 
-TODO
+With the configs shown above, we have a working Talos Kubernetes cluster that runs using IPv6-only networking, using the `/64` of each node for the pods running on that node.
+Additionally we are using Cilium CNI in full kube-proxy replacement mode with Kubernetes-based IPAM to allocate the pod IPs and Talos CCM to allocate the respective `/80` networks from each node's `/64` network.
+
+In addition to that, to workaround the lack of IPv6 connectivity of some services we are using NAT64/DNS64 resolvers to be able to pull container images from IPv4-only registries like GitHub Container Registry.
+
+**Notes**:
+
+- You want to make sure that your nodes have proper firewall rules in place to only allow access from your nodes to each other. You might be able to use [Cilium's Host Firewall feature](https://docs.cilium.io/en/latest/security/host-firewall/) for that though I haven't tested it yet.
+- Make sure to double-check any application you deploy for proper IPv6 support. Some applications might still have issues with IPv6-only networking.
+    - In the past I had issues with Zalando's postgres-operator not being able to create proper IPv6 connections to the PostgreSQL instances it created. Might be fixed in the meantime, I haven't tested it recently. Haven't deployed it yet but stumbled upon [this Percona Jira issue (PXC-3638)](https://perconadev.atlassian.net/browse/PXC-3638) about "manual" configuration being needed to make nodes sync/join correctly.
+
+P.S. In my tests I even deployed the cluster using ARM64 VMs/servers on Hetzner Cloud and everything worked as expected!
 
 ## The Cherry On Top - GitHub Repository with Terraform Code and Configs
 
-The repository contains all the code and configs to deploy a Talos Kubernetes cluster with IPv6-only networking on Hetzner Cloud using Terraform (and Packer): 
+The repository contains all the code and configs to deploy a Talos Kubernetes cluster with IPv6-only networking on Hetzner Cloud using Terraform (and Packer) is available at
 [https://github.com/galexrt/k8s-talos-ipv6-only](https://github.com/galexrt/k8s-talos-ipv6-only).
 
-Make sure to checkout the README.md for instructions on how to use it.
-
-TODO
+Make sure to checkout the [README.md](https://github.com/galexrt/k8s-talos-ipv6-only/blob/main/README.md) for instructions on how to use it.
