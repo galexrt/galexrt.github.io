@@ -22,14 +22,14 @@
     "@nuxt/image": "2.0.0",
     "@nuxt/ui": "4.2.1",
     "@nuxthub/core": "0.9.1",
-    "@vueuse/nuxt": "14.0.0",
+    "@vueuse/nuxt": "14.1.0",
     "better-sqlite3": "12.4.6",
     "mermaid": "11.12.1",
     "tailwindcss": "4.1.17",
     "zod": "4.1.13"
   },
   "devDependencies": {
-    "@nuxt/eslint": "1.10.0",
+    "@nuxt/eslint": "1.11.0",
     "eslint": "9.39.1",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.4",
