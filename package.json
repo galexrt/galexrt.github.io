@@ -38,7 +38,7 @@
     "nuxt": "4.2.1",
     "nuxt-site-config": "3.2.11",
     "nuxt-site-config-kit": "3.2.11",
-    "prettier": "3.7.2",
+    "prettier": "3.7.3",
     "prettier-plugin-organize-imports": "4.3.0",
     "sharp": "0.34.5",
     "vue-tsc": "3.1.5",
