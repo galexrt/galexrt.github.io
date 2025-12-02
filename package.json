@@ -24,7 +24,7 @@
     "@nuxthub/core": "0.9.1",
     "@vueuse/nuxt": "14.1.0",
     "better-sqlite3": "12.5.0",
-    "mermaid": "11.12.1",
+    "mermaid": "11.12.2",
     "tailwindcss": "4.1.17",
     "zod": "4.1.13"
   },
