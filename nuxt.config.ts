@@ -88,14 +88,22 @@ export default defineNuxtConfig({
         strict: false,
     },
 
-    compatibilityDate: '2024-07-29',
+    compatibilityDate: '2025-12-20',
 
     future: {
         compatibilityVersion: 4,
     },
 
     hub: {
-        database: true,
+        db: 'sqlite',
+    },
+
+    nitro: {
+        preset: "cloudflare_module",
+        cloudflare: {
+            deployConfig: true,
+            nodeCompat: true
+        }
     },
 
     content: {
