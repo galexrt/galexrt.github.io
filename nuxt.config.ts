@@ -33,7 +33,8 @@ export default defineNuxtConfig({
         clientBundle: {
             scan: true,
         },
-        serverBundle: 'remote',
+        serverBundle: 'local',
+        provider: 'none',
     },
 
     fonts: {
