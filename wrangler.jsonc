@@ -27,5 +27,15 @@
       ],
       "vars": {}
     }
-  }
+  },
+  "routes": [
+    {
+      "pattern": "galexrt.moe",
+      "custom_domain": true
+    },
+    {
+      "pattern": "wwww.galexrt.moe",
+      "custom_domain": true
+    }
+  ]
 }
