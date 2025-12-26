@@ -3,11 +3,13 @@
 
 @source "../../../content";
 
-@theme static {
+@theme {
     --font-sans: 'DM Sans', sans-serif;
 
     --breakpoint-3xl: 1920px;
+}
 
+@theme static {
     --color-azureradiance-50: #effaff;
     --color-azureradiance-100: #dbf2fe;
     --color-azureradiance-200: #bfe9fe;

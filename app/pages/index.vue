@@ -14,7 +14,7 @@ useSeoMeta({
 </script>
 
 <template>
-    <div v-if="page">
+    <div v-if="page" class="relative">
         <UPageHero
             :title="page.hero.title"
             :description="page.hero.description"
@@ -50,6 +50,9 @@ useSeoMeta({
             </UPageGrid>
         </UPageSection>
 
-        <UPageCTA v-bind="page.cta" class="bg-gray-100/50 dark:bg-gray-800/50" />
+
+        <UPageSection :ui="{ container: 'py-8 sm:py-12 lg:py-12' }">
+            <UPageCTA v-bind="page.cta" class="bg-gray-100/50 dark:bg-gray-800/50 overflow-hidden @container" variant="naked" />
+        </UPageSection>
     </div>
 </template>

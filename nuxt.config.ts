@@ -29,12 +29,28 @@ export default defineNuxtConfig({
     css: ['~/assets/css/main.css'],
 
     icon: {
-        collections: ['ph', 'mdi', 'simple-icons'],
+        collections: ['lucide', 'mdi', 'ph', 'simple-icons'],
         clientBundle: {
             scan: true,
         },
         serverBundle: 'local',
         provider: 'none',
+    },
+
+    ui: {
+        theme: {
+            colors: [
+                'primary',
+                'secondary',
+                'success',
+                'info',
+                'warning',
+                'error',
+                // Custom colors
+                'azureradiance',
+                'blueviolet',
+            ],
+        }
     },
 
     fonts: {

@@ -2,47 +2,85 @@ export default defineAppConfig({
     ui: {
         colors: {
             primary: 'blueviolet',
-            gray: 'slate',
         },
+
         icons: {
-            dynamic: true,
-            dark: 'i-ph-moon-fill',
-            light: 'i-ph-sun-fill',
-            search: 'i-ph-magnifying-glass',
-            external: 'i-ph-link',
-            chevron: 'i-ph-caret-down',
-            hash: 'i-ph-hash',
-            menu: 'i-ph-list-bold',
-            close: 'i-ph-x',
-            check: 'i-ph-check-circle',
+            arrowLeft: 'mdi-arrow-left',
+            arrowRight: 'mdi-arrow-right',
+            check: 'mdi-check',
+            chevronDoubleLeft: 'mdi-chevron-double-left',
+            chevronDoubleRight: 'mdi-chevron-double-right',
+            chevronDown: 'mdi-chevron-down',
+            chevronLeft: 'mdi-chevron-left',
+            chevronRight: 'mdi-chevron-right',
+            chevronUp: 'mdi-chevron-up',
+            close: 'mdi-close',
+            ellipsis: 'mdi-dots-horizontal',
+            external: 'mdi-arrow-top-right',
+            file: 'mdi-file-document',
+            folder: 'mdi-folder',
+            folderOpen: 'mdi-folder-open',
+            loading: 'mdi-loading',
+            minus: 'mdi-minus',
+            plus: 'mdi-plus',
+            search: 'mdi-magnify',
+            upload: 'mdi-upload',
+            arrowUp: 'mdi-arrow-up',
+            arrowDown: 'mdi-arrow-down',
+            caution: 'mdi-alert-circle',
+            copy: 'mdi-content-copy',
+            copyCheck: 'mdi-check-circle-outline',
+            dark: 'mdi-moon-waning-crescent',
+            error: 'mdi-close-circle',
+            eye: 'mdi-eye',
+            eyeOff: 'mdi-eye-off',
+            hash: 'mdi-pound',
+            info: 'mdi-information',
+            light: 'mdi-white-balance-sunny',
+            menu: 'mdi-menu',
+            panelClose: 'mdi-menu-close',
+            panelOpen: 'mdi-menu-open',
+            reload: 'mdi-reload',
+            stop: 'mdi-stop',
+            success: 'mdi-check-circle',
+            system: 'mdi-monitor',
+            tip: 'mdi-lightbulb-variant',
+            warning: 'mdi-alert',
         },
+
         button: {
-            rounded: 'rounded-full',
-            default: {
+            slots: {
+                base: 'rounded-full'
+            },
+            defaultVariants: {
                 size: 'md',
             },
         },
+
         input: {
-            default: {
+            defaultVariants: {
                 size: 'md',
             },
         },
+
         card: {
-            rounded: 'rounded-xl',
+            slots: {
+                root: 'rounded-xl',
+            },
         },
+
         footer: {
-            top: {
-                wrapper: 'border-t border-gray-200 dark:border-gray-800',
-                container: 'py-8 lg:py-16',
-            },
-            bottom: {
-                wrapper: 'border-t border-gray-200 dark:border-gray-800',
+            slots: {
+
+                top:  'border-t border-gray-200 dark:border-gray-800 py-8 lg:py-16',
+                bottom: 'border-t border-gray-200 dark:border-gray-800',
             },
         },
-        page: {
-            hero: {
+
+        pageHero: {
+            slots: {
                 wrapper: 'lg:py-24',
-            },
+            }
         },
     },
 });

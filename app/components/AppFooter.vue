@@ -36,9 +36,7 @@ const links = [
 <template>
     <USeparator class="h-px" />
     <UFooter :ui="{ top: 'border-b border-[var(--ui-border)]' }">
-        <template #top>
-            <UFooterColumns :links="links" class="print:hidden" />
-        </template>
+            <UNavigationMenu :links="links" class="print:hidden" />
 
         <template #left>
             <p class="text-sm text-gray-500 dark:text-gray-400">
@@ -55,7 +53,7 @@ const links = [
                 target="_blank"
                 icon="i-simple-icons-github"
                 aria-label="GitHub"
-                color="gray"
+                color="neutral"
                 variant="ghost"
             />
         </template>
