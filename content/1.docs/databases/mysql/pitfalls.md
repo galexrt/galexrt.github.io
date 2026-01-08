@@ -24,8 +24,6 @@ The password for a replication user must be a maximum of `32` characters long.
 
 **TL;DR** The suffixes are in "Bytes". E.g., 16M = 16777216 Bytes.
 
->
-
 ```bash
 mysql --max_allowed_packet=16777216
 mysql --max_allowed_packet=16M
@@ -34,3 +32,13 @@ mysql --max_allowed_packet=16M
 > The first command specifies the value in bytes. The second specifies the value in megabytes. For variables that take a numeric value, the value can be given with a suffix of K, M, or G to indicate a multiplier of 1024, 10242 or 10243. (For example, when used to set max\_allowed\_packet, the suffixes indicate units of kilobytes, megabytes, or gigabytes.) As of MySQL 8.0.14, a suffix can also be T, P, and E to indicate a multiplier of 10244, 10245 or 10246. Suffix letters can be uppercase or lowercase.
 
 Quoted from: [MySQL 8.0 Reference Manual - 4.2.2.5 Using Options to Set Program Variables](https://dev.mysql.com/doc/refman/8.0/en/program-variables.html)
+
+## MariaDB `JSON` Data Type "Limitations"
+
+> The JSON alias was added to make it possible to use JSON columns in statement based replication from MySQL to MariaDB and to make it possible for MariaDB to read mysqldumps from MySQL.
+>
+> JSON is an alias for LONGTEXT COLLATE utf8mb4_bin introduced for compatibility reasons with MySQL's JSON data type. MariaDB implements this as a LONGTEXT rather, as the JSON data type contradicts the SQL:2016 standard, and MariaDB's benchmarks indicate that performance is at least equivalent.
+>
+> _Source: [JSON Data Type | Server | MariaDB Documentation](https://mariadb.com/docs/server/reference/data-types/string-data-types/json)_
+
+So don't wonder if you create a table with a `JSON` column and then see it as `LONGTEXT` when you do a `SHOW CREATE TABLE ...` later on..
