@@ -34,7 +34,7 @@ export default defineNuxtConfig({
             scan: true,
         },
         serverBundle: 'local',
-        provider: 'none',
+        provider: 'iconify',
     },
 
     ui: {

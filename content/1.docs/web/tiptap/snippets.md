@@ -13,7 +13,7 @@ const editor = useTiptapEditor(); // Your Tiptap editor instance
 
 const end = editor.$doc.content.size || 0; // Sane-ish fallback in case the document is empty or doc is "undefined"
 
-editor?.commands.insertContentAt(
+editor.commands.insertContentAt(
     end, // Position
     '<p>Your content here</p>', // Can be plain text, raw HTML or JSON node(s).
 );

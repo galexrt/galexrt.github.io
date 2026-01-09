@@ -42,3 +42,12 @@ Quoted from: [MySQL 8.0 Reference Manual - 4.2.2.5 Using Options to Set Program 
 > _Source: [JSON Data Type | Server | MariaDB Documentation](https://mariadb.com/docs/server/reference/data-types/string-data-types/json)_
 
 So don't wonder if you create a table with a `JSON` column and then see it as `LONGTEXT` when you do a `SHOW CREATE TABLE ...` later on..
+
+### MariaDB vs MySQL Functionality Differences
+
+It feels that the "drift" of functionality between MariaDB and MySQL is more and more increasing over time.
+For example, MariaDB doesn't support JSON multi-valued indexes, but MySQL 8.x does.
+
+I wouldn't be too worried yet, but as someone who is developing an application that should run on "any MySQL database" it is something to keep in mind.
+
+Be sure to checkout the pitfalls documented on this page and [the MariaDB vs. MySQL section here](mariadb.md#mariadb-vs-mysql).

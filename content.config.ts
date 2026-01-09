@@ -43,7 +43,7 @@ const authorsSchema = z.array(
 export const collections = {
     docs: defineCollection({
         type: 'page',
-        source: '1.docs/**/*',
+        source: '1.docs/**/*.{md,yml}',
         schema: z.object({
             title: z.string().nonempty(),
             description: z.string().nonempty(),
@@ -51,7 +51,7 @@ export const collections = {
     }),
     posts: defineCollection({
         type: 'page',
-        source: '3.blog/**',
+        source: '3.blog/**/*.{md,yml}',
         schema: z.object({
             title: z.string().nonempty(),
             description: z.string().nonempty(),
