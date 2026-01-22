@@ -122,10 +122,4 @@ export default defineNuxtConfig({
             nodeCompat: true
         }
     },
-
-    content: {
-        preview: {
-            api: 'https://api.nuxt.studio',
-        },
-    },
 });
