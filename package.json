@@ -13,16 +13,16 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "1.2.86",
+    "@iconify-json/lucide": "1.2.87",
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/ph": "1.2.2",
-    "@iconify-json/simple-icons": "1.2.67",
+    "@iconify-json/simple-icons": "1.2.68",
     "@mermaid-js/layout-elk": "0.2.0",
     "@nuxt/content": "3.11.0",
     "@nuxt/fonts": "0.13.0",
     "@nuxt/image": "2.0.0",
     "@nuxt/ui": "4.4.0",
-    "@nuxthub/core": "0.10.5",
+    "@nuxthub/core": "0.10.6",
     "@vueuse/nuxt": "14.1.0",
     "better-sqlite3": "12.6.2",
     "drizzle-kit": "0.31.8",
@@ -32,20 +32,20 @@
     "zod": "4.3.6"
   },
   "devDependencies": {
-    "@nuxt/eslint": "1.12.1",
+    "@nuxt/eslint": "1.13.0",
     "eslint": "9.39.2",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.5",
     "eslint-plugin-tailwindcss": "3.18.2",
     "eslint-plugin-vue": "10.7.0",
     "nuxt": "4.3.0",
-    "nuxt-site-config": "3.2.18",
-    "nuxt-site-config-kit": "3.2.18",
+    "nuxt-site-config": "3.2.19",
+    "nuxt-site-config-kit": "3.2.19",
     "prettier": "3.8.1",
     "prettier-plugin-organize-imports": "4.3.0",
     "sharp": "0.34.5",
-    "vue-tsc": "3.2.3",
-    "wrangler": "4.60.0"
+    "vue-tsc": "3.2.4",
+    "wrangler": "4.61.1"
   },
   "packageManager": "pnpm@10.28.1+sha512.7d7dbbca9e99447b7c3bf7a73286afaaf6be99251eb9498baefa7d406892f67b879adb3a1d7e687fc4ccc1a388c7175fbaae567a26ab44d1067b54fcb0d6a316",
   "pnpm": {
