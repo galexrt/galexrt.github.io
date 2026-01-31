@@ -23,7 +23,7 @@
     "@nuxt/image": "2.0.0",
     "@nuxt/ui": "4.4.0",
     "@nuxthub/core": "0.10.6",
-    "@vueuse/nuxt": "14.1.0",
+    "@vueuse/nuxt": "14.2.0",
     "better-sqlite3": "12.6.2",
     "drizzle-kit": "0.31.8",
     "drizzle-orm": "0.45.1",
