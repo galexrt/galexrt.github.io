@@ -13,10 +13,10 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "1.2.88",
+    "@iconify-json/lucide": "1.2.89",
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/ph": "1.2.2",
-    "@iconify-json/simple-icons": "1.2.69",
+    "@iconify-json/simple-icons": "1.2.70",
     "@mermaid-js/layout-elk": "0.2.0",
     "@nuxt/content": "3.11.2",
     "@nuxt/fonts": "0.13.0",
@@ -25,14 +25,14 @@
     "@nuxthub/core": "0.10.6",
     "@vueuse/nuxt": "14.2.0",
     "better-sqlite3": "12.6.2",
-    "drizzle-kit": "0.31.8",
+    "drizzle-kit": "0.31.9",
     "drizzle-orm": "0.45.1",
     "mermaid": "11.12.2",
     "tailwindcss": "4.1.18",
     "zod": "4.3.6"
   },
   "devDependencies": {
-    "@nuxt/eslint": "1.13.0",
+    "@nuxt/eslint": "1.14.0",
     "eslint": "9.39.2",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.5",
@@ -47,7 +47,7 @@
     "vue-tsc": "3.2.4",
     "wrangler": "4.63.0"
   },
-  "packageManager": "pnpm@10.28.2+sha512.41872f037ad22f7348e3b1debbaf7e867cfd448f2726d9cf74c08f19507c31d2c8e7a11525b983febc2df640b5438dee6023ebb1f84ed43cc2d654d2bc326264",
+  "packageManager": "pnpm@10.29.2+sha512.bef43fa759d91fd2da4b319a5a0d13ef7a45bb985a3d7342058470f9d2051a3ba8674e629672654686ef9443ad13a82da2beb9eeb3e0221c87b8154fff9d74b8",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@tailwindcss/oxide",
