@@ -22,6 +22,8 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation');
                         </UPageAside>
                     </template>
 
+                    <UContentNavigation class="mt-4 lg:hidden" :navigation="navigation[0].children" type="single" orientation="vertical" />
+
                     <slot />
                 </UPage>
             </UContainer>
