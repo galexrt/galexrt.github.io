@@ -28,7 +28,7 @@
     "drizzle-kit": "0.31.9",
     "drizzle-orm": "0.45.1",
     "mermaid": "11.12.3",
-    "tailwindcss": "4.1.18",
+    "tailwindcss": "4.2.0",
     "zod": "4.3.6"
   },
   "devDependencies": {
@@ -40,8 +40,8 @@
     "eslint-plugin-tailwindcss": "3.18.2",
     "eslint-plugin-vue": "10.8.0",
     "nuxt": "4.3.1",
-    "nuxt-site-config": "3.2.19",
-    "nuxt-site-config-kit": "3.2.19",
+    "nuxt-site-config": "3.2.20",
+    "nuxt-site-config-kit": "3.2.20",
     "prettier": "3.8.1",
     "prettier-plugin-organize-imports": "4.3.0",
     "sharp": "0.34.5",
