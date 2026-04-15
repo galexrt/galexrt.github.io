@@ -70,6 +70,7 @@ export default defineNuxtConfig({
                 'ini',
                 'json',
                 'mermaid',
+                'proto',
                 'php',
                 'python',
                 'shell',
