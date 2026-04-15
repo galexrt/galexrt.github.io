@@ -10,7 +10,6 @@ export default defineNuxtConfig({
         '@nuxt/ui',
         '@nuxt/content',
         '@nuxt/fonts',
-        '@nuxthub/core',
         '@vueuse/nuxt',
         'nuxt-site-config',
     ],
@@ -110,10 +109,6 @@ export default defineNuxtConfig({
 
     future: {
         compatibilityVersion: 4,
-    },
-
-    hub: {
-        db: 'sqlite',
     },
 
     nitro: {
