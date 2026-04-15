@@ -11,7 +11,7 @@ authors:
   - name: Gaurav Sitlani
 ---
 
-::callout{icon="i-ph-info" color="info"}
+::note
 This blog post is originally from the Koor Technologies, Inc. website which due Koor Technologies, Inc. closure in early 2024 doesn't exist anymore.
 ::
 
