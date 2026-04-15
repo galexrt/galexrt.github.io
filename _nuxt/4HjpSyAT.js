@@ -1,1 +1,0 @@
-import{_ as s}from"./DlAUqK2U.js";import{o,e as a,h as r,b as t}from"./BYzRQQEi.js";const c={},n={class:"masonry-container sm:p-8"},l={class:"grid grid-cols-1 gap-4 lg:block list-none ps-0"};function _(e,i){return o(),a("div",n,[r("ul",l,[t(e.$slots,"default")])])}const f=Object.assign(s(c,[["render",_]]),{__name:"ImageGallery"});export{f as default};
