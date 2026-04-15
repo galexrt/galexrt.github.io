@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     css: ['~/assets/css/main.css'],
 
     icon: {
-        collections: ['lucide', 'mdi', 'ph', 'simple-icons'],
+        collections: ['lucide', 'mdi', 'ph', 'simple-icons', 'vscode-icons'],
         clientBundle: {
             scan: true,
         },
