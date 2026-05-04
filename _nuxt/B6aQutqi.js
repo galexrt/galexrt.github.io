@@ -1,1 +1,0 @@
-import{e as _,l as e,w as s,b as c,m as r,o as p,A as l,n as m}from"./CtbslT4N.js";import{_ as d}from"./DlAUqK2U.js";const f={};function u(o,i){const n=l,t=r,a=m;return p(),_("div",null,[e(n),e(t,null,{default:s(()=>[c(o.$slots,"default")]),_:3}),e(a)])}const h=d(f,[["render",u]]);export{h as default};
