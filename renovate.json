@@ -16,5 +16,6 @@
       "automerge": true
     }
   ],
-  "platformAutomerge": true
+  "platformAutomerge": true,
+  "minimumReleaseAge": "1 day"
 }
