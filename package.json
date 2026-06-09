@@ -16,7 +16,7 @@
     "@iconify-json/lucide": "1.2.111",
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/ph": "1.2.2",
-    "@iconify-json/simple-icons": "1.2.85",
+    "@iconify-json/simple-icons": "1.2.86",
     "@iconify-json/vscode-icons": "1.2.55",
     "@mermaid-js/layout-elk": "0.2.1",
     "@nuxt/content": "3.14.0",
@@ -45,7 +45,7 @@
     "prettier": "3.8.3",
     "prettier-plugin-organize-imports": "4.3.0",
     "sharp": "0.34.5",
-    "vue-tsc": "3.3.3"
+    "vue-tsc": "3.3.4"
   },
   "packageManager": "pnpm@10.34.1+sha512.b58fbde6dca66a929538021581f648b4570b6ca19b18e7cbd7f2c07a7b24454155388dacdf08f2af3678e88a6d1fe04f9d609df24bf51735a060ea041b374ab7",
   "pnpm": {
