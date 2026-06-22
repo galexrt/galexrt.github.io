@@ -76,8 +76,8 @@ importers:
         specifier: 5.5.6
         version: 5.5.6(eslint-config-prettier@10.1.8(eslint@10.5.0(jiti@2.7.0)))(eslint@10.5.0(jiti@2.7.0))(prettier@3.8.4)
       eslint-plugin-tailwindcss:
-        specifier: 4.0.2
-        version: 4.0.2(eslint@10.5.0(jiti@2.7.0))(tailwindcss@4.3.1)(typescript@5.9.3)
+        specifier: 4.0.3
+        version: 4.0.3(eslint@10.5.0(jiti@2.7.0))(tailwindcss@4.3.1)(typescript@5.9.3)
       eslint-plugin-vue:
         specifier: 10.9.2
         version: 10.9.2(@stylistic/eslint-plugin@5.10.0(eslint@10.5.0(jiti@2.7.0)))(@typescript-eslint/parser@8.61.0(eslint@10.5.0(jiti@2.7.0))(typescript@5.9.3))(eslint@10.5.0(jiti@2.7.0))(vue-eslint-parser@10.4.1(eslint@10.5.0(jiti@2.7.0)))
@@ -4608,8 +4608,8 @@ packages:
     peerDependencies:
       eslint: '>=9.38.0'
 
-  eslint-plugin-tailwindcss@4.0.2:
-    resolution: {integrity: sha512-I/plNAFclmxJUUzKhQ6W2sMYcfxMMYLcslVFzRwtoIaheLOvKoVluTOxx67aX0H234gAlKW5VuK0fOVWgPFkqQ==}
+  eslint-plugin-tailwindcss@4.0.3:
+    resolution: {integrity: sha512-JSirGfeufS4m6PDV+pflwOPqU3CG3y39xRt5JhRjPrbRagjFbbTcyEjfiClU6aWTQ18HFhMItiBTUWqbjrGoOg==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
       tailwindcss: ^4.0.0
@@ -11844,7 +11844,7 @@ snapshots:
       regexp-ast-analysis: 0.7.1
       scslre: 0.3.0
 
-  eslint-plugin-tailwindcss@4.0.2(eslint@10.5.0(jiti@2.7.0))(tailwindcss@4.3.1)(typescript@5.9.3):
+  eslint-plugin-tailwindcss@4.0.3(eslint@10.5.0(jiti@2.7.0))(tailwindcss@4.3.1)(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/utils': 8.61.0(eslint@10.5.0(jiti@2.7.0))(typescript@5.9.3)
       postcss: 8.5.15
