@@ -21,8 +21,8 @@ importers:
         specifier: 1.2.87
         version: 1.2.87
       '@iconify-json/vscode-icons':
-        specifier: 1.2.59
-        version: 1.2.59
+        specifier: 1.2.60
+        version: 1.2.60
       '@mermaid-js/layout-elk':
         specifier: 0.2.1
         version: 0.2.1(mermaid@11.15.0)
@@ -1047,8 +1047,8 @@ packages:
   '@iconify-json/simple-icons@1.2.87':
     resolution: {integrity: sha512-8YciStObhSji3OZFmWAWK6kBujyqO5bLCxeDwLxf3CR3F4PVelq7keC2LBvgTqviWzSTysj5/g4PCFLiAMVGsw==}
 
-  '@iconify-json/vscode-icons@1.2.59':
-    resolution: {integrity: sha512-6RN+ixRubu3UKrUEqV24iuwvh2DgY541h2QWdxBeK3kJvXuDpaFNxw2dUSUqp80IU7f+QAU5sh718tXgyynnbQ==}
+  '@iconify-json/vscode-icons@1.2.60':
+    resolution: {integrity: sha512-oqwPx2GX6CnF+8QqkUiEOS+U0F3ywvKjoPogedGVr/bW7DTw7m+GS6oxSnUofZACWpER9RTllEQe+4J3ovy7bA==}
 
   '@iconify/collections@1.0.697':
     resolution: {integrity: sha512-OHc99jYQmioWfQOTcFualkHAMAcnYpSpQErKL9wB36vg/gqnBlaMQTzLGw3xuzzFoesCj46esE8uDue96DyvOw==}
@@ -8213,7 +8213,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/vscode-icons@1.2.59':
+  '@iconify-json/vscode-icons@1.2.60':
     dependencies:
       '@iconify/types': 2.0.0
 
