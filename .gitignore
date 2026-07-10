@@ -27,3 +27,5 @@ logs
 .history
 
 .wrangler/
+
+.direnv/
