@@ -45,9 +45,9 @@ I'm hope that this problem will be further improved next year for FOSDEM'21.
 One of the awesome things to mention is that the recordings of the talks are available pretty quick as it is a self service system for the speakers. In my case the ["Rook Cloud Native Storage for Kubernetes" by Alexander Trost](https://video.fosdem.org/2020/H.1308/rook_cloud_native_storage_for_kubernetes.mp4) I gave, is already available to watch.
 The more time passes, the more talk recordings will be available to watch. If you go to the [FOSDEM'20 schedule](https://fosdem.org/2020/schedule/) and click on a talk, it should have the recording linked in the "Links" section for you to watch.
 
-Let's dive into one of the talks that stood out to me. It is the "The Linux Kernel: We have to finish this thing one day;)" by "Thorsten Leenhuis".
+Let's dive into one of the talks that stood out to me. It is the "The Linux Kernel: We have to finish this thing one day;-)" by "Thorsten Leenhuis".
 
-![FOSDEM'20 - Saturday, Janson Room: "The Linux Kernel: We have to finish this thing one day ;)" by "Thorsten Leemhuis"](/blog/2020/fosdem20/img_20200201_101052.jpg)
+![FOSDEM'20 - Saturday, Janson Room: "The Linux Kernel: We have to finish this thing one day ;-)" by "Thorsten Leemhuis"](/blog/2020/fosdem20/img_20200201_101052.jpg)
 
 He talked about Linux getting "actual" Async IO through `io_uring`, which should give a boost to the "kernel scalability" of Linux.
 The scalability of Linux is an interesting point as in a lot of cases a to be implemented feature/ change, has to work on existing code to improve it. One example he brought up was the use of the `lock_kernel()` call, which usage is almost completely removed from the kernel code to improve performance and scalability.

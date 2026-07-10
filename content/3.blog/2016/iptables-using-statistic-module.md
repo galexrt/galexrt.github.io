@@ -27,7 +27,7 @@ iptables -t nat -A INPUT -p tcp -m tcp --dport 80 -j LB_PORT80
 
 ## Dropping packages with a X% probability from a specific IP address
 
-My favorite rule to mess with people ;)
+My favorite rule to mess with people ;-)
 
 ```bash
 iptables -A INPUT \

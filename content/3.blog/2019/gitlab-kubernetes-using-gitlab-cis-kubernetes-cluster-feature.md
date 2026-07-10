@@ -49,7 +49,7 @@ Though I have to note that I find it a bit "mehh" that you can only create/add o
 
 ## Step 1 - Download and "import" example Repository
 The repository with the files used in this blog post are available on GitHub: [galexrt/presentation-gitlab-k8s](https://github.com/galexrt/presentation-gitlab-k8s).
-You can use the GitLab repository import functionality to import the repository. If you imported the repository into your GitLab, you should already see GitLab CI begin to do it's work, but fail on the `release_upload` and at latest on the `deploy_dev` task, as you shouldn't have the Kubernetes integration configured and activated before you even read the post yet ;)
+You can use the GitLab repository import functionality to import the repository. If you imported the repository into your GitLab, you should already see GitLab CI begin to do it's work, but fail on the `release_upload` and at latest on the `deploy_dev` task, as you shouldn't have the Kubernetes integration configured and activated before you even read the post yet ;-)
 
 > **NOTE**
 >

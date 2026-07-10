@@ -69,7 +69,7 @@ The second point about the integration which was greatly expanded in the version
 ## Step 1 - Download and "import" example Repository
 
 The repository with the files used in this blog post are available on GitHub: [galexrt/presentation-gitlab-k8s](https://github.com/galexrt/presentation-gitlab-k8s).
-You can use the GitLab repository import functionality to import the repository. If you imported the repository into your GitLab, you should already see GitLab CI begin to do it's work, but fail on the `release_upload` and at latest on the `deploy_dev` task, as you shouldn't have the Kubernetes integration configured and activated before you even read the post yet ;)
+You can use the GitLab repository import functionality to import the repository. If you imported the repository into your GitLab, you should already see GitLab CI begin to do it's work, but fail on the `release_upload` and at latest on the `deploy_dev` task, as you shouldn't have the Kubernetes integration configured and activated before you even read the post yet ;-)
 
 > **NOTE**
 >
@@ -141,7 +141,7 @@ In the end copy `YOUR_DECODED_TOKEN` somewhere safe.
 ## Step 3 - Get the Kubernetes CA Certificate
 
 At least for my cluster that I setup with the `kubernetes/contrib` Ansible deployment the Kubernetes CA certificate is located in `/etc/kubernetes/certs/ca.crt`.
-So a simple `cat` does the thing ;)
+So a simple `cat` does the thing ;-)
 
 ```bash
 $ cat /etc/kubernetes/ca.crt

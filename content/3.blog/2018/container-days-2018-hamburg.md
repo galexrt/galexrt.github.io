@@ -32,7 +32,7 @@ The speaker party was filled with cool people and a nice atmosphere at [StrandPa
 
 ![Container Days 2018 - Reeperbahn Trainstation sign](/blog/2018/container-days-2018-hamburg/img_20180618_235548.jpg)
 
-Obvious visit to the Hamburg Reeperbahn. Just kidding, we just used the train station to get back to our hotel (as far as I remember) ;)
+Obvious visit to the Hamburg Reeperbahn. Just kidding, we just used the train station to get back to our hotel (as far as I remember) ;-)
 
 ***
 

@@ -46,7 +46,7 @@ For me what counted here, was the message (see the diagram above) I got from the
 Next presentation I went to was "Deploy a resilient E-commerce platform using latest docker tools" of [Rachid Zarouali](https://github.com/xinity) from [SYNOLIA](https://www.synolia.com/).
 He gave some interesting insights in their E-commerce platform, in which they weren't "simply" using Kubernetes. As the title from the presentation suggets, the tools used by them are mostly official Docker tools/projects, but also some other open source projects too.
 
-**For Kubernetes users**: Just keep on using Kubernetes ;)
+**For Kubernetes users**: Just keep on using Kubernetes ;-)
 
 Overall a well made presentation, as written with good insights into the tooling used. Should be interesting for everyone that has to decide between Kubernetes and Docker Swarm.
 
@@ -135,7 +135,7 @@ No offense against the presentator, maybe it was just the lack of me drinking a 
 
 > **NOTE**
 >
-> Aren't we all companies that want to sell our products? ;)
+> Aren't we all companies that want to sell our products? ;-)
 >
 > **NOTE**
 >

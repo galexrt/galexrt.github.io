@@ -118,7 +118,7 @@ chmod +x /usr/local/bin/docker-compose
 
 ##### **Last but not least**
 
-Clone the Workshop repo `https://github.com/galexrt/workshop-docker.git`, it'll provide all files used in the Workshop ;)
+Clone the Workshop repo `https://github.com/galexrt/workshop-docker.git`, it'll provide all files used in the Workshop ;-)
 
 ```bash
 git clone https://github.com/galexrt/workshop-docker.git
@@ -412,7 +412,7 @@ ENTRYPOINT ["/sbin/entrypoint.sh"]
 CMD ["app:run"]
 ```
 
-**Don't worry** we're just making a very simple and basic example. ;)
+**Don't worry** we're just making a very simple and basic example. ;-)
 
 #### `Dockerfile` explained
 
@@ -637,7 +637,7 @@ docker-compose up -f DOCKER_COMPOSE_YML
 > **TASK**: `compose202`
 > The task contains other `docker-compose.yml`s for you to play around with. Look at the `docker-compose.yml`s and start them.
 > Just play around with `docker-compose` a bit.
-> **And don't forget** the `-f DOCKER_COMPOSE_YML` argument. ;)
+> **And don't forget** the `-f DOCKER_COMPOSE_YML` argument. ;-)
 
 #### Summary
 
@@ -651,7 +651,7 @@ We can now write basic `docker-compose.yml`s. We can now start a multi container
 ***
 
 > Below this line, everythings a bit vague and still needs some writing to be done. Please be aware of that!
-> This line will slowly move down, until I'm finished. ;)
+> This line will slowly move down, until I'm finished. ;-)
 
 ***
 

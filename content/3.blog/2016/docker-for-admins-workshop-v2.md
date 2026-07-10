@@ -555,7 +555,7 @@ docker exec \
 > - `CONTAINER` - Container ID or name of the container the command should be executed in.
 > - `mysql -u root -p` - The command and arguments to execute.
 
-You would use the `--detach` (or `-d`) option to run a non-interactive command in the background with no logs or return (Good for cron jobs _;)_).
+You would use the `--detach` (or `-d`) option to run a non-interactive command in the background with no logs or return (Good for cron jobs _;-)_).
 
 > **NOTE**
 >
@@ -887,7 +887,7 @@ ENTRYPOINT ["/sbin/entrypoint.sh"]
 CMD ["app:run"]
 ```
 
-_Don't worry_ we're going to make a very simple and basic image. ;)
+_Don't worry_ we're going to make a very simple and basic image. ;-)
 
 ## Understanding Dockerfiles
 

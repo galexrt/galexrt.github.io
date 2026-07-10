@@ -47,7 +47,7 @@ I suggest you take a look at a few posts about CRI-O to get a general understand
 * [6 Reasons why CRI-O is the best runtime for Kubernetes - Project Atomic](https://www.projectatomic.io/blog/2017/06/6-reasons-why-cri-o-is-the-best-runtime-for-kubernetes/)
 * [CRI-O, the Project to Run Containers without Docker, Reaches 1.0 - The New Stack](https://thenewstack.io/cri-o-project-run-containers-without-docker-reaches-1-0/)
 
-But you are most likely here because you already know that, right? ;)
+But you are most likely here because you already know that, right? ;-)
 
 Another point for me is that in the best case it will be "shipped" with Kubernetes at some point in time, so that you "just" upgrade Kubelet and et voilà you get the new CRI-O version. I would totally wnat it to be like that.
 

@@ -89,7 +89,7 @@ The point of operators making it easy to deploy and manage applications is more 
 
 ![KubeCon - Keynote - Operators: Kube Native Apps](/blog/2018/kubecon-copenhagen-2018-day-2/img_20180503_093229.jpg)
 
-It is amazing to hear a success story such as that for an operator, as you normally just hear "it works" ;)
+It is amazing to hear a success story such as that for an operator, as you normally just hear "it works" ;-)
 
 ![KubeCon - Keynote - The Operator Framework](/blog/2018/kubecon-copenhagen-2018-day-2/img_20180503_093315.jpg)
 

@@ -18,7 +18,7 @@ image:
 
 ## Intro
 I went to the Google Cloud Event about "Enterprise Grade Hybrid Cloud with Kubernetes Cluster Federation" at Google Munich.
-> **NOTE** I wrote the next few sentences while not having internet connection because of "DeutscheBahn" ;)
+> **NOTE** I wrote the next few sentences while not having internet connection because of "DeutscheBahn" ;-)
 
 A thing I just have to note is that I had taken an IC instead of an ICE to Munich. Now guess what, ICs don't have wifi.. I personally think that in a county as advanced as Germany, it should be "required" to have wifi on "every" train. Maybe not trams but at least ICs and ECs too instead of only ICEs.
 I could solve my problem by using my phone as a hotspot which was just as unreliable as the internet in the ICE, but at least I had a bit of internet, so I got that going for me which is nice. Another awesome thing was that my seat's outlet wasn't working..
@@ -51,7 +51,7 @@ Nowadays Google engineers, looking at the percentage, commit less to Kubernetes.
 
 Kubernetes currently supports up to about 5k nodes or 150k pods. Even Google "admitted" that they and no other company is running more than that and asking the audience also showed the same results for other Kubernetes (/ Container) users. Most "users" are like "We need at least over 5k nodes for running enterprise applications on Kubernetes" but "in real life" some of these companies don't even run more than 100 nodes at the same time in the same cluster..
 
-If size should ever matter (I hope you see what I did there ;) ), Federation can help by mitigating this "issue" by splitting the "load" (pods, etc) over multiple cluster.
+If size should ever matter (I hope you see what I did there ;-) ), Federation can help by mitigating this "issue" by splitting the "load" (pods, etc) over multiple cluster.
 Other advantages to see when looking at running a hybrid cloud setup with federation is that (when doing it correctly) you get a nice way to do failover with increased control over your data. As big companies more and more have the need to run on-premise, this also allows for running sensitive data applications on-premise and run other tasks on the cloud (aka on demand). Let's take germany as an example for data protection laws, to get more trust from customers too, you have to run on-premise to comply with law and make customers feel safe about their data.
 
 For Google to step up with the Kubernetes project was a good thing to do. Google simply knows how to scale applications, as they have seven products that have more than one billion active users! Google Cloud Plattform is no exception to that many "users".
@@ -87,7 +87,7 @@ Through the abstraction that Tectonic brings with using Terraform you can easily
 The demo showed a Tectonic Kubernetes cluster running on the Google Cloud Plattform, which is still in a pretty beta state, as seen on the Tectonic documentation page. He said that the next release will contain the feature to imitate Kubernetes `Roles` to see what they can do. This will make creating `Roles` definetely simpler to see which things they are able to do or not to.
 The Tectonic installer automatically creates `Ingres`es for [Prometheus](https://github.com/prometheus/prometheus) and the Tectonic admin web interface.
 
-As always I can confirm, that operators are are cool and the prometheus-operator in specific is very cool, but to have equality here, all operators are cool! ;)
+As always I can confirm, that operators are are cool and the prometheus-operator in specific is very cool, but to have equality here, all operators are cool! ;-)
 
 For curious people that know the Terraform "language", the Tectonic installer is available on GitHub here: [coreos/tectonic-installer](https://github.com/coreos/tectonic-installer).
 

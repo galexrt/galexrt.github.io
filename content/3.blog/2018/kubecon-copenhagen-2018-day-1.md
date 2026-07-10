@@ -71,7 +71,7 @@ Currently there is a total of 20 projects in the CNCF.
 #### Sandbox projects
 
 ![KubeCon - Keynote - Rook was showed as one of the sandbox projects](/blog/2018/kubecon-copenhagen-2018-day-1/img_20180502_092918.jpg)
-(FTW! I'm totatlly not biased;))
+(FTW! I'm totatlly not biased;-))
 
 * [Rook](https://rook.io/)
 * [Open Policy Agent](https://www.openpolicyagent.org/)
