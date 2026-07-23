@@ -19,7 +19,7 @@
     "@iconify-json/simple-icons": "1.2.91",
     "@iconify-json/vscode-icons": "1.2.67",
     "@mermaid-js/layout-elk": "0.2.2",
-    "@nuxt/content": "3.15.1",
+    "@nuxt/content": "3.15.2",
     "@nuxt/fonts": "0.14.0",
     "@nuxt/image": "2.0.0",
     "@nuxt/ui": "4.10.0",
@@ -45,7 +45,7 @@
     "prettier": "3.9.6",
     "prettier-plugin-organize-imports": "4.3.0",
     "sharp": "0.35.3",
-    "vue-tsc": "3.3.7"
+    "vue-tsc": "3.3.8"
   },
   "packageManager": "pnpm@10.34.5+sha512.a4ee05f2f73658255bd6a89859c065a45c28a57daefae2c893a168ee2b73168c37b91e83e57ea67654ad03f03031746430e8bce38e362e042605fb8abc80192e",
   "pnpm": {
