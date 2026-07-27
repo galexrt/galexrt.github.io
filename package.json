@@ -13,10 +13,10 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "1.2.119",
+    "@iconify-json/lucide": "1.2.120",
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/ph": "1.2.2",
-    "@iconify-json/simple-icons": "1.2.91",
+    "@iconify-json/simple-icons": "1.2.92",
     "@iconify-json/vscode-icons": "1.2.67",
     "@mermaid-js/layout-elk": "0.2.2",
     "@nuxt/content": "3.15.2",
