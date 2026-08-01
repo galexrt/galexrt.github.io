@@ -13,11 +13,11 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "1.2.120",
+    "@iconify-json/lucide": "1.2.121",
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/ph": "1.2.2",
     "@iconify-json/simple-icons": "1.2.92",
-    "@iconify-json/vscode-icons": "1.2.67",
+    "@iconify-json/vscode-icons": "1.2.68",
     "@mermaid-js/layout-elk": "0.2.2",
     "@nuxt/content": "3.15.2",
     "@nuxt/fonts": "0.14.0",
@@ -45,7 +45,7 @@
     "prettier": "3.9.6",
     "prettier-plugin-organize-imports": "4.3.0",
     "sharp": "0.35.3",
-    "vue-tsc": "3.3.8"
+    "vue-tsc": "3.3.9"
   },
   "packageManager": "pnpm@10.34.5+sha512.a4ee05f2f73658255bd6a89859c065a45c28a57daefae2c893a168ee2b73168c37b91e83e57ea67654ad03f03031746430e8bce38e362e042605fb8abc80192e",
   "pnpm": {
