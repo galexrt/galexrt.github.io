@@ -37,6 +37,10 @@ export default defineNuxtConfig({
         provider: 'iconify',
     },
 
+    image: {
+        provider: 'none',
+    },
+
     ui: {
         theme: {
             colors: [
