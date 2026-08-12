@@ -1,0 +1,1 @@
+import{t as e}from"./DA7migGo.js";var t=()=>e(`color-mode`).value;export{t};
