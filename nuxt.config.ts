@@ -3,6 +3,7 @@ const customElements = ['Center'];
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     telemetry: false,
+    ssr: false,
 
     modules: [
         '@nuxt/eslint',
