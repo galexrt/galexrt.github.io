@@ -18,7 +18,7 @@
     "@iconify-json/ph": "1.2.2",
     "@iconify-json/simple-icons": "1.2.93",
     "@iconify-json/vscode-icons": "1.2.74",
-    "@mermaid-js/layout-elk": "0.2.2",
+    "@mermaid-js/layout-elk": "0.2.3",
     "@nuxt/content": "3.15.2",
     "@nuxt/fonts": "0.14.0",
     "@nuxt/image": "2.1.0",
@@ -27,7 +27,7 @@
     "better-sqlite3": "13.0.3",
     "drizzle-kit": "0.31.10",
     "drizzle-orm": "0.45.2",
-    "mermaid": "11.16.1",
+    "mermaid": "11.17.0",
     "tailwindcss": "4.3.3",
     "zod": "4.4.3"
   },
