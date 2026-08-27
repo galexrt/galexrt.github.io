@@ -27,7 +27,7 @@
     "better-sqlite3": "13.0.3",
     "drizzle-kit": "0.31.10",
     "drizzle-orm": "0.45.2",
-    "mermaid": "11.17.1",
+    "mermaid": "11.17.2",
     "tailwindcss": "4.3.3",
     "zod": "4.4.3"
   },
