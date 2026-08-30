@@ -13,11 +13,11 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "1.2.126",
+    "@iconify-json/lucide": "1.2.127",
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/ph": "1.2.2",
-    "@iconify-json/simple-icons": "1.2.93",
-    "@iconify-json/vscode-icons": "1.2.75",
+    "@iconify-json/simple-icons": "1.2.94",
+    "@iconify-json/vscode-icons": "1.2.76",
     "@mermaid-js/layout-elk": "0.2.3",
     "@nuxt/content": "3.16.0",
     "@nuxt/fonts": "0.14.0",
@@ -29,7 +29,7 @@
     "drizzle-orm": "0.45.2",
     "mermaid": "11.17.2",
     "tailwindcss": "4.3.3",
-    "zod": "4.4.3"
+    "zod": "4.5.2"
   },
   "devDependencies": {
     "@libsql/client": "0.17.4",
