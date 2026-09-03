@@ -25,7 +25,7 @@ features:
       to: "/setup"
       icon: "i-ph-computer-tower"
     - title: "Coffee"
-      description: "Do you like coffee? Q-Kaffee in karlsruhe Durlach is the best."
+      description: "Do you like coffee? Cafe Berry Su in Karlsruhe is nice."
       to: "/coffee"
       icon: "i-ph-coffee-bean"
     - title: "Food"

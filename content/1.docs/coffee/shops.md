@@ -3,9 +3,9 @@ title: Shops
 icon: 'i-ph-shopping-bag'
 ---
 
-## Best coffee beans
+## Coffee beans
 
-[Q-Kaffee](https://www.qkaffee.de/)
+- [Café Berry Su](https://www.berry-su.de/)
 
 ## Coffee machines and equipment
 
