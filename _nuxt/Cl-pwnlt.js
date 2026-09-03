@@ -1,0 +1,1 @@
+import{mt as e,v as t}from"./Car86Ubo.js";import{E as n}from"#entry";import{t as r}from"./BDNMzG2s.js";var i={};function a(r,i){let a=n;return e(),t(a)}var o=r(i,[[`render`,a]]);export{o as default};

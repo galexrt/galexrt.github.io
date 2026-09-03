@@ -1,0 +1,1 @@
+import{D as e,b as t,mt as n,qt as r,xt as i}from"./Car86Ubo.js";import{C as a,r as o,t as s}from"#entry";import{t as c}from"./BDNMzG2s.js";var l={};function u(c,l){let u=o,d=a,f=s;return n(),t(`div`,null,[e(u),e(d,null,{default:r(()=>[i(c.$slots,`default`)]),_:3}),e(f)])}var d=c(l,[[`render`,u]]);export{d as default};

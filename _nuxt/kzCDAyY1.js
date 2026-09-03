@@ -1,0 +1,1 @@
+import{_ as e,b as t,mt as n,xt as r}from"./Car86Ubo.js";import{t as i}from"./BDNMzG2s.js";var a={},o={class:`masonry-container sm:p-8`},s={class:`grid grid-cols-1 gap-4 lg:block list-none ps-0`};function c(i,a){return n(),t(`div`,o,[e(`ul`,s,[r(i.$slots,`default`)])])}var l=Object.assign(i(a,[[`render`,c]]),{__name:`ImageGallery`});export{l as default};

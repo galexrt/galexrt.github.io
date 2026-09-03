@@ -1,0 +1,1 @@
+import{f as e}from"./BMJnnw8R.js";export{e as createInfoServices};
