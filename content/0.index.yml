@@ -13,7 +13,7 @@ features:
       to: "/docs"
       icon: "i-ph-files"
     - title: "Blog"
-      description: "Posts of a blog, about technical, personal and random things."
+      description: "Posts on a blog, about technical, personal and random things."
       to: "/blog"
       icon: "i-ph-article-medium"
     - title: "Projects"
