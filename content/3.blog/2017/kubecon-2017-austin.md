@@ -5,7 +5,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 date: "2017-12-05T12:09:28-05:00"
 tags:
   - Conferences

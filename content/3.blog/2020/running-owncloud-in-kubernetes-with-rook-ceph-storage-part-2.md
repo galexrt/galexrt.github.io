@@ -5,7 +5,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 date: "2020-01-06T14:56:41+01:00"
 image:
   src: '/blog/2020/running-owncloud-in-kubernetes-with-rook-ceph-storage-part-1/owncloud-in-kubernetes-rook-ceph.png'

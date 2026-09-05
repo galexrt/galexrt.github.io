@@ -8,7 +8,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 description: "Tutorial on how to use Keycloak with Matrix Synapse Homeserver for authentication of users."
 date: 2019-06-28T11:51:19+02:00
 image:

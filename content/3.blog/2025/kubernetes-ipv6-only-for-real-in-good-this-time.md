@@ -7,7 +7,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 ---
 
 (Photo by [RealToughCandy.com from Pexels.com](https://www.pexels.com/photo/person-holding-logo-of-there-is-no-place-like-home-11035359/), modified to fit the blog post theme)

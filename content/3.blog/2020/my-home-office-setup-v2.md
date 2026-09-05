@@ -10,7 +10,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 description: "In this post I'm showing you my current gaming and home office setup."
 date: 2020-01-10T11:58:26+01:00
 image:

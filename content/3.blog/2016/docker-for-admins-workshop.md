@@ -10,7 +10,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 image:
   src: '/blog/covers/docker-logo-vertical.png'
 ---

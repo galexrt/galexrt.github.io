@@ -5,7 +5,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 date: "2018-10-15T08:15:20+01:00"
 tags:
   - Cloud Native

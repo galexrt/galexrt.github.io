@@ -5,7 +5,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 date: "2017-08-31T09:30:00+02:00"
 tags:
   - Continuous Delivery

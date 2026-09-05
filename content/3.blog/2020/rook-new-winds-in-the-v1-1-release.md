@@ -4,7 +4,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 description: "Cross post of an older post I published on The Cloud Report blog about the Rook v1.1 release."
 tags:
   - Articles

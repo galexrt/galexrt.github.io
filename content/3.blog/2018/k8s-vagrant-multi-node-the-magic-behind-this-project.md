@@ -7,7 +7,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 description: "In this post I'm going to write about a project I started to speed up multi-node Kubernetes dev environments. I'm going to especially explain how to simple it can be to start VirtualBox VMs in parallel."
 date: 2018-06-07T13:12:27+02:00
 image:

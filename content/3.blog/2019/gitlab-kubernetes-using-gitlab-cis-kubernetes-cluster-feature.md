@@ -5,7 +5,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 date: "2019-06-10T14:53:20+02:00"
 tags:
   - GitLab

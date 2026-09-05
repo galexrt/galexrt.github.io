@@ -9,7 +9,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 ---
 
 > ![Dust in the Radiator](/blog/2016/psa-keep-your-computer-clean/dust-in-the-radi-1.png)

@@ -4,7 +4,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 date: "2017-06-02T14:39:01+02:00"
 tags:
   - Golang

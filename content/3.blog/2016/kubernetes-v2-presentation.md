@@ -8,7 +8,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 description: 'I have update my old Kubernetes presentation to contain the latest Kubernetes features.'
 image:
   src: 'https://avatars1.githubusercontent.com/u/13629408?s=400&v=4'

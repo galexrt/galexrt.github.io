@@ -8,7 +8,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 image:
   src: '/blog/2016/my-blog-layout-has-been-updated/blog_gce_search_bar.png'
 ---

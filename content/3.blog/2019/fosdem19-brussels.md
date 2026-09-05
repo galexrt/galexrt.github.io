@@ -4,7 +4,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 description: "Some thoughts, notes, comments and pictures from the FOSDEM'19 in Brussels, Belgium."
 image:
   src: '/blog/2019/fosdem19-brussels/dyy8hdmwoaaffza.jpg'

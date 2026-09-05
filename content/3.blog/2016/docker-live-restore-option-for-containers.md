@@ -4,7 +4,7 @@ authors:
   - name: Alexander Trost
     to: https://github.com/galexrt
     avatar:
-      src: /images/profile-picture.jpg
+      src: /images/profile-picture.webp
 tags:
   - Docker
 description: 'New flag in Docker daemon runtime allows to keep containers running even when Docker daemon is stopped.'
