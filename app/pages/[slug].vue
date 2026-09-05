@@ -18,7 +18,7 @@ useSeoMeta({
 </script>
 
 <template>
-    <UContainer v-if="post" :ui="{ padding: '!px-4', constrained: 'max-w-8xl' }">
+    <UContainer v-if="post" :ui="{ base: 'max-w-7xl' }">
         <UPageHeader :title="post.title" :description="post.description">
             <div class="mt-4 flex flex-wrap items-center gap-3">
                 <UButton
