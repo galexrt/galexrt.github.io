@@ -13,7 +13,7 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "1.2.132",
+    "@iconify-json/lucide": "1.2.133",
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/ph": "1.2.2",
     "@iconify-json/twemoji": "1.2.5",
@@ -43,7 +43,7 @@
     "nuxt": "4.5.2",
     "nuxt-site-config": "4.2.3",
     "nuxt-site-config-kit": "4.2.3",
-    "prettier": "3.9.6",
+    "prettier": "3.9.7",
     "prettier-plugin-organize-imports": "4.3.0",
     "sharp": "0.35.4",
     "vue-tsc": "3.3.11"
