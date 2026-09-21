@@ -1,9 +1,51 @@
+import { readdirSync } from 'node:fs';
+import { join, relative } from 'node:path';
+
 const customElements = ['Center'];
+
+const contentRoot = join(process.cwd(), 'content');
+
+function markdownFiles(directory: string): string[] {
+    return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+        const path = join(directory, entry.name);
+
+        if (entry.isDirectory()) {
+            return markdownFiles(path);
+        }
+
+        return entry.name.endsWith('.md') ? [path] : [];
+    });
+}
+
+function routeFromContentFile(file: string, root: string, prefix = ''): string {
+    const path = relative(root, file).replace(/\\/g, '/').replace(/\.md$/, '');
+    const route = path === 'index' ? '' : `/${path}`;
+
+    return `${prefix}${route}` || '/';
+}
+
+const staticContentRoutes = [
+    '/',
+    '/blog',
+    '/docs',
+    ...readdirSync(join(contentRoot, '3.blog'), { withFileTypes: true })
+        .filter((entry) => entry.isDirectory())
+        .map((entry) => `/blog/${entry.name}`),
+    ...markdownFiles(join(contentRoot, '1.docs')).map((file) =>
+        routeFromContentFile(file, join(contentRoot, '1.docs'), '/docs'),
+    ),
+    ...markdownFiles(join(contentRoot, '3.blog')).map((file) =>
+        routeFromContentFile(file, join(contentRoot, '3.blog'), '/blog'),
+    ),
+    ...markdownFiles(contentRoot)
+        .filter((file) => relative(contentRoot, file).split(/[\\/]/).length === 1)
+        .map((file) => routeFromContentFile(file, contentRoot).replace(/^\/\d+\./, '/')),
+];
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     telemetry: false,
-    ssr: false,
+    ssr: true,
 
     modules: [
         '@nuxt/eslint',
@@ -118,5 +160,8 @@ export default defineNuxtConfig({
 
     nitro: {
         preset: "github_pages",
+        prerender: {
+            routes: staticContentRoutes,
+        },
     },
 });
