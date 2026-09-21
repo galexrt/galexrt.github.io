@@ -215,7 +215,7 @@ They seemingly allow ConfigMaps to be referenced but also included in a CustomRe
 In the demo, they used a "custom" operator to deploy Backstage. The deployed Backstage instance also included the Lightspeed chatbot, but the chatbot was not working at first.
 The initially applied custom resources were missing secrets for, e.g., accessing the AI model. After updating the Custom Resource with the ConfigMaps and Secrets, the operator reconciled the application and the chatbot started working.
 
-<https://github.com/redhat-developer/rhdh-operator>
+Repository URL: <https://github.com/redhat-developer/rhdh-operator>
 
 ### Kubernetes RBAC at scale without losing your sanity - Kevin Gimbel
 
@@ -322,7 +322,7 @@ This becomes even more challenging when authentication and authorization need to
 
 ![CDS2026 - Federated Identity for Distributed Systems: Understanding SPIFFE - Leon Krass - Challenges with (Non-) Human Identities](/blog/2026/container-days-hamburg-2026/cds2026-spiffe-3.webp)
 
-SPIFFE stands for "Secure Production Identity Framework For Everyone".
+[SPIFFE](https://spiffe.io/) stands for "Secure Production Identity Framework For Everyone".
 
 "The Bottom Turtle Analogy"
 
@@ -375,7 +375,7 @@ The credentials were stored in a Kubernetes Secret, which can be used by apps to
 
 ![CDS2026 - Kubernetes as the Universal Control Plane: From Pods to Multi-Cloud Infrastructure - Rabieh Fashwall - The Power Combo: Crossplane + Cluster API](/blog/2026/container-days-hamburg-2026/cds2026-crossplane-3.webp)
 
-Crossplane is great, but what happens when you combine it with the powerful Cluster API (CAPI)? The demo showed how easy it can be to create a cluster and scale it up or down (adding or removing nodes) with Cluster API.
+[Crossplane](https://www.crossplane.io/) is great, but what happens when you combine it with the powerful Cluster API (CAPI)? The demo showed how easy it can be to create a cluster and scale it up or down (adding or removing nodes) with Cluster API.
 Bringing Crossplane back into the picture, developers could "easily" create a new test environment with a cluster and a database using GitOps.
 In the demo, they used ArgoCD for the GitOps part, but you could use any GitOps tool of your choice, e.g., FluxCD.
 
