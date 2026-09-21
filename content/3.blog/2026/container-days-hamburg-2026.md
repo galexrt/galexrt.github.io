@@ -298,7 +298,7 @@ It was interesting to hear about Kafka, especially how they are trying to make i
 
 ## Day 3
 
-### Federated Identity for Distributed Systems: Understanding SPIFFE - Leon Krass
+### Federated Identity for Distributed Systems: Understanding SPIFFE - Leon Kraß
 
 For authentication and authorization in a distributed "world", you need to know which "user" or "agent" is trying to access a resource.
 
@@ -309,24 +309,24 @@ In the talk, they split identities into two categories:
 
 This makes a huge difference in how you handle them. A human may use a password or other identifying information, while a non-human identity will usually use a token or certificate to "prove" its identity.
 
-![CDS2026 - Federated Identity for Distributed Systems: Understanding SPIFFE - Leon Krass - Non-Human Identities](/blog/2026/container-days-hamburg-2026/cds2026-spiffe-1.webp)
+![CDS2026 - Federated Identity for Distributed Systems: Understanding SPIFFE - Leon Kraß - Non-Human Identities](/blog/2026/container-days-hamburg-2026/cds2026-spiffe-1.webp)
 
 Broken down further, a human identity is a physical entity with attributes, such as a name or email address, that are mapped to digital attributes.
 A non-human identity is a digital entity with digital attributes, for example, a Kubernetes service account.
 
-![CDS2026 - Federated Identity for Distributed Systems: Understanding SPIFFE - Leon Krass - Trust Boundaries and Identity Federation](/blog/2026/container-days-hamburg-2026/cds2026-spiffe-2.webp)
+![CDS2026 - Federated Identity for Distributed Systems: Understanding SPIFFE - Leon Kraß - Trust Boundaries and Identity Federation](/blog/2026/container-days-hamburg-2026/cds2026-spiffe-2.webp)
 
 In the past, distributed systems were mostly "static", so using something like an IP address as the identity was often enough. In a dynamic system-where workloads can scale, move between platforms, or be replaced-the network identity is no longer enough.
 
 This becomes even more challenging when authentication and authorization need to work across platforms. In the age of AI, you especially want to know what an agent did, while also being able to limit what that agent is allowed to do, including across platforms.
 
-![CDS2026 - Federated Identity for Distributed Systems: Understanding SPIFFE - Leon Krass - Challenges with (Non-) Human Identities](/blog/2026/container-days-hamburg-2026/cds2026-spiffe-3.webp)
+![CDS2026 - Federated Identity for Distributed Systems: Understanding SPIFFE - Leon Kraß - Challenges with (Non-) Human Identities](/blog/2026/container-days-hamburg-2026/cds2026-spiffe-3.webp)
 
 [SPIFFE](https://spiffe.io/) stands for "Secure Production Identity Framework For Everyone".
 
 "The Bottom Turtle Analogy"
 
-![CDS2026 - Federated Identity for Distributed Systems: Understanding SPIFFE - Leon Krass - The Bottom Turtle Analogy](/blog/2026/container-days-hamburg-2026/cds2026-spiffe-4.webp)
+![CDS2026 - Federated Identity for Distributed Systems: Understanding SPIFFE - Leon Kraß - The Bottom Turtle Analogy](/blog/2026/container-days-hamburg-2026/cds2026-spiffe-4.webp)
 
 The idea is basically a chain of trust, or a "trust chain".
 
@@ -338,7 +338,7 @@ A SPIFFE identity service can establish and federate trust across platforms, for
 
 SPIRE is the reference implementation of SPIFFE. Red Hat OpenShift and HashiCorp Vault Enterprise also support or integrate with SPIFFE/SPIRE.
 
-![CDS2026 - Federated Identity for Distributed Systems: Understanding SPIFFE - Leon Krass - SPIFFE + SPIRE Live Demo](/blog/2026/container-days-hamburg-2026/cds2026-spiffe-5.webp)
+![CDS2026 - Federated Identity for Distributed Systems: Understanding SPIFFE - Leon Kraß - SPIFFE + SPIRE Live Demo](/blog/2026/container-days-hamburg-2026/cds2026-spiffe-5.webp)
 
 They also showed a CSI driver for using SPIFFE/SPIRE identities in Kubernetes-based environments.
 SPIRE also provides CRDs for configuring the SPIFFE/SPIRE service in Kubernetes. For example, the trust domain can be configured, and pod label selectors can be used to determine which pods should receive a SPIFFE identity.
