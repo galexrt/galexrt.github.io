@@ -1,0 +1,1 @@
+import{n as e}from"./BwiDN6z1.js";import{n as t}from"./D0iQX5Wz.js";function n(e,t){e.accDescr&&t.setAccDescription?.(e.accDescr),e.accTitle&&t.setAccTitle?.(e.accTitle),e.title&&t.setDiagramTitle?.(e.title)}t(n,`populateCommonDb`),e(n,`populateCommonDb`);export{n as t};
