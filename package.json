@@ -13,14 +13,14 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "1.2.142",
+    "@iconify-json/lucide": "1.2.143",
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/ph": "1.2.2",
     "@iconify-json/twemoji": "1.2.5",
-    "@iconify-json/simple-icons": "1.2.99",
-    "@iconify-json/vscode-icons": "1.2.87",
+    "@iconify-json/simple-icons": "1.2.100",
+    "@iconify-json/vscode-icons": "1.2.88",
     "@mermaid-js/layout-elk": "0.2.3",
-    "@nuxt/content": "3.16.1",
+    "@nuxt/content": "3.16.2",
     "@nuxt/fonts": "0.14.0",
     "@nuxt/image": "2.1.0",
     "@nuxt/ui": "4.11.3",
@@ -30,7 +30,7 @@
     "drizzle-orm": "0.45.4",
     "mermaid": "11.17.2",
     "tailwindcss": "4.3.3",
-    "zod": "4.6.6"
+    "zod": "4.6.7"
   },
   "devDependencies": {
     "@libsql/client": "0.18.0",
@@ -48,7 +48,7 @@
     "sharp": "0.35.5",
     "vue-tsc": "3.3.13"
   },
-  "packageManager": "pnpm@10.34.6+sha512.7e1ae66a83a9143c118cc1944f37cc4f2b8acddeda4b001cfa78908f6e46e45e15292739ca6c9d026426cc757e9318cc98c5551d6a16c165097b0028ba87b4e6",
+  "packageManager": "pnpm@10.34.7+sha512.ba98abc585539933375b5971f4bc6d6c73a1b4b7edc4a879e7d102fe5423d1e02309d67c60a11f04955093a96e521ad9c3b138cdd654ca5be563f378b3ae48bd",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@tailwindcss/oxide",
