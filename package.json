@@ -30,7 +30,7 @@
     "drizzle-orm": "0.45.4",
     "mermaid": "11.17.2",
     "tailwindcss": "4.3.3",
-    "zod": "4.6.5"
+    "zod": "4.6.6"
   },
   "devDependencies": {
     "@libsql/client": "0.18.0",
