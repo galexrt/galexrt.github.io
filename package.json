@@ -42,7 +42,7 @@
     "eslint-plugin-vue": "10.11.1",
     "nuxt": "4.6.1",
     "nuxt-site-config": "5.0.2",
-    "nuxt-site-config-kit": "4.2.3",
+    "nuxt-site-config-kit": "5.0.2",
     "prettier": "3.9.10",
     "prettier-plugin-organize-imports": "4.3.0",
     "sharp": "0.35.5",
