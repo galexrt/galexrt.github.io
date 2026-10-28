@@ -1,1 +1,0 @@
-import{D as e,b as t,mt as n,qt as r,xt as i}from"./Dn5-ag-b.js";import{r as a,t as o,x as s}from"#entry";import{t as c}from"./BDNMzG2s.js";var l={};function u(c,l){let u=a,d=s,f=o;return n(),t(`div`,null,[e(u),e(d,null,{default:r(()=>[i(c.$slots,`default`)]),_:3}),e(f)])}var d=c(l,[[`render`,u]]);export{d as default};
