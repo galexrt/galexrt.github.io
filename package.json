@@ -13,13 +13,13 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "1.2.150",
+    "@iconify-json/lucide": "1.2.151",
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/ph": "1.2.2",
     "@iconify-json/twemoji": "1.2.5",
     "@iconify-json/simple-icons": "1.2.101",
-    "@iconify-json/vscode-icons": "1.2.95",
-    "@mermaid-js/layout-elk": "1.0.1",
+    "@iconify-json/vscode-icons": "1.2.96",
+    "@mermaid-js/layout-elk": "1.0.2",
     "@nuxt/content": "3.16.2",
     "@nuxt/fonts": "1.2.0",
     "@nuxt/image": "2.2.1",
@@ -28,7 +28,7 @@
     "better-sqlite3": "13.0.3",
     "drizzle-kit": "0.31.11",
     "drizzle-orm": "0.45.4",
-    "mermaid": "12.2.0",
+    "mermaid": "12.3.0",
     "tailwindcss": "4.3.4",
     "zod": "4.6.7"
   },
