@@ -25,7 +25,7 @@
     "@nuxt/image": "2.2.1",
     "@nuxt/ui": "4.12.0",
     "@vueuse/nuxt": "15.0.0",
-    "better-sqlite3": "13.1.1",
+    "better-sqlite3": "13.2.0",
     "drizzle-kit": "0.31.11",
     "drizzle-orm": "0.45.4",
     "mermaid": "12.3.0",
