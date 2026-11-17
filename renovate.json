@@ -17,5 +17,9 @@
     }
   ],
   "platformAutomerge": true,
+  "postUpdateOptions": ["pnpmDedupe"],
+  "nix": {
+    "enabled": true
+  },
   "minimumReleaseAge": "1 day"
 }
