@@ -11,13 +11,13 @@ icon: 'i-ph-fast-forward'
 find -name '*.zip' -exec sh -c 'unzip -d "${1%.*}" "$1"' _ {} \;
 ```
 
-### Extract all '*.rar' files into a directry named after the rar's filename
+### Extract all '*.rar' files into a directory named after the rar's filename
 
 ```bash
-find -name '*.rar' -exec sh -c 'mkdir "${1%.*}"; unrar e "$1" "${1%.*}"' _ {} \;
+find -name '*.rar' -exec sh -c 'mkdir "${1%.*}"; unrar -e "$1" "${1%.*}"' _ {} \;
 ```
 
-### Extract all '*.7z' files into a directry named after the rar's filename
+### Extract all '*.7z' files into a directory named after the 7z's filename
 
 ```bash
 find -name '*.7z' -exec sh -c 'mkdir "${1%.*}"; 7z x "$1" -o"${1%.*}"' _ {} \;
