@@ -1,1 +1,0 @@
-import{t as e}from"./BNAMD44U.js";import{Mt as t,W as n,dt as r,p as i}from"./CNcqJIme.js";import{t as a}from"./BOxDf3s2.js";import o from"./Du47lcTK.js";var s={__name:`ProseCaution`,setup(s){let c=e();return(e,s)=>(n(),i(o,{color:`error`,icon:t(c).ui.icons.caution},{default:r(()=>[a(e.$slots,`default`,{mdcUnwrap:`p`})]),_:3},8,[`icon`]))}};export{s as default};
