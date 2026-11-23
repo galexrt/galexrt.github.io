@@ -13,12 +13,12 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "1.2.157",
+    "@iconify-json/lucide": "1.2.158",
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/ph": "1.2.2",
     "@iconify-json/twemoji": "1.2.5",
     "@iconify-json/simple-icons": "1.2.103",
-    "@iconify-json/vscode-icons": "1.2.99",
+    "@iconify-json/vscode-icons": "1.2.100",
     "@mermaid-js/layout-elk": "1.0.2",
     "@nuxt/content": "3.17.0",
     "@nuxt/fonts": "1.2.0",
