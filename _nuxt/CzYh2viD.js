@@ -1,0 +1,1 @@
+import{Vn as e,Wn as t,fr as n,hr as r}from"#entry";import{t as i}from"./BmP83cE4.js";var a={},o={class:`masonry-container sm:p-8`},s={class:`grid grid-cols-1 gap-4 lg:block list-none ps-0`};function c(i,a){return n(),t(`div`,o,[e(`ul`,s,[r(i.$slots,`default`)])])}var l=Object.assign(i(a,[[`render`,c]]),{__name:`ImageGallery`});export{l as default};

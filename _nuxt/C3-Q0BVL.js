@@ -1,0 +1,2 @@
+//# allFunctionsCalledOnLoad
+import{Bn as e,Ct as t,Hn as n,P as r,R as i,Ur as a,Wr as o,fr as s,gn as c,hr as l,kr as u}from"#entry";var d={base:`mt-8 pb-24 space-y-12`},f={__name:`UPageBody`,props:{as:{type:null,required:!1},class:{type:null,required:!1},ui:{type:Object,required:!1}},setup(f){let p=i(`pageBody`,f),m=c(),h=e(()=>r({extend:d,...m.ui?.pageBody||{}}));return(e,r)=>(s(),n(a(t),{as:a(p).as,class:o(h.value({class:[a(p).ui?.base,a(p).class]}))},{default:u(()=>[l(e.$slots,`default`)]),_:3},8,[`as`,`class`]))}};export{f as t};

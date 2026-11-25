@@ -1,1 +1,0 @@
-import{r as e,t,x as n}from"#entry";import{J as r,W as i,dt as a,h as o,x as s}from"./CNcqJIme.js";import{t as c}from"./BDNMzG2s.js";var l={};function u(c,l){let u=e,d=n,f=t;return i(),o(`div`,null,[s(u),s(d,null,{default:a(()=>[r(c.$slots,`default`)]),_:3}),s(f)])}var d=c(l,[[`render`,u]]);export{d as default};

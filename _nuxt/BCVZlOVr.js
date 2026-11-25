@@ -1,0 +1,2 @@
+//# allFunctionsCalledOnLoad
+import{Jn as e,M as t,Wn as n,fr as r,hr as i,kr as a,r as o,t as s}from"#entry";import{t as c}from"./BmP83cE4.js";var l={};function u(c,l){return r(),n(`div`,null,[e(o),e(t,null,{default:a(()=>[i(c.$slots,`default`)]),_:3}),e(s)])}var d=c(l,[[`render`,u]]);export{d as default};

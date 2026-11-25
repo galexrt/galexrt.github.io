@@ -1,0 +1,1 @@
+export{M as createArchitectureServices}from"./DMyo-dsJ.js";import"./DI_UYJZ4.js";
