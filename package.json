@@ -13,7 +13,7 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "1.2.159",
+    "@iconify-json/lucide": "1.2.160",
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/ph": "1.2.2",
     "@iconify-json/twemoji": "1.2.5",
@@ -41,8 +41,8 @@
     "eslint-plugin-tailwindcss": "4.4.0",
     "eslint-plugin-vue": "10.12.1",
     "nuxt": "4.7.0",
-    "nuxt-site-config": "5.1.0",
-    "nuxt-site-config-kit": "5.1.0",
+    "nuxt-site-config": "5.1.1",
+    "nuxt-site-config-kit": "5.1.1",
     "prettier": "3.10.1",
     "prettier-plugin-organize-imports": "4.3.0",
     "sharp": "0.35.5",
