@@ -28,14 +28,14 @@
     "better-sqlite3": "13.2.0",
     "drizzle-kit": "0.31.11",
     "drizzle-orm": "0.45.4",
-    "mermaid": "12.3.0",
+    "mermaid": "12.4.0",
     "tailwindcss": "4.3.5",
     "zod": "4.6.7"
   },
   "devDependencies": {
     "@libsql/client": "0.18.0",
     "@nuxt/eslint": "1.17.0",
-    "eslint": "10.15.0",
+    "eslint": "10.16.0",
     "eslint-config-prettier": "10.1.9",
     "eslint-plugin-prettier": "5.5.7",
     "eslint-plugin-tailwindcss": "4.4.0",
